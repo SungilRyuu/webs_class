@@ -1,8 +1,7 @@
 # webs_class
-https://SungilRyuu.github.io/web_class/
 
 ## 메인페이지
-
+https://SungilRyuu.github.io/web_class/
 
 ## 자바스크립트
 
