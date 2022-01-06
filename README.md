@@ -1,7 +1,7 @@
 # webs_class
 
 ## 메인페이지
-https://jiseonpack.github.io/webs_class/
+https://sungilryuu.github.io/webs_class/
 
 ## 자바스크립트
 
