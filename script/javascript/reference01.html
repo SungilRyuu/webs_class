@@ -22,42 +22,37 @@
         <h2>자바스크립트 선언문</h2>
         <p>선언문은 자바스크립트 코드를 작성할 영역을 선언하는 것이라도 이해하면 됩니다. &lt;script&gt;라는 태그로 선언문이 시작된 곳부터 &lt;/script&gt;라는 태그로 종료된 곳까지를
             스크립트
-            영역이라고 부릅니다.</p>
-
-        <p>선언문은 &lt;head&gt; 태그 영역 또는 &lt;body&gt; 태그 영역에 선언하면 됩니다. 우리나라 개발자의 대부분은 &lt;head&gt; 태그 영역에 선언하고 있습니다. 우리도
+            영역이라고 부릅니다.선언문은 &lt;head&gt; 태그 영역 또는 &lt;body&gt; 태그 영역에 선언하면 됩니다. 우리나라 개발자의 대부분은 &lt;head&gt; 태그 영역에 선언하고 있습니다. 우리도
             &lt;head&gt; 태그 영역에 선언하겠습니다.</p>
 
 
         <p>다음은 선언문을 작성하는 예제입니다. </p><br>
 
-        <div class="sample">
-            <h3>코딩해보세요</h3>
-            <div class="code">
-                <pre class="line-numbers"><code class="language-js">01: &lt;!DOCTYPE html&gt;
-02: &lt;html lang="ko"&gt;
-03: &lt;head&gt;
-04:     &lt;meta charset="UTF-8"&gt;
-05:     &lt;title&gt;Document&lt;/title&gt;
-06:     &lt;script&gt;
-07:         &lt;document.white("환영합니다")&gt;;
-08:     &lt;/script&gt;
-09: &lt;head&gt;
-10: &lt;body&gt;
-11: &lt;/body&gt;
-12: &lt;/html&gt;</code></pre>
-            </div>
+
+        <div class="code">
+            <pre class="line-numbers"><code class="language-js">&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+    &lt;script&gt;
+        &lt;document.white("환영합니다")&gt;;
+    &lt;/script&gt;
+&lt;head&gt;
+&lt;body&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
         </div>
 
         <p>7행 document는 문서 객체이며 문서 출력 메서드인 write( )를 이용하여 데이터를 문서에 출력할 때 사용합니다. <br><br>작성한 문서를 저장한 후 Ctrl + Alt + O 를
             눌러
             실행하면 아래와 같은 결과 화면이 나타납니다.</p>
 
-        <div class="sample">
-            <h3>결과화면</h3>
+
             <div class="code">
                 <pre class="line-numbers"><code class="language-js">환영합니다</code></pre>
             </div>
-        </div><br>
+<br>
 
         <h2>자바스크립트 주석 처리</h2>
         <p>자바스크립트 선언문 안에서 코드가 아닌 설명글을 넣고 싶을 때는 주석 처리를 하면 됩니다. 이 때 한 줄 주석일 경우에는 '//한 줄 설명글'로 작성하고, 여러 줄 주석일 경우에는 '/*여러 줄
@@ -91,7 +86,7 @@
         <div class="sample">
             <h3>코딩해보세요</h3>
             <div class="code">
-                <pre class="line-numbers"><code class="language-js">01: document.write("환영합니다");</code></pre>
+                <pre class="line-numbers"><code class="language-js">document.write("환영합니다");</code></pre>
             </div><br>
 
             <p>2. [import_test.html] 파일을 열어 앞에서 작성한 [example.js]를 연동해 보겠습니다. 다음과 같이 코드를 작성합니다. 만약 연동이 잘 되지 않으면 src 값에
@@ -101,16 +96,16 @@
             <div class="sample">
                 <h3>코딩해보세요</h3>
                 <div class="code">
-                    <pre class="line-numbers"><code class="language-js">01: &lt;!DOCTYPE html>
-02: &lt;html lang="ko">
-03: &lt;head>
-04:     &lt;meta charset="UTF-8">
-05:     &lt;title>외부 자바스크립트 연동&lt;/title>
-06:     &lt;script src="js/example.js">&lt;/script>
-07: &lt;head>
-08: &lt;body>
-09: &lt;/body>
-10: &lt;/html></code></pre>
+                    <pre class="line-numbers"><code class="language-js">&lt;!DOCTYPE html>
+&lt;html lang="ko">
+&lt;head>
+    &lt;meta charset="UTF-8">
+    &lt;title>외부 자바스크립트 연동&lt;/title>
+    &lt;script src="js/example.js">&lt;/script>
+&lt;head>
+&lt;body>
+&lt;/body>
+&lt;/html></code></pre>
                 </div>
             </div><br>
 
