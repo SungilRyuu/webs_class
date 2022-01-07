@@ -50,6 +50,24 @@ a {
     color: #000;
 }
 
+/* top */
+.top {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+}
+
+.top a {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    background: #000;
+    color: #fff;
+    display: block;
+}
+
 
 /* header */
 #header {
@@ -103,6 +121,8 @@ a {
     padding: 40px;
 }
 
+
+/* list */
 .list {
     padding-bottom: 40px;
     border-bottom: 1px dotted #cdcdcd;
@@ -128,6 +148,36 @@ a {
     }
 }
 
+/* note */
+.note {
+    padding: 40px 0px;
+    border-bottom: 1px dotted #cdcdcd;
+}
+
+.note a {
+    font-size: 16px;
+    background: #000;
+    color: #fff;
+    border-radius: 20px;
+    padding: 7px 15px 5px 15px;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.note a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 800px) {
+    .note {
+        padding: 20px 0;
+    }
+
+    .note a {
+        font-size: 14px;
+    }
+}
+
 /* script */
 .script {
     padding: 40px 0;
@@ -135,7 +185,6 @@ a {
 
 .script .sample {
     margin-bottom: 80px;
-    border-bottom: 1px dotted #cdcdcd;
 }
 
 .script .sample h3 {
@@ -166,4 +215,57 @@ a {
         padding: 10px 15px 8px 15px;
     }
 
+    .script .sample .code pre {
+        font-size: 14px;
+    }
 }
+
+/* doc */
+.doc {
+    font-size: 18px;
+    line-height: 1.8;
+    padding-bottom: 300px;
+}
+
+.doc h2 {
+    font-weight: 500;
+    margin: 40px 0 5px;
+}
+
+.doc h3 {
+    font-weight: 500;
+    margin: 20px 0 5px;
+    text-decoration: underline;
+}
+
+.doc li {
+    list-style: disc;
+    margin-left: 20px;
+}
+
+.doc p {
+    margin-bottom: 5px;
+}
+
+.doc .line {
+    border: 1px solid #cdcdcd;
+    padding: 20px 20px 15px 20px;
+    border-radius: 10px;
+}
+
+.doc .code {
+    border: 1px solid#cdcdcd;
+    padding: 20px 20px 15px 20px;
+    border-radius: 10px;
+    background: #666a6d;
+    color: rgb(224, 221, 221);
+}
+
+.doc strong {
+    background: #C3EAFF;
+    font-weight: normal;
+    border-radius: 20px;
+    padding: 2px 15px 0px 15px;
+    display: inline-block;
+}
+

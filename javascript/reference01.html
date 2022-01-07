@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트</title>
+    <!-- style -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/prism.css">
+
+    <!-- script -->
+    <script src="assets/js/prism.js"></script>
+</head>
+
+<body>
+    <header id="header">
+        <h1><a href="index.html">Javascript</a></h1>
+        <nav>
+            <ul>
+                <li class="active"><a href="reference01.html">기초 문법</a></li>
+                <li><a href="reference02.html">변수</a></li>
+                <li><a href="reference03.html">자료형</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main">
+        <div class="doc">
+            <h2>자바스크립트 선언문</h2>
+            <p>
+                &nbsp;&nbsp;선언문은 자바스크립트 코드를 작성할 영역을 선언하는 것이라고 이해하면 됩니다.
+                &lt;script&gt;라는 태그로 선언문이 시작된 곳부터 &lt;/script&gt;라는 태그로 종료된 곳까지를 스크립트 영역이라고 부릅니다.
+                선언문은 &lt;head&gt; 태그 영역 또는 &lt;body&gt; 태그 영역에 선언하면 됩니다.
+                <br>&nbsp;&nbsp;우리도 &lt;head&gt; 태그 영역에 선언하겠습니다.
+            </p>
+
+            <div class="code">
+                <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="ko"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+    &lt;script&gt;
+        &lt;document.white("환영합니다")&gt;;
+    &lt;/script&gt;
+&lt;head&gt;
+&lt;body&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+            </div><br>
+
+            <p>
+                &nbsp;&nbsp;작성한 문서를 저장한 후 Ctrl + Alt + O 를 눌러 실행하면 아래와 같은 화면이 나타납니다.
+            </p>
+
+            <div class="code">
+                <pre><code>환영합니다</code></pre>
+            </div>
+
+            <h2>자바스크립트 주석처리</h2>
+            <p>
+                &nbsp;&nbsp;자바스크립트 선언문 안에서 코드가 아닌 설명글을 넣고 싶을 때에는 주석처리를 하면 됩니다.
+                이 때, 한 줄 주석일 경우에는 '//한 줄 설명글'로 작성하고, 여러 글 주석일 경우에는 '/*여러 줄 설명글*/'로 작성하면 됩니다.
+                단축키는 Ctrl + / 입니다.
+            </p>
+
+            <div class="code">
+                <pre><code>//한 줄 설명글인 경우
+
+/*
+설명글이 여러 줄인 경우 이렇게 처리합니다.
+*/</code></pre>
+            </div>
+            <p>&nbsp;&nbsp;코드를 작성할 때 이렇게 설명글을 달아 놓으면 시간이 흘러도 기억을 할 수 있습니다.</p>
+
+            <h2>코드 입력 시 주의사항</h2>
+            <p>
+                &nbsp;&nbsp;자바스크립트를 작성할 때 몇 가지 주의해야 할 사항이 있습니다.
+            </p>
+            <ul>
+                <li>자바스크립트는 대,소문자를 구분하여 작성하여야 합니다.</li>
+                <li>코드 한 줄을 작성한 후에는 세미콜론(;)을 써야 합니다.</li>
+                <li>코드를 작성할 때에는 한 줄에 한 문장만 작성하는 것이 가독성을 위해 좋습니다.</li>
+                <li>문자형 데이터를 작성할 때 큰 따옴표(" ")와 작은 따옴표(' ')의 겹침 오류를 주의해야 합니다.</li>
+                <li>코드를 작성할 때 중괄호{ } 또는 소괄호( )의 짝이 맞아야 합니다.</li>
+            </ul>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트</title>
+    <!-- style -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/prism.css">
+
+    <!-- script -->
+    <script src="assets/js/prism.js"></script>
+</head>
+
+<body>
+    <header id="header">
+        <h1><a href="index.html">Javascript</a></h1>
+        <nav>
+            <ul>
+                <li><a href="reference01.html">기초 문법</a></li>
+                <li><a href="reference02.html">변수</a></li>
+                <li class="active"><a href="reference03.html">자료형</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+
+    <main id="main">
+        <div class="doc">
+            <h2>데이터 타입(자료형)</h2>
+            <p>
+                &nbsp;&nbsp;변수에는 여러가지 유형이 들어갈 수 있습니다.
+                프로그램 언어에 있어 가장 기본적인 요소이며, 데이터 타입이라고 합니다.
+                데이터 타입에는 숫자, 문자열, 논리값, 특수값, 심벌, 객체, 함수 등을 표현할 수 있습니다.
+            </p>
+
+            <h3>숫자(Number)</h3>
+            <p>
+                &nbsp;&nbsp;숫자형(Number) 데이터는 단어 의미 그대로 숫자를 의미합니다.
+                만약 "100"과 같이 큰따옴표가 숫자를 감싸고 있다면 숫자가 아닌 문자형 데이터입니다.
+                이 경우에는 Number("100")를 이용하면 문자형 데이터를 숫자형 데이터로 바꿀 수 있습니다.
+            </p>
+
+            <h3>문자열(String)</h3>
+            <p>
+                &nbsp;&nbsp;문자형(String) 데이터는 다음과 같이 문자나 숫자를 큰따옴표(" ") 또는 작은 따옴표('')로 감싸고 있습니다.
+                또한 문자형 데이터에 HTML태그를 포함하여 출력하면 태그로 인식합니다.
+            </p>
+
+            <h3>논리값(Boolean)</h3>
+            <p>
+                &nbsp;&nbsp; 논리형(Boolean) 데이터는 true(참) 또는 false(거짓)가 있습니다.
+                이 데이터는 주로 2개의 데이터를 비교할 때 나오는 결과입니다.
+                예를 들어 '100보다 10이 크다'는 잘못된 비교이므로 false라는 결과를 반환하게 됩니다. 
+                Boolean( ) 메서드에 데이터를 입력하면 논리형 데이터인 true 또는 false를 반환합니다.
+                Boolean( ) 메서드는 숫자 0과 null, undefined, 빈 문자(" ")를 제외한 모든 데이터에 대해 true를 반환합니다. <br>
+                &nbsp;&nbsp;예를 들어, Boolean() 메서드에 숫자 0을 입력하면 false라는 값을 반환합니다.
+                그리고 Boolean()메서드에 "홍길동"을 입력하면 true를 반환합니다.
+            </p>
+
+            <h3>특수값(null)</h3>
+            <p>
+                &nbsp;&nbsp;null은 변수에 저장된 값이 null인 경우를 가리킵니다. null은 변수에 저장된 데이터를 비우고자 할 때 사용하는 값입니다.
+            </p>
+
+            <h3>특수값(undefined)</h3>
+            <p>
+                &nbsp;&nbsp;undefined는 변수에 값이 등록되기 전의 기본값입니다.
+            </p>
+
+            <h3>심벌(symbol)</h3>
+            <p>
+                &nbsp;&nbsp;Symbol은 고유하고 변경 불가능한 원시 값이며 객체의 속성 키로 사용할 수 있습니다.
+            </p>
+
+            <h3>객체(Object)</h3>
+            <p>
+                &nbsp;&nbsp;객체란 식별자로 참조할 수 있는 메모리 상의 값을 말합니다.
+            </p>
+
+            <h3>함수(function)</h3>
+            <p>
+                &nbsp;&nbsp;함수는 값을 실행할 수 있는 경우를 일컫습니다.
+                함수는 '호출이 가능함'을 제외하면 일반적인 객체입니다.
+            </p>
+        </div>
+    </main>
+</body>
+
+</html>
