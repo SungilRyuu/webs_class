@@ -269,3 +269,11 @@ a {
     display: inline-block;
 }
 
+@media (max-width: 800px) {
+    .doc {
+        font-size: 14px;
+    }
+    .doc p {
+        font-size: 13px;
+    }
+}
