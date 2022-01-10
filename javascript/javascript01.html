@@ -67,38 +67,23 @@
                 <h3>01. 변수 : 데이터 저장</h3>
                 <div class="code">
                     <pre class="line-numers"><code class="language-js">{
-    var x = 100; //변수 x에 숫자 100을 저장
-    var y = 200; //변수 y에 숫자 200을 저장
-    var z = "javascript"; //변수 z에 문자 javascript를 저장
+    var x = 100; 
+    var y = 200; 
+    var z = "javascript";
 
-    document.write("*** 01. 변수 ***");
     document.write(x);
     document.write(y);
     document.write(z);
 }</code></pre>
                 </div>
-                <div class="result result 01"></div>
+
+
+                <div class="result">
+                    <h4>결과보기</h4>
+                    <div class="result01"></div>
+                </div>
             </div>
-            
-        <script>
-                    //sample01
-        //01. 변수 : 데이터 저장소
-        {
-            var x = 100; //변수 x에 숫자 100을 저장
-            var y = 200; //변수 y에 숫자 200을 저장
-            var z = "javascript"; //변수 z에 문자 javascript를 저장
-
-            document.querySelector(".result01").innerHTML = x + "<br>" + y + "<br>" + z;
-
-            document.write("<br>*** 01. 변수 ***<br>");
-            document.write(x, "<br>");
-            document.write(y, "<br>");
-            document.write(z, "<br>");
-        }
-        </script>
-        
-        
-            <!-- //sample1 -->
+            <!-- //sample01 -->
 
 
             <div id="sample2" class="sample">
@@ -113,12 +98,16 @@
     y = 400;
     z = "jquery"
 
-    document.write("*** 02. 변수 ***");
     document.write(x);
     document.write(y);
     document.write(z);
 }</code></pre>
                 </div>
+
+                <div class="result">
+                    <h4>결과보기</h4>
+                    <div class="result02"></div>
+                </div>                
             </div>
             <!-- //sample2 -->
 
@@ -132,14 +121,18 @@
     let z = "javascript";
 
     x += 300;
-    y += 400;
+    y -= 400;
     z += "jquery";
 
-    document.write("*** 03. 변수 ***");
     document.write(x);
     document.write(y);
     document.write(z);
 }</code></pre>
+                </div>
+
+                <div class="result">
+                    <h4>결과보기</h4>
+                    <div class="result03"></div>
                 </div>
             </div>
             <!-- //sample3 -->
@@ -169,7 +162,7 @@
 
     document.write("함수 밖");
     document.write(x); //100
-    document.write(y); //200
+    document.write(y); //200        
     document.write(z); //javascript
 }</code></pre>
                 </div>
@@ -377,7 +370,7 @@
             <div id="sample16" class="sample">
                 <h3>16. 객체 : 데이터를 저장 (키와 값) : 표현 방법7</h3>
                 <div class="code">
-<pre class="line-numbers"><code class="language-js">{
+                    <pre class="line-numbers"><code class="language-js">{
     const a = 100;
     const b = 200;
     const c = "javascript";
@@ -438,14 +431,11 @@
         //sample01
         //01. 변수 : 데이터 저장소
         {
-            var x = 100; //변수 x에 숫자 100을 저장
-            var y = 200; //변수 y에 숫자 200을 저장
-            var z = "javascript"; //변수 z에 문자 javascript를 저장
+            var x = 100; 
+            var y = 200;
+            var z = "javascript"; 
 
-            document.write("<br>*** 01. 변수 ***<br>");
-            document.write(x, "<br>");
-            document.write(y, "<br>");
-            document.write(z, "<br>");
+            document.querySelector(".result01").innerHTML = x + "<br>" + y + "<br>" + z;
         }
 
         //02. 변수 : 데이터 저장 + 데이터 변경 
@@ -457,10 +447,7 @@
             y = 400;
             z = "jquery"
 
-            document.write("<br>*** 02. 변수 ***<br>");
-            document.write(x, "<br>");
-            document.write(y, "<br>");
-            document.write(z, "<br>");
+            document.querySelector(".result02").innerHTML = x + "<br>" + y + "<br>" + z;
         }
 
         //03. 변수 : 데이터 저장 + 데이터 변경 + 데이터 추가
@@ -473,10 +460,7 @@
             y -= 400; // t = y - 400
             z += "jquery";
 
-            document.write("<br>*** 03. 변수 ***<br>");
-            document.write(x, "<br>");
-            document.write(y, "<br>");
-            document.write(z, "<br>");
+            document.querySelector(".result03").innerHTML = x + "<br>" + y + "<br>" + z;
         }
 
         // 04. 변수 : 변수의 종류 : 지역변수 + 전역변수 + 매개변수
@@ -662,7 +646,11 @@
             const b = 200;
             const c = "javascript";
 
-            const obj = {a, b, c};
+            const obj = {
+                a,
+                b,
+                c
+            };
 
             document.write("<br>*** 16. 객체 ***<br>");
             document.write(obj.a, "<br>");
@@ -675,10 +663,19 @@
             const obj = {
                 a: 100,
                 b: [200, 300],
-                c: {x: 400,y: 500},
+                c: {
+                    x: 400,
+                    y: 500
+                },
                 d: "javascript",
-                e: function() {
+                e: function () {
                     document.write("javascript가 실행되었습니다.");
+                },
+                f: function () {
+                    document.write(obj.d + "가 실행되었습니다.");
+                },
+                g: function () {
+                    document.write(this.d + "r가 실행되었습니다.");
                 }
             }
 
@@ -690,6 +687,8 @@
             document.write(obj.c.x, "<br>"); //400
             document.write(obj.c.y, "<br>"); //500
             obj.e();
+            obj.f();
+            obj.g();
         }
     </script>
 
