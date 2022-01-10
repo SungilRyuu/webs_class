@@ -311,7 +311,7 @@ a {
 
 /* table */
 table    {
-    width: 100%;
+    width: 90%;
     border: 1px solid#000;
     border-collapse: collapse;
 }
