@@ -176,6 +176,12 @@ document.write(z);
                     <pre class="line-numbers"><code class="language-js">{
     const arr = [100, 200, 300, 400, 500];
 
+    document.write(arr[0]);
+    document.write(arr[1]);
+    document.write(arr[2]);
+    document.write(arr[3]);
+    document.write(arr[4]);
+
     // for(초기값, 조건식, 증감식)
     for (let i = 0; i&lt;arr.length; i++){
         document.write(arr[i], "&lt;br&gt;");
@@ -195,7 +201,30 @@ document.write(z);
                 <h3>07. 배열 : 데이터 불러오기 : forEach( )</h3>
                 <div class="code">
                     <pre class="line-numbers"><code class="language-js">{
+    const num = [100, 200, 300, 400, 500];
 
+    document.write(num[0]);
+    document.write(num[1]);
+    document.write(num[2]);
+    document.write(num[3]);
+    document.write(num[4]);
+
+    // for 문
+    for( let i = 0; i&lt;num.length; i++ ){
+        document.write(num[i],"&lt;br&gt;");
+    }
+
+    // for each ( )
+    num.forEach(function(el){
+        document.write(el, "&lt;br&gt;");
+    });
+    
+    //forEach(element, index, array)
+    num.forEach(function(element, index, array){
+        document.write(element);
+        document.write(index);
+        document.write(array);
+    })
 }</script></code></pre>
                 </div>
 
@@ -260,12 +289,6 @@ document.write(z);
         {
             const arr = [100, 200, 300, 400, 500];
 
-                // document.write(arr[0]);
-                // document.write(arr[1]);
-                // document.write(arr[2]);
-                // document.write(arr[3]);
-                // document.write(arr[4]);
-
                 // for(초기값, 조건식, 증감식)
                 for( let i = 0; i<arr.length; i++){
                     //0; 0<5; 1
@@ -277,16 +300,10 @@ document.write(z);
         {
             const num = [100, 200, 300, 400, 500];
 
-            //document.write(num[0], "<br>");
-            //document.write(num[1], "<br>");
-            //document.write(num[2], "<br>");
-            //document.write(num[3], "<br>");
-            //document.write(num[4], "<br>");
-
-            // for 문
-            for( let i = 0; i<num.length; i++ ){
-                document.queryselector(".result07").innerHTML += num[i] + "<br>";
-            }
+            // for each ( )
+            num.forEach(function(el){
+                document.querySelector(".result07").innerHTML += el + "<br>";
+            });
         }
 
         

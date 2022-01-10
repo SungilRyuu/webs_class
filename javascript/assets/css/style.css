@@ -308,3 +308,30 @@ a {
         padding: 15px;
     }
 }
+
+/* table */
+table    {
+    width: 100%;
+    border: 1px solid#000;
+    border-collapse: collapse;
+}
+
+th{
+    background: rgb(255, 244, 244);
+    border: 1px solid#000;
+    font-weight: normal;
+}
+
+td{
+    border: 1px solid#000;
+}
+
+th, td{
+    text-align: center;
+}
+
+.this-class {
+    border: 1px solid#000;
+    background: rgb(114, 114, 114);
+    width: 0;
+}
