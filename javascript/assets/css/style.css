@@ -311,7 +311,7 @@ a {
 
 /* table */
 table    {
-    width: 90%;
+    width: 100%;
     border: 1px solid#000;
     border-collapse: collapse;
 }
@@ -328,6 +328,10 @@ td{
 
 th, td{
     text-align: center;
+}
+
+.this_class td{
+    text-align: left;
 }
 
 .this-class {
