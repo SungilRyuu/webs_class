@@ -1,0 +1,116 @@
+@font-face {
+    font-family: 'GmarketSans';
+    font-weight: 300;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GmarketSans';
+    font-weight: 500;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GmarketSans';
+    font-weight: 700;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.ttf') format("truetype");
+    font-display: swap;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'GmarketSans';
+}
+
+body {
+    background: #F5F5F5;
+}
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-bottom: 1px solid #000;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: #F5F5F5;
+}
+
+#header h1 {
+    font-weight: 500;
+    padding: 20px 10px 10px 20px;
+}
+
+#header h1 a {
+    text-decoration: none;
+    color: #000;
+}
+
+#header strong {
+    font-weight: 300;
+    padding: 10px 20px 10px 10px;
+}
+
+#contents {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#contents h2 {
+    font-size: 80px;
+    text-align: center;
+    padding: 12% 5% 5% 5%;
+}
+
+#contents h2 em {
+    font-style: normal;
+    color: #00DB72;
+}
+
+#contents h2 a {
+    color: #000;
+    text-decoration: none;
+}
+
+#contents .menu {
+    margin-bottom: 5px;
+}
+
+#contents .menu ul li {
+    list-style: none;
+    display: inline;
+}
+
+#contents .menu ul li a {
+    text-decoration: none;
+    background: #00DB72;
+    color: #fff;
+    padding: 5px 10px;
+    display: inline-block;
+}
+
+#contents .menu ul li.active a {
+    background: #000;
+    color:#00DB72;
+}
