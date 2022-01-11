@@ -186,17 +186,17 @@ ex) "100" + 200 = "100200";</code></pre>
     var num1 = 10;
     var num2 = 3;
 
-    num1 += num2;       //num1 = num1(10) + num2(3);
-    document.write(num1,"&lt;br&gt;");      //13
+    num1 += num2; 
+    document.write(num1,"&lt;br&gt;");
 
-    num1 -= num2;       //num1 = num1(13) - num2(3);
-    document.write(num1,"&lt;br&gt;");      //10
+    num1 -= num2;  
+    document.write(num1,"&lt;br&gt;");
 
-    num1 *= num2;       //num1 = num1(10) * num2(3);
-    document.write(num1,"&lt;br&gt;");      //30
+    num1 *= num2; 
+    document.write(num1,"&lt;br&gt;");  
 
-    num1 %= num2;       //num1 = num1(30) % num2(3);
-    document.write(num1,"&lt;br&gt;");      //00
+    num1 %= num2;   
+    document.write(num1,"&lt;br&gt;");  
 
 &lt;/script&gt;</code></pre>
             </div><br>
@@ -291,55 +291,38 @@ var A = B ++
                 <tr>
                     <th>종류</th>
                     <th>설명</th>
-                    <th>비고</th>
                 </tr>
                 <tr>
                     <td>A &gt; B</td>
                     <td>A가 B보다 크다.</td>
-                    <td></td>
                 </tr>
                 <tr>
                     <td>A &lt; B</td>
                     <td>A가 B보다 작다.</td>
-                    <td></td>
                 </tr>
                 <tr>
                     <td>A &gt;= B</td>
                     <td>A가 B보다 크거나 같다.</td>
-                    <td></td>
                 </tr>
                 <tr>
                     <td>A &lt;= B</td>
                     <td>A가 B보다 작거나 같다.</td>
-                    <td></td>
                 </tr>
                 <tr>
                     <td>A == B</td>
                     <td>A와 B는 같다.</td>
-                    <td>숫자를 비교할 경우 자료형(type)은 숫자형이든 문자형이든 상관하지 않고 표기된 숫자만 일치하면 true를 반환합니다. 
-                        가령, 숫자형 10과 문자형"10"은 같은 것으로 인식되어 true를 반환합니다.
-                    </td>
                 </tr>
                 <tr>
                     <td>A != B</td>
                     <td>A와 B는 다르다.</td>
-                    <td>숫자를 비교할 경우 자료형은 숫자형이든 문자형이든 상관하지 않고 표기된 숫자만 다르면 true를 반환합니다. 
-                        가령, 숫자형 10과 문자형"10"은 같은 것으로 인식되어 A!=B에 대해 false를 반환합니다.
-                    </td>
                 </tr>
                 <tr>
                     <td>A === B</td>
-                    <td>A와 B는 같다.</td>
-                    <td>숫자를 비교할 경우 반드시 표기된 숫자와 자료형도 일지해야만 true를 반환합니다. 
-                        10과 "10"을 비교했을 경우 표기된 숫자는 같지만 하나는 숫자형 10이고 하나는 문자형 "10"이므로 false를 반환합니다.
-                    </td>
+                    <td>A와 B는 내용과 형태가 같다.</td>
                 </tr>
                 <tr>
                     <td>A !== B</td>
-                    <td>A 와 B는 다르다.</td>
-                    <td>숫자를 비교할 경우 반드시 표기된 숫자 또는 자료형이 일치하지 않을 때 true를 반환합니다. 
-                        가령, 10과 "10"을 비교했을 경우 표기된 숫자는 같지만 하나는 숫자형 10이고 하나는 문자형 "10"이므로 이때는 true를 반환합니다.
-                    </td>
+                    <td>A 와 B는 내용과 형태가 다르다.</td>
                 </tr>
             </table><br>
 

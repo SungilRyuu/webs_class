@@ -337,4 +337,5 @@ th, td{
 .this-class {
     border: 1px solid#000;
     background: rgb(114, 114, 114);
+    width: 0;
 }
