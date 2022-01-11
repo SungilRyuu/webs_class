@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,9 +16,11 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/prism.css">
 </head>
+
 <body>
 
-    <header id="header"><h1><a href="#">라인 중학교 1학년 코딩반</a></h1>
+    <header id="header">
+        <h1><a href="#">라인 중학교 1학년 코딩반</a></h1>
         <strong>류성일</strong>
     </header>
 
@@ -26,25 +29,110 @@
 
         <div class="menu">
             <ul>
+                <li><a href="css.html">속성</a></li>
                 <li><a href="cssRefer01.html">기초 문법</a></li>
                 <li><a href="cssRefer02.html">Block/Inline</a></li>
                 <li class="active"><a href="cssRefer03.html">CSS 단위</a></li>
                 <li><a href="cssRefer04.html">CSS 색상</a></li>
             </ul>
         </div>
-        <!-- //menu -->        
+        <!-- //menu -->
 
         <div class="refer">
+            <div class="doc">
+                <h3>CSS 단위</h3>
+                <p>
+                    CSS에서 사용하는 단위는 font-size, text-indent, line-height, width, height, padding 등 크기를 나타내는 값에 쓰입니다.
+                    크게는 크기가 변하지 않는 절대 단위와 상황에 따라 크게가 변하는 상대 단위로 나뉩니다.
+                </p>
+
+                <h4>절대단위</h4>
+                <p>
+                    고정된 값을 출력하며 절대 크기가 변하지 않습니다. <br>
+                    이 방볍은 크기가 가변적인 웹사이트가 아닌 경우에는 유용하나, 반응형 사이트에 적용하기에는 복잡하다는 단점이 있습니다.
+                </p>
+
+                <div class="table">
+                    <table>
+                        <tr>
+                            <th>cm (센치미터)</th>
+                            <th>mm (미리미터)</th>
+                            <th>in (인치)</th>
+                        </tr>
+                        <tr>
+                            <th>px (픽셀)</th>
+                            <th>pt (포인트)</th>
+                            <th>pc (파이카)</th>
+                        </tr>
+                    </table>
+                </div>
+
+                <h4>상대단위</h4>
+
+                <p>
+                    부모 요소나 다른 요소의 크기에 영향을 받아 상대적으로 크기가 변합니다. <br>
+                    반응형 웹사이트를 작업할 때 주로 사용합니다.
+                </p>
+
+                <div class="table">
+                    <table>
+                        <tr>
+                            <th>em</th>
+                            <td>부모 요소의 크기의 영향을 받아 크기가 변합니다.</td>
+                        </tr>
+                        <tr>
+                            <th>rem</th>
+                            <td>최상위 요소인 html요소의 크기의 영향을 받아 크기가 변합니다.</td>
+                        </tr>
+                        <tr>
+                            <th>%</th>
+                            <td>부모 요소의 크기의 영향을 받아 크기가 변합니다.</td>
+                        </tr>
+                        <tr>
+                            <th>vw</th>
+                            <td>viewpoint width의 약자입니다. <br>
+                            ex) 80vw : 뷰포트 영역의 80%</td>
+                        </tr>
+                        <tr>
+                            <th>vh</th>
+                            <td>viewpoint height의 약자입니다. <br>
+                                ex) 80vh : 뷰포트 영역의 80%</td>
+                        </tr>
+                        <tr>
+                            <th>vmin</th>
+                            <td>뷰포트의 최소값입니다. <br>
+                            설정한 viewport 값에 따라 변합니다.</td>
+                        </tr>
+                        <tr>
+                            <th>vmax</th>
+                            <td>뷰포트의 최대값입니다. <br>
+                            설정한 viewport 값에 따라 변합니다.</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <p>
+                    반응형 웹사이트를 제작할 때에는 주로 rem을 사용합니다.
+                </p>
+
+            </div>
+
+
+
+
+
 
 
         </div>
+        </div>
         <!-- //refer -->
 
-        
+
     </main>
 
 
     <!-- script -->
     <script src="assets/js/prism.js"></script>
 </body>
+
 </html>

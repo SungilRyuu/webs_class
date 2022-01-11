@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,9 +16,11 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/prism.css">
 </head>
+
 <body>
 
-    <header id="header"><h1><a href="#">라인 중학교 1학년 코딩반</a></h1>
+    <header id="header">
+        <h1><a href="#">라인 중학교 1학년 코딩반</a></h1>
         <strong>류성일</strong>
     </header>
 
@@ -26,25 +29,50 @@
 
         <div class="menu">
             <ul>
+                <li><a href="css.html">속성</a></li>
                 <li><a href="cssRefer01.html">기초 문법</a></li>
                 <li class="active"><a href="cssRefer02.html">Block/Inline</a></li>
                 <li><a href="cssRefer03.html">CSS 단위</a></li>
                 <li><a href="cssRefer04.html">CSS 색상</a></li>
             </ul>
         </div>
-        <!-- //menu -->        
+        <!-- //menu -->
 
         <div class="refer">
+            <div class="doc">
+                <h3>Block와 Inline</h3>
+                <h4>1. Block</h4>
+                <p>
+                    block 속성은 inline과는 달리 한 줄에 나열되지 않고 그 자체로 한 줄을 완전히 차지합니다.
+                    예를 들어, header, footer, p, li, table, div, h1 등이 block 요소에 해당하는 태그들입니다.
+                    블록 속성을 가지고 있는 태그는 기본적으로 width: 100% 속성을 가지고 있습니다.
+                    화면의 가로 폭을 100% 차지하기 때문에 다음 요소가 양 옆에 붙을 공간이 없어 자연히 줄 넘김이 됩니다.
+                    또한 모양새를 쉽게 제어할 수 있는 속성 때문에 대부분 블록 속성을 가진 태그를 화면 구성이나 레이아웃에 사용합니다.
+                </p>
 
+                <h4>2. Inline</h4>
+                <p>
+                    inline 속성은 줄을 바꾸지 않고 다른 요소와 함께 한 행에 위치하려는 성향을 가지고 있습니다.
+                    예를 들어, span, a, img 등이 모두 inline 요소에 해당하는 태그들입니다.
+                    대표적인 특성은 상,하단 외부 여백(margin) 속성을 정의해도 적용되지 않거나 너비(width)와 높이(height) 속성이 적용되지 않는 것입니다.
+                </p>
 
+                <h4>3. inline-block</h4>
+                <p>
+                    display 속성이 inline-block으로 지정된 엘리먼트는 기본적으로 inline 엘리먼트처럼 전후 줄바꿈 없이 한 줄에 다른 엘리먼트들과 나란히 배치됩니다. 
+                    하지만 inline 엘리먼트에서 불가능하던 width와 height 속성 지정 및 margin과 padding 속성의 상하 간격 지정이 가능해집니다.
+                    대표적인 inline-block 엘리먼트로 &lt;button&gt;이나 &lt;input&gt;, &lt;select&gt; 태그 등을 들 수 있습니다. 
+                </p>
+            </div>
         </div>
         <!-- //refer -->
 
-        
+
     </main>
 
 
     <!-- script -->
     <script src="assets/js/prism.js"></script>
 </body>
+
 </html>

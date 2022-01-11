@@ -75,6 +75,7 @@ body {
     max-width: 1200px;
     width: 100%;
     margin: 0 auto;
+    margin-bottom: 100px;
 }
 
 #contents h2 {
@@ -93,16 +94,18 @@ body {
     text-decoration: none;
 }
 
-#contents .menu {
+/* menu */
+.menu {
     margin-bottom: 5px;
 }
 
-#contents .menu ul li {
+.menu ul li {
     list-style: none;
-    display: inline;
+    display: inline-block;
+    margin-bottom: 5px;
 }
 
-#contents .menu ul li a {
+.menu ul li a {
     text-decoration: none;
     background: #00DB72;
     color: #fff;
@@ -110,7 +113,7 @@ body {
     display: inline-block;
 }
 
-#contents .menu ul li.active a {
+.menu ul li.active a {
     background: #000;
     color: #00DB72;
 }
@@ -120,6 +123,10 @@ body {
     background: #fff;
     padding: 40px;
     border: 1px solid #000;
+    overflow-x: auto;
+}
+
+.refer .table {
     overflow-x: auto;
 }
 
@@ -142,4 +149,116 @@ body {
     padding: 15px;
     font-weight: 300;
     line-height: 1.4;
+}
+
+/* doc */
+.doc {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.doc h3 {
+    font-size: 24px;
+    font-weight: 500;
+    margin: 40px 0 5px;
+}
+
+.doc h3:first-child {
+    margin-top: 0;
+}
+
+.doc h4 {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 20px 0 5px;
+}
+
+.doc li {
+    list-style: disc;
+    margin-left: 20px;
+}
+
+.doc p {
+    margin-bottom: 5px;
+}
+
+.doc .line {
+    border: 1px solid #cdcdcd;
+    padding: 20px 20px 15px 20px;
+    border-radius: 10px;
+}
+
+.doc .code {
+    padding: 20px 20px 15px 20px;
+    border-radius: 10px;
+    background: #dedede;
+}
+
+.doc strong {
+    background: #00DB72;
+    font-weight: normal;
+    border-radius: 20px;
+    padding: 2px 15px 0px 15px;
+    display: inline-block;
+    color: #fff;
+}
+
+@media (max-width: 1220px) {
+    #contents {
+        width: 96%;
+    }
+}
+
+@media (max-width: 800px) {
+    #contents {
+        width: 100%;
+    }
+
+    #header h1 {
+        font-size: 18px;
+        padding: 20px 10px 5px 16px;
+    }
+
+    #header strong {
+        font-size: 14px;
+        padding: 20px 10px 5px 16px;
+    }
+
+    #contents h2 {
+        font-size: 40px;
+        padding: 80px 0 40px 0;
+    }
+
+    .menu {
+        margin: 16px 16px 0 16px;
+        font-size: 14px;
+    }
+
+    .refer {
+        background: transparent;
+        border: 0;
+        font-size: 14px;
+        padding: 16px;
+    }
+
+    .refer .table table {
+        min-width: 400px;
+    }
+
+    .refer .table table th {
+        padding: 10px;
+    }
+
+    .refer .table table td {
+        padding: 10px;
+    }
+
+    .doc {
+        font-size: 14px;
+    }
+
+    .doc h3 {
+        font-size: 20px;
+    }
+
 }
