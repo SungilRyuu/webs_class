@@ -142,8 +142,6 @@
                 <h3>04. 변수 : 변수의 종류 : 지역변수 + 전역변수 + 매개변수</h3>
                 <div class="code">
                     <pre class="line-numbers"><code class="language-js">{
-    document.write("*** 04. 변수 : 변수의 종류 ***");
-
     let x = 100; //전역변수
     let y = 200; //전역변수
 
@@ -188,9 +186,9 @@
     const y = 200;
     const z = "javascript";
 
-    //x = 300;
-    // y = 400;
-    // z = "jquery";
+    x = 300;
+    y = 400;
+    z = "jquery";
 
     document.write(x);
     document.write(y);
@@ -539,7 +537,7 @@
             }
             func();
 
-            document.querySelector(".result04-2").innerHTML = "함수 밖" + "<br>" + x + "<br>" + y + "<br>" + z;
+            document.querySelector(".result04-2").innerHTML = "함수 밖" + "<br>" + x + "<br>" + y + "<br>" + undefined;
 
         }
 
@@ -549,7 +547,7 @@
             const y = 200;
             const z = "javascript";
 
-            document.querySelector(".result05").innerHTML = x + "<br>" + y + "<br>" + z;
+            document.querySelector(".result05").innerHTML = "error";
         }
 
         // 06. 배열 : 여러 개의 데이터를 저장 : 표현 방법 1
