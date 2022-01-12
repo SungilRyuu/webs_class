@@ -337,11 +337,7 @@
 
                 <div class="result">
                     <h4>결과보기</h4>
-                    <div class="result12">
-                        100
-                        200
-                        javascript
-                    </div>
+                    <div class="result12"></div>
                 </div>
             </div>
             <!-- //sample12 -->
@@ -351,17 +347,15 @@
                 <h3>13. 객체 : 데이터 불러오기 : 기본</h3>
                 <div class="code">
                     <pre class="line-numbers"><code class="language-js">{
-    document.write("<br> *** *** <br>");
-
     const obj = {
         a: 100,
         b: 200,
         c: "javascript"
     }
 
-    document.write(obj.a, "<br>");
-    document.write(obj.b, "<br>");
-    document.write(obj.c, "<br>");
+    document.write(obj.a, "&lt;br&gt;");
+    document.write(obj.b, "&lt;br&gt;");
+    document.write(obj.c, "&lt;br&gt;");
     document.write(obj['a']);
     document.write(obj['b']);
     document.write(obj['c']);
@@ -370,31 +364,25 @@
 
                 <div class="result">
                     <h4>결과보기</h4>
-                    <div class="result13">
-                        100
-                        200
-                        javascript
-                        100200javascript
-                    </div>
+                    <div class="result13"></div>
                 </div>
             </div>
+
             <!-- //sample13 -->
 
             <div id="sample14" class="sample">
                 <h3>14. 객체 : 데이터 불러오기 : Object</h3>
                 <div class="code">
                     <pre class="line-numbers"><code class="language-js">{
-    document.write("<br> *** *** <br>");
-
     const obj = {
         a : 100,
         b : 200,
         c : "javascript"
     }
 
-    document.write(Object.keys(obj), "<br>"); //a,b,c 
-    document.write(Object.values(obj), "<br>"); //100,200,javascript 
-    document.write(Object.entries(obj), "<br>"); //a,100,b,200,c,javascript
+    document.write(Object.keys(obj), "<br>");
+    document.write(Object.values(obj), "<br>");
+    document.write(Object.entries(obj), "<br>");
 }</code></pre>
                 </div>
 
@@ -413,8 +401,6 @@
                 <h3>15. 객체 : 데이터 불러오기 : 변수</h3>
                 <div class="code">
                     <pre class="line-numbers"><code class="language-js">{
-    document.write("<br> *** *** <br>");
-
     const obj = {
         a : 100,
         b : 200,
@@ -613,16 +599,16 @@
                 3] + "<br>" + num[4] + "<br>" + "<br>";
 
             for (let i = 0; i < num.length; i++) {
-                document.querySelector(".result07").innerHTML += num[i] + "<br>" ;
+                document.querySelector(".result07").innerHTML += num[i] + "<br>";
             }
 
-            num.forEach(function(el){
-                document.querySelector(".result07").innerHTML +=   el + "<br>";
+            num.forEach(function (el) {
+                document.querySelector(".result07").innerHTML += el + "<br>";
             })
 
-            num.forEach(function(element, index, array){
+            num.forEach(function (element, index, array) {
                 document.querySelector(".result07").innerHTML += element;
-                document.querySelector(".result07").innerHTML +=  index;
+                document.querySelector(".result07").innerHTML += index;
                 document.querySelector(".result07").innerHTML += array + "<br>";
             })
 
@@ -633,7 +619,7 @@
         {
             const num = [100, 200, 300, 400, 500];
 
-            for (let i of num){
+            for (let i of num) {
                 document.querySelector(".result08").innerHTML += i + "<br>";
             }
 
@@ -643,12 +629,12 @@
         {
             const num = [100, 200, 300, 400, 500];
 
-            for (let i of num){
+            for (let i of num) {
                 document.querySelector(".result09").innerHTML += i + "<br>";
             }
-    
 
-            for (let i in num){
+
+            for (let i in num) {
                 document.querySelector(".result09").innerHTML += i;
             }
         }
@@ -657,11 +643,11 @@
         {
             const num = [100, 200, 300, 400, 500];
 
-            num.map(function(el){
+            num.map(function (el) {
                 document.querySelector(".result10").innerHTML += el + "<br>";
             })
 
-            num.map(function(element, ind, array) {
+            num.map(function (element, ind, array) {
                 document.querySelector(".result10").innerHTML += element + " ";
                 document.querySelector(".result10").innerHTML += ind + " ";;
                 document.querySelector(".result10").innerHTML += array + "<br>";
@@ -674,13 +660,10 @@
             const num = [100, 200, 300, 400, 500];
 
             document.querySelector(".result11").innerHTML += num + "<br>";
-            document.querySelector(".result11").innerHTML += num[0] + " " + num[1] + "  " + num[2] + "  " + num[3] + "  " + num[4] + "<br>";
-            document.querySelector(".result11").innerHTML += num[0] + " " + num[1] + "  " + num[2] + "  " + num[3] + "  " + num[4] ;
-
-
-            document.write(num); //100, 200, 300, 400, 500
-            document.write(num[0], num[1], num[2], num[3], num[4]); //100 200 300 400 500
-            document.write(...num); //100 200 300 400 50
+            document.querySelector(".result11").innerHTML += num[0] + " " + num[1] + "  " + num[2] + "  " + num[3] +
+                "  " + num[4] + "<br>";
+            document.querySelector(".result11").innerHTML += num[0] + " " + num[1] + "  " + num[2] + "  " + num[3] +
+                "  " + num[4];
         }
 
         // 12. 배열 : 데이터 불러오기 : 배열 구조분해할당(Destructuring Assignment)
@@ -691,43 +674,34 @@
 
             [a, b, c] = [100, 200, "javascript"];
 
-            document.write(a);
-            document.write(b);
-            document.write(c);
+            document.querySelector(".result12").innerHTML += a + "<br> " + b + "<br> " + c;
         }
 
         // 13. 객체 : 데이터 불러오기 : 기본
         {
-            document.write("<br> *** *** <br>");
-
             const obj = {
                 a: 100,
                 b: 200,
                 c: "javascript"
             }
 
-            document.write(obj.a, "<br>");
-            document.write(obj.b, "<br>");
-            document.write(obj.c, "<br>");
-            document.write(obj['a']);
-            document.write(obj['b']);
-            document.write(obj['c']);
+
+            document.querySelector(".result13").innerHTML += obj.a + "<br>" + obj.b + "<br>" + obj.c + "<br>";
+            document.querySelector(".result13").innerHTML += obj['a'] + "<br>" + obj['b'] + "<br>" + obj['c'];
         }
 
 
         // 14. 객체 : 데이터 불러오기 : Object
         {
-            document.write("<br> *** *** <br>");
-
             const obj = {
                 a: 100,
                 b: 200,
                 c: "javascript"
             }
 
-            document.write(Object.keys(obj), "<br>"); //a,b,c 
-            document.write(Object.values(obj), "<br>"); //100,200,javascript 
-            document.write(Object.entries(obj), "<br>"); //a,100,b,200,c,javascript
+            // document.write(Object.keys(obj), "<br>"); //a,b,c 
+            // document.write(Object.values(obj), "<br>"); //100,200,javascript 
+            // document.write(Object.entries(obj), "<br>"); //a,100,b,200,c,javascript
         }
 
         //15. 객체 : 데이터 불러오기 : 변수
