@@ -58,7 +58,7 @@
                 <li>23. 객체 : 데이터 불러오기 : 객체구조분해할당</li>
             </ul>
         </div>
-        <!-- //lits -->
+        <!-- //list -->
 
         <div class="note">
             <a href="reference04.html">for문</a>
@@ -388,11 +388,7 @@
 
                 <div class="result">
                     <h4>결과보기</h4>
-                    <div class="result14">
-                        a,b,c <br>
-                        100,200,javascript <br>
-                        a,100,b,200,c,javascript <br>
-                    </div>
+                    <div class="result14"></div>
                 </div>
             </div>
             <!-- //sample14 -->
@@ -419,9 +415,7 @@
 
                 <div class="result">
                     <h4>결과보기</h4>
-                    <div class="result15">
-                        100<br>200<br>javascript
-                    </div>
+                    <div class="result15"></div>
                 </div>
             </div>
             <!-- //sample15 -->
@@ -601,18 +595,19 @@
             for (let i = 0; i < num.length; i++) {
                 document.querySelector(".result07").innerHTML += num[i] + "<br>";
             }
+            document.querySelector(".result07").innerHTML += "<br>";
 
             num.forEach(function (el) {
                 document.querySelector(".result07").innerHTML += el + "<br>";
             })
 
+            document.querySelector(".result07").innerHTML += "<br>";
+
             num.forEach(function (element, index, array) {
-                document.querySelector(".result07").innerHTML += element;
-                document.querySelector(".result07").innerHTML += index;
+                document.querySelector(".result07").innerHTML += element + " ";
+                document.querySelector(".result07").innerHTML += index + " ";
                 document.querySelector(".result07").innerHTML += array + "<br>";
             })
-
-
         }
 
         // 08. 배열 : 데이터 불러오기 : for of( )
@@ -697,6 +692,10 @@
                 c: "javascript"
             }
 
+            document.querySelector(".result14").innerHTML += Object.keys(obj) + "<br>";
+            document.querySelector(".result14").innerHTML += Object.values(obj) + "<br>";
+            document.querySelector(".result14").innerHTML += Object.entries(obj);
+
             // document.write(Object.keys(obj), "<br>"); //a,b,c 
             // document.write(Object.values(obj), "<br>"); //100,200,javascript 
             // document.write(Object.entries(obj), "<br>"); //a,100,b,200,c,javascript
@@ -713,9 +712,12 @@
             const name1 = obj.a;
             const name2 = obj.b;
             const name3 = obj.c;
-// document.write(name1);
-// document.write(name2);
-// document.write(name3);
+
+            document.querySelector(".result15").innerHTML += name1 + "<br>" + name2 + "<br>" + name3;
+
+            // document.write(name1);
+            // document.write(name2);
+            // document.write(name3);
         }
     </script>
 

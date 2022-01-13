@@ -272,7 +272,7 @@ a {
     display: inline-block;
 }
 
-.doc .table{
+.doc .table {
     overflow-x: auto;
 }
 
@@ -283,13 +283,13 @@ a {
     border-collapse: collapse;
 }
 
-.doc .table table th{
+.doc .table table th {
     border-bottom: 1px solid #cdcdcd;
     border-right: 1px solid #cdcdcd;
     background-color: #f5f5f5;
 }
 
-.doc .table table td{
+.doc .table table td {
     border-bottom: 1px solid #cdcdcd;
     border-right: 1px solid #cdcdcd;
     text-align: left;
@@ -300,6 +300,7 @@ a {
     .doc {
         font-size: 14px;
     }
+
     .doc h2 {
         font-size: 18px;
     }
@@ -309,8 +310,8 @@ a {
         border: 1px solid #cdcdcd;
         border-radius: 10px;
     }
-    .doc .table table{
-    }
+
+    .doc .table table {}
 }
 
 /* result */
@@ -324,7 +325,7 @@ a {
     font-size: 16px;
 }
 
-.result div{
+.result div {
     background: #272822;
     padding: 20px;
     color: #fff;
@@ -333,11 +334,12 @@ a {
     line-height: 1.4;
 }
 
-@media (max-width: 800px){
+@media (max-width: 800px) {
     .result h4 {
         font-size: 14px;
         padding: 10px 15px;
     }
+
     .result div {
         font-size: 14px;
         padding: 15px;
@@ -351,21 +353,22 @@ table {
     border-collapse: collapse;
 }
 
-th{
+th {
     background: rgb(255, 244, 244);
     border: 1px solid#000;
     font-weight: normal;
 }
 
-td{
+td {
     border: 1px solid#000;
 }
 
-th, td{
+th,
+td {
     text-align: center;
 }
 
-.this_class td{
+.this_class td {
     text-align: left;
 }
 
@@ -395,12 +398,13 @@ th, td{
     border: 8px solid #50B5F9;
     box-sizing: border-box;
     position: absolute;
-    left: 0; top: 0;
+    left: 0;
+    top: 0;
     z-index: -1;
     border-radius: 13px;
 }
 
-.javascript h1{
+.javascript h1 {
     font-size: 8vw;
     color: #0243f1;
     font-weight: 700;
@@ -428,8 +432,37 @@ th, td{
     color: #fff;
 }
 
-@media (max-width: 800px){
-    .javascript h1{
+@media (max-width: 800px) {
+    .javascript h1 {
         font-size: 55px;
         padding: 10px 0;
+    }
 }
+
+
+/* 간격 설정 */
+.mt0 {margin-top: 0px !important;}
+.mt5 {margin-top: 5px !important;}
+.mt10 {margin-top: 10px !important;}
+.mt15 {margin-top: 15px !important;}
+.mt20 {margin-top: 20px !important;}
+.mt25 {margin-top: 25px !important;}
+.mt30 {margin-top: 30px !important;}
+.mt35 {margin-top: 35px !important;}
+.mt40 {margin-top: 40px !important;}
+.mt45 {margin-top: 45px !important;}
+.mt50 {margin-top: 50px !important;}
+.mt55 {margin-top: 55px !important;}
+
+.mb0 {margin-bottom: 0px !important;}
+.mb5 {margin-bottom: 5px !important;}
+.mb10 {margin-bottom: 10px !important;}
+.mb15 {margin-bottom: 15px !important;}
+.mb20 {margin-bottom: 20px !important;}
+.mb25 {margin-bottom: 25px !important;}
+.mb30 {margin-bottom: 30px !important;}
+.mb35 {margin-bottom: 35px !important;}
+.mb40 {margin-bottom: 40px !important;}
+.mb45 {margin-bottom: 45px !important;}
+.mb50 {margin-bottom: 50px !important;}
+.mb55 {margin-bottom: 55px !important;}
