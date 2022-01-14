@@ -53,12 +53,57 @@
                 <li>02. 클래스</li>
             </ul>
         </div>
+        <!-- //list -->
+
+        <div class="note">
+            <a href="reference08.html">함수</a>
+        </div>
+        <!-- //note -->
+
+        <div class="script">
 
 
 
-    <main id="main">
+
+        </div>
+        <!-- //script -->
 
 
     </main>
+
+    <script>
+        //01. 선언적 함수
+        {
+            function func(){
+            document.write("함수가 실행되었습니다.");
+            }
+            func();
+        }
+
+        //02. 익명 함수
+        {
+            const func = function (){
+                document.write("함수가 실행되었습니다.");
+            }
+            func();
+        }
+
+        //03. 매개변수 함수
+        {
+            function func(str){
+                document.write(str);
+            }
+            func("함수가 실행되었습니다.");
+        }
+
+        //04. 리턴값 함수
+        {
+            function func(){
+                const str = "함수가 실행되었습니다.";
+                return str;
+            }
+            document.write(func());
+        }
+    </script>
 </body>
 </html>
