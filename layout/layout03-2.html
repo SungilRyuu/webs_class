@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout03-2</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #e8f5e9;
+        }
+
+        #wrap {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        #header {
+            width: 1200px;
+            height: 100px;
+            background-color: #c8e6c9;
+        }
+
+        #nav {
+            width: 1200px;
+            display: flex;
+        }
+
+        #nav .nav1 {
+            width: 400px;
+            height: 100px;
+            background-color: #a5d6a7;
+        }
+
+        #nav .nav2 {
+            width: 400px;
+            height: 100px;
+            background-color: rgb(147, 223, 150);
+        }
+
+        #nav .nav3 {
+            width: 400px;
+            height: 100px;
+            background-color: #66bb6a;
+        }
+
+        #contents {
+            width: 1200px;
+            display: flex;
+        }
+
+        #contents .aside1 {
+            width: 300px;
+            height: 780px;
+            background-color: #4caf50;
+        }
+
+        #contents .content {
+            width: 600px;
+            height: 780px;
+            background-color: #43a047;
+        }
+
+        #contents .content .content1{
+            width: 600px;
+            height: 390px;
+            background-color: #388e3c;
+        }
+
+        #contents .content .content2{
+            width: 600px;
+            height: 390px;
+            background-color: #2e7d32;
+        }
+
+        #contents .aside2 {
+            width: 300px;
+            height: 780px;
+            background-color: #1b5e20;
+        }
+
+        #footer {
+            width: 1200px;
+            height: 100px;
+            background-color: #00c853;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div id="wrap">
+        <header id="header"></header>
+        <nav id="nav">
+            <article class="nav1"></article>
+            <article class="nav2"></article>
+            <article class="nav3"></article>
+        </nav>
+        <section id="contents">
+            <section class="aside1"></section>
+            <section class="content">
+                <article class=content1></article>
+                <article class=content2></article>
+            </section>
+            <section class="aside2"></section>
+        </section>
+        <footer id="footer"></footer>
+
+    </div>
+</body>
+
+</html>
