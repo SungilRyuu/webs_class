@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Layout03</title>
+    <title>Layout03-1</title>
+
     <style>
         * {
             margin: 0;
@@ -25,69 +26,77 @@
             width: 1200px;
             height: 100px;
             background-color: #B3E5FC;
-            ;
         }
 
         #nav {
             width: 1200px;
+            background-color: #81D4FA;
+            display: flex;
+        }
+
+        #nav .nav1 {
+            width: 600px;
             height: 100px;
             background-color: #81D4FA;
         }
 
+        #nav .nav2 {
+            width: 600px;
+            height: 100px;
+            background-color: #1d7aa5;
+        }
+
         #contents {
             width: 1200px;
+            height: 780px;
             display: flex;
+            background-color: #0588ca;
         }
 
         #contents .aside {
-            width: 400px;
-            height: 780px;
+            width: 300px;
+            height: 520px;
             background-color: #4FC3F7;
         }
 
-        #contents .content .article1 {
-            width: 800px;
+        #contents #article .article1 {
+            width: 900px;
             height: 260px;
             background-color: #29B6F6;
         }
 
-        #contents .content .article2 {
-            width: 800px;
+        #contents #article .article2 {
+            width: 900px;
             height: 260px;
             background-color: #039BE5;
-        }
-
-        #contents .content .article3 {
-            width: 800px;
-            height: 260px;
-            background-color: #0288D1;
         }
 
         #footer {
             width: 1200px;
             height: 100px;
             background-color: #0277BD;
-
         }
     </style>
-</head>
 
+</head>
 
 <body>
     <div id="wrap">
         <header id="header"></header>
-        <nav id="nav"></nav>
+        <nav id="nav">
+            <article class="nav1"></article>
+            <article class="nav2"></article>
+        </nav>
         <section id="contents">
             <aside class="aside"></aside>
-            <section class="content">
+            <section id="article">
                 <article class="article1"></article>
                 <article class="article2"></article>
-                <article class="article3"></article>
             </section>
+            <article class=sec></article>
         </section>
         <footer id="footer"></footer>
     </div>
-
 </body>
 
 </html>
