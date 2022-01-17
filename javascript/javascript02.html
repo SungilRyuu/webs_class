@@ -93,9 +93,10 @@
 }</code></pre>
                 </div>
 
-                <div class="result result01t">
+                <div class="result result1t">
                     <h4>결과보기</h4>
-                    <div class="result01"></div>
+                    <div class="result1">
+                    </div>
                 </div>
             </div>
             <!-- //sample01 -->
@@ -113,9 +114,9 @@
 }</code></pre>
                 </div>
 
-                <div class="result result02t">
+                <div class="result result2t">
                     <h4>결과보기</h4>
-                    <div class="result02"></div>
+                    <div class="result2"></div>
                 </div>
             </div>
             <!-- //sample02 -->
@@ -133,9 +134,9 @@
 }</code></pre>
                 </div>
 
-                <div class="result result03t">
+                <div class="result result3t">
                     <h4>결과보기</h4>
-                    <div class="result03"></div>
+                    <div class="result3"></div>
                 </div>
             </div>
             <!-- //sample03 -->
@@ -155,9 +156,9 @@
 }</code></pre>
                 </div>
 
-                <div class="result result04t">
+                <div class="result result4t">
                     <h4>결과보기</h4>
-                    <div class="result04"></div>
+                    <div class="result4"></div>
                 </div>
             </div>
             <!-- //sample04 -->
@@ -173,9 +174,9 @@
 }</code></pre>
                 </div>
 
-                <div class="result result05t">
+                <div class="result result5t">
                     <h4>결과보기</h4>
-                    <div class="result05"></div>
+                    <div class="result5"></div>
                 </div>
             </div>
             <!-- //sample05 -->
@@ -200,9 +201,9 @@
 }</script></code></pre>
                 </div>
 
-                <div class="result result06t">
+                <div class="result result6t">
                     <h4>결과보기</h4>
-                    <div class="result06"></div>
+                    <div class="result6"></div>
                 </div>
             </div>
             <!-- //sample06 -->
@@ -239,9 +240,9 @@
 }</script></code></pre>
                 </div>
 
-                <div class="result result07t">
+                <div class="result result7t">
                     <h4>결과보기</h4>
-                    <div class="result07"></div>
+                    <div class="result7"></div>
                 </div>
             </div>
             <!-- //sample07 -->
@@ -258,9 +259,9 @@
 }</code></pre>
                 </div>
 
-                <div class="result result08t">
+                <div class="result result8t">
                     <h4>결과보기</h4>
-                    <div class="result08"></div>
+                    <div class="result8"></div>
                 </div>
             </div>
             <!-- //sample08 -->
@@ -281,9 +282,9 @@
 }</script></code></pre>
                 </div>
 
-                <div class="result result09t">
+                <div class="result result9t">
                     <h4>결과보기</h4>
-                    <div class="result09"></div>
+                    <div class="result9"></div>
                 </div>
             </div>
             <!-- //sample09 -->
@@ -560,7 +561,7 @@
                 y = 200,
                 z = "javascript";
 
-            document.querySelector(".result01").innerHTML = x + "<br>" + y + "<br>" + z;
+            document.querySelector(".result1").innerHTML = x + "<br>" + y + "<br>" + z;
         }
 
         // 02. 상수 : 데이터 불러오기
@@ -569,21 +570,21 @@
                 y = 200,
                 z = "javascript";
 
-            document.querySelector(".result02").innerHTML = x + "<br>" + y + "<br>" + z;
+            document.querySelector(".result2").innerHTML = x + "<br>" + y + "<br>" + z;
         }
 
         // 03. 배열 : 데이터 불러오기
         {
             const arr = [100, 200, "javascript"];
 
-            document.querySelector(".result03").innerHTML = arr[0] + "<br>" + arr[1] + "<br>" + arr[2];
+            document.querySelector(".result3").innerHTML = arr[0] + "<br>" + arr[1] + "<br>" + arr[2];
         }
 
         // 04. 배열 : 데이터 불러오기 : 2차 배열
         {
             const arr = [100, 200, ["javascript", "jquery"]];
 
-            document.querySelector(".result04").innerHTML = arr[0] + "<br>" + arr[1] + "<br>" + arr[2] + "<br>" + arr[2]
+            document.querySelector(".result4").innerHTML = arr[0] + "<br>" + arr[1] + "<br>" + arr[2] + "<br>" + arr[2]
                 [0] + "<br>" + arr[2][1];
         }
 
@@ -591,21 +592,21 @@
         {
             const arr = [100, 200, "javascript"];
 
-            document.querySelector(".result05").innerHTML = arr.length;
+            document.querySelector(".result5").innerHTML = arr.length;
         }
 
         // 06. 배열 : 데이터 불러오기 : for( ) 문
         {
             const arr = [100, 200, 300, 400, 500];
 
-            document.querySelector(".result06").innerHTML = arr[0] + "<br>" + arr[1] + "<br>" + arr[2] + "<br>" + arr[
+            document.querySelector(".result6").innerHTML = arr[0] + "<br>" + arr[1] + "<br>" + arr[2] + "<br>" + arr[
                 3] + "<br>" + arr[4] + "<br>" + "<br>";
 
 
 
             // for(초기값, 조건식, 증감식)
             for (let i = 0; i < arr.length; i++) {
-                document.querySelector(".result06").innerHTML += arr[i] + "<br>";
+                document.querySelector(".result6").innerHTML += arr[i] + "<br>";
             }
         }
 
@@ -613,24 +614,24 @@
         {
             const num = [100, 200, 300, 400, 500];
 
-            document.querySelector(".result07").innerHTML = num[0] + "<br>" + num[1] + "<br>" + num[2] + "<br>" + num[
+            document.querySelector(".result7").innerHTML = num[0] + "<br>" + num[1] + "<br>" + num[2] + "<br>" + num[
                 3] + "<br>" + num[4] + "<br>" + "<br>";
 
             for (let i = 0; i < num.length; i++) {
-                document.querySelector(".result07").innerHTML += num[i] + "<br>";
+                document.querySelector(".result7").innerHTML += num[i] + "<br>";
             }
-            document.querySelector(".result07").innerHTML += "<br>";
+            document.querySelector(".result7").innerHTML += "<br>";
 
             num.forEach(function (el) {
-                document.querySelector(".result07").innerHTML += el + "<br>";
+                document.querySelector(".result7").innerHTML += el + "<br>";
             })
 
-            document.querySelector(".result07").innerHTML += "<br>";
+            document.querySelector(".result7").innerHTML += "<br>";
 
             num.forEach(function (element, index, array) {
-                document.querySelector(".result07").innerHTML += element + " ";
-                document.querySelector(".result07").innerHTML += index + " ";
-                document.querySelector(".result07").innerHTML += array + "<br>";
+                document.querySelector(".result7").innerHTML += element + " ";
+                document.querySelector(".result7").innerHTML += index + " ";
+                document.querySelector(".result7").innerHTML += array + "<br>";
             })
         }
 
@@ -639,7 +640,7 @@
             const num = [100, 200, 300, 400, 500];
 
             for (let i of num) {
-                document.querySelector(".result08").innerHTML += i + "<br>";
+                document.querySelector(".result8").innerHTML += i + "<br>";
             }
 
         }
@@ -649,12 +650,12 @@
             const num = [100, 200, 300, 400, 500];
 
             for (let i of num) {
-                document.querySelector(".result09").innerHTML += i + "<br>";
+                document.querySelector(".result9").innerHTML += i + "<br>";
             }
 
 
             for (let i in num) {
-                document.querySelector(".result09").innerHTML += i;
+                document.querySelector(".result9").innerHTML += i;
             }
         }
 
