@@ -28,6 +28,15 @@
                 <li class="active"><a href="javascript04.html">데이터 제어하기</a></li>
             </ul>
             <ul>
+                <li><a href="javascript05.html">문자열 객체</a></li>
+                <li><a href="javascript06.html">배열 객체</a></li>
+                <li><a href="javascript07.html">수학 객체</a></li>
+                <li><a href="javascript08.html">숫자 객체</a></li>
+                <li><a href="javascript09.html">브라우저 객체</a></li>
+                <li><a href="javascript10.html">요소 객체</a></li>
+                <li><a href="javascript11.html">이벤트 객체</a></li>
+            </ul>
+            <ul>
                 <li><a href="practice01.html">데이터 연습하기</a></li>
             </ul>
         </nav>
@@ -344,178 +353,177 @@
 
 
         </div>
-        <!-- //script -->
-
-
-
-        <script>
-            //조건문 (1~6)
-            // 01. if문
-            {
-                if (true) {
-                    document.querySelector(".result01").innerHTML = "실행되었습니다.(true)";
-                } else {
-                    document.querySelector(".result01").innerHTML = "실행되었습니다.(false)";
-                }
-            }
-
-            // 02. if문 생략 -> 중괄호 생략 
-            {
-                const num = 100;
-
-                if (num == 100) document.querySelector(".result02").innerHTML = "실행되었습니다.(true)";
-                else document.querySelector(".result02").innerHTML = "실행되었습니다.(false)";
-            }
-
-            // 03. 다중 if문
-            {
-                const num = 100;
-
-                if (num == 90) {
-                    document.querySelector(".result03").innerHTML = "실행되었습니다.(num==90)";
-                } else if (num == 100) {
-                    document.querySelector(".result03").innerHTML = "실행되었습니다.(num==100)";
-                } else if (num == 110) {
-                    document.querySelector(".result03").innerHTML = "실행되었습니다.(num==110)";
-                } else if (num == 120) {
-                    document.querySelector(".result03").innerHTML = "실행되었습니다.(num==120)";
-                } else {
-                    document.querySelector(".result03").innerHTML = "실행되었습니다.(num==값이 없음)";
-                }
-            }
-
-            // 04. 중첩 if문
-            {
-                const num = 100;
-
-                if (num == 100) {
-                    document.querySelector(".result04").innerHTML += "실행되었습니다.(1)" + "<br>";
-                    if (num == 100) {
-                        document.querySelector(".result04").innerHTML += "실행되었습니다.(2)" + "<br>";
-                        if (num == 100) {
-                            document.querySelector(".result04").innerHTML += "실행되었습니다.(3)";
-                        }
-                    }
-                } else {
-                    document.querySelector(".result04").innerHTML = "실행되었습니다.(4)";
-                }
-            }
-
-            // 05. 삼항 연산자(조건부 연산자) -> if 문을 한 줄로 씀 (컴퓨터가 해석하는 시간이 줄어듬)
-            {
-                const num = 100;
-
-                (num == 100) ? document.querySelector(".result05").innerHTML = "true": document.querySelector(
-                    ".result05").innerHTML = "false";
-            }
-
-            // 06. switch문 -> 조건식을 사용할 수 없음! 값이 같냐 안같냐 정도만 가능
-            {
-                const num = 100;
-
-                switch (num) {
-                    case 100:
-                        document.querySelector(".result06").innerHTML = "실행되었습니다.(num==100)";
-                        break;
-                    case 200:
-                        document.querySelector(".result06").innerHTML = "실행되었습니다.(num==200)";
-                        break;
-                    case 300:
-                        document.querySelector(".result06").innerHTML = "실행되었습니다.(num==300)";
-                        break;
-                    case 400:
-                        document.querySelector(".result06").innerHTML = "실행되었습니다.(num==400)";
-                        break;
-                }
-            }
-
-            // 07. while문 -> 반복함, 끝을 정해주지 않으면 무한 반복되서 error 난다
-            {
-                let num = 1;
-
-                while (num <= 10) {
-                    document.querySelector(".result07").innerHTML += num + ". 실행되었습니다." + "<br>";
-                    num++;
-                }
-            }
-
-            // 08. do while문 -> while은 조건에 안맞으면 실행되지 않지만 do while은 조건에 맞든 안맞든 한 번은 실행 됨
-            {
-                let num = 1;
-
-                do {
-                    document.querySelector(".result08").innerHTML += num + ". 실행되었습니다." + "<br>";
-                    num++;
-                } while (num <= 10);
-            }
-
-            // 09. for문
-            {
-                for (let i = 1; i <= 10; i++) {
-                    document.querySelector(".result09").innerHTML += i + ". 실행되었습니다." + "<br>";
-                }
-            }
-
-            // 10. 중첩 for문
-            {
-                for (let i = 1; i <= 1; i++) {
-                    document.querySelector(".result10").innerHTML += i + ". 실행(i)되었습니다." + "<br>";
-                    for (let j = 1; j <= 5; j++) {
-                        document.querySelector(".result10").innerHTML += j + ". 실행(j)되었습니다.";
-                    }
-                }
-                for (let i = 2; i <= 5; i++) {
-                    document.querySelector(".result10").innerHTML += "<br>" + i + ". 실행(i)되었습니다." + "<br>";
-                    for (let j = 1; j <= 5; j++) {
-                        document.querySelector(".result10").innerHTML += j + ". 실행(j)되었습니다.";
-                    }
-                }
-            }
-
-            // 11. break문
-            {
-                let num = 1;
-                while (num <= 20) {
-                    document.querySelector(".result11").innerHTML += num;
-                    num++;
-                    if (num == 10) {
-                        break;
-                    }
-                }
-
-                document.querySelector(".result11").innerHTML += "<br>";
-
-                //for문          
-                for (let i = 1; i <= 20; i++) {
-                    document.querySelector(".result11").innerHTML += i;
-                    if (i == 10) {
-                        break;
-                    }
-                }
-            }
-
-            // 12. continue문
-            {
-                let num = 0
-                while (num < 10) {
-                    num++;
-                    if (num == 5) {
-                        continue;
-                    }
-                    document.querySelector(".result12").innerHTML += num;
-                }
-                document.querySelector(".result12").innerHTML += "<br>";
-
-                for (let i = 1; i <= 10; i++) {
-                    if (i == 5) {
-                        continue;
-                    }
-                    document.querySelector(".result12").innerHTML += i;
-                }
-
-            }
-        </script>
     </main>
+    <!-- //script -->
+
+
+    <script>
+        //조건문 (1~6)
+        // 01. if문
+        {
+            if (true) {
+                document.querySelector(".result01").innerHTML = "실행되었습니다.(true)";
+            } else {
+                document.querySelector(".result01").innerHTML = "실행되었습니다.(false)";
+            }
+        }
+
+        // 02. if문 생략 -> 중괄호 생략 
+        {
+            const num = 100;
+
+            if (num == 100) document.querySelector(".result02").innerHTML = "실행되었습니다.(true)";
+            else document.querySelector(".result02").innerHTML = "실행되었습니다.(false)";
+        }
+
+        // 03. 다중 if문
+        {
+            const num = 100;
+
+            if (num == 90) {
+                document.querySelector(".result03").innerHTML = "실행되었습니다.(num==90)";
+            } else if (num == 100) {
+                document.querySelector(".result03").innerHTML = "실행되었습니다.(num==100)";
+            } else if (num == 110) {
+                document.querySelector(".result03").innerHTML = "실행되었습니다.(num==110)";
+            } else if (num == 120) {
+                document.querySelector(".result03").innerHTML = "실행되었습니다.(num==120)";
+            } else {
+                document.querySelector(".result03").innerHTML = "실행되었습니다.(num==값이 없음)";
+            }
+        }
+
+        // 04. 중첩 if문
+        {
+            const num = 100;
+
+            if (num == 100) {
+                document.querySelector(".result04").innerHTML += "실행되었습니다.(1)" + "<br>";
+                if (num == 100) {
+                    document.querySelector(".result04").innerHTML += "실행되었습니다.(2)" + "<br>";
+                    if (num == 100) {
+                        document.querySelector(".result04").innerHTML += "실행되었습니다.(3)";
+                    }
+                }
+            } else {
+                document.querySelector(".result04").innerHTML = "실행되었습니다.(4)";
+            }
+        }
+
+        // 05. 삼항 연산자(조건부 연산자) -> if 문을 한 줄로 씀 (컴퓨터가 해석하는 시간이 줄어듬)
+        {
+            const num = 100;
+
+            (num == 100) ? document.querySelector(".result05").innerHTML = "true": document.querySelector(
+                ".result05").innerHTML = "false";
+        }
+
+        // 06. switch문 -> 조건식을 사용할 수 없음! 값이 같냐 안같냐 정도만 가능
+        {
+            const num = 100;
+
+            switch (num) {
+                case 100:
+                    document.querySelector(".result06").innerHTML = "실행되었습니다.(num==100)";
+                    break;
+                case 200:
+                    document.querySelector(".result06").innerHTML = "실행되었습니다.(num==200)";
+                    break;
+                case 300:
+                    document.querySelector(".result06").innerHTML = "실행되었습니다.(num==300)";
+                    break;
+                case 400:
+                    document.querySelector(".result06").innerHTML = "실행되었습니다.(num==400)";
+                    break;
+            }
+        }
+
+        // 07. while문 -> 반복함, 끝을 정해주지 않으면 무한 반복되서 error 난다
+        {
+            let num = 1;
+
+            while (num <= 10) {
+                document.querySelector(".result07").innerHTML += num + ". 실행되었습니다." + "<br>";
+                num++;
+            }
+        }
+
+        // 08. do while문 -> while은 조건에 안맞으면 실행되지 않지만 do while은 조건에 맞든 안맞든 한 번은 실행 됨
+        {
+            let num = 1;
+
+            do {
+                document.querySelector(".result08").innerHTML += num + ". 실행되었습니다." + "<br>";
+                num++;
+            } while (num <= 10);
+        }
+
+        // 09. for문
+        {
+            for (let i = 1; i <= 10; i++) {
+                document.querySelector(".result09").innerHTML += i + ". 실행되었습니다." + "<br>";
+            }
+        }
+
+        // 10. 중첩 for문
+        {
+            for (let i = 1; i <= 1; i++) {
+                document.querySelector(".result10").innerHTML += i + ". 실행(i)되었습니다." + "<br>";
+                for (let j = 1; j <= 5; j++) {
+                    document.querySelector(".result10").innerHTML += j + ". 실행(j)되었습니다.";
+                }
+            }
+            for (let i = 2; i <= 5; i++) {
+                document.querySelector(".result10").innerHTML += "<br>" + i + ". 실행(i)되었습니다." + "<br>";
+                for (let j = 1; j <= 5; j++) {
+                    document.querySelector(".result10").innerHTML += j + ". 실행(j)되었습니다.";
+                }
+            }
+        }
+
+        // 11. break문
+        {
+            let num = 1;
+            while (num <= 20) {
+                document.querySelector(".result11").innerHTML += num;
+                num++;
+                if (num == 10) {
+                    break;
+                }
+            }
+
+            document.querySelector(".result11").innerHTML += "<br>";
+
+            //for문          
+            for (let i = 1; i <= 20; i++) {
+                document.querySelector(".result11").innerHTML += i;
+                if (i == 10) {
+                    break;
+                }
+            }
+        }
+
+        // 12. continue문
+        {
+            let num = 0
+            while (num < 10) {
+                num++;
+                if (num == 5) {
+                    continue;
+                }
+                document.querySelector(".result12").innerHTML += num;
+            }
+            document.querySelector(".result12").innerHTML += "<br>";
+
+            for (let i = 1; i <= 10; i++) {
+                if (i == 5) {
+                    continue;
+                }
+                document.querySelector(".result12").innerHTML += i;
+            }
+
+        }
+    </script>
 </body>
 
 </html>
