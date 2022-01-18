@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Layout05</title>
+    <title>Layout05-1</title>
+
     <style>
         * {
             margin: 0;
@@ -42,9 +43,9 @@
 
         .container {
             width: 1200px;
-            margin: 0 auto;
             height: inherit;
-            background-color: rgba(0, 0, 0, 0.3);
+            background-color: rgb(0, 0, 0, 0.2);
+            margin: 0 auto;
         }
 
         #contents .container {
@@ -53,25 +54,26 @@
             flex-direction: column;
         }
 
-        #contents .container .aside {
-            width: 400px;
-            height: 780px;
-            background-color: #795548;
-        }
-
         #contents .container .article1 {
-            width: 800px;
+            width: 900px;
             height: 390px;
-            background-color: #6D4C41;
+            background-color: #123;
         }
 
         #contents .container .article2 {
-            width: 800px;
+            width: 900px;
             height: 390px;
-            background-color: #5D4037;
+            background-color: #456;
+        }
+
+        #contents .container .aside {
+            width: 300px;
+            height: 780px;
+            background-color: #789;
         }
     </style>
 </head>
+
 
 <body>
     <div id="wrap">
@@ -83,9 +85,9 @@
         </nav>
         <section id="contents">
             <div class="container">
-                <aside class="aside"></aside>
                 <article class="article1"></article>
                 <article class="article2"></article>
+                <article class="aside"></article>
             </div>
         </section>
         <footer id="footer">

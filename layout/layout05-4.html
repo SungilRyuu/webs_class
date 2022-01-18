@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #wrap {}
+
+        #header {
+            height: 100px;
+            background-color: #E0F2F1;
+        }
+
+        #nav {
+            background-color: rgb(152, 167, 231);
+        }
+
+        #nav .container {
+            display: flex;
+        }
+
+        #nav .container .nav1 {
+            width: 30%;
+            height: 100px;
+            background-color: #80CBC4;
+        }
+
+        #nav .container .nav2 {
+            width: 70%;
+            height: 100px;
+            background-color: #396b66;
+        }
+
+        #contents {
+            height: 780px;
+            background-color: #26A69A;
+        }
+
+        #footer {
+            height: 100px;
+            background-color: #00897B;
+        }
+
+        .container {
+            width: 1200px;
+            height: inherit;
+            margin: 0 auto;
+            background-color: rgb(0, 0, 0, 0.2);
+        }
+
+        #contents .container {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
+
+        #contents .container .article1 {
+            width: 60%;
+            display: flex;
+        }
+
+        #contents .container .article1 .a1 {
+            width: 50%;
+            height: 390px;
+            background-color: rgb(175, 101, 101);
+        }
+
+        #contents .container .article1 .a2 {
+            width: 50%;
+            height: 390px;
+            background-color: rgb(121, 44, 44);
+        }
+
+        #contents .container .article2 {
+            width: 60%;
+            height: 390px;
+            background-color: rgb(55, 119, 47);
+        }
+
+        #contents .container .aside1 {
+            width: 40%;
+            height: 780px;
+            background-color: rgb(94, 139, 184);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="container"></div>
+        </header>
+        <nav id="nav">
+            <div class="container">
+                <article class="nav1"></article>
+                <article class="nav2"></article>
+            </div>
+        </nav>
+        <section id="contents">
+            <div class="container">
+                <article class="article1">
+                    <article class="a1"></article>
+                    <article class="a2"></article>
+                </article>
+                <article class="article2"></article>
+                <article class="aside1"></article>
+            </div>
+        </section>
+        <footer id="footer">
+            <div class="container"></div>
+        </footer>
+    </div>
+
+</body>
+
+</html>
