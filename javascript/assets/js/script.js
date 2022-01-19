@@ -2,6 +2,6 @@
 
 document.querySelectorAll(".result").forEach(function(el){
     el.addEventListener("click", function(){
-        alert("ddd");
+        el.classList.toggle("active");
     });
 });
