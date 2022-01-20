@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice02</title>
+
+    <!-- style -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/prism2.css">
+
+</head>
+
+<body>
+
+    <div class="back"><a href="practice.html">Back</a></div>
+
+    <main id="main">
+        <div class="test">
+            <h2>2. 구구단 출력하기</h2>
+
+            <!-- 01 -->
+            <h3>2.1 for문을 이용하여 2단부터 9단까지 출력하시오!</h3>
+
+
+            <div class="code">
+                <pre class="line-numbers"><code class="language-js">{
+    for(let i = 2; i &lt;= 9; i++){
+        document.write("&lt;br&gt;");
+        
+        for (let j = 1; j &lt;= 9; j++){
+            let sum = i * j;
+            document.write(i + " * " + j + " = " + sum, "&lt;br&gt;");
+        }
+    }
+}</code></pre>
+            </div>
+
+            
+            <div class="result result01">
+                <h4>결과보기</h4>
+                <div></div>
+            </div>
+
+
+
+
+            <h3>2.2 while문을 이용하여 2단부터 9단까지 출력하시오!</h3>
+            <div class="code">
+                <pre class="line-numbers"><code class="language-js">{
+    let i = 2;
+    let j = 1;
+            
+    while (i &lt;= 9) {
+        while (j &lt;= 9) {
+            let sum = i * j;
+            document.write(i + " * " + j + " = " + sum, "&lt;br&gt;");
+            j++;
+            }
+        document.write("&lt;br&gt;");
+        i++;
+        j = 1;
+    }
+    
+}</code></pre>
+            </div>
+
+            
+            <h3>2.3 사용자가 원하는 단을 받아 출력하시오!</h3>
+            <p>조건 : 사용자가 원하는 단은 prompt()를 사용합니다. <a href="#" class="pBtn btn03">클릭</a></p>
+            <div class="code">
+                <pre class="line-numbers"><code class="language-js">{
+    let num, result; 
+
+    document.querySelector(".btn03").addEventListener("click", () => {
+        num = prompt("출력할 구구단 숫자를 입력해주세요!!", "2");
+
+        for(let i = 1; i &lt;= 9; i++){
+            result = num + " * " + i + " = " + (num * i ) + "&lt;br&gt;"
+            document.querySelector(".result03 > div").innerHTML += result;
+        }
+    });
+}</code></pre>
+            </div>
+
+            <div class="result result03">
+                <h4>결과보기</h4>
+                <div></div>
+            </div>
+
+
+    </main>
+
+
+    
+    <!-- script -->
+    <script src="assets/js/prism.js"></script>
+    <script src="assets/js/script.js"></script>
+
+    <!--  script -->    
+    <script>
+    // 01
+
+    // 02
+    
+    // 03. 사용자가 원하는 단을 받아 출력하시오!
+    {
+        let num, result; 
+
+        //버튼을 클릭하면 경고창을~~
+        document.querySelector(".btn03").addEventListener("click", () => {
+            num = prompt("출력할 구구단 숫자를 입력해주세요!!", "2");
+            //console.log(num)
+
+            for(let i = 1; i <= 9; i++){
+                result = num + " * " + i + " = " + (num * i ) + "<br>"
+                //console.log(result)
+                document.querySelector(".result03 > div").innerHTML += result;
+            }
+        });
+    }
+    </script>
+
+</body>
+
+</html>

@@ -40,6 +40,15 @@
     font-family: 'GmarketSans';
 }
 
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
 body {
     background: #F5F5F5;
 }
@@ -126,7 +135,29 @@ body {
     overflow-x: auto;
 }
 
+.refer .title {}
+
+.refer .title ul {}
+
+.refer .title li {
+    display: inline;
+}
+
+.refer .title li a {
+    background-color: #00db72;
+    color: #fff;
+    display: inline-block;
+    padding: 6px 30px;
+    margin-bottom: 5px;
+}
+
+.refer .title li.active a {
+    background-color: #000;
+    color: #fff;
+}
+
 .refer .table {
+    margin-top: 40px;
     overflow-x: auto;
 }
 

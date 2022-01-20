@@ -1,0 +1,39 @@
+<h3>___</h3>
+
+<h4>___</h4>
+
+<p>____</p>
+
+
+<h3>먼저, confirm으로 확인창을 표시하겠습니다.</h3>
+<script>
+    const btn = document.querySelector("#samle1 .btn1");
+
+    btn.addEventListener("click", () => {
+        const conf = confirm("오늘 공부할 준비가 되었나요?");
+    });
+</script>
+
+<p>먼저, 버튼을 누르면 확인창이 뜨도록 하였습니다.</p>
+<p>그 다음은 if를 넣는 것인데...</p>
+
+<h3>if 적용하기</h3>
+<h4>첫 번째 시도</h4>
+<script>
+    const btn = document.querySelector("#samle1 .btn1");
+
+    btn.addEventListener("click", () => {
+        const conf = confirm("오늘 공부할 준비가 되었나요?");
+
+        if (true) {
+            document.querySelector("#sample1 .view").innerText = "네, 준비되었습니다.";
+        } else {
+            document.querySelector("#sample1 .view").innerText = "네, 아직 준비되지 않았습니다.";
+        }
+    });
+</script>
+
+<p>흠... 주어진 대로 한 것 같은데 안되네요</p>
+<p>예전에 if문 정리한 것과 계속 비교를 했는데 </p>
+
+
