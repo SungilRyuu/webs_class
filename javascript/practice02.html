@@ -38,7 +38,7 @@
 }</code></pre>
             </div>
 
-            
+
             <div class="result result01">
                 <h4>결과보기</h4>
                 <div></div>
@@ -63,11 +63,15 @@
         i++;
         j = 1;
     }
-    
 }</code></pre>
             </div>
 
-            
+            <div class="result result02">
+                <h4>결과보기</h4>
+                <div></div>
+            </div>
+
+
             <h3>2.3 사용자가 원하는 단을 받아 출력하시오!</h3>
             <p>조건 : 사용자가 원하는 단은 prompt()를 사용합니다. <a href="#" class="pBtn btn03">클릭</a></p>
             <div class="code">
@@ -94,33 +98,61 @@
     </main>
 
 
-    
+
     <!-- script -->
     <script src="assets/js/prism.js"></script>
     <script src="assets/js/script.js"></script>
 
-    <!--  script -->    
+    <!--  script -->
     <script>
-    // 01
+        // 01
+        {
+            for (let i = 2; i <= 9; i++) {
+                document.querySelector(".result01 > div").innerHTML += "<br>";
 
-    // 02
-    
-    // 03. 사용자가 원하는 단을 받아 출력하시오!
-    {
-        let num, result; 
-
-        //버튼을 클릭하면 경고창을~~
-        document.querySelector(".btn03").addEventListener("click", () => {
-            num = prompt("출력할 구구단 숫자를 입력해주세요!!", "2");
-            //console.log(num)
-
-            for(let i = 1; i <= 9; i++){
-                result = num + " * " + i + " = " + (num * i ) + "<br>"
-                //console.log(result)
-                document.querySelector(".result03 > div").innerHTML += result;
+                for (let j = 1; j <= 9; j++) {
+                    let sum = i * j;
+                    document.querySelector(".result01 > div").innerHTML += i + " * " + j + " = " + sum + "<br>";
+                }
             }
-        });
-    }
+        }
+
+        // 02
+
+        {
+            let i = 2;
+            let j = 1;
+
+            while (i <= 9) {
+                while (j <= 9) {
+                    let sum = i * j;
+                    document.querySelector(".result02 > div").innerHTML += i + " * " + j + " = " + sum + "<br>";
+                    j++;
+                }
+                document.querySelector(".result02 > div").innerHTML += "<br>";
+                i++;
+                j = 1;
+            }
+        }
+
+
+
+        // 03. 사용자가 원하는 단을 받아 출력하시오!
+        {
+            let num, result;
+
+            //버튼을 클릭하면 경고창을~~
+            document.querySelector(".btn03").addEventListener("click", () => {
+                num = prompt("출력할 구구단 숫자를 입력해주세요!!", "2");
+                //console.log(num)
+
+                for (let i = 1; i <= 9; i++) {
+                    result = num + " * " + i + " = " + (num * i) + "<br>"
+                    //console.log(result)
+                    document.querySelector(".result03 > div").innerHTML += result;
+                }
+            });
+        }
     </script>
 
 </body>

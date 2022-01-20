@@ -11,8 +11,6 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/prism2.css">
 
-    <!-- script -->
-    <script src="assets/js/prism2.js"></script>
 </head>
 
 <body>
@@ -38,6 +36,12 @@
 }</code></pre>
             </div>
 
+
+            <div class="result result01">
+                <h4>결과보기</h4>
+                <div></div>
+            </div>
+
             <!-- 02 -->
             <h3>1.2 for문을 이용해서 1부터 100까지 출력하는 함수를 작성해주세요.</h3>
 
@@ -47,6 +51,11 @@
         console.log(i);
     }                   
 }</code></pre>
+            </div>
+
+            <div class="result result02">
+                <h4>결과보기</h4>
+                <div></div>
             </div>
 
             <!-- 03 -->
@@ -81,6 +90,16 @@
 }</code></pre>
             </div>
 
+            <div class="result result03_1">
+                <h4>결과보기(짝수)</h4>
+                <div></div>
+            </div>
+
+            <div class="result result03_2">
+                <h4>결과보기(홀수)</h4>
+                <div></div>
+            </div>
+
 
 
         </div>
@@ -88,7 +107,42 @@
 
     </main>
 
+    <!-- script -->
+    <script src="assets/js/prism.js"></script>
+    <script src="assets/js/script.js"></script>
+
     <script>
+        //01
+        {
+            let num = 1;
+
+            while (num <= 100) {
+                document.querySelector(".result01 > div").innerHTML += num + " ";
+                num++;
+            }
+        }
+
+        //02
+        {
+            for (let i = 1; i <= 100; i++) {
+                document.querySelector(".result02 > div").innerHTML += i + " ";
+            }
+        }
+
+        //03 짝수
+        {
+            for(let i = 1; i <= 100; i++){
+                if(i % 2 == 0) document.querySelector(".result03_1 > div").innerHTML += i + " ";
+            }
+        }
+        
+        //03 홀수
+        {
+            for(let i = 1; i <= 100; i++){
+                if(i % 2 !== 0) document.querySelector(".result03_2 > div").innerHTML += i + " ";
+            }
+        }
+
         // // 짝수
         // {
         //     for (let i = 1; i <= 100; i++) {
@@ -103,11 +157,6 @@
         //         }
         //     }
         // }
-
-
-
-
-
     </script>
 
 </body>
