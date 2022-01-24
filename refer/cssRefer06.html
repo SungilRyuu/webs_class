@@ -42,40 +42,69 @@
 
         <div class="refer">
             <div class="doc">
-                <h3>id</h3>
+                <h3>float 영역 깨짐 현상</h3>
                 <p>
-                    id는 페이지 내에서 특정 위치나 태그를 지정하는 것이기 때문에 오직 페이지 내에서 한 번만 사용할 수 있습니다.
-                    CSS에서 정의하는 방법은 '#id name'과 같이 적용합니다.
+                    float은 '띄우다'라는 뜻으로, 한 요소를 일반적인 레이아웃의 흐름으로부터 띄어 수평 정렬을 할 때 사용합니다.
+                    float 속성은 이미지와 텍스트를 함께 배치할 때 사용하며, 요소가 부모요소 기준으로 왼쪽 또는 오른쪽에 배치됩니다. <br><br>
+                    float: left 로 레이아웃을 만들 때, 영역 깨짐(Height 값이 사라져 0이 되는 현상) 이 발생을 합니다. <br>
+                    이를 해결할 수 있는 방법은 아래의 3가지 입니다.
                 </p>
 
-                <h3>class</h3>
-                <p>
-                    class는 자주 사용되는 스타일에 적용합니다.
-                    CSS에서 정의하는 방법은 '.class name'과 같이 적용합니다.
-                </p><br>
 
+                <h4>1. 깨지는 영역에 clear: both; 를 설정합니다.</h4>
+                <p>
+                    clear: both; 는 취소하다 라는 개념입니다.
+                    float 속성을 더 이상 사용하지 않고 그 전으로 되돌립니다.
+                </p>
                 <div class="code">
-                    <pre><code>&lt;div id="wrap"&gt;
-    &lt;header id="header"&gt; &lt;/header&gt;
-    &lt;nav id="nav"&gt; &lt;/nav&gt;
-    &lt;section id="contents"&gt;
-        &lt;aside class="aside"&gt; &lt;/aside&gt;
-        &lt;section class="content"&gt;
-                &lt;article class="article1"&gt; &lt;/article&gt;
-                &lt;article class="article2"&gt; &lt;/article&gt;
-                &lt;article class="article3"&gt; &lt;/article&gt;
-        &lt;/section&gt;
-    &lt;/section&gt;
-    &lt;footer id="footer"&gt; &lt;/footer&gt;
-&lt;/div&gt;</code></pre>    
-                    </div>
+                    <pre><code>clear: both; 오른쪽, 왼쪽을 취소, 가장 많이 사용 
+clear: left; 왼쪽을 취소
+clear: right; 오른쪽을 취소
+clear: none; 기초 값으로, clear값을 설정하지 않은 것과 같음</code></pre>
                 </div>
 
+
+                <h4>2. 부모 영역한테 overflow:hidden; 설정</h4>
+                <p>
+                    자식 영역에 float을 주게되면, 부모 영역의 height값이 없어집니다.
+                    이 때, 부모 영역에 overflow:hidden;을 적용하면 float은 해제되어 영역만큼 높이 설정이 됩니다.
+                </p>
+
+                <h4>3. 가상의 영역 속성을 만들어서 =clearfix 속성을 설정</h4>
+                <p>
+                    float을 사용한 부모 영역에 .clearfix를 설정하면 float으로 인하여 영역이 깨지는 현상을 방지할 수 있습니다.
+                    즉, 가상의 영역 속성을 만들고 내용을 넣어 출력하는 것입니다.
+                </p>
+
+                <div class="code">
+                    <pre><code>     /* clearfix */
+.clearfix {
+    zoom: 1;
+}
+
+.clearfix::before,
+.clearfix::after {
+    content: '';
+    display: block;
+}
+
+.clearfix:after {
+    clear: both;
+}</code></pre>
+                </div>
+
+                <p>
+                    <ul>
+                        <li>zoom:1; : 익스플로어 6,7,8 버전에 영역을 잡기위한 요소</li>
+                        <li>::before, ::after : 가상요소를 사용하여 컨텐츠를 사용하는 속성</li>
+                        <li>clear: both; : float 성질을 양쪽에서 차단하는 역할</li>
+                    </ul>
+                </p>
+
             </div>
+
         </div>
         <!-- //refer -->
-
-
 
     </main>
 

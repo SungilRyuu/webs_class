@@ -9,57 +9,61 @@
     3. 가상의 영역 속성을 만들어서 = clearfix 속성을 설정
  */
 
-#header {
-    min-width: 1500px;
-    padding: 10px;
-    white-space: nowrap;
-}
+ #header {
+     padding: 10px;
+     border-bottom: 1px solid #eee;
+     min-width: 1200px;
+     white-space: nowrap;
+ }
 
-#header .logo {
-    float: left;
-    width: 20%;
-    text-align: left;
-    padding: 20px 28px;
-    margin-top: 3px;
-}
+ #header .logo {
+     float: left;
+     width: 20%;
+     text-align: left;
+     padding-left: 18px;
+     padding-top: 15px;
+     padding-bottom: 7px;
+ }
 
-#header .logo a {
-    font-size: 30px;
-}
+ #header .logo a {
+     font-size: 30px;
+ }
 
-#header .logo a em {
-    font-size: 18px;
-}
+ #header .logo a em {
+     font-size: 18px;
+     font-weight: 300;
+ }
 
-#header .nav {
+ #header .menu {
     float: left;
     width: 60%;
     text-align: center;
 }
 
-#header .nav ul {
-    margin-top: 35px;
+#header .menu ul {
 }
 
-#header .nav li {
+#header .menu li {
+    display: inline;     
+}
+
+#header .menu li a {
+    font-size: 18px;
     display: inline-block;
+    padding: 19.5px 30px;
 }
 
-#header .nav li a {
-    padding: 20px 30px;
-    margin: 0 30px;
-}
-
-#header .member {
-    float: left;
+ #header .member {
+    float: right;
     width: 20%;
     text-align: right;
-    margin-top: 30px;
-    padding: 0 20px;
+    padding-top: 10px;
+    padding-right: 20px;
 }
 
-#header .member a {
+#header .member a{
+    display: inline-block;
+    padding: 10px 22px;
     border: 1px solid #000;
     border-radius: 50px;
-    padding: 5px 20px;
 }
