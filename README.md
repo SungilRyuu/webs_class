@@ -11,3 +11,7 @@ https://sungilryuu.github.io/webs_class/refer/html.html
 
 ## CSS 레퍼런스
 https://sungilryuu.github.io/webs_class/refer/css.html
+
+## 웹표준 사이트 제작
+https://sungilryuu.github.io/webs_class/site/webClass/index.html
+
