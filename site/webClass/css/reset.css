@@ -43,6 +43,37 @@ textarea {
     font-family: NexonLv1Gothic, 'Malgun Gothic', '맑은 고딕', dotum, 돋움;
 }
 
+/* 링크 초기화 */
+a {
+    color: #222;
+    text-decoration: none;
+}
+
+/* 목록 초기화 */
+ol, ul {
+    list-style: none;
+}
+
+/* 스타일 초기화 */
+em{
+    font-style: normal;
+}
+
+/* clearfix */
+.clearfix {
+    zoom: 1; /* ie 6,7,8 */
+}
+
+.clearfix::before,
+.clearfix::after {
+    content: '';
+    display: block;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
 /* 폰트 셋팅 */
 .NexonLv1 {font-family: NexonLv1Gothic;}
 .NexonLv1-300 {font-family: NexonLv1Gothic; font-weight: 300;}
