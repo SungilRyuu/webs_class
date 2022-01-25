@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML/CSS 레퍼런스 북</title>
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="../assets/face/css.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/face/css.png">
+    <link rel="icon" href="../assets/face/css.png" sizes="128x128">
+
+    <style>
+        @font-face {
+            font-family: 'Cafe24SsurroundAir';
+            font-weight: normal;
+            font-style: normal;
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/Cafe24SsurroundAir/Cafe24SsurroundAir.eot');
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/Cafe24SsurroundAir/Cafe24SsurroundAir.eot?#iefix') format('embedded-opentype'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/Cafe24SsurroundAir/Cafe24SsurroundAir.woff2') format('woff2'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/Cafe24SsurroundAir/Cafe24SsurroundAir.woff') format('woff'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/Cafe24SsurroundAir/Cafe24SsurroundAir.ttf') format("truetype");
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Jalnan';
+            font-weight: normal;
+            font-style: normal;
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/goodchoice/Jalnan.eot');
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/goodchoice/Jalnan.eot?#iefix') format('embedded-opentype'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/goodchoice/Jalnan.woff2') format('woff2'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/goodchoice/Jalnan.woff') format('woff'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/goodchoice/Jalnan.ttf') format("truetype");
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'Cafe24Syongsyong';
+            font-weight: normal;
+            font-style: normal;
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/Cafe24Syongsyong/Cafe24Syongsyong.eot');
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/Cafe24Syongsyong/Cafe24Syongsyong.eot?#iefix') format('embedded-opentype'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/Cafe24Syongsyong/Cafe24Syongsyong.woff2') format('woff2'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/Cafe24Syongsyong/Cafe24Syongsyong.woff') format('woff'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/Cafe24Syongsyong/Cafe24Syongsyong.ttf') format("truetype");
+            font-display: swap;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        body {
+            background: #ffdbe5;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        #wrap {
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .sea {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 30vh;
+            background: linear-gradient(to bottom, #fcc3ca 10%, #dfc8fa);
+            z-index: 10;
+        }
+
+        .text {
+            position: absolute;
+            left: 50%;
+            top: 40%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            z-index: 30;
+        }
+
+        .text .subTitle {
+            font-family: 'Cafe24SsurroundAir';
+            background: #eb6567;
+            color: #fff;
+            border-radius: 50px;
+            padding: 14px 60px 10px 60px;
+            display: inline-block;
+            margin-bottom: 30px;
+            font-size: 30px;
+            box-shadow: 3px 3px 0 #6c3c4d;
+            position: relative;
+        }
+
+        .text .subTitle::before {
+            content: '';
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #6c4c4d;
+            position: absolute;
+            left: 30px;
+            top: 50%;
+            margin-top: -5px;
+        }
+
+        .text .subTitle::after {
+            content: '';
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #6c4c4d;
+            position: absolute;
+            right: 30px;
+            top: 50%;
+            margin-top: -5px;
+        }
+
+        .text h1 a {
+            font-family: 'Cafe24Syongsyong';
+            font-size: 10vw;
+            line-height: 1.2;
+            color: #EB6567;
+            font-weight: normal;
+            font-style: italic;
+            position: relative;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        
+        .text h2 a {
+            font-family: 'Cafe24Syongsyong';
+            font-size: 80px;
+            color: #fff;
+            position: relative;
+            display: inline-block;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: all 0.3s;
+        }
+
+        .text h2 a:hover {
+            color: #EB6567;
+        }
+
+        .text h1 strong {
+            color: #e16365;
+        }
+
+        .text h1 em {
+            font-style: normal;
+            color: #fff;
+            -webkit-text-stroke: 0.05em #6c4c4d;
+        }
+
+        .love {
+            width: 300px;
+            position: absolute;
+            left: 50%;
+            bottom: -30px;
+            transform: translateX(-50%);
+            z-index: 20;
+        }
+
+        .love::after {
+            font-family: 'Cafe24Syongsyong';
+            content: "오늘 공부할까?";
+            position: absolute;
+            right: -5vw;
+            top: 0;
+            color: #eb6567;
+            font-size: 20px;
+            transform: rotate(10deg);
+        }
+
+        .ship {
+            width: 300px;
+            position: absolute;
+            left: 0;
+            bottom: 10vh;
+            z-index: 17;
+            animation-name: move;
+            animation-duration: 40s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes move {
+            0% {
+                left: -30%;
+            }
+
+            100% {
+                left: 100%;
+            }
+        }
+
+        .duck1 {
+            width: 30px;
+            position: absolute;
+            right: 10vw;
+            bottom: 20vh;
+            z-index: 15;
+            animation: duck1 7s infinite linear;
+        }
+
+        @keyframes duck1 {
+            0% {right: -10vw;}
+            50% {right: 15vw;}
+            100% {right: 40vw;}
+        }
+
+        .duck2 {
+            width: 20px;
+            position: absolute;
+            right: 8vw;
+            bottom: 19vh;
+            z-index: 15;
+            animation: duck2 10s infinite linear;
+        }
+
+        @keyframes duck2 {
+            0% {right: -10vw;}
+            50% {right: 15vw;}
+            100% {right: 40vw;}
+        }
+
+        .balloon {
+            width: 70px;
+            position: absolute;
+            left: 10vw;
+            top: 10vw;
+            animation: ball 45s infinite linear;
+        }
+
+        @keyframes ball {
+            0% {
+                left: 100vw
+            }
+
+            50% {
+                top: 20vw
+            }
+
+            100% {
+                left: -10vw
+            }
+        }
+
+        .cloud1 {
+            width: 80px;
+            position: absolute;
+            left: 20vw;
+            top: 5vh;
+        }
+
+        .cloud2 {
+            width: 70px;
+            position: absolute;
+            left: 40vw;
+            top: 10vh;
+            animation: move2 130s infinite linear;
+        }
+
+        @keyframes move2 {
+            0% {
+                left: 40vh
+            }
+
+            50% {
+                left: 110vh
+            }
+
+            75% {
+                left: -70vh
+            }
+
+            100% {
+                left: 40vh
+            }
+
+        }
+
+        .cloud3 {
+            width: 100px;
+            position: absolute;
+            right: 10vw;
+            top: 15vh;
+            transform: rotateY(180deg);
+            animation: move1 100s infinite linear;
+        }
+
+        @keyframes move1 {
+            0% {
+                right: -10vh
+            }
+
+            100% {
+                right: 110vh
+            }
+        }
+
+        .hearts > .particle {
+            opacity: 0;
+            position: absolute;
+            background-color: #CC2A5D;
+            animation: hearts 3s ease-in infinite;
+        }
+        .hearts > .particle:before,
+        .hearts > .particle:after {
+            position: absolute;
+            content: "";
+            border-radius: 100px;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            background-color: #CC2A5D;
+        }
+        .hearts > .particle:before {
+            transform: translateX(-50%);
+        }
+        .hearts > .particle:after {
+            transform: translateY(-50%);
+        }
+        @keyframes hearts {
+            0% {opacity: 0; transform: translate(0, 0%) rotate(45deg);}
+            20% {opacity: 0.6; transform: translate(0, -20%) rotate(45deg);}
+            100% {opacity: 0; transform: translate(0, -1000%) rotate(45deg);}
+        }
+
+        @media (max-width: 800px) {
+            .text .subTitle {
+                font-size: 20px;
+            }
+
+            .text h2 a {
+                font-size: 40px;
+            }
+
+            .text h1 a {
+                white-space: nowrap;
+                font-size: 70px;
+            }
+
+            .cloud1, .ship {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <div class="sea"></div>
+        <div class="text hearts">
+            <span class="subTitle">HTML/CSS</span>
+            <h1><a href="../index.html">레퍼런스 북</a></h1>
+            <h2>
+                <a href="html.html">HTML</a>
+                <a href="css.html">CSS</a>
+            </h2>
+        </div>
+
+
+        <div class="love">
+            <img src="assets/img/love.png" alt="사람">
+        </div>
+        <div class="ship">
+            <img src="assets/img/ship.png" alt="배">
+        </div>
+        <div class="duck1">
+            <img src="assets/img/duck1.png" alt="오리1">
+        </div>
+        <div class="duck2">
+            <img src="assets/img/duck2.png" alt="오리2">
+        </div>
+        <div class="balloon">
+            <img src="assets/img/balloon.png" alt="열기구">
+        </div>
+        <div class="cloud1">
+            <img src="assets/img/cloud.png" alt="구름1">
+        </div>
+        <div class="cloud2">
+            <img src="assets/img/cloud.png" alt="구름2">
+        </div>
+        <div class="cloud3">
+            <img src="assets/img/cloud.png" alt="구름3">
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script>
+        jQuery.rnd = function(m,n) {
+            m = parseInt(m);
+            n = parseInt(n);
+            return Math.floor( Math.random() * (n - m + 1) ) + m;
+        }
+        function hearts() {
+            $.each($(".hearts"), function(){
+                var heartcount = ($(this).width()/50)*1;
+                for(var i = 0; i <= heartcount; i++) {
+                    var size = ($.rnd(60,120)/5);
+                    $(this).append('<span class="particle" style="top:' + $.rnd(20,80) + '%; left:' + $.rnd(0,95) + '%;width:' + size + 'px; height:' + size + 'px;animation-delay: ' + ($.rnd(0,30)/10) + 's;"></span>');
+                }
+            });
+        }
+        hearts();
+    </script>
+</body>
+
+</html>
