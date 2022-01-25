@@ -135,10 +135,6 @@ body {
     overflow-x: auto;
 }
 
-.refer .title {}
-
-.refer .title ul {}
-
 .refer .title li {
     display: inline;
 }
@@ -154,6 +150,23 @@ body {
 .refer .title li.active a {
     background-color: #000;
     color: #fff;
+}
+
+.refer .subTitle {
+    margin-top: 10px;
+}
+
+.refer .subTitle li {
+    display: inline-block;
+}
+
+.refer .subTitle li a {
+    margin-right: 10px;
+}
+
+.refer .subTitle li.active a {
+    border-bottom : 2px solid #000;
+
 }
 
 .refer .table {
@@ -297,3 +310,18 @@ body {
     }
 
 }
+
+/* 간격 셋팅 */
+.mt0 {margin-top: 0 !important;}
+.mt10 {margin-top: 10 !important;}
+.mt20 {margin-top: 20 !important;}
+.mt30 {margin-top: 30 !important;}
+.mt40 {margin-top: 40 !important;}
+.mt50 {margin-top: 50 !important;}
+
+.mb0 {margin-bottom: 0 !important;}
+.mb10 {margin-bottom: 10 !important;}
+.mb20 {margin-bottom: 20 !important;}
+.mb30 {margin-bottom: 30 !important;}
+.mb40 {margin-bottom: 40 !important;}
+.mb50 {margin-bottom: 50 !important;}

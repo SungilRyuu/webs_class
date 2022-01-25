@@ -7,8 +7,7 @@
     1. 깨지는 영역에 clear: both; 설정
     2. 부모 영역한테 overflow: hidden; 설정
     3. 가상의 영역 속성을 만들어서 = clearfix 속성을 설정
- */
-
+ 
  #header {
      padding: 10px;
      border-bottom: 1px solid #eee;
@@ -67,3 +66,18 @@
     border: 1px solid #000;
     border-radius: 50px;
 }
+*/
+
+/* 헤더02 flex를 사용한 경우 */
+#header {
+    border-bottom: 1px solid #eee;
+    display: grid;
+}
+
+#header .logo {}
+
+#header .menu {}
+
+#header .menu li {}
+
+#header .member {}
