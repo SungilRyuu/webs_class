@@ -36,6 +36,7 @@
                 <li><a href="cssRefer04.html">CSS 색상</a></li>
                 <li><a href="cssRefer05.html">Id/Class 차이점</a></li>
                 <li><a href="cssRefer06.html">float</a></li>
+                <li><a href="cssRefer07.html">벤더 프리픽스</a></li>
             </ul>
         </div>
         <!-- //menu -->
@@ -138,12 +139,12 @@
                             <tr>
                                 <th>형제 선택자<br>(Sibling Selector)</th>
                                 <td>div ~ p {color: #fff;}</td>
-                                <td></td>
+                                <td>div 태그 뒤에 오는 p 태그를 선택하여 글씨 색을 하얀색으로 변경합니다.</td>
                             </tr>
                             <tr>
                                 <th>인접 형제 선택자<br>(Adjacent Sibling Selector)</th>
                                 <td>div + p {color: #fff;}</td>
-                                <td></td>
+                                <td>div 태그 바로 뒤에 오는 p 태그를 선택하여 글씨 색을 하얀색으로 변경합니다.</td>
                             </tr>
                         </tbody>
                     </table>
@@ -221,27 +222,27 @@
                             <tr>
                                 <th>::first-line</th>
                                 <td>p::first-line {color: #fff;}</td>
-                                <td></td>
+                                <td>각 요소의 첫번째 줄의 글씨 색을 하얀색으로 변경합니다.</td>
                             </tr>
                             <tr>
                                 <th>::first-letter</th>
                                 <td>p::first-letter {color: #fff;}</td>
-                                <td></td>
+                                <td>각 요소의 첫 글자를 글씨 색을 하얀색으로 변경합니다.</td>
                             </tr>
                             <tr>
                                 <th>::before</th>
                                 <td>p::before {content: '시작'}</td>
-                                <td></td>
+                                <td>p 태그의 앞에 시작이라는 텍스트를 추가합니다.</td>
                             </tr>
                             <tr>
                                 <th>::after</th>
                                 <td>p::after {content: '끝'}</td>
-                                <td></td>
+                                <td>p 태그의 뒤에 끝이라는 텍스트를 추가합니다.</td>
                             </tr>
                             <tr>
                                 <th>::selection</th>
                                 <td>p::selection {color:red;}</td>
-                                <td></td>
+                                <td>p 태그에서 드래그 하는 부분의 색상을 빨간색으로 변경합니다.</td>
                             </tr>
                         </tbody>
                     </table>
@@ -265,67 +266,67 @@
                             <tr>
                                 <th>:first-child</th>
                                 <td>li:first-child {color: #fff;}</td>
-                                <td></td>
+                                <td>li 태그의 첫번째 자식의 글자 색상을 하얀색으로 변경합니다.</td>
                             </tr>
                             <tr>
                                 <th>:last-child</th>
                                 <td>li:last-child {color: #fff;}</td>
-                                <td></td>
+                                <td>li 태그의 마지막 자식의 글자 색상을 하얀색으로 변경합니다.</td>
                             </tr>
                             <tr>
                                 <th>:first-of-type</th>
                                 <td>p:first-of-type {color: #fff;}</td>
-                                <td></td>
+                                <td>p 태그의 첫번째 element의 색상을 하얀색으로 변경합니다.</td>
                             </tr>
                             <tr>
                                 <th>:last-of-type</th>
                                 <td>p:last-of-type {color: #fff;}</td>
-                                <td></td>
+                                <td>p 태그의 마지막 element의 색상을 하얀색으로 변경합니다.</td>
                             </tr>
                             <tr>
                                 <th>:nth-child()</th>
                                 <td>li:nth-child(2) {color: #fff;}</td>
-                                <td></td>
+                                <td>li 태그의 두번째 자식의 글자 색상을 하얀색으로 변경합니다.</td>
                             </tr>
                             <tr>
                                 <th>:nth-last-child()</th>
                                 <td>li:nth-last-child(2) {color: #fff;}</td>
-                                <td></td>
+                                <td>li 태그의 뒤에서 두번째 자식의 글자 색상을 하얀색으로 변경합니다.</td>
                             </tr>
                             <tr>
                                 <th>:nth-of-type()</th>
                                 <td>p:nth-of-type(3) {color: #fff;}</td>
-                                <td></td>
+                                <td>p 태그의 세번째 element의 색상을 하얀색으로 변경합니다.</td>
                             </tr>
                             <tr>
                                 <th>:nth-last-of-type()</th>
                                 <td>p:nth-last-of-type(3) {color: #fff;}</td>
-                                <td></td>
+                                <td>p 태그의 마지막에서 세번째 element의 색상을 하얀색으로 변경합니다.</td>
                             </tr>
                             <tr>
                                 <th>:only-child</th>
                                 <td>p:only-child {color: #fff;}</td>
-                                <td></td>
+                                <td>p 태그에서 단 하나의 자식요소일 경우, 색상을 하얀색으로 변경합니다.</td>
                             </tr>
                             <tr>
                                 <th>:only-of-type</th>
                                 <td>p:only-of-type {color: #fff;}</td>
-                                <td></td>
+                                <td>p 태그에서 단 하나의 element일 경우, 색상을 하얀색으로 변경합니다.</td>
                             </tr>
                             <tr>
-                                <th>:root</th>
+                                <th>:not(nth-child( ))</th>
                                 <td>li:not(nth-child(2)) {color: #fff;}</td>
-                                <td></td>
+                                <td>li 태그의 두번째 자식요소를 제외한 요소들의 색상을 하얀색으로 변경합니다.</td>
                             </tr>
                             <tr>
                                 <th>:root</th>
                                 <td>:root {color: #fff;}</td>
-                                <td></td>
+                                <td>문서에서 가장 높은 element의 색상을 하얀색으로 변경합니다.</td>
                             </tr>
                             <tr>
                                 <th>:empty</th>
                                 <td>:empty {color: #fff;}</td>
-                                <td></td>
+                                <td>텍스트와 element가 없는 element의 색상을 하얀색으로 변경합니다.</td>
                             </tr>
                         </tbody>
                     </table>
@@ -349,22 +350,22 @@
                             <tr>
                                 <th>:link</th>
                                 <td>a:link {color: #fff;}</td>
-                                <td></td>
+                                <td>방문한 적이 없는 링크의 글자 색깔을 하얀색으로 지정합니다.</td>
                             </tr>
                             <tr>
                                 <th>:visited</th>
                                 <td>a:visited {color: #fff;}</td>
-                                <td></td>
+                                <td>방문한 적이 있는 링크의 글자 색깔을 하얀색으로 지정합니다.</td>
                             </tr>
                             <tr>
                                 <th>:hover</th>
                                 <td>a:hover {color: #fff;}</td>
-                                <td></td>
+                                <td>마우스로 롤오버 했을 때 링크의 글자 색깔을 하얀색으로 지정합니다.</td>
                             </tr>
                             <tr>
                                 <th>:active</th>
                                 <td>a:active {color: #fff;}</td>
-                                <td></td>
+                                <td>마우스로 클릭 했을 때 링크의 글자 색깔을 하얀색으로 지정합니다.</td>
                             </tr>
                         </tbody>
                     </table>
@@ -388,22 +389,22 @@
                             <tr>
                                 <th>:checked</th>
                                 <td>input:checked {color: #fff;}</td>
-                                <td></td>
+                                <td>체크 또는 선택된 input 박스의 색상을 하얀색으로 변경합니다. </td>
                             </tr>
                             <tr>
                                 <th>:focus</th>
                                 <td>input:focus {color: #fff;}</td>
-                                <td></td>
+                                <td>input 박스에 텍스트를 입력 가능한 상태로 둘 때 색상을 하얀색으로 변경합니다.</td>
                             </tr>
                             <tr>
                                 <th>:enabled</th>
                                 <td>input:enabled {color: #fff;}</td>
-                                <td></td>
+                                <td>활성화된 input 박스의 색상을 하얀색으로 변경합니다.</td>
                             </tr>
                             <tr>
-                                <th>:dis</th>
-                                <td>input:dis {color: #fff;}</td>
-                                <td></td>
+                                <th>:disabled</th>
+                                <td>input:disabled {color: #fff;}</td>
+                                <td>활성화되지 않은 input 박스의 색상을 하얀색으로 변경합니다.</td>
                             </tr>
                         </tbody>
                     </table>
