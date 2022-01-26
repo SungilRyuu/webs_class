@@ -1,5 +1,13 @@
 /* 전체 레이아웃 */
+#wrap {
+    height: 2000px;
+}
 
+/* 컨테이너 */
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
 
 /* 
     헤더01 float
@@ -116,7 +124,7 @@
 } */
 
 /* 헤더03 grid를 사용한 경우 */
-#header{
+#header {
     padding: 10px;
     border-bottom: 1px solid #eee;
     min-width: 1200px;
@@ -176,7 +184,7 @@
 
 #banner {}
 
-.imgType {
+.img_type {
     width: 100%;
     height: 700px;
 
@@ -188,7 +196,52 @@
     background: url(../img/bg01.jpg) no-repeat center / cover;
 }
 
-    /* 웹 사이트에서 이미지를 표현하는 방법
+/* 웹 사이트에서 이미지를 표현하는 방법
     1. HTML 태그를 통해서 : img 태그 : 의미가 있는 이미지(로고, 의미) --> alt(대체문자) 꼭 써야함!
     2. CSS 속성을 통해서 : background 속성 : 의미가 없는 이미지 (배경, 색표현) --> ir효과(대체문자를 css 속성으로 표현)
     3. 이미지 스프라이트 : background와 ir 효과를 통해서 이미지를 표현 (현재 제일 많이 씀) */
+
+
+/* 이미지 / 텍스트 유형 */
+/* 유형1(img_text_type) */
+
+.itType01 {
+    padding: 150px 0;
+    overflow: hidden;
+}
+
+.itType01 .text {
+    float: left;
+    width: 386.66px;
+    height: 530px;
+    margin-right: 20px;
+    background-color: #ccc;
+}
+
+.itType01 .img1 {
+    float: left;
+    width: 386.66px;
+    height: 530px;
+    margin-right: 20px;
+    background-color: #999;
+    background-image: url(../img/img_text_bg1.jpg);
+}
+
+.itType01 .img2 {
+    float: left;
+    width: 386.66px;
+    height: 530px;
+    background-color: #ccc;
+    background-image: url(../img/img_text_bg2.jpg);
+}
+
+@media (-webkit-min-device-pixel-ratio: 2){
+    .itType01 .img {
+        background-image: url(../img/img_text_bg1@2x.jpg);
+    }
+}
+@media (-webkit-min-device-pixel-ratio: 3){
+    .itType01 .img {
+        background-image: url(../img/img_text_bg1@3x.jpg);
+    }
+}
