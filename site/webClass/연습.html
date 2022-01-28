@@ -77,6 +77,27 @@
             text-indent: -9999px;
         }
 
+        #skip {
+            position: relative;
+            z-index: 10000;
+        }
+
+        #skip a {
+            background: #000;
+            color: #fff;
+            position: absolute;
+            left: -400px;
+            top: 0;
+            padding: 20px 40px;
+            display: inline-block;
+            transition: left 0.3s ease-in;
+        }
+
+        #skip a:active {}
+
+        #skip a:focus {
+            left: 5px;
+        }
 
         #wrap {
             width: 100%;
@@ -92,8 +113,7 @@
             height: 900px;
         }
 
-        #contents {
-        }
+        #contents {}
 
         #contents .cont1 {
             background-color: #e3f2fd;
@@ -171,9 +191,9 @@
             width: 1200px;
             height: inherit;
             margin: 0 auto;
-            background-color: rgb(0,0,0,0.05);
+            background-color: rgb(0, 0, 0, 0.05);
         }
-        
+
         .container1 {
             width: 1200px;
             height: inherit;
@@ -183,41 +203,62 @@
 </head>
 
 <body>
+    <div id="skip">
+        <a href="#contents">컨텐츠 바로가기</a>
+    </div>
+    <!-- //skip -->
+
     <div id="wrap">
         <header id="header">
-            <div class="container">
-            </div>
+            <h2 class="ir_so">헤더 영역</h1>
+                <div class="container">
+                </div>
         </header>
         <section id="banner">
-            <div class="container"></div>
+            <h2 class="ir_so">배너 영역</h1>
+                <div class="container"></div>
         </section>
         <section id="contents">
-                <article class="cont1"><div class="container"></div></article>
-                <article class="cont2"><div class="container"></div></article>
+            <h2 class="ir_so">컨텐츠 영역</h1>
+                <article class="cont1">
+                    <h3 class="ir_so">컨텐츠 영역1</h3>
+                    <div class="container"></div>
+                </article>
+                <article class="cont2">
+                    <h3 class="ir_so">컨텐츠 영역2</h3>
+                    <div class="container"></div>
+                </article>
                 <article class="cont3 container1">
-                    <h2 class="ir_so">컨텐츠 영역</h2>
+                    <h3 class="ir_so">컨텐츠 영역3</h3>
                     <h3 class="text_title">FIND opportuninies</h3>
                     <div class="cc">
                         <section class="c1">
-                            <div class="img"></div>
-                            <p class=t1>Mini Program</p>
+                            <div class="img">
+                                <h4 class="ir_so">이미지1</h4>
+                            </div>
+                            <p class="t1">Mini Program</p>
                             <p class="t2">Wechat</p>
                         </section>
 
                         <section class="c2">
-                            <div class="img"></div>
-                            <p class=t1>Mini Program</p>
+                            <div class="img">
+                                <h4 class="ir_so">이미지1</h4>
+                            </div>
+                            <p class="t1">Mini Program</p>
                             <p class="t2">Wechat</p>
                         </section>
 
                         <section class="c3">
-                            <div class="img"></div>
-                            <p class=t1>Mini Program</p>
+                            <div class="img">
+                                <h4 class="ir_so">이미지1</h4>
+                            </div>
+                            <p class="t1">Mini Program</p>
                             <p class="t2">Wechat</p>
                         </section>
                 </article>
         </section>
         <footer id="footer">
+            <h3 class="ir_so">푸터 영역</h3>
             <div class="container"></div>
         </footer>
 
