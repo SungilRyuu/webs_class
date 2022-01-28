@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice_layout</title>
+
+    <style>
+        /* 넥슨 고딕Lv1 */
+        @font-face {
+            font-family: 'NexonLv1Gothic';
+            font-weight: 300;
+            font-style: normal;
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.eot');
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.eot?#iefix') format('embedded-opentype'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.woff2') format('woff2'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.woff') format('woff'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.ttf') format("truetype");
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'NexonLv1Gothic';
+            font-weight: 400;
+            font-style: normal;
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.eot');
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.eot?#iefix') format('embedded-opentype'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.woff2') format('woff2'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.woff') format('woff'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.ttf') format("truetype");
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'NexonLv1Gothic';
+            font-weight: 700;
+            font-style: normal;
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.eot');
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.eot?#iefix') format('embedded-opentype'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.woff2') format('woff2'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.woff') format('woff'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.ttf') format("truetype");
+            font-display: swap;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'NexonLv1Gothic';
+        }
+
+
+        #wrap {
+            width: 100%;
+        }
+
+        #header {
+            background-color: #ffcdd2;
+            height: 100px;
+        }
+
+        #banner {
+            background-color: #efebe9;
+            height: 900px;
+        }
+
+        #contents {
+            background-color: #e0f2f1;
+        }
+
+        #contents .cont1 {
+            background-color: #e3f2fd;
+            height: 640px;
+        }
+
+        #contents .cont2 {
+            background-color: #f9fbe7;
+            height: 3243px;
+        }
+
+        #contents .cont3 {
+            background-color: #fff;
+            height: 1067px;
+        }
+
+        .cont3 .text_title {
+            display: inline-block;
+            margin: 110px 0 100px;
+            font-size: 50px;
+        }
+
+        .cont3 .cc .t1 {
+            font-size: 25px;
+            font-weight: 700;
+            padding: 5px 0;
+        }
+
+        .cont3 .cc .t2 {
+            font-size: 20px;
+        }
+
+        .cont3 .c1 {
+            float: left;
+        }
+
+        .cont3 .img {
+            margin-bottom: 25px;
+        }
+
+        .cont3 .c1 .img {
+            width: 365px;
+            height: 460px;
+            background-image: url(img/연습img/bg1.jpg);
+        }
+
+        .cont3 .c2 {
+            float: left;
+            margin-left: 50px;
+        }
+
+        .cont3 .c2 .img {
+            width: 365px;
+            height: 460px;
+            background-image: url(img/연습img/bg2.jpg);
+        }
+
+        .cont3 .c3 {
+            float: left;
+            margin-left: 50px;
+        }
+
+        .cont3 .c3 .img {
+            width: 365px;
+            height: 460px;
+            background-image: url(img/연습img/bg3.jpg);
+        }
+
+        #footer {
+            background-color: #fff3e0;
+            height: 388px;
+        }
+
+        .container {
+            width: 1200px;
+            height: inherit;
+            margin: 0 auto;
+            background-color: rgb(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="container">
+
+            </div>
+        </header>
+        <section id="banner">
+            <div class="container"></div>
+        </section>
+        <section id="contents">
+            <div class="container">
+                <article class="cont1"></article>
+                <article class="cont2"></article>
+                <article class="cont3">
+                    <h3 class="text_title">FIND opportuninies</h3>
+                    <div class="cc">
+                        <section class="c1">
+                            <div class="img"></div>
+                            <p class=t1>Mini Program</p>
+                            <p class="t2">Wechat</p>
+                        </section>
+
+                        <section class="c2">
+                            <div class="img"></div>
+                            <p class=t1>Mini Program</p>
+                            <p class="t2">Wechat</p>
+                        </section>
+
+                        <section class="c3">
+                            <div class="img"></div>
+                            <p class=t1>Mini Program</p>
+                            <p class="t2">Wechat</p>
+                        </section>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <footer id="footer">
+            <div class="container"></div>
+        </footer>
+
+    </div>
+</body>
+
+</html>
