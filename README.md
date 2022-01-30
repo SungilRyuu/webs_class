@@ -15,3 +15,5 @@ https://sungilryuu.github.io/webs_class/refer/css.html
 ## 웹표준 사이트 제작
 https://sungilryuu.github.io/webs_class/site/webClass/index.html
 
+##WEB-STANDARD
+https://sungilryuu.github.io/webs_class/webstandard/index.html
