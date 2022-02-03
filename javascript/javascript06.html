@@ -575,7 +575,7 @@
             const arrNumUnshift = arrNum.unshift(600);
 
             document.querySelector(".sample4_N1").innerHTML = 1;
-            document.querySelector(".sample4_Q1").innerHTML = [100, 200, 300, 400, 500];
+            document.querySelector(".sample4_Q1").innerHTML = "[100, 200, 300, 400, 500]";
             document.querySelector(".sample4_M1").innerHTML = "unShift(600)";
             document.querySelector(".sample4_P1").innerHTML = arrNumUnshift;
             document.querySelector(".sample4_R1").innerHTML = arrNum;
@@ -587,7 +587,7 @@
             const arrNumShift = arrNum.shift();
 
             document.querySelector(".sample4_N2").innerHTML = 2;
-            document.querySelector(".sample4_Q2").innerHTML = [100, 200, 300, 400, 500];
+            document.querySelector(".sample4_Q2").innerHTML = "[100, 200, 300, 400, 500]";
             document.querySelector(".sample4_M2").innerHTML = "shift()";
             document.querySelector(".sample4_P2").innerHTML = arrNumShift;
             document.querySelector(".sample4_R2").innerHTML = arrNum;
@@ -600,7 +600,7 @@
             const arrNumReverse = arrNum.reverse();
 
             document.querySelector(".sample5_N1").innerHTML = 1;
-            document.querySelector(".sample5_Q1").innerHTML = [100, 200, 300, 400, 500];
+            document.querySelector(".sample5_Q1").innerHTML = "[100, 200, 300, 400, 500]";
             document.querySelector(".sample5_M1").innerHTML = "reverse()";
             document.querySelector(".sample5_R1").innerHTML = arrNum;
         }
@@ -611,7 +611,7 @@
             const arrNumSort2 = arrNum2.sort();
 
             document.querySelector(".sample5_N2").innerHTML = 2;
-            document.querySelector(".sample5_Q2").innerHTML = [100, 200, 300, 400, 500];
+            document.querySelector(".sample5_Q2").innerHTML = "[100, 200, 300, 400, 500]";
             document.querySelector(".sample5_M2").innerHTML = "sort()";
             document.querySelector(".sample5_R2").innerHTML = arrNum2;
 
@@ -621,7 +621,7 @@
             });
 
             document.querySelector(".sample5_N3").innerHTML = 3;
-            document.querySelector(".sample5_Q3").innerHTML = [100, 200, 300, 400, 500];
+            document.querySelector(".sample5_Q3").innerHTML = "[100, 200, 300, 400, 500]";
             document.querySelector(".sample5_M3").innerHTML = "sort(function(a,b){return b-a})";
             document.querySelector(".sample5_R3").innerHTML = arrNumSort3;
 
@@ -631,7 +631,7 @@
             });
 
             document.querySelector(".sample5_N4").innerHTML = 4;
-            document.querySelector(".sample5_Q4").innerHTML = [500, 400, 300, 200, 100];
+            document.querySelector(".sample5_Q4").innerHTML = "[500, 400, 300, 200, 100]";
             document.querySelector(".sample5_M4").innerHTML = "sort(function(a,b){return a-b})";
             document.querySelector(".sample5_R4").innerHTML = arrNumSort4;
 
@@ -639,7 +639,7 @@
             const arrNumSort5 = arrNum5.sort((a, b) => a.localeCompare(b));
 
             document.querySelector(".sample5_N5").innerHTML = 5;
-            document.querySelector(".sample5_Q5").innerHTML = ['c', 'd', 'e', 'a', 'b'];
+            document.querySelector(".sample5_Q5").innerHTML = "['c', 'd', 'e', 'a', 'b']";
             document.querySelector(".sample5_M5").innerHTML = "sort((a,b) => a.localeCompare(b))";
             document.querySelector(".sample5_R5").innerHTML = arrNumSort5;
 
@@ -647,7 +647,7 @@
             const arrNumSort6 = arrNum6.sort((a, b) => b.localeCompare(a));
 
             document.querySelector(".sample5_N6").innerHTML = 6;
-            document.querySelector(".sample5_Q6").innerHTML = ['c', 'd', 'e', 'a', 'b'];
+            document.querySelector(".sample5_Q6").innerHTML = "['c', 'd', 'e', 'a', 'b']";
             document.querySelector(".sample5_M6").innerHTML = "sort((a,b) => b.localeCompare(a))";
             document.querySelector(".sample5_R6").innerHTML = arrNumSort6;
         }
@@ -691,10 +691,6 @@
             document.querySelector(".sample7_M2").innerHTML = "reduce((p, c) => p + c)";
             document.querySelector(".sample7_R2").innerHTML = arrReduce2;
 
-            //arrNum2 값을 for문을 이용해서 출력해주세요!
-            for (let i = 0; i < arrNum2.length; i++){
-                document.write(arrNum2[i]);
-            }
 
             // document.querySelector(".sample7_N3").innerHTML = 3;
             // document.querySelector(".sample7_Q3").innerHTML = "[100, 200, 300, 400, 500]";
