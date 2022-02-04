@@ -1416,7 +1416,6 @@
             document.querySelector(".sample11_Q1").innerHTML = "[100, 200, 300, 400, 500]";
             document.querySelector(".sample11_M1").innerHTML = "find(el => el === 300)";
             document.querySelector(".sample11_R1").innerHTML = result;
-            console.log("find" + result);
 
             const result2 = arrNum.find(el => el === 600);
 
@@ -1459,7 +1458,6 @@
             document.querySelector(".sample12_Q1").innerHTML = "[100, 200, 300, 400, 500]";
             document.querySelector(".sample12_M1").innerHTML = "filter(el => el === 300)";
             document.querySelector(".sample12_R1").innerHTML = result;
-            console.log(result);
             
             const result2 = arrNum.filter(el => el === 600);
             
@@ -1517,19 +1515,61 @@
             arrBox = [100, 200, 300, 400, 500, 600, 700];
 
             //정답 유도 방법을 2개 이상 사용
-            //1. 300, 400 출력
 
-            //2. 100, 300, 500, 700 출력
+            //1. 300, 400 출력------------------------------------------------------
+            //성공1
+            hw1_1 = arrBox.splice(2,2);
+            // console.log(hw1_1)
 
-            //3. 700 출력
+            //실패1
+            arrBox12 = [100, 200, 300, 400, 500, 600, 700];
+            hw1_2 = arrBox12.pop();
+            // console.log(hw1_2)
+            //팝 안에는 숫자가 들어가면 안됨ㅋㅋ
 
-            arrBox2 = ["j", "b", "c", "d", "e"];
+            //2. 100, 300, 500, 700 출력------------------------------------------------------
+            
+            //실패1
+            // arrBox21 = [100, 200, 300, 400, 500, 600, 700];
 
-            //j
+            // if(arrBox21[i] % 200 !== 0){
+            //     console.log(i);
+            // } 
 
-            // j c
+            
 
-            //j b c d
+
+
+            //3. 700 출력------------------------------------------------------
+            //성공1
+            arrBox31 = [100, 200, 300, 400, 500, 600, 700];
+            hw3_1 = arrBox31.pop();
+            // console.log(hw3_1);
+
+
+
+            //-------------------------------------------------------
+
+            arrBox4 = ["j", "b", "c", "d", "e"];
+
+            //j------------------------------------------------------
+            //성공
+            arrBox41 = ["j", "b", "c", "d", "e"];
+            hw4_1 = arrBox41.shift();
+            // console.log(hw4_1);
+
+            //성공
+            hw4_2 = arrBox4.reduce(el => el);
+            // console.log(hw4_2);
+
+
+            // j c------------------------------------------------------
+
+            //j b c d------------------------------------------------------
+            arrBox2_6 = ["j", "b", "c", "d", "e"];
+            hw6_1 = arrBox2_6.pop();
+            // console.log(arrBox2_6);
+
         }
 
 
