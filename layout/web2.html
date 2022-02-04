@@ -54,6 +54,28 @@
         text-indent: -9999px;
     }
 
+    #skip {
+        position: relative;
+        z-index: 10000;
+    }
+
+    #skip a {
+        background: #000;
+        color: #fff;
+        position: absolute;
+        left: -400px;
+        top: 0;
+        padding: 20px 40px;
+        display: inline-block;
+        transition: left 0.3s ease-in;
+    }
+
+    #skip a:active {}
+
+    #skip a:focus {
+        left: 5px;
+    }
+
     #wrap {
         width: 100%;
         font-family: 'VitroPride';
@@ -164,6 +186,12 @@
 </style>
 
 <body>
+    <div id="skip">
+        <a href="#contents">컨텐츠 바로가기</a>
+    </div>
+    <!-- //skip -->
+
+
     <div id="wrap">
         <header id="header">
             <div class="container1">
@@ -184,12 +212,14 @@
         <section id="contents">
             <div class="container2">
                 <div class="con1">
+                    <h3 class="ir_so">컨텐츠 영역1</h3>
                     <p>
                         We research new opportunities <br>
                         that inspire success.
                     </p>
                 </div>
                 <div class="con2">
+                    <h3 class="ir_so">컨텐츠 영역2</h3>
                     <div class="con1_1">
                         <div class="img_style">
                             <p>
@@ -210,6 +240,7 @@
                     </div>
                 </div>
                 <div class="con3">
+                    <h3 class="ir_so">컨텐츠 영역3</h3>
                     <div class="con1_1">
                         <div class="img_style">
                             <p>
