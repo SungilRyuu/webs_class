@@ -37,12 +37,12 @@
                 <li><a href="practice.html">데이터 연습하기</a></li>
             </ul>
             <ul>
-                <li><a href="sample.html">필수 예제</a></li>
-                <li><a href="plugin.html">플러그인</a></li>
-                <li><a href="effect/mouseEffect.html">마우스 이펙트</a></li>
-                <li><a href="effect/parallaxEffect.html">패럴랙스 이펙트</a></li>
-                <li><a href="effect/slideEffect.html">슬라이드 이펙트</a></li>
-                <li><a href="effect/gameEffect.html">게임 이펙트</a></li>
+                <li><a href="sample_menu.html">메뉴 이펙트</a></li>
+                <li><a href="sample_search.html">검색 이펙트</a></li>
+                <li><a href="sample_mouse.html">마우스 이펙트</a></li>
+                <li><a href="sample_parallax.html">패럴랙스 이펙트</a></li>
+                <li><a href="sample_slide.html">슬라이드 이펙트</a></li>
+                <li><a href="sample_game.html">게임 이펙트</a></li>
             </ul>
         </nav>
     </header>
@@ -1122,43 +1122,43 @@
 
             const arrNum2 = [100, 200, 300, 400, 500];
             const arrNumSort2 = arrNum2.sort();
-    
+
             document.querySelector(".sample5_N2").innerHTML = 2;
             document.querySelector(".sample5_Q2").innerHTML = "[100, 200, 300, 400, 500]";
             document.querySelector(".sample5_M2").innerHTML = "sort()";
             document.querySelector(".sample5_R2").innerHTML = arrNum2;
-    
+
             const arrNum3 = [100, 200, 300, 400, 500];
             const arrNumSort3 = arrNum3.sort(function (a, b) {
                 return b - a
             });
-    
+
             document.querySelector(".sample5_N3").innerHTML = 3;
             document.querySelector(".sample5_Q3").innerHTML = "[100, 200, 300, 400, 500]";
             document.querySelector(".sample5_M3").innerHTML = "sort(function(a,b){return b-a})";
             document.querySelector(".sample5_R3").innerHTML = arrNumSort3;
-    
+
             const arrNum4 = [500, 400, 300, 200, 100];
             const arrNumSort4 = arrNum4.sort(function (a, b) {
                 return a - b
             });
-    
+
             document.querySelector(".sample5_N4").innerHTML = 4;
             document.querySelector(".sample5_Q4").innerHTML = "[500, 400, 300, 200, 100]";
             document.querySelector(".sample5_M4").innerHTML = "sort(function(a,b){return a-b})";
             document.querySelector(".sample5_R4").innerHTML = arrNumSort4;
-    
+
             const arrNum5 = ['c', 'd', 'e', 'a', 'b'];
             const arrNumSort5 = arrNum5.sort((a, b) => a.localeCompare(b));
-    
+
             document.querySelector(".sample5_N5").innerHTML = 5;
             document.querySelector(".sample5_Q5").innerHTML = "['c', 'd', 'e', 'a', 'b']";
             document.querySelector(".sample5_M5").innerHTML = "sort((a,b) => a.localeCompare(b))";
             document.querySelector(".sample5_R5").innerHTML = arrNumSort5;
-    
+
             const arrNum6 = ['c', 'd', 'e', 'a', 'b'];
             const arrNumSort6 = arrNum6.sort((a, b) => b.localeCompare(a));
-    
+
             document.querySelector(".sample5_N6").innerHTML = 6;
             document.querySelector(".sample5_Q6").innerHTML = "['c', 'd', 'e', 'a', 'b']";
             document.querySelector(".sample5_M6").innerHTML = "sort((a,b) => b.localeCompare(a))";
@@ -1170,14 +1170,14 @@
         {
             const arrNum1 = [100, 200, 300];
             const arrNum2 = [400, 500, 600];
-            const arrConcat= arrNum1.concat(arrNum2);
+            const arrConcat = arrNum1.concat(arrNum2);
 
             document.querySelector(".sample6_N1").innerHTML = 1;
             document.querySelector(".sample6_Q1").innerHTML = "[100, 200, 300],[400, 500, 600]";
             document.querySelector(".sample6_M1").innerHTML = "arrNum1.concat(arrNum2)";
             document.querySelector(".sample6_R1").innerHTML = arrConcat;
 
-            const arrSpread= [...arrNum1, ...arrNum2];
+            const arrSpread = [...arrNum1, ...arrNum2];
 
             document.querySelector(".sample6_N2").innerHTML = 1;
             document.querySelector(".sample6_Q2").innerHTML = "[100, 200, 300],[400, 500, 600]";
@@ -1206,7 +1206,7 @@
 
             const arrNum3 = [100, 200, 300, 400, 500];
             let sum = 0;
-            for (let i = 0; i<arrNum3.length; i++){
+            for (let i = 0; i < arrNum3.length; i++) {
                 sum = sum + arrNum3[i]
             }
 
@@ -1215,8 +1215,11 @@
             document.querySelector(".sample7_M3").innerHTML = "for()";
             document.querySelector(".sample7_R3").innerHTML = sum;
 
-            const arrNum4 = [[100, 200], [300, 400]];
-            const arrReduce4 = arrNum4.reduce((p,c) => p.concat(c));
+            const arrNum4 = [
+                [100, 200],
+                [300, 400]
+            ];
+            const arrReduce4 = arrNum4.reduce((p, c) => p.concat(c));
 
             document.querySelector(".sample7_N4").innerHTML = 4;
             document.querySelector(".sample7_Q4").innerHTML = "[[100, 200], [300, 400]]";
@@ -1227,7 +1230,7 @@
         //11. 배열 메서드 : reduceRight() : 배열 요소 하나로 정리 : 반환(결과 값)
         {
             const arrNum5 = ["javascript", "react", "vue"];
-            const arrReduce5 = arrNum5.reduceRight((p,c) => p+ " " +c);
+            const arrReduce5 = arrNum5.reduceRight((p, c) => p + " " + c);
 
             document.querySelector(".sample7_N5").innerHTML = 5;
             document.querySelector(".sample7_Q5").innerHTML = '["javascript", "react", "vue"]';
@@ -1246,36 +1249,36 @@
             document.querySelector(".sample8_M1").innerHTML = "slice(2)";
             document.querySelector(".sample8_R1").innerHTML = result;
 
-            const result2 = arrNum.slice(2,3);
+            const result2 = arrNum.slice(2, 3);
 
             document.querySelector(".sample8_N2").innerHTML = 2;
             document.querySelector(".sample8_Q2").innerHTML = "[100, 200, 300, 400, 500]";
             document.querySelector(".sample8_M2").innerHTML = "slice(2,3)";
             document.querySelector(".sample8_R2").innerHTML = result2;
 
-            const result3 = arrNum.slice(2,4);
+            const result3 = arrNum.slice(2, 4);
 
             document.querySelector(".sample8_N3").innerHTML = 3;
             document.querySelector(".sample8_Q3").innerHTML = "[100, 200, 300, 400, 500]";
             document.querySelector(".sample8_M3").innerHTML = "slice(2,4)";
             document.querySelector(".sample8_R3").innerHTML = result3;
-            
-            const result4 = arrNum.slice(2,5);
+
+            const result4 = arrNum.slice(2, 5);
 
             document.querySelector(".sample8_N4").innerHTML = 4;
             document.querySelector(".sample8_Q4").innerHTML = "[100, 200, 300, 400, 500]";
             document.querySelector(".sample8_M4").innerHTML = "slice(2,5)";
             document.querySelector(".sample8_R4").innerHTML = result4;
 
-            
+
             const result5 = arrNum.slice(-2);
-            
+
             document.querySelector(".sample8_N5").innerHTML = 5;
             document.querySelector(".sample8_Q5").innerHTML = "[100, 200, 300, 400, 500]";
             document.querySelector(".sample8_M5").innerHTML = "slice(-2)";
             document.querySelector(".sample8_R5").innerHTML = result5;
 
-            const result6 = arrNum.slice(-2,5);
+            const result6 = arrNum.slice(-2, 5);
 
             document.querySelector(".sample8_N6").innerHTML = 6;
             document.querySelector(".sample8_Q6").innerHTML = "[100, 200, 300, 400, 500]";
@@ -1297,7 +1300,7 @@
             document.querySelector(".sample9_R1").innerHTML = arrNum;
 
             const arrNum2 = [100, 200, 300, 400, 500];
-            const result2 = arrNum2.splice(2,3);
+            const result2 = arrNum2.splice(2, 3);
 
             document.querySelector(".sample9_N2").innerHTML = 2;
             document.querySelector(".sample9_Q2").innerHTML = "[100, 200, 300, 400, 500]";
@@ -1313,7 +1316,7 @@
             document.querySelector(".sample9_M3").innerHTML = "splice(2,3, 'javascript')";
             document.querySelector(".sample9_P3").innerHTML = result3;
             document.querySelector(".sample9_R3").innerHTML = arrNum3;
-        
+
             const arrNum4 = [100, 200, 300, 400, 500];
             const result4 = arrNum4.splice(1, 1, 'javascript');
 
@@ -1325,7 +1328,7 @@
 
             const arrNum5 = [100, 200, 300, 400, 500];
             const result5 = arrNum5.splice(1, 0, 'javascript');
-            
+
             document.querySelector(".sample9_N5").innerHTML = 5;
             document.querySelector(".sample9_Q5").innerHTML = "[100, 200, 300, 400, 500]";
             document.querySelector(".sample9_M5").innerHTML = "splice(1, 0, 'javascript')";
@@ -1453,34 +1456,34 @@
         {
             const arrNum = [100, 200, 300, 400, 500];
             const result = arrNum.filter(el => el === 300);
-            
+
             document.querySelector(".sample12_N1").innerHTML = 1;
             document.querySelector(".sample12_Q1").innerHTML = "[100, 200, 300, 400, 500]";
             document.querySelector(".sample12_M1").innerHTML = "filter(el => el === 300)";
             document.querySelector(".sample12_R1").innerHTML = result;
-            
+
             const result2 = arrNum.filter(el => el === 600);
-            
+
             document.querySelector(".sample12_N2").innerHTML = 2;
             document.querySelector(".sample12_Q2").innerHTML = "[100, 200, 300, 400, 500]";
             document.querySelector(".sample12_M2").innerHTML = "filter(el => el === 600)";
             document.querySelector(".sample12_R2").innerHTML = result2;
-            
+
             const result3 = arrNum.filter(el => el >= 300); //조건식 가능(find와 차이점)
-            
+
             document.querySelector(".sample12_N3").innerHTML = 3;
             document.querySelector(".sample12_Q3").innerHTML = "[100, 200, 300, 400, 500]";
             document.querySelector(".sample12_M3").innerHTML = "filter(el => el >= 300)";
             document.querySelector(".sample12_R3").innerHTML = result3;
         }
-        
+
         //{13}
         // 20. 배열 메서드 : map() : 배열 요소 추출하여 새로운 배열로 만듦 : 반환(배열)
         //배열.filter(콜백함수)
         {
             const arrNum = [100, 200, 300, 400, 500];
             const result = arrNum.map(el => el);
-            
+
             document.querySelector(".sample13_N1").innerHTML = 1;
             document.querySelector(".sample13_Q1").innerHTML = "[100, 200, 300, 400, 500]";
             document.querySelector(".sample13_M1").innerHTML = "map(el => el)";
@@ -1500,7 +1503,13 @@
             document.querySelector(".sample13_M3").innerHTML = "map(el => el + 100)";
             document.querySelector(".sample13_R3").innerHTML = result3;
 
-            const arrNum4 = [{a:100}, {a:200}, {a:300}];
+            const arrNum4 = [{
+                a: 100
+            }, {
+                a: 200
+            }, {
+                a: 300
+            }];
             const result4 = arrNum4.map(el => el.a);
 
             document.querySelector(".sample13_N4").innerHTML = 4;
@@ -1518,8 +1527,14 @@
 
             //1. 300, 400 출력------------------------------------------------------
             //성공1
-            hw1_1 = arrBox.splice(2,2);
+            arrBox11 = [100, 200, 300, 400, 500, 600, 700];
+            hw1_1 = arrBox11.splice(2, 2);
             // console.log(hw1_1)
+
+            //성공2
+            arrBox13 = [100, 200, 300, 400, 500, 600, 700];
+            hw1_3 = arrBox13.slice(2, 4);
+            // console.log(hw1_3);
 
             //실패1
             arrBox12 = [100, 200, 300, 400, 500, 600, 700];
@@ -1528,15 +1543,28 @@
             //팝 안에는 숫자가 들어가면 안됨ㅋㅋ
 
             //2. 100, 300, 500, 700 출력------------------------------------------------------
-            
-            //실패1
+
+            // 실패1
             // arrBox21 = [100, 200, 300, 400, 500, 600, 700];
 
             // if(arrBox21[i] % 200 !== 0){
             //     console.log(i);
             // } 
 
-            
+            // 성공1
+            // arrBox22 = [100, 200, 300, 400, 500, 600, 700];
+
+            // for(i = 2; i < 7; i+=2){
+            //     console.log(arrBox22[i]);
+            // }
+
+            // //성공2
+            // arrBox23 = [100, 200, 300, 400, 500, 600, 700];
+            // a1 = arrBox23.shift();
+
+            // hw2_3 = arrBox23.filter(el => el %200 != 0);
+            // console.log(hw2_3); 
+
 
 
 
@@ -1545,6 +1573,11 @@
             arrBox31 = [100, 200, 300, 400, 500, 600, 700];
             hw3_1 = arrBox31.pop();
             // console.log(hw3_1);
+
+            //성공2
+            arrBox32 = [100, 200, 300, 400, 500, 600, 700];
+            hw3_2 = arrBox32.slice(6);
+            // console.log(hw3_2);
 
 
 
@@ -1564,11 +1597,39 @@
 
 
             // j c------------------------------------------------------
+            //성공1
+            // arrBox51 = ["j", "b", "c", "d", "e"];
+            // hw5_1 = arrBox51.find(el => el == "j")
+            // hw5_2 = arrBox51.find(el => el == "c");
+            // hw5_3 = hw5_1.concat(hw5_2);
+            // console.log(hw5_3);
+
+            //실패1
+            // arrBox54 = ["j", "b", "c", "d", "e"];
+
+            // if(arrBox54 = "j" || "c"){
+            //     console.log(arrBox54);
+            // }
+
+            // //성공2
+            // arrBox55 = ["j", "b", "c", "d", "e"];
+
+            // for(i = 0; i < 3; i+=2){
+            //     console.log(arrBox55[i]);
+            // }
+
 
             //j b c d------------------------------------------------------
-            arrBox2_6 = ["j", "b", "c", "d", "e"];
-            hw6_1 = arrBox2_6.pop();
-            // console.log(arrBox2_6);
+            //성공1
+            arrBox61 = ["j", "b", "c", "d", "e"];
+            hw6_1 = arrBox61.pop();
+            // console.log(arrBox61);
+
+            //성공2
+            // arrBox62 = ["j", "b", "c", "d", "e"];
+            // for(i = 0; i<4; i++){
+            //     console.log(arrBox62[i]);
+            // }
 
         }
 
@@ -1577,8 +1638,6 @@
 
 
         // 21. 배열 메서드 : Array.from() : 배열로 변환하기 : 반환(배열)
-
-
     </script>
 </body>
 
