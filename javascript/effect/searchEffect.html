@@ -8,7 +8,17 @@
     <style>
     @import url('https://fonts.googleapis.com/css2?family=Six+Caps&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap');
-
+    @font-face {
+    font-family: 'NexonLv1Gothic';
+    font-weight: 300;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.eot?#iefix') format('embedded-opentype'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.woff2') format('woff2'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.woff') format('woff'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.ttf') format("truetype");
+    font-display: swap;
+}
 
         body {
             margin: 0;
@@ -36,13 +46,52 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+        .pages {
+            font-family: 'NexonLv1Gothic';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 10px;
+        }
+        .pages li {
+            display: inline;
+            list-style: none;
+        }
+        .pages li a {
+            display: inline-block;
+            text-align: center;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            color: #fff;
+            border: 1px solid #fff;
+            text-decoration: none;
+            border-radius: 50%;
+            font-size: 14px;
+            margin: 4px;
+            box-shadow: 0 0 0 #fff inset;
+            transition: all 0.4s;
+            opacity: 0.8;
+        }
+        .pages li a:hover {
+            box-shadow: 0 -100px 0 #fff inset;
+            color: #6C4A70;
+            opacity: 1;
+        }
 
     </style>
 </head>
 <body>
     <div id="canvas"></div>
 
-    <h1>Search Effect</h1>
+    <h1><a href="../index.html">Search Effect</a></h1>
+
+    <div class="pages">
+        <ul>
+            <li><a href="searchEffect01.html">1</a></li>
+            <li><a href="searchEffect02.html">2</a></li>
+        </ul>
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/93/three.min.js"></script>
     <script>
