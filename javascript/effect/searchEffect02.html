@@ -147,7 +147,7 @@
             }
 
 
-        .board .list li .show {
+        .board .list li.show {
                 display: block;
             }
     </style>
@@ -202,10 +202,12 @@
 
         cssList.forEach((element, index) => {
             element.classList.add("show");
-            cssCount.innerHtml = index + 1;
-        })
+            console.log(index);
+            cssCount.innerHTML = index + 1;
+        });
 
-        searchBox .addEventListener("keyup", () => {
+
+        searchBox.addEventListener("keyup", () => {
             const searchWord = searchBox.value; //사용자가 입력한 값
 
 
@@ -219,6 +221,7 @@
                 }
             })
         })
+    
 
 
     </script>
