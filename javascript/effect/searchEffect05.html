@@ -167,34 +167,20 @@
         }
 
         /* option  */
-
-        .board .desc {
-            background: #a5c3d5;
-            font-size: 18px;
-            margin: 5px 0;
-            border-radius: 4px;
-            padding: 15px 10px;
-        }
-
-        .board .list {
-            background: #a5c3d5;
-            padding: 15px 10px;
-            border-radius: 4px;
-        }
-
-        .board .list span {
+        .board .search span {
             border: 1px solid #223547;
-            border-radius: 20px;
-            padding: 5px 20px;
-            margin: 3px;
+            border-radius: 30px;
+            padding: 5px 30px;
             display: inline-block;
-            transition: all 0.3s;
+            margin: 3px;
+            transition: all 0.2s;
         }
 
-        .board .list span:hover {
+        .board .search span:hover {
             background: #223547;
             color: #fff;
-        } 
+            cursor: pointer;
+        }
     </style>
     </style>
 </head>
@@ -206,96 +192,84 @@
                 <li><a href="searchEffect01.html">1</a></li>
                 <li><a href="searchEffect02.html">2</a></li>
                 <li><a href="searchEffect03.html">3</a></li>
-                <li class="active"><a href="searchEffect04.html">4</a></li>
-                <li><a href="searchEffect05.html">5</a></li>
+                <li><a href="searchEffect04.html">4</a></li>
+                <li class="active"><a href="searchEffect05.html">5</a></li>
                 <li><a href="searchEffect06.html">6</a></li>
                 <li><a href="searchEffect07.html">7</a></li>
                 <li><a href="searchEffect08.html">8</a></li>
             </ul>
         </div>
         <div class="board">
-            <span class="sub"><a href="../javascript06.html#sample11">find( )</a>를 이용하여 속성을 검색하면 설명 보여주기</span>
+            <span class="sub"><a href="../javascript06.html#sample12">filter()</a>를 이용하여 조회수 검색하기</span>
             <h1><a href="searchEffect.html">CSS 속성 검색하기</a></h1>
 
             <!-- 검색 영역 -->
             <div class="search">
-                <label for="search-box">검색하기</label>
-                <input type="text" id="search-box" placeholder="CSS 속성을 입력해주세요!!">
+                <span>조회수 10개 이상</span>
+                <span>조회수 20개 이상</span>
+                <span>조회수 30개 이상</span>
+                <span>조회수 40개 이상</span>
             </div>
 
             <!-- 전체 목록 갯수 -->
             <div class="count">전체 목록 갯수 : 0개</div>
 
-            <!-- CSS 설명 영역 -->
-            <div class="desc">아래의 속성을 검색하면 설명이 나옵니다.</div>
-
             <!-- CSS 속성 리스트 -->
-            <div class="list"></div>
+            <div class="list">
+                <ul></ul>
+            </div>
         </div>
     </div>
 
     <!-- script -->
     <script>
         const cssProperty = [
-            {name: "all", desc: "all 속성은 CSS 속성을 재설정하는데 사용할 수 있는 약식 속성입니다."},
-            {name: "animation", desc: "animation 속성은 애니메이션 속성을 설정하기 위한 약식 속성입니다."},
-            {name: "animation-delay", desc: "animation-delay 속성은 애니메이션이 시작되는 시간을 설정합니다."},
-            {name: "animation-direction", desc: "animation-direction 속성은 애니메이션이 움직이는 방향을 설정합니다."},
-            {name: "animation-duration", desc: "animation-duration 속성은 애니메이션이 움직이는 시간을 설정합니다."},
-            {name: "animation-fill-mode", desc: "animation-fill-mode 속성은 애니메이션이 끝난 후의 상태를 설정합니다."},
-            {name: "animation-iteration-count", desc: "animation-iteration-count 속성은 애니메이션 반복 횟수를 설정합니다."},
-            {name: "animation-name", desc: "animation-name 속성은 애니메이션 키프레임 이름을 설정합니다."},
-            {name: "animation-play-state", desc: "animation-play-state 속성은 애니메이션의 진행상태를 설정합니다."},
-            {name: "backdrop-filter", desc: "backdrop-filter 속성은 요소 뒤에 필터효과를 설정합니다."},
-            {name: "backface-visibility", desc: "backface-visibility 속성은 요소 뒷면을 보여줄지 설정합니다."},
-            {name: "caption-side", desc: "caption-side 속성은 테이블 캡션의 위치를 설정합니다."},
-            {name: "direction", desc: "direction 속성은 문장의 방향을 설정합니다."},
-            {name: "empty-cells", desc: "empty-cells 속성은 테이블의 빈요소의 속성을 설정합니다."},
-            {name: "filter", desc: "filter 속성은 그래픽 효과를 설정합니다."},
-            {name: "flex", desc: "flex 속성은 콘텐츠의 성질을 flex로 정의합니다."},
-            {name: "grid-template-column", desc: "grid-template-column 속성은 가로 컬럼의 크기와 위치를 설정합니다."}
+            {view: "10", name: "all", desc: "all 속성은 CSS 속성을 재설정하는데 사용할 수 있는 약식 속성입니다."},
+            {view: "20", name: "animation", desc: "animation 속성은 애니메이션 속성을 설정하기 위한 약식 속성입니다."},
+            {view: "30", name: "animation-delay", desc: "animation-delay 속성은 애니메이션이 시작되는 시간을 설정합니다."},
+            {view: "40", name: "animation-direction", desc: "animation-direction 속성은 애니메이션이 움직이는 방향을 설정합니다."},
+            {view: "50", name: "animation-duration", desc: "animation-duration 속성은 애니메이션이 움직이는 시간을 설정합니다."},
+            {view: "11", name: "animation-fill-mode", desc: "animation-fill-mode 속성은 애니메이션이 끝난 후의 상태를 설정합니다."},
+            {view: "13", name: "animation-iteration-count", desc: "animation-iteration-count 속성은 애니메이션 반복 횟수를 설정합니다."},
+            {view: "15", name: "animation-name", desc: "animation-name 속성은 애니메이션 키프레임 이름을 설정합니다."},
+            {view: "17", name: "animation-play-state", desc: "animation-play-state 속성은 애니메이션의 진행상태를 설정합니다."},
+            {view: "21", name: "backdrop-filter", desc: "backdrop-filter 속성은 요소 뒤에 필터효과를 설정합니다."},
+            {view: "49", name: "backface-visibility", desc: "backface-visibility 속성은 요소 뒷면을 보여줄지 설정합니다."},
+            {view: "22", name: "caption-side", desc: "caption-side 속성은 테이블 캡션의 위치를 설정합니다."},
+            {view: "31", name: "direction", desc: "direction 속성은 문장의 방향을 설정합니다."},
+            {view: "41", name: "empty-cells", desc: "empty-cells 속성은 테이블의 빈요소의 속성을 설정합니다."},
+            {view: "41", name: "filter", desc: "filter 속성은 그래픽 효과를 설정합니다."},
+            {view: "19", name: "flex", desc: "flex 속성은 콘텐츠의 성질을 flex로 정의합니다."},
+            {view: "10", name: "grid-template-column", desc: "grid-template-column 속성은 가로 컬럼의 크기와 위치를 설정합니다."}
         ];
 
-        const searchBox = document.querySelector("#search-box");
-        const cssCount = document.querySelector(".count");
-        const cssDesc = document.querySelector(".desc");
-        const cssList = document.querySelector(".list");
+        const searchBox = document.querySelectorAll(".search span"); //알파벳 버튼(다중)
+        const cssList = document.querySelector(".list ul"); //속성 리스트
+        const cssCount = document.querySelector(".count em"); //속성 갯수
 
-        //css 속성 값 / 전체 갯수 출력하기
-        cssProperty.map((element, index) => {
-            cssCount.innerText = "전체 목록 갯수 :" + (index + 1) + "개";
-            cssList.innerHTML += "<span>" + element.name + "</span>"; // '='이라고 하면 변경만 되고 추가하려면 '+=' 해야 함
-        })
-
-        //사용자가 입력한 값
-        // searchBox.addEventListener("keyup", () => {
-        //     searchBox.value;
-        // })
-
-        searchBox.addEventListener("keyup", () => {
-            const searchWord = searchBox.value;
-
-            findProp(searchWord);
-        })
-
-        document.querySelectorAll(".list span").forEach(span => {
+        //각각 버튼 눌렀을 때
+        searchBox.forEach(span => {
             span.addEventListener("click", () => {
-                //클릭한 데이터 값을 가져오기
-                const listProp = span.innerText;
-                findProp(listProp);
-            })
-        })
+                onClickButton();
+            });
+        });
 
-        function findProp(searchProp){
-            const targetData = cssProperty.find((data) => data.name === searchProp)
-
-            //찾는 데이터가 없을 때
-            if(targetData == null){
-                cssDesc.textContent = "해당 속성은 존재하지 않습니다. 다시 검색해 주세요!";
-                return;
-            }
-            cssDesc.innerHTML = targetData.desc;
+        //버튼 클릭했을 때 - 실행문
+        function onClickButton(){
         }
+
+        //CSS 리스트 출력하기 - 데이터 뿌려주기
+        function upDataList(){
+            let list = "";
+
+            for(let data of cssProperty){
+                list += `<li>${data.name}: ${data.desc} <span>${data.view}</span></li>`
+            }
+
+            cssList.innerHTML = list;
+        }
+        upDataList()
+        
     </script>
 </body>
 </html>
