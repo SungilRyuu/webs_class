@@ -924,7 +924,7 @@
             </div>
             <!-- //sample13 -->
 
-            <div id="sample1" class="sample">
+            <div id="sample14" class="sample">
                 <h3>14. 배열 메서드 : Array.from() : 배열로 변환하기 : 반환(배열)</h3>
                 <div class="table">
                     <table>
@@ -994,6 +994,17 @@
     </main>
     <!-- script -->
     <script>
+
+                //#id 이동하기
+                document.querySelectorAll("a[href^='#']").forEach(el => {
+            el.addEventListener("click", (event) => {
+                event.preventDefault();
+                document.querySelector(el.getAttribute("href")).scrollIntoView({
+                    behavior: "smooth"
+                })
+            })
+        })
+
         //01. 배열 속성
         {
             const arrNum = [100, 200, 300, 400, 500];

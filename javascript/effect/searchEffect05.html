@@ -181,6 +181,22 @@
             color: #fff;
             cursor: pointer;
         }
+
+        .board .list li {
+            padding-right: 100px;
+            position: relative;
+        }
+
+        .board .list li span {
+            right: 10px; top: 50%;
+            font-size: 14px;
+            transform: translateY(-50%);
+        }
+
+        .board .list li span::before {
+            content: 'view : ';
+            text-transform: uppercase;
+        }        
     </style>
     </style>
 </head>
@@ -205,10 +221,10 @@
 
             <!-- 검색 영역 -->
             <div class="search">
-                <span>조회수 10개 이상</span>
-                <span>조회수 20개 이상</span>
-                <span>조회수 30개 이상</span>
-                <span>조회수 40개 이상</span>
+                <span data-view="10">조회수 10개 이상</span>
+                <span data-view="20">조회수 20개 이상</span>
+                <span data-view="30">조회수 30개 이상</span>
+                <span data-view="40">조회수 40개 이상</span>
             </div>
 
             <!-- 전체 목록 갯수 -->
@@ -246,30 +262,27 @@
         const searchBox = document.querySelectorAll(".search span"); //알파벳 버튼(다중)
         const cssList = document.querySelector(".list ul"); //속성 리스트
         const cssCount = document.querySelector(".count em"); //속성 갯수
+        let listHtml = "";
 
-        //각각 버튼 눌렀을 때
+        //목록 보여주기
+        function updateList(list){
+            listHtml = "";
+            for(const data of list){
+                listHtml += `<li>${data.name} : ${data.desc} <span>${data.view}</span></li>`;
+            }
+            cssList.innerHTML = listHtml;
+        }
+        updateList(cssProperty);
+        
+        //버튼 클릭하기
         searchBox.forEach(span => {
             span.addEventListener("click", () => {
-                onClickButton();
+                const target = span.dataset.view;
+                const filterList = cssProperty.filter(data => data.view >= target)
+                
+                updateList(filterList);
             });
-        });
-
-        //버튼 클릭했을 때 - 실행문
-        function onClickButton(){
-        }
-
-        //CSS 리스트 출력하기 - 데이터 뿌려주기
-        function upDataList(){
-            let list = "";
-
-            for(let data of cssProperty){
-                list += `<li>${data.name}: ${data.desc} <span>${data.view}</span></li>`
-            }
-
-            cssList.innerHTML = list;
-        }
-        upDataList()
-        
+        })
     </script>
 </body>
 </html>
