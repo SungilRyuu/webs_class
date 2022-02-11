@@ -222,10 +222,11 @@
 
             <!-- 검색 영역 -->
             <div class="search">
+                <span class="btn0">반대로</span>
                 <span class="btn1">오름차순</span>
                 <span class="btn2">내림차순</span>
-                <span class="btn3">알파벳순</span>
-                <span class="btn4">알파벳순(반대)</span>
+                <span class="btn3">알파벳순(a~z)</span>
+                <span class="btn4">알파벳순(z~a)</span>
             </div>
 
             <!-- 전체 목록 갯수 -->
@@ -267,7 +268,7 @@
 
         //데이터 출력
         const updateList = function(){
-            let listHtml = '';    
+            let listHtml = '';
 
             cssProperty.forEach((data, index) => {
                 listHtml += `<li> ${data.num}. ${data.name} : ${data.desc} </li>`;
@@ -277,6 +278,72 @@
             cssList.innerHTML = listHtml;
         }
         updateList()
+
+        //반대 정렬
+        function sortReverse(){
+            cssProperty.reverse();
+            updateList();
+        }
+        
+        //오름차순 정렬
+        function sortAscending(){
+            cssProperty.sort((a,b) => {
+                return a.num - b.num;
+            })
+            updateList()
+        }
+
+        //내림차순 정렬
+        function sortDescending(){
+            cssProperty.sort((a,b) => {
+                return b.num - a.num;
+            })
+            updateList()
+        }
+
+        //알파벳 정렬(a~z)
+        function sortAlphabet(){
+            cssProperty.sort((a, b) => {
+                let x = a.name;
+                let y = b.name;
+                return x.localeCompare(y);
+            });
+            updateList();
+        }
+        
+        //알파벳 정렬(z~a)
+        function sortAlphabetZ(){
+            cssProperty.sort((a, b) => {
+                let x = a.name;
+                let y = b.name;
+                return y.localeCompare(x);
+            });
+            updateList();
+        }
+
+        //반대로 버튼 클릭 시
+        document.querySelector(".btn0").addEventListener("click", () => {
+            sortReverse();
+        })
+        //내림차순 버튼 클릭 시
+        document.querySelector(".btn2").addEventListener("click", () => {
+            sortDescending();
+        })
+
+        //오름차순 버튼 클릭 시
+        document.querySelector(".btn1").addEventListener("click", () => {
+            sortAscending();
+        })
+
+        //a~z 버튼 클릭 시
+        document.querySelector(".btn3").addEventListener("click", () => {
+            sortAlphabet();
+        })
+
+        //z~a 버튼 클릭 시
+        document.querySelector(".btn4").addEventListener("click", () => {
+            sortAlphabetZ();
+        })
 
     </script>
 </body>
