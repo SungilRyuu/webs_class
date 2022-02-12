@@ -13,7 +13,6 @@
         * {
             margin: 0;
             padding: 0;
-            margin: 0 auto;
             font-style: none;
             text-decoration: none;
             list-style: none;
@@ -47,18 +46,18 @@
         }
 
         #wrap {
-            width: 1440px;
         }
 
         #header {
-            display: grid;
-            grid-template-columns: 20% 60% 20%;
-            margin-top: 50px;
+            width: 1250px;
+            display: flex;
+            margin: 0 auto;
+            margin-top: 42px;
+            justify-content: space-between;            
         }
 
         .logo {
-            margin-left: 100px;
-            width: 300px;
+            width: 200px;
             height: 50px;
             font-size: 24px;
             padding-top: 8px;
@@ -72,20 +71,20 @@
 
         .logo a:nth-child(2) {
             position: absolute;
-            left: 100px;
-            background: url(img/211.svg);
+            background: url(img/web3.svg);
             width: 35px; height: 35px;
         }
 
         .logo a:nth-child(3) {
+            margin-left: 40px;
             position: absolute;
-            left: 140px;
         }
 
-        .menu {}
+        .menu {
+            width: 700px;
+        }
 
         .menu ul {
-            width: 600px;
             display: flex;
             justify-content: space-between;
         }
@@ -105,8 +104,9 @@
 
         .member {
             display: flex;
-            width: 150px;
+            width: 100px;
             padding-top: 13px;
+            justify-content: space-between;
         }
 
         .member a {
@@ -116,13 +116,13 @@
         .member a:nth-child(1) {
             width: 19px;
             height: 19px;
-            background: url(img/211.svg) 0 -50px;
+            background: url(img/web3.svg) 0 -50px;
         }
 
         .member a:nth-child(2) {
             width: 35px;
             height: 30px;
-            background: url(img/211.svg) -49px -50px;
+            background: url(img/web3.svg) -49px -50px;
             position: relative;
             top: -9px;
             left: 5px;
@@ -131,10 +131,10 @@
         .member a:nth-child(3) {
             width: 19px;
             height: 19px;
-            background: url(img/211.svg) -100px -50px;
+            background: url(img/web3.svg) -100px -50px;
         }
 
-        #banner {
+        #banner1 {
             height: 700px;
             display: flex;
             position: relative;
@@ -142,17 +142,17 @@
             padding-bottom: 10px;
         }
 
-        #banner .left {
-            position: absolute;
-            left: 100px;
+        #banner1 .left {
+            width: 1200px;
+            margin: 0 auto;
         }
 
-        #banner .left h3 {
+        #banner1 .left h3 {
             font-size: 75px;
             white-space: nowrap;
         }
 
-        #banner .left p {
+        #banner1 .left p {
             margin-top: 55px;
             font-size: 18px;
             color: rgb(114, 105, 106);
@@ -160,7 +160,7 @@
             z-index: 1;
         }
 
-        #banner .left a {
+        #banner1 .left a {
             display: inline-block;
             font-style: none;
             color: #000;
@@ -172,22 +172,20 @@
             
         }
 
-        #banner .left a:nth-child(1) {
+        #banner1 .left a:nth-child(1) {
             background-color: #C4A586;
             color: #fff;
             
         }
 
-        #banner .left a:nth-child(2) {
+        #banner1 .left a:nth-child(2) {
             color: #C4A586;
             border: 1px solid #C4A586;
             margin-left: 26px;
         }
 
-
-        #banner .right {
+        #banner1 .right {
             position: absolute;
-            bottom: 0;
             right: 0;
             z-index: -1;
         }
@@ -195,7 +193,102 @@
         #contents {
             height: 3650px;
             background-color: yellow;
+            width: 1440px;
+            margin: 0 auto;
         }
+
+        .con1 {
+            width: 100%;
+            height: 285px;
+            background-color: #fff;
+        }
+
+        .con1 h3 {
+            text-align: center;
+            margin-top: 60px;
+            letter-spacing: -1px;
+            font-size: 16px;
+            line-height: 1;
+            font-weight: 500;
+        }
+        .con1 ul {
+            display: flex;
+            justify-content: space-between;
+            width: 1110px;
+            margin: 0 auto;
+            margin-top: 50px;
+            height: 60px;
+        }
+
+        .con1 li:nth-child(1) {
+            background: url(img/web3.svg) 0px -100px;
+            width: 100px;
+        }
+        .con1 li:nth-child(2) {
+            background: url(img/web3.svg) -100px -100px;
+            width: 100px;
+        }
+        .con1 li:nth-child(3) {
+            background: url(img/web3.svg) -200px -100px;
+            width: 130px;
+        }
+        .con1 li:nth-child(4) {
+            background: url(img/web3.svg) -350px -100px;
+            width: 130px;
+        }
+        .con1 li:nth-child(5) {
+            background: url(img/web3.svg) -500px -100px;
+            width: 100px;
+        }
+        .con1 li:nth-child(6) {
+            background: url(img/web3.svg) -600px -100px;
+            width: 150px;
+        }
+
+        .con2 {
+            height: 388px;
+            margin: 0 auto;
+            display: flex;
+        }
+        .con2 .left {
+            width: 50%;
+            background-color: rgb(252, 239, 233);
+            display: flex;
+        }
+
+        .con2 .left > div:nth-child(1) {width: 267px;}
+        .con2 .left > div:nth-child(2) {
+            width: 409px;
+            background-image: url(img/web3C2L.png);
+            margin-top: 30px;
+        }
+        
+        .con2 .right {
+            width: 50%;
+            background-color: rgb( 250, 226, 200);
+            display: flex;
+        }
+        .con2 .right > div:nth-child(1) {width: 267px;}
+        .con2 .right > div:nth-child(2) {
+            width: 409px;
+            background-image: url(img/web3C2R.png);
+            margin: 106px 53px 66px 59px;
+        }
+
+        .con2 h3 {
+            font-size: 34px;
+            line-height: 44px;
+            margin-top: 110px;
+            margin-left: 67px;
+            margin-bottom: 91px;
+        }
+
+        .con2 a {
+            color: #000;
+            margin-left: 67px;
+            font-size: 20px;
+        }
+        
 
         #footer {
             height: 180px;
@@ -213,6 +306,7 @@
                     <a href="">MISTRIUM</a>
             </div>
             <nav class="menu">
+                <h2 class="ir_pm">main menu</h2>
                 <ul>
                     <li><a href="#">home</a></li>
                     <li><a href="#">about us</a></li>
@@ -227,31 +321,61 @@
                 <a href="#" class="ir_pm">로그인</a>
             </div>
         </header>
-        <nav id="banner">
-            <div class="left">
-                <h2 class="ir_pm">배너</h2>
-                <h3>Modern Furniture For <br> Modern Living Style</h3>
-                <p>
-                    In unfeeling existence objection immediate repulsive <br>
-                    on he in. Imprudence comparison uncommonly me <br>
-                    he difficulty diminution resolution. Likewise proposal<br>
-                    differed scarcely dwelling as on raillery.<br><br>
-                    September few dependent extremity own continued <br>
-                    and ten prevailed attending. Early to weeks we could. <br>
-                    Do commanded an shameless we disposing do.<br>
-                    Indulgence ten remarkably nor are impression out.<br>
-                    Power is lived means oh every in we quiet.
-                </p>
-                <div class="btn">
-                    <a href="#" class="brown">Request a Quote</a>
-                    <a href="#" class="white">Watch Video</a>
+        <nav id="banner1">
+                <div class="left">
+                    <h2 class="ir_pm">banner</h2>
+                    <h3>Modern Furniture For <br> Modern Living Style</h3>
+                    <p>
+                        In unfeeling existence objection immediate repulsive <br>
+                        on he in. Imprudence comparison uncommonly me <br>
+                        he difficulty diminution resolution. Likewise proposal<br>
+                        differed scarcely dwelling as on raillery.<br><br>
+                        September few dependent extremity own continued <br>
+                        and ten prevailed attending. Early to weeks we could. <br>
+                        Do commanded an shameless we disposing do.<br>
+                        Indulgence ten remarkably nor are impression out.<br>
+                        Power is lived means oh every in we quiet.
+                    </p>
+                    <div class="btn">
+                        <a href="#" class="brown">Request a Quote</a>
+                        <a href="#" class="white">Watch Video</a>
+                    </div>
                 </div>
-            </div>
             <div class="right">
-                <img src="img/0211.jpg" alt="">
+                <img src="img/web3banner.png" alt="의자 사진">
             </div>
         </nav>
-        <section id="contents"></section>
+        <section id="contents">
+            <div class="con1">
+                <h2 class="ir_pm">client list</h2>
+                <h3>SOME OF OUR TRUSTED CLIENTS</h3>
+                <ul>
+                    <li class="ir_pm">stripe</li>
+                    <li class="ir_pm">Google</li>
+                    <li class="ir_pm">Deloitte.</li>
+                    <li class="ir_pm">accenture</li>
+                    <li class="ir_pm">IBM</li>
+                    <li class="ir_pm">SAMSUNG</li>
+                </ul>
+            </div>
+            <div class="con2">
+                <h2 class="ir_pm">Browse Collection</h2>
+                <section class="left">
+                    <div>
+                        <h3>Residential <br> Furniture</h3>
+                        <a href="">Browse Collection</a>
+                    </div>
+                    <div class="img"></div>
+                </section>
+                <section class="right">
+                    <div>
+                        <h3>Hospitality <br> Furniture</h3>
+                        <a href="">Browse Collection</a>
+                    </div>
+                    <div class="img"></div>
+                </section>
+            </div>
+        </section>
         <footer id="footer"></footer>
     </div>
 </body>
