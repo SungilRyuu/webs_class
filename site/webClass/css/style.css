@@ -3,6 +3,13 @@
     height: 2000px;
 }
 
+.gray {
+    background: #f5f5f5;
+}
+
+.white {
+    background: #fff !important;
+}
 /* 컨테이너 */
 .container {
     width: 1200px;
@@ -832,4 +839,54 @@
 }
 .footer_sns li:nth-child(4) a {
     background-position: -150px 0;
+}
+
+/* 회원가입 : join-type */
+.join-type {
+    padding: 200px 0;
+}
+
+.member-form {
+    max-width: 665px;
+    height: 800px;
+    border: 1px solid #dedede;
+    background: #fff;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+.member-form h3 {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+
+.member-form .list li {
+    font-size: 14px;
+    line-height: 1.6;
+    position: relative;
+    padding-left: 10px;
+}
+
+.member-form .list li::before {
+    content: '';
+    width: 3px;
+    height: 3px;
+    background: #000;
+    border-radius: 50%;
+    position: absolute;
+    left: 0; top: 9px;
+}
+
+.member-form h4 {
+    margin-top: 30px;
+    text-decoration: underline;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.member-form .guide {
+    background: #f5f5f5;
+    padding: 20px;
 }
