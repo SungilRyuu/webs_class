@@ -20,9 +20,119 @@
             color: #fff;
             transition: all 0.2s;
         }
+
+        li {
+            list-style: none;
+        }
+
+        body {
+            width: 100%;
+            height: 100vh;
+            background-image: url(img/grassland.jpg);
+            background-size: cover;
+            background-position: center center;
+            overflow: hidden;
+            color: #fff;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            left: 0; top: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgb(31, 63, 122, 0.28);
+            z-index: -1;
+        }
+
+        /* info */
+        .title {
+            position: absolute;
+            left: 20px; top: 20px;
+        }
+
+        .title h1 {
+            font-size: 34px;
+            border-bottom: 1px dashed #fff;
+            padding-bottom: 8px;
+            margin-bottom: 8px;
+        }
+        .title h1 a {}
+        .title p {
+            font-size: 16px;
+        }
+
+        .number {
+            position: absolute;
+            right: 20px; top: 20px;
+        }
+
+        .number li {
+            display: inline;
+        }
+
+        .number li a {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            border: 1px dashed #fff;
+            border-radius: 10px;
+            text-align: center;
+            line-height: 30px;
+            font-size: 12px;
+        }
+
+        .number li a:hover, 
+        .number li.active a {
+            background: #fff;
+            color: #000;
+        }
+
+        .source {
+            position: absolute;
+            right: 20px;
+            bottom: 20px;
+        }
+
+        .source button {
+            border: 1px dashed #fff;
+            background: transparent;
+            font-family: 'NexonLv1Gothic';
+            color: #fff;
+            font-size: 16px;
+            padding: 10px 30px;
+            border-radius: 50px;
+        }
+
+        .source button:hover {
+            background: #fff;
+            color: #000;
+        }
     </style>
 </head>
 <body>
     
+    <!-- info -->
+    <div class="title">
+        <h1><a href="sliderEffect.html">Javascript Slider Effect01</a></h1>
+        <p>이미지 슬라이드 - 페이드 효과</p>
+    </div>
+
+    <div class="number">
+        <ul>
+            <li><a href="sliderEffect01.html">1</a></li>
+            <li><a href="sliderEffect02.html">2</a></li>
+            <li><a href="sliderEffect03.html">3</a></li>
+            <li><a href="sliderEffect04.html">4</a></li>
+            <li><a href="sliderEffect05.html">5</a></li>
+            <li><a href="sliderEffect06.html">6</a></li>
+            <li><a href="sliderEffect07.html">7</a></li>
+            <li><a href="sliderEffect08.html">8</a></li>
+        </ul>
+    </div>
+
+    <div class="source">
+        <button>소스 보기</button>
+    </div>
 </body>
 </html>
