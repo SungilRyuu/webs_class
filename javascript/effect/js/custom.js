@@ -14,6 +14,10 @@
                 document.querySelector("#modal").classList.remove("show");
                 document.querySelector("#modal").classList.add("hide");
             })
+            document.querySelector(".close").addEventListener("click", () => {
+                document.querySelector("#modal").classList.remove("show");
+                document.querySelector("#modal").classList.add("hide");
+            })
         }
 
         //tab 메뉴

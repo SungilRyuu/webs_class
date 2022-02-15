@@ -18,7 +18,7 @@
 
         img {
             width: 100%;
-            vertical-align: top; /*이미지 여백 */
+            vertical-align: top; /*이미지 여백 제거 */
         }
         body {
             width: 100%;
@@ -52,6 +52,7 @@
             padding-bottom: 8px;
             margin-bottom: 8px;
         }
+
         .title p {
             font-size: 16px;
         }
@@ -105,6 +106,7 @@
             cursor: pointer;
         }
 
+        /* modal */
         #modal {
             position: fixed;
             left: 0; top: 0;
@@ -173,20 +175,23 @@
 
         .code-view {
             width: 60vw;
-            min-height: 60vh;
+            height: 60vh;
             background: #fff;
             border: 1px solid #f2f2f2;
             border-radius: 10px;
+            overflow: scroll;
             overflow-x: hidden;
+            scroll-snap-type: none;
         }
 
         .view-header {
-            padding: 7px 0 7px 10px;
-            border-bottom: 1px solid #eee;
             position: absolute;
             left: 0;
             top: 0;
             width: 100%;
+            padding: 7px 0 7px 10px;
+            border-bottom: 1px solid #eee;
+            background-color: #fff;
         }
 
         .view-header > span {
@@ -206,13 +211,15 @@
         }
 
         .view-title {
+            border-top: 1px solid #eee;
             border-bottom: 2px solid #eee;
             padding: 7px 10px 7px 10px;
             height: 37px;
             position: absolute;
             left: 0;
-            top: 34px;
+            top: 32px;
             width: 100%;
+            background-color: #fff;
         }
 
         .view-title li {
@@ -224,7 +231,7 @@
             font-size: 14px;
             text-transform: uppercase;
             padding: 7px 20px 10px 20px;
-            margin: 2px 5px 0 5px;
+            margin: 0px 5px 0 5px;
         }
         .view-title li.active a {
             color: #000;
@@ -232,7 +239,7 @@
             background: #dcdce4;
         }
         .view-cont {
-            background-color: #e8e8e8;
+            background-color: #282C34;
             height: 100%;
             padding-top: 70px;
         }

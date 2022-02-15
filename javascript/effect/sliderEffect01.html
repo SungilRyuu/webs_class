@@ -89,7 +89,7 @@
                 <div class="modal-cont">
                     <div class="code-view">
                         <div class="view-header" aria-hidden="true">
-                            <span></span>
+                            <span class="close"></span>
                             <span></span>
                             <span></span>
                         </div>
@@ -102,42 +102,78 @@
                             </ul>
                         </div>
                         <div class="view-cont">
-                            <div><pre><code class="language-javascript">const modal = function(){
-    document.querySelector(".source-btn").addEventListener("click", () => {
-        document.querySelector("#modal").classList.add("show");
-    });
-    document.querySelector(".modal-close").addEventListener("click", () => {
-        document.querySelector("#modal").classList.remove("show");
-    })
+                            <div><pre><code class="language-html">&lt;section id="sliderType01"&gt;
+    &lt;div class="slider__wrap"&gt;
+        &lt;div class="slider__img"&gt;
+            &lt;div class="slider"&gt;&lt;img src="img/images01.jpg" alt="이미지1"&gt;&lt;/div&gt;
+            &lt;div class="slider"&gt;&lt;img src="img/images02.jpg" alt="이미지2"&gt;&lt;/div&gt;
+            &lt;div class="slider"&gt;&lt;img src="img/images03.jpg" alt="이미지3"&gt;&lt;/div&gt;
+            &lt;div class="slider"&gt;&lt;img src="img/images04.jpg" alt="이미지4"&gt;&lt;/div&gt;
+            &lt;div class="slider"&gt;&lt;img src="img/images05.jpg" alt="이미지5"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/section&gt;</code></pre></div>
+<div><pre><code class="language-css">.slider__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
 }
-modal()</code></pre></div>
-<div><pre><code class="language-javascript">const modal = function(){
-    document.querySelector(".source-btn").addEventListener("click", () => {
-        document.querySelector("#modal").classList.add("show");
-    });
-    document.querySelector(".modal-close").addEventListener("click", () => {
-        document.querySelector("#modal").classList.remove("show");
-    })
+
+.slider__img {
+    position: relative;
+    width: 800px;
+    height: 480px;
 }
-modal()</code></pre></div>
-<div><pre><code class="language-javascript">const modal = function(){
-    document.querySelector(".source-btn").addEventListener("click", () => {
-        document.querySelector("#modal").classList.add("show");
-    });
-    document.querySelector(".modal-close").addEventListener("click", () => {
-        document.querySelector("#modal").classList.remove("show");
-    })
+
+.slider {
+    position: absolute;
+    left: 0; top: 0;
 }
-modal()</code></pre></div>
-<div><pre><code class="language-javascript">const modal = function(){
-    document.querySelector(".source-btn").addEventListener("click", () => {
-        document.querySelector("#modal").classList.add("show");
-    });
-    document.querySelector(".modal-close").addEventListener("click", () => {
-        document.querySelector("#modal").classList.remove("show");
-    })
+
+.slider::before {
+    position: absolute;
+    left: 5px; top: 5px;
+    color: #fff;
+    padding: 5px 10px 3px;
+    background: rgba(0,0,0,0.4);
 }
-modal()</code></pre></div>
+
+.slider:nth-child(1):before {content: '이미지1';}
+.slider:nth-child(2):before {content: '이미지2';}
+.slider:nth-child(3):before {content: '이미지3';}
+.slider:nth-child(4):before {content: '이미지4';}
+.slider:nth-child(5):before {content: '이미지5';}
+.slider:nth-child(1) {z-index: 5;}
+.slider:nth-child(2) {z-index: 4;}
+.slider:nth-child(3) {z-index: 3;}
+.slider:nth-child(4) {z-index: 2;}
+.slider:nth-child(5) {z-index: 1;}</code></pre></div>
+<div><pre><code class="language-javascript">const sliderWrap = document.querySelector(".slider__wrawp")
+const sliderImg = document.querySelector(".slider__img")
+const slider = document.querySelectorAll(".slider")
+
+console.log(slider[0])
+
+let currentIndex = 0; //현재 보이는 이미지
+let sliderCount = slider.length //이미지 갯수
+
+setInterval(() => {
+    let nextIndex = (currentIndex + 1) % 5;
+
+    slider[currentIndex].style.opacity = "0" //첫 번째 이미지를 안보이게
+    slider[nextIndex].style.opacity = "1" //두 번째 이미지를 안보이게
+
+    // console.log("currentIndex :" + currentIndex)
+    // console.log("nextIndex : " + nextIndex)
+
+    slider.forEach(slider => {
+        slider.style.transition = "all 0.7s"
+    })
+
+    currentIndex = nextIndex;
+},2000);</code></pre></div>
+<div><pre><code class="language-jQuery">jQuery</code></pre></div>
                         </div>
                     </div>
                 </div>
@@ -174,8 +210,8 @@ modal()</code></pre></div>
             slider[currentIndex].style.opacity = "0" //첫 번째 이미지를 안보이게
             slider[nextIndex].style.opacity = "1" //두 번째 이미지를 안보이게
 
-            console.log("currentIndex :" + currentIndex)
-            console.log("nextIndex : " + nextIndex)
+            // console.log("currentIndex :" + currentIndex)
+            // console.log("nextIndex : " + nextIndex)
 
             slider.forEach(slider => {
                 slider.style.transition = "all 0.7s"
