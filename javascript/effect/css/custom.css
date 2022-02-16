@@ -23,12 +23,18 @@
         body {
             width: 100%;
             height: 100vh;
-            background-image: url(../img/grassland.jpg);
             background-size: cover;
             background-position: center center;
             overflow: hidden;
             color: #fff;
         }
+
+        body.img00 {background-image: url(../img/grassland.jpg);}
+        body.img01 {background-image: url(../img/images06.jpg);}
+        body.img02 {background-image: url(../img/images02.jpg);}
+        body.img03 {background-image: url(../img/images03.jpg);}
+        body.img04 {background-image: url(../img/images04.jpg);}
+        body.img05 {background-image: url(../img/images05.jpg);}
 
         body::before {
             content: '';
