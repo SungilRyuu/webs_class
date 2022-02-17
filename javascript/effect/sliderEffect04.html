@@ -113,32 +113,32 @@
     &lt;div class="slider__wrap"&gt;
         &lt;div class="slider__img"&gt;
             &lt;div class="slider__inner"&gt;
-                &lt;div class="slider"&gt;&lt;img src="img/images06.jpg" alt="이미지1"&gt;&lt;/div&gt;
-                &lt;div class="slider"&gt;&lt;img src="img/images07.jpg" alt="이미지2"&gt;&lt;/div&gt;
-                &lt;div class="slider"&gt;&lt;img src="img/images08.jpg" alt="이미지3"&gt;&lt;/div&gt;
-                &lt;div class="slider"&gt;&lt;img src="img/images09.jpg" alt="이미지4"&gt;&lt;/div&gt;
-                &lt;div class="slider"&gt;&lt;img src="img/images10.jpg" alt="이미지5"&gt;&lt;/div&gt;
+                &lt;div class="slider"&gt;&lt;img src="img/images01.jpg" alt="이미지1"&gt;&lt;/div&gt;
+                &lt;div class="slider"&gt;&lt;img src="img/images02.jpg" alt="이미지2"&gt;&lt;/div&gt;
+                &lt;div class="slider"&gt;&lt;img src="img/images03.jpg" alt="이미지3"&gt;&lt;/div&gt;
+                &lt;div class="slider"&gt;&lt;img src="img/images04.jpg" alt="이미지4"&gt;&lt;/div&gt;
+                &lt;div class="slider"&gt;&lt;img src="img/images05.jpg" alt="이미지5"&gt;&lt;/div&gt;
             &lt;/div&gt;
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/section&gt;</code></pre></div>
 <div><pre><code class="language-css">.slider__wrap {
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
 }
 .slider__img {     /*화면 보이는 구간 */
     width: 800px;
     height: 480px;
-    overflow: hidden; /*  overflow가 없다면 전체가 보임*/
+    overflow: hidden; /* overflow가 없다면 이미지 전체가 보임*/
 }
 
 .slider__inner {     /* 이미지 움직이는 영역 */
     height: 480px;     /* 이미지 총 길이 */
     transform: translateY(0);     
 }
-/* position: relative를 쓰는 이유: 1. position:absolute의 기준점을 잡을 때 / 2. float:left를 주고 싶을 때 */
+/* position: relative를 쓰는 이유: 1. position:absolute의 기준점을 잡을 때 2. float:left를 주고 싶을 때 */
 
 .slider {    
     width: 800px;
@@ -146,11 +146,11 @@
 }
 
 .slider::before {
-    position: absolute;
-    left: 5px;top: 5px;
-    background: rgba(0,0,0,0.4);
     color: #fff;
     padding: 5px 10px 3px;
+    background: rgba(0,0,0,0.4);
+    position: absolute;
+    left: 5px;top: 5px;
 }
 
 .slider:nth-child(1):before {content: '이미지1';}
@@ -159,38 +159,28 @@
 .slider:nth-child(4):before {content: '이미지4';}
 .slider:nth-child(5):before {content: '이미지5';}
 .slider:nth-child(6):before {content: '이미지1';}</code></pre></div>
-<div><pre><code class="language-javascript">const sliderWrap = document.querySelector(".slider__wrap")
-    const sliderImg = document.querySelector(".slider__img") //이미지 한칸만 움직이는 영역
-    const sliderInner = document.querySelector(".slider__inner") //이미지 움직이는 영역
-    const slider = document.querySelectorAll(".slider") //각각의 이미지 
+<div><pre><code class="language-javascript">let currentIndex = 0;     // currentIndex값 0
+let sliderCount = slider.length; //이미지 갯수
+let sliderHeight = sliderImg.offsetHeight; //offsetWidth : 패딩 마진 값 빼줌
+let sliderClone = sliderInner.firstElementChild.cloneNode(true); //첫 번째 이미지 복사
+sliderInner.appendChild(sliderClone); //첫 번째 이미지를 마지막에 넣어 줌
+
+function sliderEffect(){     // sliderEffect 함수
+    currentIndex++;
+
+    sliderInner.style.transition = "all 0.3s"     // css 설정
+    sliderInner.style.transform = "translateY(-" + sliderHeight * currentIndex  + "px)"     // css 설정 (y축 기준)
     
-    let currentIndex = 0;
-    let sliderCount = slider.length; //이미지 갯수
-    let sliderHeight = sliderImg.offsetHeight; //offsetWidth : 패딩 마진 값 빼줌
-    let sliderClone = sliderInner.firstElementChild.cloneNode(true); //첫 번째 이미지 복사
-    sliderInner.appendChild(sliderClone); //첫 번째 이미지를 마지막에 넣어 줌
-
-    console.log(sliderHeight);
-    
-    function sliderEffect(){
-        currentIndex++;
-
-        sliderInner.style.transition = "all 0.3s"
-        sliderInner.style.transform = "translateY(-" + sliderHeight * currentIndex  + "px)"
-
-        //currentIndex = 0 1 2 3 4 0 1 2 3 4 0 .....
-        // if(currentIndex % 5 % 2 == 0 ) console.log(currentIndex % 5);
-       
-        //마지막 사진에 갔을 때
-        if(currentIndex == 5){
-            setTimeout(() => {
-            sliderInner.style.transition = "0s"
-            sliderInner.style.transform = "translateY(0px)"
-        }, 300);
-            currentIndex = 0;
-        }
+    //마지막 사진에 갔을 때
+    if(currentIndex == 5){     // currentIndex가 5(마지막 사진 다음 장)으로 갔을 때
+        setTimeout(() => {     // 일정한 시간 간격 설정 (0.3초)
+        sliderInner.style.transition = "0s"     // 0초만에
+        sliderInner.style.transform = "translateY(0px)"     // y축 기준 0px로 가라
+    }, 300);     // 0.3초
+        currentIndex = 0;
     }
-    setInterval(sliderEffect, 1000);</code></pre></div>
+}
+setInterval(sliderEffect, 1000);     // 1초 간격으로 움직여라</code></pre></div>
 <div><pre><code class="language-jQuery">공사중입니다.</code></pre></div>
                         </div>
                     </div>

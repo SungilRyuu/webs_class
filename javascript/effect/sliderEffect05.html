@@ -50,19 +50,19 @@
         .slider:nth-child(5):before {content: '이미지5';}
 
         .slider__btn a {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            z-index: 100;
-            background: rgb(0,0,0,0.4);
             width: 50px;
             height: 50px;
-            text-align: center;
-            transition: all 0.2s;
-            line-height: 50px;
-            display: block;
             color: #fff;
+            display: block;
+            line-height: 50px;
+            text-align: center;
             text-decoration: none;
+            background: rgb(0,0,0,0.4);
+            position: absolute;
+            top: 50%;
+            transition: all 0.2s;
+            transform: translateY(-50%);
+            z-index: 100;
         }
         .slider__btn a.prev {
             left: 0;
@@ -78,7 +78,7 @@
 <body class="img06">
     <!-- main -->
     <main>
-        <section id="sliderType03">
+        <section id="sliderType05">
             <div class="slider__wrap">
                 <div class="slider__img">
                     <div class="slider__inner">
@@ -137,15 +137,15 @@
                             </ul>
                         </div>
                         <div class="view-cont">
-                            <div><pre><code class="language-html">&lt;section id="sliderType03"&gt;
+                            <div><pre><code class="language-html">&lt;section id="sliderType05"&gt;
     &lt;div class="slider__wrap"&gt;
         &lt;div class="slider__img"&gt;
             &lt;div class="slider__inner"&gt;
-                &lt;div class="slider"&gt;&lt;img src="img/images06.jpg" alt="이미지1"&gt;&lt;/div&gt;
-                &lt;div class="slider"&gt;&lt;img src="img/images07.jpg" alt="이미지2"&gt;&lt;/div&gt;
-                &lt;div class="slider"&gt;&lt;img src="img/images08.jpg" alt="이미지3"&gt;&lt;/div&gt;
-                &lt;div class="slider"&gt;&lt;img src="img/images09.jpg" alt="이미지4"&gt;&lt;/div&gt;
-                &lt;div class="slider"&gt;&lt;img src="img/images10.jpg" alt="이미지5"&gt;&lt;/div&gt;
+                &lt;div class="slider"&gt;&lt;img src="img/images01.jpg" alt="이미지1"&gt;&lt;/div&gt;
+                &lt;div class="slider"&gt;&lt;img src="img/images02.jpg" alt="이미지2"&gt;&lt;/div&gt;
+                &lt;div class="slider"&gt;&lt;img src="img/images03.jpg" alt="이미지3"&gt;&lt;/div&gt;
+                &lt;div class="slider"&gt;&lt;img src="img/images04.jpg" alt="이미지4"&gt;&lt;/div&gt;
+                &lt;div class="slider"&gt;&lt;img src="img/images05.jpg" alt="이미지5"&gt;&lt;/div&gt;
             &lt;/div&gt;
         &lt;/div&gt;
         &lt;div class="slider__btn"&gt;
@@ -155,19 +155,19 @@
         &lt;/div&gt;
 &lt;/section&gt;</code></pre></div>
 <div><pre><code class="language-css">.slider__btn a {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 100;
-    background: rgb(0,0,0,0.4);
     width: 50px;
     height: 50px;
-    text-align: center;
-    transition: all 0.2s;
-    line-height: 50px;
-    display: block;
     color: #fff;
+    display: block;
+    line-height: 50px;
+    text-align: center;
     text-decoration: none;
+    background: rgb(0,0,0,0.4);
+    position: absolute;
+    top: 50%;
+    transition: all 0.2s;
+    transform: translateY(-50%);
+    z-index: 100;
 }
 .slider__btn a.prev {
     left: 0;
@@ -178,38 +178,21 @@
 .slider__btn a:hover{
     background: rgb(241,96,86);
 }</code></pre></div>
-<div><pre><code class="language-javascript">const sliderWrap = document.querySelector(".slider__wrap")
-const sliderImg = document.querySelector(".slider__img") //이미지 한칸만 움직이는 영역
-const sliderInner = document.querySelector(".slider__inner") //이미지 움직이는 영역
-const slider = document.querySelectorAll(".slider") //각각의 이미지 
-const sliderBtn = document.querySelector(".slider__btn") //슬라이드 버튼 선언
-const sliderBtnPrev = sliderBtn.querySelector(".prev") //
-const sliderBtnNext = sliderBtn.querySelector(".next")
+<div><pre><code class="language-javascript">function gotoSlider(num){     // gotoSlider 함수에 num 실행 
+    sliderInner.style.transition = "all 0.4s";     // css에 transition 추가
+    sliderInner.style.transform = "translateX("+ -sliderWidth * num +"px)";     // css에 transform 추가
 
-let currentIndex = 0;
-let sliderCount = slider.length;
-let sliderWidth = sliderImg.offsetWidth;
-
-function gotoSlider(num){
-    sliderInner.style.transition = "all 0.4s";
-    sliderInner.style.transform = "translateX("+ -sliderWidth * num +"px)";
-
-    currentIndex = num;
+    currentIndex = num;     // currentIndex와 num 값이 같도록 함
 }
 
-sliderBtnPrev.addEventListener("click", () => {
-    let prevIndex = (currentIndex + (sliderCount - 1) ) % sliderCount;
-    // 첫 번째 이미지가 있을 때 0 --> 4
-    // if (currentIndex == 0){
-    //     prevIndex = sliderCount -1
-    // }
-    gotoSlider(prevIndex);
+sliderBtnPrev.addEventListener("click", () => {     // 이전으로 가는 버튼을 눌렀을 때의 이벤트 설정
+    let prevIndex = (currentIndex + (sliderCount - 1) ) % sliderCount;     // 나머지를 이용하여 이전 위치 값 설정
+    gotoSlider(prevIndex);     // gotoSlider에 prevIndex값을 넣어서 실행
 })
 
-sliderBtnNext.addEventListener("click", () => {
-    let nextIndex = (currentIndex + 1) % sliderCount;
-    // 이미지 총 갯수 이상 넘어가면 안됨
-    gotoSlider(nextIndex);
+sliderBtnNext.addEventListener("click", () => {     // 다음으로 가는 버튼을 눌렀을 때의 이벤트 설정
+    let nextIndex = (currentIndex + 1) % sliderCount;     // 나머지를 이용하여 다음 위치 값 설정
+    gotoSlider(nextIndex);     // gotoSlider에 nextIndex값을 넣어서 실행
 })</code></pre></div>
 <div><pre><code class="language-jQuery">공사중입니다.</code></pre></div>
                         </div>
