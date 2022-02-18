@@ -715,11 +715,18 @@
 
         correct.addEventListener("keyup", () => {
             const correctBox = correct.value;
-            console.log(correctBox);
+
+            if (correctBox == answerResult) {
+                quizDog.classList.add("like")
+                quizDog.classList.remove("dislike")
+            } else {
+                quizDog.classList.add("dislike");
+                quizDog.classList.remove("like");
+            }
         })
 
 
-        const 
+
     </script>
 </body>
 </html>
