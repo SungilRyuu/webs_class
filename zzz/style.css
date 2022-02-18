@@ -1,0 +1,13 @@
+* {
+    margin: 0;
+    padding: 0;
+    background: #654ea3;
+}
+
+body {
+    position: relative;
+}
+h1 {
+    color: #fffec3;
+    position: absolute;
+}

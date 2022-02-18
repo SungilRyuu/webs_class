@@ -19,6 +19,9 @@
             font-family: 'Poppins';
         }
 
+        a {
+            color: #000;
+        }
         .ir_pm {
             display: block;
             overflow: hidden;
@@ -467,10 +470,158 @@
             top: 120px;
         }
 
-        #footer {
-            height: 180px;
-            background-color: red;
+        .con4 {
+            width: 1440px;
+            display: flex;
+            margin-left: 192px;
         }
+        .con4 .left {}
+        .con4 .right {
+            margin-top: 70px;
+            word-spacing: -1px;
+            margin-left: 107px;
+        }
+        .con4 .right h3 {
+            font-size: 53px;
+            line-height: 56px;
+            text-align-last: left;
+        }
+        .con4 .right p {
+            margin-top: 43px;
+            font-size: 18px;
+            line-height: 28px;
+            font-weight: 300;
+        }
+
+        .con5 {
+            margin-top: 353px;
+            width: 1440px;
+            margin-left: 135px;
+            display: flex;
+        }
+        .con5 h2 {
+            display: inline-block;
+            font-size: 14px;
+            line-height: 20px;
+            color: rgb(254,132,50);
+            border: 1px solid rgb(254,132,50);
+            letter-spacing: -0.3px;
+            border-radius: 50px;
+            text-align: center;
+            font-weight: 300;
+            padding: 5px 25px;
+            margin-bottom: 38px;
+        }
+
+        .con5 p {
+            font-size: 53px;
+            line-height: 56px;
+            font-weight: 700;
+            letter-spacing: -2px;
+        }
+
+        .con5 a {
+            display: inline-block;
+            margin-top: 70px;
+            margin-left: 569px;
+            text-decoration: underline;
+            position: relative;
+            z-index: 0;
+        }
+
+        .con5 a::before {
+            content: '';
+            width: 120px;
+            height: 100px;
+            background-image: url(img/web3C5B.jpg);
+            position: absolute;
+            bottom: -30px;
+            right: 140px;
+            border-radius: 120px;
+            z-index: -1;
+
+
+        }
+        .con5 .right {}
+        .con5 img {
+            margin-right: 32px;
+
+        }
+
+        #footer {
+            width: 1440px;
+            margin: 0 auto;
+        }
+
+        .footer1 {
+            display: flex;
+            align-items: baseline;
+        }
+
+        .footer__logo {
+            margin-left: 182px;
+            font-size: 24px;
+            margin-right: 260px;
+            
+        }
+        .footer__logo::before {
+            content: '';
+            width: 35px; height: 35px;
+            background: url(img/web3.svg);
+            position: absolute;
+            left: 135px;
+        }
+
+        .footer__menu {
+            width: 328px;
+        }
+        .footer__menu ul {
+            display: flex;
+            justify-content: space-between;
+        }
+        .footer__menu li {
+        }
+        .footer__menu li a {
+        }
+
+        .footer__sns {
+            margin-left: 328px;
+        }
+        .footer__sns ul {
+            display: flex;
+        }
+        .footer__sns li {
+            margin-right: 30px;
+        }
+
+        .footer__sns li:nth-child(1) a {
+            background-image: url(img/web3.svg);
+            width: 13px;height: 13px;
+            background-position: 0px -250px;
+        }
+        .footer__sns li:nth-child(2) a {
+            background-image: url(img/web3.svg);
+            width: 13px;height: 13px;
+            background-position: -50px -250px;
+        }
+        .footer__sns li:nth-child(3) a {
+            background-image: url(img/web3.svg);
+            width: 13px;height: 13px;
+            background-position: -100px -250px;
+        }
+
+        .footer2 {
+            margin-top: 58px;
+            text-align: center;
+            color: rgb(233,233,229);
+        }
+
+        .footer2 p {
+            padding: 34px 0;
+            border-top: 1px solid rgb(233,233,229);
+        }
+
+
     </style>
 </head>
 
@@ -621,8 +772,60 @@
                     </article>
                 </div>
             </div>
+            <div class="con4">
+                <h2 class="ir_pm">Brochure</h2>
+                <div class="left">
+                    <img src="img/web3C4L.png" alt="듣는 척 하는 남자">
+                </div>
+                <div class="right">
+                    <h3>Let’s see what our<br>customer’s say</h3>
+                    <p>
+                        Dwelling and speedily ignorant any steepest. 
+                        <br>Admiration instrument affronting invitation reasonably 
+                        <br>up do of prosperous in. Shy saw declared age debating 
+                        <br>ecstatic man. Call in so want pure rank am dear were. 
+                        <br>Remarkably to continuing in surrounded diminution on.
+                    </p>
+                </div>
+            </div>
+            <div class="con5">
+                <div class="left">
+                    <h2>Mistrium Interiror</h2>
+                    <p>Signup to receive updates <br>about new products</p>
+                    <a href="#">Watch intro video</a>
+                </div>
+                <div class="right">
+                    <img src="img/web3C5R.png" alt="인테리어 소품">
+                </div>
+            </div>
         </section>
-        <footer id="footer"></footer>
+        <footer id="footer">
+            <h2 class="ir_pm">footer</h2>
+            <div class="footer1">
+                <div class="footer__logo">
+                    <a href="">MISTRIUM</a>
+                </div>
+                <div class="footer__menu">
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Product</a></li>
+                        <li><a href="#">Service</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer__sns">
+                    <ul>
+                        <li><a href="#" class="ir_pm">페이스북</a></li>
+                        <li><a href="#" class="ir_pm">인스타그램</a></li>
+                        <li><a href="#" class="ir_pm">유튜브</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer2">
+                <p>Copyright © 2021. arshakir.com</p>
+            </div>
+
+        </footer>
     </div>
 </body>
 
