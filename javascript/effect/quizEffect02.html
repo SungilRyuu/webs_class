@@ -716,18 +716,22 @@
 
         correct.addEventListener("keyup", () => {
             const correctBox = correct.value;
+            const truee = document.querySelector(".quiz__view .true");
+            const falsee = document.querySelector(".quiz__view .false");
 
             if (correctBox == answerResult) {
-                quizDog.classList.add("like")
-                quizDog.classList.remove("dislike")
+                quizDog.classList.add("like");
+                quizDog.classList.remove("dislike");
+                truee.style.opacity = "1";
+                falsee.style.opacity = "0";
+                
             } else {
                 quizDog.classList.add("dislike");
                 quizDog.classList.remove("like");
+                truee.style.opacity = "0";
+                falsee.style.opacity = "1";
             }
         })
-
-
-
     </script>
 </body>
 </html>
