@@ -669,10 +669,148 @@
                 <div class="symbol"></div>
             </div>
             </div>
-            <div class="menu-bar"><span>File</span><span>Edit</span><span>View</span><span>Help</span></div>
+            <div class="menu-bar"><span class="active">HTML</span><span>CSS</span><span>JavaScrpit</span></div>
             <div class="content-container">
             <div class="content">
-                <div class="main"></div>
+                <div class="main">
+                    <div><pre><code class="language-html">&lt;div class="quiz__wrap"&gt;
+    &lt;div class="quiz"&gt;
+        &lt;h2 class="quiz__type"&gt;HTML 퀴즈&lt;/h2&gt;
+        &lt;h3 class="quiz__question"&gt;
+            &lt;span class="quiz__number"&gt;&lt;/span&gt;
+            &lt;span class="quiz__ask"&gt;&lt;/span&gt;
+        &lt;/h3&gt;
+        &lt;div class="quiz__view"&gt;
+            &lt;div class="dog"&gt; &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="quiz__answer"&gt;
+            &lt;button class="quiz__confirm"&gt;정답 확인하기&lt;/button&gt;
+            &lt;div class="quiz__result"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre></div>
+                    <div><pre><code class="language-css">.quiz__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 150px;
+}
+
+.quiz {
+    width: 100%;
+    max-width: 500px;
+    background: #fff;
+    border: 8px ridge #cacaca;
+    margin: 10px;
+}
+
+.quiz__type {
+    background: #cacaca;
+    text-align: center;
+    font-size: 14px;
+    color: #3b3b3b;
+    border: 3px ridge #cacaca;
+    padding: 3px 0;
+    position: relative;
+}
+
+.quiz__type::before {
+    content: '';
+    position: absolute;
+    left: 2px;top: 2px;
+    width: 5px; height: 5px;
+    border: 6px ridge #cacaca;
+}
+
+.quiz__type::after {
+    content: '';
+    position: absolute;
+    right: 2px;top: 2px;
+    width: 5px; height: 5px;
+    border: 6px ridge #cacaca;
+}
+
+.quiz__question {
+    border-top: 6px ridge #cacaca;
+    border-bottom: 6px ridge #cacaca;
+    padding: 13px 30px;
+    font-size: 24px;
+    line-height: 1.4;
+}
+
+.quiz__number {
+    font-family: 'Cafe24Dangdanghae';
+    color: #64a30b;
+}
+
+.quiz__ask {
+    font-family: 'Cafe24Dangdanghae';
+}
+
+.quiz__view {
+    background-color: #f5f5f5;
+}
+
+.quiz__answer {
+    background-color: #f5f5f5;
+    border-top: 6px ridge #cacaca;
+    padding: 10px;
+}
+
+.quiz__confirm {
+    border: 6px ridge #cacaca;
+    width: 100%;
+    font-size: 22px;
+    padding: 13px 20px;
+    background: rgb(192, 192, 192);
+    font-family: 'Cafe24Dangdanghae';
+    text-shadow: 1px 1px 1px #fff;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.quiz__confirm:hover {
+    background: #b3b3b3;
+}
+
+.quiz__result {
+    border: 6px ridge #cacaca;
+    text-align: center;
+    width: 100%;
+    font-size: 22px;
+    padding: 13px 20px;
+    background: rgb(255, 255, 255);
+    font-family: 'Cafe24Dangdanghae';
+    text-shadow: 1px 1px 1px #fff;
+    display: none;
+}</code></pre></div>
+                    <div><pre><code class="language-js">const quizType = document.querySelector(".quiz__type"); //퀴즈 종류
+const quizNumber = document.querySelector(".quiz__number"); //퀴즈 번호
+const quizAsk = document.querySelector(".quiz__ask"); //퀴즈 질문
+const quizConfirm = document.querySelector(".quiz__confirm"); //정답 확인 버튼
+const quizResult = document.querySelector(".quiz__result"); //정답 결과
+const quizDog = document.querySelector(".quiz__view .dog"); //강아지
+
+//문제 정보
+const answerType = "HTML"
+const answerNum = 1;
+const answerAsk = "컨텐츠의 구조를 정의하는 마크업 언어는 무엇일까요?";
+const answerResult = "HTML";
+
+//문제 출력
+quizType.textContent = answerType;
+quizNumber.textContent = answerNum + ". ";
+quizAsk.textContent = answerAsk;
+quizResult.textContent = answerResult;
+
+//정답 확인
+quizConfirm.addEventListener("click", () => {
+    quizConfirm.style.display = "none";
+    quizResult.style.display = "block";
+    quizDog.classList.add("like");
+})</code></pre></div>
+                </div>
                 <div class="scroll">
                 <div class="start"></div>
                 <div class="progress"></div>
@@ -689,6 +827,7 @@
         </div>
     </div>
 
+    <script src="js/windows.js"></script>
     <script>
         const quizType = document.querySelector(".quiz__type"); //퀴즈 종류
         const quizNumber = document.querySelector(".quiz__number"); //퀴즈 번호

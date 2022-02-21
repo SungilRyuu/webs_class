@@ -7,6 +7,8 @@
     <title>퀴즈 이펙트</title>
     <style>
 
+    @import url(css/windows.css);
+
     @font-face {
         font-family: 'DungGeunMo';
         src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
@@ -790,7 +792,215 @@
         <a href="mailto:x7nxc3@gmail.com">x7nxc3@gmail.com</a>
         <div class="quiz_source">소스보기</div>
     </footer>
+    <div class="source">
+        <div class="window">
+            <div class="title-bar">
+            <div class="minimize">
+                <div class="symbol"></div>
+            </div>
+            <div class="maximize">
+                <div class="symbol"></div>
+            </div>
+            <div class="close">
+                <div class="symbol"></div>
+            </div>
+            </div>
+            <div class="menu-bar"><span class="active">HTML</span><span>CSS</span><span>JavaScrpit</span></div>
+            <div class="content-container">
+            <div class="content">
+                <div class="main">
+                    <div><pre><code class="language-html">&lt;div class="quiz__answer"&gt;
+    &lt;div class="quiz__selects"&gt;
+        &lt;label for="select1"&gt;
+            &lt;input class="select" type="radio" name="select" id="select1" value="1"&gt;
+            &lt;span class="choice"&gt;&lt;/span&gt;
+        &lt;/label&gt;
+        &lt;label for="select2"&gt;
+            &lt;input class="select" type="radio" name="select" id="select2" value="2"&gt;
+            &lt;span class="choice"&gt;&lt;/span&gt;
+        &lt;/label&gt;
+        &lt;label for="select3"&gt;
+            &lt;input class="select" type="radio" name="select" id="select3" value="3"&gt;
+            &lt;span class="choice"&gt;&lt;/span&gt;
+        &lt;/label&gt;
+        &lt;label for="select4"&gt;
+            &lt;input class="select" type="radio" name="select" id="select4" value="4"&gt;
+            &lt;span class="choice"&gt;&lt;/span&gt;
+        &lt;/label&gt;
+    &lt;/div&gt;
+    &lt;button class="quiz__confirm"&gt;정답 확인하기&lt;/button&gt;
+    &lt;div class="quiz__result"&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre></div>
+                    <div><pre><code class="language-css">.quiz__answer {
+    background-color: #f5f5f5;
+    border-top: 6px ridge #cacaca;
+    padding: 10px;
+}
 
+.quiz__confirm {
+    border: 6px ridge #cacaca;
+    width: 100%;
+    font-size: 22px;
+    padding: 13px 20px;
+    background: rgb(192, 192, 192);
+    font-family: 'DungGeunMo';
+    text-shadow: 1px 1px 1px #fff;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.quiz__confirm:hover {
+    background: #b3b3b3;
+}
+
+.quiz__result {
+    border: 6px ridge #cacaca;
+    text-align: center;
+    width: 100%;
+    font-size: 22px;
+    padding: 13px 20px;
+    background: rgb(255, 255, 255);
+    font-family: 'DungGeunMo';
+    text-shadow: 1px 1px 1px #fff;
+    line-height: 1.4;
+    /* display: none; */
+}
+
+.quiz__input {
+    width: 100%;
+    border: 6px ridge #cacaca;
+    font-size: 22px;
+    text-align: left;
+    padding: 13px 20px;
+    background: rgb(255, 255, 255);
+    font-family: 'DungGeunMo';
+    text-shadow: 1px 1px 1px #fff;
+    margin-bottom: 10px;
+}
+
+.quiz__selects {
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.quiz__selects label {
+    display: flex;
+}
+
+.quiz__selects label input {
+    position: absolute;
+    left: -9999px;
+}
+
+.quiz__selects label span {
+    font-size: 20px;
+    padding: 10px 30px 10px 20px;
+    margin: 3px 0;
+    line-height: 1.3;
+    border-radius: 20px;
+    font-family: 'DungGeunMo';
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.25s;
+}
+
+.quiz__selects label span::before {
+    content: '';
+    width: 30px; height: 30px;
+    border-radius: 50%;
+    margin-right: 15px;
+    background: #fff;
+    display: flex;
+    flex-shrink: 0;
+    box-shadow: inset 0 0 0 4px #64a30b;
+    transition: all 0.25s;
+}
+
+.quiz__selects label input:checked + span {
+    background-color: #e8ffc5;
+}
+
+.quiz__selects label input:checked + span::before {
+    box-shadow: inset 0 0 0 10px #64a30b;
+}</code></pre></div>
+                    <div><pre><code class="language-js">const quizType = document.querySelector(".quiz__type"); //문제 유형
+const quizNumber = document.querySelector(".quiz__number"); //문제 번호
+const quizAsk = document.querySelector(".quiz__ask"); //문제 질문
+const quizConfirm = document.querySelector(".quiz__confirm"); //문제 정답 버튼
+const quizResult = document.querySelector(".quiz__result"); //문제 설명
+const quizView = document.querySelector(".quiz__view"); //문제 화면
+const quizSelects = document.querySelector(".quiz__selects"); //객관식 보기
+const quizChoice = quizSelects.querySelectorAll(".choice"); //객관식 보기 - 초이스
+const quizSelect = quizSelects.querySelectorAll(".select"); //선택한 보기
+
+//문제 정보
+const quizInfo = [
+    {
+        answerType : "javascript",
+        answerNum : 1 + ". ",
+        answerAsk : "객체 기반의 스크립트 프로그래밍 언어는 무엇입니까?",
+        answerChoice : ["javascript", "html", "css", "react"],
+        answerResult : "1",
+        answerEx : "객체 기반의 스크립트 프로그래밍 언어는 자바스크립트입니다."
+    }
+];
+
+//문제 출력
+function updateQuiz() {
+    //타입, 문제, 정답, 보기 채워주기
+    for(i in quizInfo){
+        quizType.textContent = quizInfo[i].answerType;
+        quizNumber.textContent = quizInfo[i].answerNum;
+        quizAsk.textContent = quizInfo[i].answerAsk;
+        quizResult.textContent = quizInfo[i].answerEx;
+
+        for (let j = 0; j &lt; 4; j ++){
+            quizChoice[j].textContent = quizInfo[0].answerChoice[j];
+        }
+    }
+    //해설 감추기
+    quizResult.style.display = "none";
+}
+updateQuiz();
+
+//정답 확인
+function answerQuiz() {
+    //사용자가 클릭한 input --> checked : 사용자가 선택한 정답 == 객체 안에 정답이 있음
+    for(let i = 0; i &lt; quizSelect.length; i++ ){ //
+        if (quizSelect[i].checked == true){
+            if(quizSelect[i].value == quizInfo[0].answerResult){
+            //정답
+            quizView.classList.add("like");
+        } else {
+            //오답
+            quizView.classList.add("dislike");
+    quizResult.style.display = "block";
+        }
+    }
+    quizConfirm.style.display = "none";
+}
+}
+
+quizConfirm.addEventListener("click", answerQuiz);</code></pre></div>
+                </div>
+                <div class="scroll">
+                <div class="start"></div>
+                <div class="progress"></div>
+                <div class="end"></div>
+                </div>
+            </div>
+            <div class="scroll -row">
+                <div class="start"></div>
+                <div class="progress"></div>
+                <div class="end"></div>
+            </div>
+            </div>
+            <div class="footer"></div>
+        </div>
+    </div>
+
+    <script src="js/windows.js"></script>
     <script>
         const quizType = document.querySelector(".quiz__type"); //문제 유형
         const quizNumber = document.querySelector(".quiz__number"); //문제 번호

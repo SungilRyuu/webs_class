@@ -7,6 +7,8 @@
     <title>퀴즈 이펙트</title>
     <style>
 
+    @import url(css/windows.css);
+
     @font-face {
         font-family: 'DungGeunMo';
         src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
@@ -795,7 +797,182 @@
         <a href="mailto:x7nxc3@gmail.com">x7nxc3@gmail.com</a>
         <div class="quiz_source">소스보기</div>
     </footer>
+    <div class="source">
+        <div class="window">
+            <div class="title-bar">
+            <div class="minimize">
+                <div class="symbol"></div>
+            </div>
+            <div class="maximize">
+                <div class="symbol"></div>
+            </div>
+            <div class="close">
+                <div class="symbol"></div>
+            </div>
+            </div>
+            <div class="menu-bar"><span class="active">HTML</span><span>CSS</span><span>JavaScrpit</span></div>
+            <div class="content-container">
+            <div class="content">
+                <div class="main">
+                    <div><pre><code class="language-html">&lt;div class="quiz__answer"&gt;
+        &lt;input type="text" placeholder="정답을 적어주세요!" class="quiz__input"&gt;
+        &lt;button class="quiz__confirm"&gt;정답 확인하기&lt;/button&gt;
+        &lt;div class="quiz__result"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre></div>
+                    <div><pre><code class="language-css">.quiz__answer {
+    background-color: #f5f5f5;
+    border-top: 6px ridge #cacaca;
+    padding: 10px;
+}
 
+.quiz__confirm {
+    border: 6px ridge #cacaca;
+    width: 100%;
+    font-size: 22px;
+    padding: 13px 20px;
+    background: rgb(192, 192, 192);
+    font-family: 'DungGeunMo';
+    text-shadow: 1px 1px 1px #fff;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.quiz__confirm:hover {
+    background: #b3b3b3;
+}
+
+.quiz__result {
+    border: 6px ridge #cacaca;
+    text-align: center;
+    width: 100%;
+    font-size: 22px;
+    padding: 13px 20px;
+    background: rgb(255, 255, 255);
+    font-family: 'DungGeunMo';
+    text-shadow: 1px 1px 1px #fff;
+    /* display: none; */
+}
+
+.quiz__input {
+    width: 100%;
+    border: 6px ridge #cacaca;
+    font-size: 22px;
+    text-align: left;
+    padding: 13px 20px;
+    background: rgb(255, 255, 255);
+    font-family: 'DungGeunMo';
+    text-shadow: 1px 1px 1px #fff;
+}</code></pre></div>
+                    <div><pre><code class="language-js">const quizType = document.querySelectorAll(".quiz__type"); //문제 유형
+const quizNumber = document.querySelectorAll(".quiz__number"); //문제 번호
+const quizAsk = document.querySelectorAll(".quiz__ask"); //문제 질문
+const quizConfirm = document.querySelectorAll(".quiz__confirm"); //문제 정답 버튼
+const quizResult = document.querySelectorAll(".quiz__result"); //문제 번호
+const quizView = document.querySelectorAll(".quiz__view"); //문제 화면
+const quizInput = document.querySelectorAll(".quiz__input"); //사용자 정답
+
+//문제 정보
+const quizInfo = [
+    {
+        answerType : "javascript",
+        answerNum : 1,
+        answerAsk : "객체 기반의 스크립트 프로그래밍 언어는 무엇입니까?",
+        answerResult : "javascript"
+    },
+    {
+        answerType : "javascript",
+        answerNum : 2,
+        answerAsk : "소문자로 변환하는 문자열 객체의 이름은 무엇입니까?",
+        answerResult : "toLowerCase"
+    },
+    {
+        answerType : "javascript",
+        answerNum : 3,
+        answerAsk : "공백을 제거하는 문자열 객체의 이름은 무엇입니까?",
+        answerResult : "trim"
+    }
+];
+
+//문제 출력
+// quizType[0].textContent = quizInfo[0].answerType;
+// quizType[1].textContent = quizInfo[1].answerType;
+// quizType[2].textContent = quizInfo[2].answerType;
+
+// quizNumber[0].textContent = quizInfo[0].answerNum + ". ";
+// quizNumber[1].textContent = quizInfo[1].answerNum + ". ";
+// quizNumber[2].textContent = quizInfo[2].answerNum + ". ";
+
+// quizAsk[0].textContent = quizInfo[0].answerAsk;
+// quizAsk[1].textContent = quizInfo[1].answerAsk;
+// quizAsk[2].textContent = quizInfo[2].answerAsk;
+
+// quizResult[0].textContent = quizInfo[0].answerResult;
+// quizResult[1].textContent = quizInfo[1].answerResult;
+// quizResult[2].textContent = quizInfo[2].answerResult;
+
+//for문
+// for(let i = 0; i &lt; quizInfo.length; i++){
+//     quizType[i].textContent = quizInfo[i].answerType;
+//     quizNumber[i].textContent = quizInfo[i].answerNum + ". ";
+//     quizAsk[i].textContent = quizInfo[i].answerAsk;
+//     quizResult[i].textContent = quizInfo[i].answerResult;
+// }
+
+//forEach
+
+quizInfo.forEach((e,i) => {
+    quizType[i].textContent = quizInfo[i].answerType;
+    quizNumber[i].textContent = quizInfo[i].answerNum + ". ";
+    quizAsk[i].textContent = quizInfo[i].answerAsk;
+    quizResult[i].textContent ="정답은 : " + quizInfo[i].answerResult + " 입니다.";
+
+})
+
+//정답 숨기기
+quizResult.forEach(el => {
+    el.style.display = "none";
+})
+
+//정답 확인
+quizConfirm.forEach((e, i) => {
+    e.addEventListener("click", () => {
+        // e.style.display = "none";
+        // quizResult[i].style.display = "block";
+
+        // 사용자 정답 = quizInfo 정답
+        const userWord = quizInput[i].value.toLowerCase().trim();
+
+        console.log(userWord);
+        if (userWord == quizInfo[i].answerResult){
+            quizView[i].classList.add("like");
+            quizConfirm[i].style.display = "none";
+        } else {
+            quizView[i].classList.add("dislike");
+            quizConfirm[i].style.display = "none";
+            quizResult[i].style.display = "block";
+            quizInput[i].style.display = "none";
+        }
+    })
+})</code></pre></div>
+                </div>
+                <div class="scroll">
+                <div class="start"></div>
+                <div class="progress"></div>
+                <div class="end"></div>
+                </div>
+            </div>
+            <div class="scroll -row">
+                <div class="start"></div>
+                <div class="progress"></div>
+                <div class="end"></div>
+            </div>
+            </div>
+            <div class="footer"></div>
+        </div>
+    </div>
+
+    <script src="js/windows.js"></script>
     <script>
         const quizType = document.querySelectorAll(".quiz__type"); //문제 유형
         const quizNumber = document.querySelectorAll(".quiz__number"); //문제 번호

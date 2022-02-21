@@ -1,6 +1,6 @@
 .source .window {
-  min-width: 800px;
-  min-height: 500px;
+  min-width: 600px;
+  min-height: 400px;
   background-color: #c7c7c7;
   padding: 4px;
   border-left: 2px solid #FCFCFC;
@@ -8,11 +8,64 @@
   border-right: 2px solid #2A2A2A;
   border-bottom: 2px solid #2A2A2A;
   position: absolute;
-  top: calc(50% - 250px);
-  left: calc(50% - 400px);
+  top: calc(50% - 200px);
+  left: calc(50% - 300px);
   z-index: 10;
-  /* display: none; */
+  transform: scaleY(0);
 }
+
+.source .window.show {
+  transition: all 0.3s ease;
+  transform: scaleY(1);
+}
+
+.source .window.hide {
+  transition: all 0.3s ease;
+  transform: scaleY(0);
+}
+
+
+
+
+
+/* .modal-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  transform: scale(0);
+} */
+/* 
+#modal.show .modal-wrap {
+  animation: zoomOut 0.5s 1s ease forwards;
+}
+
+#modal.hide .modal-wrap {
+  animation: zoomIn 0.5s ease forwards;
+}
+
+@keyframes foldOut {
+  0% {transform: scaleX(0) scaleY(0.005)}
+  50% {transform: scaleX(1) scaleY(0.005)}
+  100% {transform: scaleX(1) scaleY(1)}
+}
+@keyframes foldIn {
+  0% {transform: scaleX(1) scaleY(1)}
+  50% {transform: scaleX(1) scaleY(0.005)}
+  100% {transform: scaleX(0) scaleY(0.005)}
+}
+
+@keyframes zoomOut {
+  0% {transform: scale(0);}
+  100% {transform: scale(1);}
+}
+
+@keyframes zoomIn {
+  0% {transform: scale(1);}
+  100% {transform: scale(0);}
+} */
+
 
 .source .title-bar {
   background-color: #000080;
@@ -79,6 +132,9 @@
   display: inline-block;
   cursor: pointer;
 }
+.source .menu-bar > span.active {
+  background-color: #bababa;
+}
 .source .menu-bar > span::first-letter {
   text-decoration: underline;
 }
@@ -94,7 +150,7 @@
 }
 .source .content-container > .content {
   display: flex;
-  height: 400px;
+  height: 350px;
 }
 .source .content-container > .content > .main, .content-container > .content > .scroll-left {
   height: 100%;
@@ -178,4 +234,15 @@
 }
 .source .scroll.-row > .end::after {
   transform: rotate(90deg);
+}
+
+.main > div:nth-child(2),
+.main > div:nth-child(3) {
+  display: none;
+}
+
+.main {
+  overflow: hidden;
+  overflow-y: visible;
+  white-space: nowrap;
 }
