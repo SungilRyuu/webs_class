@@ -11,6 +11,7 @@
   top: calc(50% - 250px);
   left: calc(50% - 400px);
   z-index: 10;
+  /* display: none; */
 }
 
 .source .title-bar {
@@ -93,7 +94,7 @@
 }
 .source .content-container > .content {
   display: flex;
-  height: 260px;
+  height: 400px;
 }
 .source .content-container > .content > .main, .content-container > .content > .scroll-left {
   height: 100%;
