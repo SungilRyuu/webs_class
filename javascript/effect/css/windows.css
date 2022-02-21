@@ -1,36 +1,19 @@
-@import url("https://fonts.googleapis.com/css?family=Inconsolata");
-html {
-  box-sizing: border-box;
-}
-
-*, *::after, *::before {
-  box-sizing: inherit;
-}
-
-html, body {
-  height: 100%;
-}
-
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #FF9AE0;
-  font-family: "Inconsolata", monospace;
-}
-
-.window {
-  min-width: 360px;
-  min-height: 220px;
+.source .window {
+  min-width: 800px;
+  min-height: 500px;
   background-color: #c7c7c7;
   padding: 4px;
   border-left: 2px solid #FCFCFC;
   border-top: 2px solid #FCFCFC;
   border-right: 2px solid #2A2A2A;
   border-bottom: 2px solid #2A2A2A;
+  position: absolute;
+  top: calc(50% - 250px);
+  left: calc(50% - 400px);
+  z-index: 10;
 }
 
-.title-bar {
+.source .title-bar {
   background-color: #000080;
   padding: 4px;
   height: 30px;
@@ -39,7 +22,7 @@ body {
   justify-content: flex-end;
   align-items: center;
 }
-.title-bar > .minimize, .title-bar > .maximize, .title-bar > .close {
+.source  .title-bar > .minimize, .title-bar > .maximize, .title-bar > .close {
   width: 26px;
   height: 22px;
   background-color: #c7c7c7;
@@ -51,35 +34,35 @@ body {
   justify-content: center;
   cursor: pointer;
 }
-.title-bar > .minimize:hover, .title-bar > .maximize:hover, .title-bar > .close:hover {
+.source .title-bar > .minimize:hover, .title-bar > .maximize:hover, .title-bar > .close:hover {
   background-color: #bababa;
   border-left: 2px solid #2A2A2A;
   border-top: 2px solid #2A2A2A;
   border-right: 2px solid #FCFCFC;
   border-bottom: 2px solid #FCFCFC;
 }
-.title-bar > .minimize {
+.source .title-bar > .minimize {
   align-items: flex-end;
 }
-.title-bar > .minimize > .symbol {
+.source .title-bar > .minimize > .symbol {
   width: 60%;
   height: 3px;
   background-color: #000000;
   margin-bottom: 2px;
 }
-.title-bar > .maximize > .symbol {
+.source .title-bar > .maximize > .symbol {
   width: 70%;
   height: 80%;
   border: 2px solid #000000;
   border-top-width: 4px;
 }
-.title-bar > .close > .symbol {
+.source .title-bar > .close > .symbol {
   width: 70%;
   height: 3px;
   background-color: #000000;
   transform: rotate(45deg);
 }
-.title-bar > .close > .symbol::after {
+.source .title-bar > .close > .symbol::after {
   content: "";
   top: 0;
   left: 0;
@@ -90,46 +73,47 @@ body {
   transform: rotate(90deg);
 }
 
-.menu-bar > span {
+.source .menu-bar > span {
   padding: 8px;
   display: inline-block;
   cursor: pointer;
 }
-.menu-bar > span::first-letter {
+.source .menu-bar > span::first-letter {
   text-decoration: underline;
 }
-.menu-bar > span:hover {
+.source .menu-bar > span:hover {
   background-color: #bababa;
 }
 
-.content-container {
+.source .content-container {
   border-left: 2px solid #2A2A2A;
   border-top: 2px solid #2A2A2A;
   border-right: 2px solid #FCFCFC;
   border-bottom: 2px solid #FCFCFC;
 }
-.content-container > .content {
+.source .content-container > .content {
   display: flex;
   height: 260px;
 }
-.content-container > .content > .main, .content-container > .content > .scroll-left {
+.source .content-container > .content > .main, .content-container > .content > .scroll-left {
   height: 100%;
 }
-.content-container > .content > .main {
+.source .content-container > .content > .main {
   width: calc(100% - 26px);
 }
-.content-container > .content > .scroll {
+.source .content-container > .content > .scroll {
   width: 26px;
 }
 
-.scroll {
+.source .scroll {
   background-color: #D7D7D7;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
 }
-.scroll > .progress {
+
+.source .scroll > .progress {
   width: 24px;
   height: 70%;
   cursor: pointer;
@@ -139,10 +123,11 @@ body {
   border-bottom: 2px solid #2A2A2A;
   background-color: #c7c7c7;
 }
-.scroll > .progress:hover {
+
+.source .scroll > .progress:hover {
   background-color: #bababa;
 }
-.scroll > .start, .scroll > .end {
+.source .scroll > .start, .scroll > .end {
   width: 24px;
   height: 22px;
   position: relative;
@@ -152,14 +137,16 @@ body {
   border-bottom: 2px solid #2A2A2A;
   background-color: #c7c7c7;
 }
-.scroll > .start:hover, .scroll > .end:hover {
+
+.source .scroll > .start:hover, .scroll > .end:hover {
   background-color: #bababa;
   border-left: 2px solid #2A2A2A;
   border-top: 2px solid #2A2A2A;
   border-right: 2px solid #FCFCFC;
   border-bottom: 2px solid #FCFCFC;
 }
-.scroll > .start::after, .scroll > .end::after {
+
+.source .scroll > .start::after, .scroll > .end::after {
   content: "";
   display: block;
   position: absolute;
@@ -172,19 +159,22 @@ body {
   border-right: 6px solid transparent;
   border-bottom: 6px solid #000000;
 }
-.scroll > .end::after {
+
+.source .scroll > .end::after {
   transform: rotate(180deg);
 }
-.scroll.-row {
+
+.source .scroll.-row {
   flex-direction: row;
 }
-.scroll.-row > .progress {
+
+.source .scroll.-row > .progress {
   width: 30%;
   height: 24px;
 }
-.scroll.-row > .start::after {
+.source .scroll.-row > .start::after {
   transform: rotate(-90deg);
 }
-.scroll.-row > .end::after {
+.source .scroll.-row > .end::after {
   transform: rotate(90deg);
 }

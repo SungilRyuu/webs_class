@@ -110,7 +110,6 @@
         color: #fff;
         font-size: 16px;
     }
-
     .quiz_source {
         position: fixed;
         padding: 10px 20px;
@@ -124,7 +123,6 @@
         background: #8d8d8d;
         color: #fff;
     }
-
     /* quiz__wrap */
     .quiz__wrap {
         display: flex;
@@ -132,7 +130,6 @@
         justify-content: center;
         flex-wrap: wrap;
         margin-top: 150px;
-        margin-bottom: 100px;
     }
     .quiz {
         width: 100%;
@@ -238,6 +235,15 @@
     75% {transform: translate3d(-5%, 0, 0) rotate(-1deg)}
     100% {transform: translateZ(0)}
     }
+
+
+
+
+
+
+
+
+
 
     .quiz__answer {
         background-color: #f5f5f5;
@@ -657,7 +663,7 @@
         visibility: visible;
         }
     }
- 
+
 
     </style>
 </head>
@@ -667,8 +673,8 @@
         <nav>
             <ul>
                 <li><a href="quizEffect01.html">1</a></li>
-                <li class="active"><a href="quizEffect02.html">2</a></li>
-                <li><a href="quizEffect03.html">3</a></li>
+                <li><a href="quizEffect02.html">2</a></li>
+                <li class="active"><a href="quizEffect03.html">3</a></li>
                 <li><a href="quizEffect04.html">4</a></li>
                 <li><a href="quizEffect05.html">5</a></li>
                 <li><a href="quizEffect06.html">6</a></li>
@@ -713,79 +719,183 @@
                     <div class="quiz__result"></div>
                 </div>
             </div>
+            <div class="quiz">
+                <h2 class="quiz__type">HTML 퀴즈</h2>
+                <h3 class="quiz__question">
+                    <span class="quiz__number"></span>
+                    <span class="quiz__ask"></span>
+                </h3>
+                <div class="quiz__view">
+                    <div class="true">정답입니다!</div>
+                    <div class="false">틀렸습니다!</div>
+                    <div class="dog">
+                        <div class='head'>
+                            <div class='ears'></div>
+                            <div class='face'></div>
+                            <div class='eyes'>
+                              <div class='teardrop'></div>
+                            </div>
+                            <div class='nose'></div>
+                            <div class='mouth'>
+                              <div class='tongue'></div>
+                            </div>
+                            <div class='chin'></div>
+                          </div>
+                          <div class='body'>
+                            <div class='tail'></div>
+                            <div class='legs'></div>
+                          </div>
+                    </div>
+                </div>
+                <div class="quiz__answer">
+                    <input type="text" placeholder="정답을 적어주세요!" class="quiz__input">
+                    <button class="quiz__confirm">정답 확인하기</button>
+                    <div class="quiz__result"></div>
+                </div>
+            </div>
+            <div class="quiz">
+                <h2 class="quiz__type">HTML 퀴즈</h2>
+                <h3 class="quiz__question">
+                    <span class="quiz__number"></span>
+                    <span class="quiz__ask"></span>
+                </h3>
+                <div class="quiz__view">
+                    <div class="true">정답입니다!</div>
+                    <div class="false">틀렸습니다!</div>
+                    <div class="dog">
+                        <div class='head'>
+                            <div class='ears'></div>
+                            <div class='face'></div>
+                            <div class='eyes'>
+                              <div class='teardrop'></div>
+                            </div>
+                            <div class='nose'></div>
+                            <div class='mouth'>
+                              <div class='tongue'></div>
+                            </div>
+                            <div class='chin'></div>
+                          </div>
+                          <div class='body'>
+                            <div class='tail'></div>
+                            <div class='legs'></div>
+                          </div>
+                    </div>
+                </div>
+                <div class="quiz__answer">
+                    <input type="text" placeholder="정답을 적어주세요!" class="quiz__input">
+                    <button class="quiz__confirm">정답 확인하기</button>
+                    <div class="quiz__result"></div>
+                </div>
+            </div>
         </div>
     </main>
     
     <footer id="footer">
         <a href="mailto:x7nxc3@gmail.com">x7nxc3@gmail.com</a>
         <div class="quiz_source">소스보기</div>
-        </div>
-
     </footer>
 
     <script>
-        const quizType = document.querySelector(".quiz__type"); //퀴즈 종류
-        const quizNumber = document.querySelector(".quiz__number"); //퀴즈 번호
-        const quizAsk = document.querySelector(".quiz__ask"); //퀴즈 질문
-        const quizConfirm = document.querySelector(".quiz__confirm"); //정답 확인 버튼
-        const quizResult = document.querySelector(".quiz__result"); //정답 결과
-        const quizView = document.querySelector(".quiz__view"); //강아지
-        const quizInput = document.querySelector(".quiz__input"); //사용자가 입력한 값
-
+        const quizType = document.querySelectorAll(".quiz__type"); //문제 유형
+        const quizNumber = document.querySelectorAll(".quiz__number"); //문제 번호
+        const quizAsk = document.querySelectorAll(".quiz__ask"); //문제 질문
+        const quizConfirm = document.querySelectorAll(".quiz__confirm"); //문제 정답 버튼
+        const quizResult = document.querySelectorAll(".quiz__result"); //문제 번호
+        const quizView = document.querySelectorAll(".quiz__view"); //문제 화면
+        const quizInput = document.querySelectorAll(".quiz__input"); //사용자 정답
 
         //문제 정보
-        const answerType = "javascript"
-        const answerNum = 2;
-        const answerAsk = "객체 기반의 스크립트 프로그래밍 언어는 무엇입니까?";
-        const answerResult = "javascript";
+        const quizInfo = [
+            {
+                answerType : "javascript",
+                answerNum : 1,
+                answerAsk : "객체 기반의 스크립트 프로그래밍 언어는 무엇입니까?",
+                answerResult : "javascript"
+            },
+            {
+                answerType : "javascript",
+                answerNum : 2,
+                answerAsk : "소문자로 변환하는 문자열 객체의 이름은 무엇입니까?",
+                answerResult : "toLowerCase"
+            },
+            {
+                answerType : "javascript",
+                answerNum : 3,
+                answerAsk : "공백을 제거하는 문자열 객체의 이름은 무엇입니까?",
+                answerResult : "trim"
+            }
+        ];
 
         //문제 출력
-        quizType.textContent = answerType;
-        quizNumber.textContent = answerNum + ". ";
-        quizAsk.textContent = answerAsk;
-        quizResult.textContent = "정답은 : " + answerResult + " 입니다.";
+        // quizType[0].textContent = quizInfo[0].answerType;
+        // quizType[1].textContent = quizInfo[1].answerType;
+        // quizType[2].textContent = quizInfo[2].answerType;
 
-        quizResult.style.display = "none";
+        // quizNumber[0].textContent = quizInfo[0].answerNum + ". ";
+        // quizNumber[1].textContent = quizInfo[1].answerNum + ". ";
+        // quizNumber[2].textContent = quizInfo[2].answerNum + ". ";
 
-        //정답 확인
-        //정답 버튼을 클릭하면 정답 확인은 안보이게, 숨겨진 정답을 보이게 설정
-        quizConfirm.addEventListener("click", () => {
-            quizConfirm.style.display = "none";
-            quizResult.style.display = "block";
-            const usedWord = quizInput.value.toLowerCase().trim(); //클릭해야 답을 가젹오게 함 + 사용자 데이터
-            console.log(usedWord); //console로 확인하기
-            // quizConfirm.style.display = "none";
-            // quizResult.style.display = "block";
-            if(usedWord == answerResult){
-                quizView.classList.add("like");
-                quizResult.style.display = "none";
-            } else {
-                quizView.classList.add("dislike");
-                quizInput.style.display = "none";
-            }
+        // quizAsk[0].textContent = quizInfo[0].answerAsk;
+        // quizAsk[1].textContent = quizInfo[1].answerAsk;
+        // quizAsk[2].textContent = quizInfo[2].answerAsk;
+
+        // quizResult[0].textContent = quizInfo[0].answerResult;
+        // quizResult[1].textContent = quizInfo[1].answerResult;
+        // quizResult[2].textContent = quizInfo[2].answerResult;
+
+        //for문
+        // for(let i = 0; i < quizInfo.length; i++){
+        //     quizType[i].textContent = quizInfo[i].answerType;
+        //     quizNumber[i].textContent = quizInfo[i].answerNum + ". ";
+        //     quizAsk[i].textContent = quizInfo[i].answerAsk;
+        //     quizResult[i].textContent = quizInfo[i].answerResult;
+        // }
+        
+        //forEach
+        
+        quizInfo.forEach((e,i) => {
+            quizType[i].textContent = quizInfo[i].answerType;
+            quizNumber[i].textContent = quizInfo[i].answerNum + ". ";
+            quizAsk[i].textContent = quizInfo[i].answerAsk;
+            quizResult[i].textContent ="정답은 : " + quizInfo[i].answerResult + " 입니다.";
+
         })
 
-        //숙제        정답을 적어주세요~
-        // const correct = document.querySelector(".quiz__input");
+        //정답 숨기기
+        quizResult.forEach(el => {
+            el.style.display = "none";
+        })
 
-        // correct.addEventListener("keyup", () => {
-        //     const correctBox = correct.value;
-        //     const truee = document.querySelector(".quiz__view .true");
-        //     const falsee = document.querySelector(".quiz__view .false");
+        //정답 확인
+        quizConfirm.forEach((e, i) => {
+            e.addEventListener("click", () => {
+                // e.style.display = "none";
+                // quizResult[i].style.display = "block";
 
-        //     if (correctBox == answerResult) {
-        //         quizView.classList.add("like");
-        //         quizView.classList.remove("dislike");
-        //         truee.style.opacity = "1";
-        //         falsee.style.opacity = "0";
-                
-        //     } else {
-        //         quizView.classList.add("dislike");
-        //         quizView.classList.remove("like");
-        //         truee.style.opacity = "0";
-        //         falsee.style.opacity = "1";
-        //     }
-        // })
+                // 사용자 정답 = quizInfo 정답
+                const userWord = quizInput[i].value.toLowerCase().trim();
+
+                console.log(userWord);
+                if (userWord == quizInfo[i].answerResult){
+                    quizView[i].classList.add("like");
+                    quizConfirm[i].style.display = "none";
+                } else {
+                    quizView[i].classList.add("dislike");
+                    quizConfirm[i].style.display = "none";
+                    quizResult[i].style.display = "block";
+                    quizInput[i].style.display = "none";
+                }
+            })
+        })
+
+        //for in 
+        // for(let i in quizInfo){
+        // quizType[i].textContent = quizInfo[i].answerType;
+        // quizNumber[i].textContent = quizInfo[i].answerNum + ". ";
+        // quizAsk[i].textContent = quizInfo[i].answerAsk;
+        // quizResult[i].textContent = quizInfo[i].answerResult;
+        // }
+
     </script>
 </body>
 </html>

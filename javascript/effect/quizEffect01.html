@@ -7,6 +7,8 @@
     <title>퀴즈 이펙트</title>
     <style>
 
+    @import url(css/windows.css);
+    
     @font-face {
         font-family: 'DungGeunMo';
         src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
@@ -110,8 +112,22 @@
     #footer a {
         color: #fff;
         font-size: 16px;
-        
     }
+
+    .quiz_source {
+        position: fixed;
+        padding: 10px 20px;
+        border: 8px ridge #cacaca;
+        background: #cacaca;
+        border-radius: 10px;
+        bottom: 10px;
+        right: 10px;
+    }
+    .quiz_source:hover {
+        background: #8d8d8d;
+        color: #fff;
+    }
+    
     /* quiz__wrap */
     .quiz__wrap {
         display: flex;
@@ -580,7 +596,6 @@
         }
     }
 
-
     </style>
 </head>
 <body>
@@ -633,44 +648,45 @@
                 </div>
             </div>
         </div>
-
-        <div class="quiz_source">
-            <div class="window">
-                <div class="title-bar">
-                <div class="minimize">
-                    <div class="symbol"></div>
-                </div>
-                <div class="maximize">
-                    <div class="symbol"></div>
-                </div>
-                <div class="close">
-                    <div class="symbol"></div>
-                </div>
-                </div>
-                <div class="menu-bar"><span>File</span><span>Edit</span><span>View</span><span>Help</span></div>
-                <div class="content-container">
-                <div class="content">
-                    <div class="main"></div>
-                    <div class="scroll">
-                    <div class="start"></div>
-                    <div class="progress"></div>
-                    <div class="end"></div>
-                    </div>
-                </div>
-                <div class="scroll -row">
-                    <div class="start"></div>
-                    <div class="progress"></div>
-                    <div class="end"></div>
-                </div>
-                </div>
-                <div class="footer"></div>
-            </div>
-        </div>
     </main>
 
     <footer id="footer">
         <a href="mailto:x7nxc3@gmail.com">x7nxc3@gmail.com</a>
+        <div class="quiz_source">소스보기</div>
     </footer>
+
+    <div class="source">
+        <div class="window">
+            <div class="title-bar">
+            <div class="minimize">
+                <div class="symbol"></div>
+            </div>
+            <div class="maximize">
+                <div class="symbol"></div>
+            </div>
+            <div class="close">
+                <div class="symbol"></div>
+            </div>
+            </div>
+            <div class="menu-bar"><span>File</span><span>Edit</span><span>View</span><span>Help</span></div>
+            <div class="content-container">
+            <div class="content">
+                <div class="main"></div>
+                <div class="scroll">
+                <div class="start"></div>
+                <div class="progress"></div>
+                <div class="end"></div>
+                </div>
+            </div>
+            <div class="scroll -row">
+                <div class="start"></div>
+                <div class="progress"></div>
+                <div class="end"></div>
+            </div>
+            </div>
+            <div class="footer"></div>
+        </div>
+    </div>
 
     <script>
         const quizType = document.querySelector(".quiz__type"); //퀴즈 종류
