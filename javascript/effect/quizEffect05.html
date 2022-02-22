@@ -745,7 +745,7 @@
 
     <main id="main">
         <div class="quiz__wrap">
-            <!-- quiz -->
+            <!-- quiz: 자바스크립트 처리 -->
         </div>
     </main>
     
@@ -770,64 +770,10 @@
             <div class="content-container">
             <div class="content">
                 <div class="main">
-                    <div><pre><code class="language-html">&lt;div class="quiz__answer"&gt;
-    &lt;div class="quiz__selects"&gt;
-        &lt;label for="select1"&gt;
-            &lt;input class="select" type="radio" name="select" id="select1" value="1"&gt;
-            &lt;span class="choice"&gt;&lt;/span&gt;
-        &lt;/label&gt;
-        &lt;label for="select2"&gt;
-            &lt;input class="select" type="radio" name="select" id="select2" value="2"&gt;
-            &lt;span class="choice"&gt;&lt;/span&gt;
-        &lt;/label&gt;
-        &lt;label for="select3"&gt;
-            &lt;input class="select" type="radio" name="select" id="select3" value="3"&gt;
-            &lt;span class="choice"&gt;&lt;/span&gt;
-        &lt;/label&gt;
-        &lt;label for="select4"&gt;
-            &lt;input class="select" type="radio" name="select" id="select4" value="4"&gt;
-            &lt;span class="choice"&gt;&lt;/span&gt;
-        &lt;/label&gt;
-    &lt;/div&gt;
-    &lt;button class="quiz__confirm"&gt;정답 확인하기&lt;/button&gt;
-    &lt;div class="quiz__result"&gt;&lt;/div&gt;
+                    <div><pre><code class="language-html">&lt;div class="quiz__wrap"&gt;
+    &lt;!-- quiz: 자바스크립트 처리 --&gt;
 &lt;/div&gt;</code></pre></div>
-                    <div><pre><code class="language-css">.quiz__answer {
-    background-color: #f5f5f5;
-    border-top: 6px ridge #cacaca;
-    padding: 10px;
-}
-
-.quiz__confirm {
-    border: 6px ridge #cacaca;
-    width: 100%;
-    font-size: 22px;
-    padding: 13px 20px;
-    background: rgb(192, 192, 192);
-    font-family: 'DungGeunMo';
-    text-shadow: 1px 1px 1px #fff;
-    transition: all 0.3s;
-    cursor: pointer;
-}
-
-.quiz__confirm:hover {
-    background: #b3b3b3;
-}
-
-.quiz__result {
-    border: 6px ridge #cacaca;
-    text-align: center;
-    width: 100%;
-    font-size: 22px;
-    padding: 13px 20px;
-    background: rgb(255, 255, 255);
-    font-family: 'DungGeunMo';
-    text-shadow: 1px 1px 1px #fff;
-    line-height: 1.4;
-    /* display: none; */
-}
-
-.quiz__input {
+<div><pre><code class="language-css">.quiz__ex {
     width: 100%;
     border: 6px ridge #cacaca;
     font-size: 22px;
@@ -837,63 +783,8 @@
     font-family: 'DungGeunMo';
     text-shadow: 1px 1px 1px #fff;
     margin-bottom: 10px;
-}
-
-.quiz__selects {
-    margin-top: 15px;
-    margin-bottom: 20px;
-}
-
-.quiz__selects label {
-    display: flex;
-}
-
-.quiz__selects label input {
-    position: absolute;
-    left: -9999px;
-}
-
-.quiz__selects label span {
-    font-size: 20px;
-    padding: 10px 30px 10px 20px;
-    margin: 3px 0;
-    line-height: 1.3;
-    border-radius: 20px;
-    font-family: 'DungGeunMo';
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    transition: all 0.25s;
-}
-
-.quiz__selects label span::before {
-    content: '';
-    width: 30px; height: 30px;
-    border-radius: 50%;
-    margin-right: 15px;
-    background: #fff;
-    display: flex;
-    flex-shrink: 0;
-    box-shadow: inset 0 0 0 4px #64a30b;
-    transition: all 0.25s;
-}
-
-.quiz__selects label input:checked + span {
-    background-color: #e8ffc5;
-}
-
-.quiz__selects label input:checked + span::before {
-    box-shadow: inset 0 0 0 10px #64a30b;
 }</code></pre></div>
-                    <div><pre><code class="language-js">const quizType = document.querySelector(".quiz__type"); //문제 유형
-const quizNumber = document.querySelector(".quiz__number"); //문제 번호
-const quizAsk = document.querySelector(".quiz__ask"); //문제 질문
-const quizConfirm = document.querySelector(".quiz__confirm"); //문제 정답 버튼
-const quizResult = document.querySelector(".quiz__result"); //문제 설명
-const quizView = document.querySelector(".quiz__view"); //문제 화면
-const quizSelects = document.querySelector(".quiz__selects"); //객관식 보기
-const quizChoice = quizSelects.querySelectorAll(".choice"); //객관식 보기 - 초이스
-const quizSelect = quizSelects.querySelectorAll(".select"); //선택한 보기
+                    <div><pre><code class="language-js">const quizWrap = document.querySelector(".quiz__wrap"); //전체 감싸는 것
 
 //문제 정보
 const quizInfo = [
@@ -901,49 +792,148 @@ const quizInfo = [
         answerType : "javascript",
         answerNum : 1 + ". ",
         answerAsk : "객체 기반의 스크립트 프로그래밍 언어는 무엇입니까?",
-        answerChoice : ["javascript", "html", "css", "react"],
-        answerResult : "1",
+        answerChoice : {1: "html",
+                        2: "css",
+                        3: "javascript",
+                        4: "react"},
+        answerResult : "3",
         answerEx : "객체 기반의 스크립트 프로그래밍 언어는 자바스크립트입니다."
+    },
+    {
+        answerType : "html",
+        answerNum : 2 + ". ",
+        answerAsk : "웹 페이지의 마크업 언어는 무엇입니까?",
+        answerChoice : {1: "html",
+                        2: "css",
+                        3: "javascript",
+                        4: "react"},
+        answerResult : "1",
+        answerEx : "웹 페이지의 마크업 언어는 html입니다."
+    },
+    {
+        answerType : "css",
+        answerNum : 3 + ". ",
+        answerAsk : "웹페이지를 꾸미기 위해서 사용하는 언어는 무엇인가요?",
+        answerChoice : {1: "html",
+                        2: "css",
+                        3: "javascript",
+                        4: "react"},
+        answerResult : "2",
+        answerEx : "웹페이지를 꾸미기 위해서 사용하는 언어는 css 입니다."
+    },
+    {
+        answerType : "react",
+        answerNum : 4 + ". ",
+        answerAsk : "이때까지 나오지 않은 정답은 무엇인가요?",
+        answerChoice : {1: "html",
+                        2: "css",
+                        3: "javascript",
+                        4: "react"},
+        answerResult : "4",
+        answerEx : "이때까지 나오지 않은 것은 react 입니다."
     }
 ];
 
 //문제 출력
-function updateQuiz() {
-    //타입, 문제, 정답, 보기 채워주기
-    for(i in quizInfo){
-        quizType.textContent = quizInfo[i].answerType;
-        quizNumber.textContent = quizInfo[i].answerNum;
-        quizAsk.textContent = quizInfo[i].answerAsk;
-        quizResult.textContent = quizInfo[i].answerEx;
+function updateQuiz(){
+    const html = [];
 
-        for (let j = 0; j &lt; 4; j ++){
-            quizChoice[j].textContent = quizInfo[0].answerChoice[j];
-        }
-    }
-    //해설 감추기
-    quizResult.style.display = "none";
+    quizInfo.forEach((question, number) =&gt; {
+        html.push(
+            `&lt;div class="quiz"&gt;
+                &lt;h2 class="quiz__type"&gt;${question.answerType}&lt;/h2&gt;
+                &lt;h3 class="quiz__question"&gt;
+                    &lt;span class="quiz__number"&gt;${question.answerNum}&lt;/span&gt;
+                    &lt;span class="quiz__ask"&gt;${question.answerAsk}&lt;/span&gt;
+                &lt;/h3&gt;
+                &lt;div class="quiz__view"&gt;
+                    &lt;div class="true"&gt;정답입니다!&lt;/div&gt;
+                    &lt;div class="false"&gt;틀렸습니다!&lt;/div&gt;
+                    &lt;div class="dog"&gt;
+                        &lt;div class='head'&gt;
+                            &lt;div class='ears'&gt;&lt;/div&gt;
+                            &lt;div class='face'&gt;&lt;/div&gt;
+                            &lt;div class='eyes'&gt;
+                            &lt;div class='teardrop'&gt;&lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class='nose'&gt;&lt;/div&gt;
+                            &lt;div class='mouth'&gt;
+                            &lt;div class='tongue'&gt;&lt;/div&gt;
+                            &lt;/div&gt;
+                            &lt;div class='chin'&gt;&lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class='body'&gt;
+                            &lt;div class='tail'&gt;&lt;/div&gt;
+                            &lt;div class='legs'&gt;&lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="quiz__answer"&gt;
+                    &lt;div class="quiz__selects"&gt;
+                        &lt;label for="select1${number}"&gt;
+                            &lt;input class="select" type="radio" name="select${number}" id="select1${number}" value="1"&gt;
+                            &lt;span class="choice"&gt;${question.answerChoice[1]}&lt;/span&gt;
+                        &lt;/label&gt;
+                        &lt;label for="select2${number}"&gt;
+                            &lt;input class="select" type="radio" name="select${number}" id="select2${number}" value="2"&gt;
+                            &lt;span class="choice"&gt;${question.answerChoice[2]}&lt;/span&gt;
+                        &lt;/label&gt;
+                        &lt;label for="select3${number}"&gt;
+                            &lt;input class="select" type="radio" name="select${number}" id="select3${number}" value="3"&gt;
+                            &lt;span class="choice"&gt;${question.answerChoice[3]}&lt;/span&gt;
+                        &lt;/label&gt;
+                        &lt;label for="select4${number}"&gt;
+                            &lt;input class="select" type="radio" name="select${number}" id="select4${number}" value="4"&gt;
+                            &lt;span class="choice"&gt;${question.answerChoice[4]}&lt;/span&gt;
+                        &lt;/label&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        `)
+    }); //html을 자바스크립트 처리
+
+    html.push(`
+        &lt;div class="quiz__btn"&gt;
+            &lt;button class="quiz__confirm"&gt;정답 확인하기&lt;/button&gt;
+            &lt;div class="quiz__result"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    `); // 정답 확인하기를 따로 빼기
+
+    quizWrap.innerHTML = html.join(''); //사이사이의 쉼표를 없애준다
 }
-updateQuiz();
+updateQuiz(); //함수실행
 
-//정답 확인
-function answerQuiz() {
-    //사용자가 클릭한 input --> checked : 사용자가 선택한 정답 == 객체 안에 정답이 있음
-    for(let i = 0; i &lt; quizSelect.length; i++ ){ //
-        if (quizSelect[i].checked == true){
-            if(quizSelect[i].value == quizInfo[0].answerResult){
-            //정답
-            quizView.classList.add("like");
+function answerQuiz(){
+    const quizSelects = document.querySelectorAll(".quiz__selects"); //보기 선택 박스
+    const quizView = document.querySelectorAll(".quiz__view"); //보기 선택 박스
+    const quizResult = document.querySelector(".quiz__result"); //결과 값
+
+    let scoreCurrent = 0; //정답 갯수
+
+    quizInfo.forEach((question, number) =&gt; {
+        const quizSelectsWrap = quizSelects[number]; //각각의 값을 가져 옴
+        const userSelector = `input[name=select${number}]:checked`; //사용자가 클릭한 것
+        const userAnswer = (quizSelectsWrap.querySelector(userSelector) || {}).value
+//클릭한 값을 가져오거나 공백을 가져오거나
+
+        if(userAnswer == question.answerResult){
+            // console.log("정답");
+            quizView[number].classList.add("like"); // 정답 표정
+            scoreCurrent++; //정답 갯수 +1 처리
         } else {
-            //오답
-            quizView.classList.add("dislike");
-    quizResult.style.display = "block";
+            // console.log("오답");
+            quizView[number].classList.add("dislike"); //오답 표정
+            const div = document.createElement("div"); //해설 삽입
+
+            quizSelectsWrap.appendChild(div).innerHTML = `&lt;p class="quiz__ex"&gt;$(question.answerEx)&lt;/p&gt;`
+
+
         }
-    }
-    quizConfirm.style.display = "none";
-}
+    });
+    quizResult.innerHTML = `${quizInfo.length} 문제 중에 ${scoreCurrent} 문제를 맞추었습니다.`
 }
 
-quizConfirm.addEventListener("click", answerQuiz);</code></pre></div>
+document.querySelector(".quiz__confirm").addEventListener("click", answerQuiz);</code></pre></div>
                 </div>
                 <div class="scroll">
                 <div class="start"></div>

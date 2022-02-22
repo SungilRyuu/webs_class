@@ -242,7 +242,6 @@
 }
 
 .main {
-  overflow: hidden;
-  overflow-y: visible;
+  overflow: visible;
   white-space: nowrap;
 }
