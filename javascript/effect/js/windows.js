@@ -1,15 +1,21 @@
 //윈도우 오픈
 const openWindow = function(){
     document.querySelector(".quiz_source").addEventListener("click", () => {
+        document.querySelector(".source").classList.add("show");
         document.querySelector(".source .window").classList.add("show");
+        document.querySelector(".source").classList.remove("hide");
         document.querySelector(".source .window").classList.remove("hide");
     });
     document.querySelector(".close").addEventListener("click", () => {
+        document.querySelector(".source").classList.add("hide");
         document.querySelector(".source .window").classList.add("hide");
+        document.querySelector(".source").classList.remove("show");
         document.querySelector(".source .window").classList.remove("show");
     });
     document.querySelector(".minimize").addEventListener("click", () => {
+        document.querySelector(".source").classList.add("hide");
         document.querySelector(".source .window").classList.add("hide");
+        document.querySelector(".source").classList.remove("show");
         document.querySelector(".source .window").classList.remove("show");
     });
 }

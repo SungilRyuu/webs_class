@@ -74,6 +74,10 @@
     }
     #header h1 {
         padding: 3px 0 6px 10px;
+        color: #fff;
+    }
+    #header h1 a {
+        color: #fff;
     }
     #header nav {
         padding-right: 10px;
@@ -1094,7 +1098,7 @@ document.querySelector(".quiz__confirm").addEventListener("click", answerQuiz);<
                     quizView[number].classList.add("dislike");
                     const div = document.createElement("div");
 
-                    quizSelectsWrap.appendChild(div).innerHTML = `<p class="quiz__ex">$(question.answerEx)</p>`
+                    quizSelectsWrap.appendChild(div).innerHTML = `<p class="quiz__ex">${question.answerEx}</p>`
                     
 
                 }
