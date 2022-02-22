@@ -142,9 +142,96 @@
                                     </ul>
                                 </div>
                                 <div class="view-cont">
-                                    <div><pre><code class="language-html"></code></pre></div>
-                                    <div><pre><code class="language-css"></code></pre></div>
-                                    <div><pre><code class="language-javascript"></code></pre></div>
+                                    <div><pre><code class="language-html">&lt;div class="attr"&gt;
+    &lt;ul&gt;
+        &lt;li&gt;clientX : &lt;span class="clientX"&gt;0&lt;/span&gt;px&lt;/li&gt;
+        &lt;li&gt;clientY : &lt;span class="clientY"&gt;0&lt;/span&gt;px&lt;/li&gt;
+        &lt;li&gt;offsetX : &lt;span class="offsetX"&gt;0&lt;/span&gt;px&lt;/li&gt;
+        &lt;li&gt;offsetY : &lt;span class="offsetY"&gt;0&lt;/span&gt;px&lt;/li&gt;
+        &lt;li&gt;pageX : &lt;span class="pageX"&gt;0&lt;/span&gt;px&lt;/li&gt;
+        &lt;li&gt;pageY : &lt;span class="pageY"&gt;0&lt;/span&gt;px&lt;/li&gt;
+        &lt;li&gt;screenX : &lt;span class="screenX"&gt;0&lt;/span&gt;px&lt;/li&gt;
+        &lt;li&gt;screenY : &lt;span class="screenY"&gt;0&lt;/span&gt;px&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</code></pre></div>
+                                    <div><pre><code class="language-css">.cursor {
+    position: absolute;
+    left: 0;top: 0;
+    width: 50px; height: 50px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    background-color: rgb(255,255,255,0.1);
+    user-select: none;
+    pointer-events: none;
+    transition: 
+        background-color 0.2s,
+        border-color 0.2s,
+        border-radius 0.2s,
+        transform 0.6s;
+}
+
+.cursor.style1 {
+    background-color: rgba(255, 71, 71, 0.6);
+    border-color: orangered;
+}
+.cursor.style2 {
+    background-color: rgba(140,0,255,0.4);
+    border-color: purple;
+    transform: rotate(720deg) scale(2);
+}
+.cursor.style3 {
+    background-color: rgb(0, 47, 255, 0.4);
+    border-color: rgb(0, 47, 255);
+    transform: scale(1.5) rotate(45deg);
+    border-radius: 10px;
+}
+.cursor.style4 {
+    background-color: rgb(121, 235, 197, 0.4);
+    border-color: rgb(121, 235, 197);
+    transform: scale(10) rotateY(360deg);
+}
+.cursor.style5 {
+    background-color: rgb(255, 0, 85, 0.4);
+    border-color: rgb(255, 0, 85);
+    transform: rotateY(720deg) scale(0.5);
+}
+.cursor.style6 {
+    background-color: rgba(1, 151, 221, 0.685);
+    border-color: rgb(198, 255, 245);
+    transform: scale(2) rotateX(360deg);
+    mix-blend-mode: difference;
+}</code></pre></div>
+                                    <div><pre><code class="language-javascript">//출력용
+window.addEventListener("mousemove", (event) => {
+    document.querySelector(".clientX").innerText = event.clientX;
+    document.querySelector(".clientY").innerText = event.clientY;
+    document.querySelector(".offsetX").innerText = event.offsetX;
+    document.querySelector(".offsetY").innerText = event.offsetY;
+    document.querySelector(".pageX").innerText = event.pageX;
+    document.querySelector(".pageY").innerText = event.pageY;
+    document.querySelector(".screenX").innerText = event.screenX;
+    document.querySelector(".screenY").innerText = event.screenY;
+});
+
+//마우스 움직이기
+window.addEventListener("mousemove", (e)=>{
+    document.querySelector(".cursor").style.left = e.clientX -25 + "px";
+    document.querySelector(".cursor").style.top = e.clientY -25 + "px";
+});
+
+//forEach 문
+const cs = document.querySelector(".cursor")
+const mouseOver = document.querySelectorAll(".mouse__wrap span")
+const mouseOverNum = mouseOver.length;
+
+mouseOver.forEach((e,i) => {
+e.addEventListener("mouseover", () => {
+    cs.classList.add("style" + ( i + 1) );
+})
+e.addEventListener("mouseout", () => {
+    cs.classList.remove("style" + ( i + 1) );
+})
+})</code></pre></div>
                                 </div>
                             </div>
                         </div>
@@ -209,10 +296,13 @@
         const mouseOverNum = mouseOver.length;
 
         mouseOver.forEach((e,i) => {
-            
+            e.addEventListener("mouseover", () => {
+                cs.classList.add("style" + ( i + 1) );
+            })
+            e.addEventListener("mouseout", () => {
+                cs.classList.remove("style" + ( i + 1) );
+            })
         })
-
-
         
 
         </script>
