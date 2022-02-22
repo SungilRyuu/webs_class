@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        body {
+            background-color: #EAF5EA;
+        }
+
+        #wrap {
+            width: 1200px;
+            margin: 0 auto;
+        }
+        #header {
+            width: 100%;
+            height: 100px;
+            background-color: #CEE5CB;
+        }
+        #nav {
+            width: 100%;
+            height: 100px;
+            background-color: #AFD5AB;
+        }
+        #main {
+            display: flex;
+        }
+        #side1 {
+            width: 20%;
+            height: 700px;
+            background-color: #91C58A;
+        }
+        #contents {
+            width: 60%;
+            height: 700px;
+            background-color: #7BB972;
+        }
+        #side2 {
+            width: 20%;
+            height: 700px;
+            background-color: #5a8b53;
+        }
+        #footer {
+            width: 100%;
+            height: 100px;
+            background-color: #5D9E52;
+        }
+
+        @media (max-width: 1220px) {
+            #wrap {
+                width: 96%;
+            }
+            #main {
+                flex-wrap: wrap;
+            }
+            #side1 {
+                width: 30%;
+                height: 500px;
+            }
+            #contents {
+                width: 70%;
+                height: 500px;
+            }
+            #side2 {
+                width: 100%;
+                height: 100px;
+            }
+        }
+
+        @media (max-width: 768px){
+            #wrap {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 600px){
+            #side1 {
+                width: 100%;
+                height: 300px;
+            }
+            #contents {
+                width: 100%;
+                height: 400px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header"></header>
+        <nav id="nav"></nav>
+        <main id="main">
+            <aside id="side1"></aside>
+            <section id="contents"></section>
+            <aside id="side2"></aside>
+        </main>
+        <footer id="footer"></footer>
+    </div>
+</body>
+</html>
