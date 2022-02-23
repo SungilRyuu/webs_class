@@ -11,115 +11,103 @@
         }
 
         body {
-            background-color: #e1f5fe;
+            background-color: #EAF5EA;
         }
 
         #wrap {
             width: 1200px;
             margin: 0 auto;
         }
-
         #header {
             width: 100%;
             height: 100px;
-            background-color: #b3e5fc;
+            background-color: #CEE5CB;
         }
         #nav {
             width: 100%;
             height: 100px;
-            background-color: #81d4fa;
+            background-color: #AFD5AB;
         }
-        #side {
-            width: 25%;
-            height: 780px;
-            background-color: #4fc3f7;
-            float: left;
+        #main {
+            display: flex;
         }
-        .con1 {
-            height: 260px;
-            background-color: #29b6f6;
+        #side1 {
+            width: 20%;
+            height: 700px;
+            background-color: #91C58A;
         }
-        .con2 {
-            height: 260px;
-            background-color: #03a9f4;
+        #contents {
+            width: 60%;
+            height: 700px;
+            background-color: #7BB972;
         }
-        .con3 {
-            height: 260px;
-            background-color: #039be5;
+        #side2 {
+            width: 20%;
+            height: 700px;
+            background-color: #5a8b53;
         }
         #footer {
             width: 100%;
             height: 100px;
-            background-color: #0288d1;
-            clear: both;
+            background-color: #5D9E52;
         }
 
         @media (max-width: 1220px) {
             #wrap {
                 width: 96%;
             }
-
-            .con2 {
-                height: 520px;
-                width: 37.5%;
-                float: left;
-            }
-            .con3 {
-                height: 520px;
-                width: 37.5%;
-                float: left;
-            }
-
         }
 
         @media (max-width: 768px){
             #wrap {
                 width: 100%;
             }
-
-            .con1 {
-                height: 390px;
-                float: none;
+            #main {
+                flex-wrap: wrap;
             }
-
-            .con2 {
-                height: 390px;
-                width: 75%;
+            #side1 {
+                width: 30%;
+                height: 630px;
             }
-
-            .con3 {
-                display: none;
+            #contents {
+                width: 70%;
+                height: 630px;
             }
-        }
-
-        @media (max-width: 600px){
-            #side {
-                float: none;
-                width: 100%;
-                height: 200px;
-            }
-            .con1 {
-                width: 100%;
-                height: 430px;
-            }
-            .con2 {
+            #side2 {
                 width: 100%;
                 height: 150px;
             }
         }
 
+        @media (max-width: 600px){
+            #main {
+                flex-direction: column;
+            }
+            #side1 {
+                width: 100%;
+                height: 200px;
+            }
+            #contents {
+                width: 100%;
+                height: 430px;
+            }
+            #side2 {
+                width: 100%;
+                height: 150px;
+            }
+        }
     </style>
 </head>
 <body>
     <div id="wrap">
         <header id="header"></header>
         <nav id="nav"></nav>
-        <aside id="side"></aside>
-        <article class="con1"></article>
-        <article class="con2"></article>
-        <article class="con3"></article>
+        <main id="main">
+            <aside id="side1"></aside>
+            <section id="contents"></section>
+            <aside id="side2"></aside>
+        </main>
         <footer id="footer"></footer>
     </div>
-    
 </body>
 </html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃7.그리드</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        body {
+            background-color: #EAF5EA;
+        }
+
+        #wrap {
+            width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-areas: 
+                "header header header"
+                "nav nav nav"
+                "side1 contents side2"
+                "footer footer footer"
+            ;
+            grid-template-rows: 100px 100px 700px 100px;
+            grid-template-columns: 20% 60% 20%;
+            
+            
+        }
+        #header {
+            background-color: #CEE5CB;
+            grid-area: header;
+        }
+        #nav {
+            background-color: #AFD5AB;
+            grid-area: nav;
+        }
+        #side1 {
+            background-color: #91C58A;
+            grid-area: side1;
+        }
+        #contents {
+            background-color: #7BB972;
+            grid-area: contents;
+        }
+        #side2 {
+            background-color: #5a8b53;
+            grid-area: side2;
+        }
+        #footer {
+            background-color: #5D9E52;
+            grid-area: footer;
+        }
+
+        @media (max-width: 1220px) {
+            #wrap {
+                width: 96%;
+                grid-template-areas: 
+                    "header header"
+                    "nav nav"
+                    "side1 contents"
+                    "side2 side2"
+                    "footer footer"
+                ;
+            grid-template-rows: 100px 100px 630px 150px 100px;
+            grid-template-columns: 30% 70%;
+            }
+        }
+
+        @media (max-width: 768px){
+            #wrap {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 600px){
+            #wrap {
+                grid-template-areas: 
+                    "header"
+                    "nav"
+                    "side1"
+                    "contents"
+                    "side2"
+                    "footer"
+                ;
+            grid-template-rows: 100px 100px 200px 430px 150px 100px;
+            grid-template-columns: 100%;
+            }
+        }
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header"></header>
+        <nav id="nav"></nav>
+        <aside id="side1"></aside>
+        <section id="contents"></section>
+        <article id="side2"></article>
+        <footer id="footer"></footer>
+    </div>
+</body>
+</html>
