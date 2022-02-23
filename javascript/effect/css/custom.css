@@ -41,7 +41,10 @@
         body.img09 {background-image: url(../img/images12.jpg);}
         body.img10 {background-image: url(../img/images13.jpg);}
         body.img11 {background-image: url(../img/images14.jpg);}
-        body.img12 {background-image: url(../img/images15.jpg);}
+        body.img12 {background-image: url(../img/images21.jpg);}
+        body.img13 {background-image: url(../img/images16.jpg);}
+        body.img14 {background-image: url(../img/images18.jpg);}
+        body.img15 {background-image: url(../img/images18.jpg);}
 
         body::before {
             content: '';

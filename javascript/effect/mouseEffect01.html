@@ -42,7 +42,7 @@
         }
         .cursor {
             position: absolute;
-            left: 0;top: 0;
+            left: -100px; top: -100px;
             width: 50px; height: 50px;
             border-radius: 50%;
             border: 3px solid #fff;
@@ -219,18 +219,25 @@ window.addEventListener("mousemove", (e)=>{
     document.querySelector(".cursor").style.top = e.clientY -25 + "px";
 });
 
-//forEach 문
-const cs = document.querySelector(".cursor")
-const mouseOver = document.querySelectorAll(".mouse__wrap span")
-const mouseOverNum = mouseOver.length;
 
-mouseOver.forEach((e,i) => {
-e.addEventListener("mouseover", () => {
-    cs.classList.add("style" + ( i + 1) );
-})
-e.addEventListener("mouseout", () => {
-    cs.classList.remove("style" + ( i + 1) );
-})
+//for 문
+for(let i = 1; i &lt;= 6 ; i ++){
+    document.querySelector(".style" + i).addEventListener("mouseover", () => {
+        document.querySelector(".cursor").classList.add("style" + i);
+    });
+    document.querySelector(".style" + i).addEventListener("mouseout", () => {
+        document.querySelector(".cursor").classList.remove("style" + i);
+    });
+}
+
+//forEach 문
+document.querySelectorAll(".mouse__wrap span").forEach((e,i) => {
+    e.addEventListener("mouseover", () => {
+        document.querySelector(".cursor").classList.add("style" + ( i + 1) );
+    })
+    e.addEventListener("mouseout", () => {
+        document.querySelector(".cursor").classList.remove("style" + ( i + 1) );
+    })
 })</code></pre></div>
                                 </div>
                             </div>
@@ -276,8 +283,11 @@ e.addEventListener("mouseout", () => {
 
             //마우스 움직이기
             window.addEventListener("mousemove", (e)=>{
-             document.querySelector(".cursor").style.left = e.clientX -25 + "px";
-             document.querySelector(".cursor").style.top = e.clientY -25 + "px";
+
+             let x = e.clientX -25 + "px";
+             let y = e.clientY -25 + "px";
+
+             document.querySelector(".cursor").style.cssText = "left:" + x +  ";" +  " top: " + y + ";";
          });
 
         //  //for 문
@@ -290,21 +300,35 @@ e.addEventListener("mouseout", () => {
         //      });
         // }
         
-        //forEach 문
-        const cs = document.querySelector(".cursor")
-        const mouseOver = document.querySelectorAll(".mouse__wrap span")
-        const mouseOverNum = mouseOver.length;
+        // //forEach 문
+        // const cs = document.querySelector(".cursor")
+        // const mouseOver = document.querySelectorAll(".mouse__wrap span")
+        // const mouseOverNum = mouseOver.length;
 
-        mouseOver.forEach((e,i) => {
+        document.querySelectorAll(".mouse__wrap span").forEach((e,i) => {
             e.addEventListener("mouseover", () => {
-                cs.classList.add("style" + ( i + 1) );
+                document.querySelector(".cursor").classList.add("style" + ( i + 1) );
             })
             e.addEventListener("mouseout", () => {
-                cs.classList.remove("style" + ( i + 1) );
+                document.querySelector(".cursor").classList.remove("style" + ( i + 1) );
             })
         })
         
+        //getAttribute
+        //span 마우스 오버 했을 때, 속성값을 alert();
 
+
+
+        document.querySelectorAll(".mouse__wrap span").forEach((el,index) => {
+            let attr = span.getAttribute("class");
+
+            el.addEventListener("mouseover", () => {
+                document.querySelector(".cursor").classList.add(attr);
+            });
+            el.addEventListener("mouseout", () => {
+                document.querySelector(".cursor").classList.remove(attr);
+            });
+        });
         </script>
 
 </body>
