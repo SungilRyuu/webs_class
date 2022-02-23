@@ -86,8 +86,8 @@
   border-right: 2px solid #2A2A2A;
   border-bottom: 2px solid #2A2A2A;
   position: absolute;
-  top: calc(50% - 200px);
-  left: calc(50% - 300px);
+  top: 20vh;
+  left: 30vw;
   z-index: 10;
   transform: scaleY(0);
 }
