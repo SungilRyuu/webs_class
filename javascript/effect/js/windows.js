@@ -1,5 +1,10 @@
+//highlight
+const highlight = function(){
+    hljs.highlightAll()
+}
+
 //윈도우 오픈
-const openWindow = function(){
+function openWindow() {
     document.querySelector(".quiz_source").addEventListener("click", () => {
         document.querySelector(".source").classList.add("show");
         document.querySelector(".source .window").classList.add("show");

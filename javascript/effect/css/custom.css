@@ -45,6 +45,16 @@
         body.img13 {background-image: url(../img/images16.jpg);}
         body.img14 {background-image: url(../img/images18.jpg);}
         body.img15 {background-image: url(../img/images18.jpg);}
+        body.img16 {background-image: url(../img/images19.jpg);}
+        body.img17 {background-image: url(../img/images22.jpg);}
+        body.img18 {background-image: url(../img/images23.jpg);}
+        body.img19 {background-image: url(../img/images24.jpg);}
+        body.img20 {background-image: url(../img/images25.jpg);}
+        body.img21 {background-image: url(../img/images26.jpg);}
+        body.img22 {background-image: url(../img/images27.jpg);}
+        body.img23 {background-image: url(../img/images28.jpg);}
+        body.img24 {background-image: url(../img/images29.jpg);}
+        body.img25 {background-image: url(../img/images30.jpg);}
 
         body::before {
             content: '';

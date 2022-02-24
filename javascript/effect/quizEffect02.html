@@ -860,10 +860,13 @@ quizConfirm.addEventListener("click", () => {
         </div>
     </div>
 
-    <script src="js/windows.js"></script>        
     <script src="js/highlight.min.js"></script>
+    <script src="js/windows.js"></script>        
 
     <script>
+        
+        highlight();
+
         const quizType = document.querySelector(".quiz__type"); //퀴즈 종류
         const quizNumber = document.querySelector(".quiz__number"); //퀴즈 번호
         const quizAsk = document.querySelector(".quiz__ask"); //퀴즈 질문
