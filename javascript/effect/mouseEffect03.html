@@ -62,7 +62,7 @@
 <body class="img12">
     <!-- main -->
     <main>
-        <section id="mouseType02">
+        <section id="mouseType03">
             <div class="cursor"></div>
 
             <div class="mouse__wrap">
@@ -112,9 +112,76 @@
                                     </ul>
                                 </div>
                                 <div class="view-cont">
-                                    <div><pre><code class="language-html"></code></pre></div>
-                                    <div><pre><code class="language-css"></code></pre></div>
-                                    <div><pre><code class="language-javascript"></code></pre></div>
+                                    <div><pre><code class="language-html">&lt;section id="mouseType03"&gt;
+    &lt;div class="cursor"&gt;&lt;/div&gt;
+
+    &lt;div class="mouse__wrap"&gt;
+        &lt;p&gt;&lt;span&gt;&lt;/span&gt;Give, Share, Lose. Lest we die &lt;span&gt;unbloomed.&lt;/span&gt;&lt;/p&gt;
+        &lt;p&gt;주고, 나누고, 잃어라. &lt;span&gt;피우지 못한 채&lt;/span&gt; 죽지 않도록.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/section&gt;</code></pre></div>
+                                    <div><pre><code class="language-css">.mouse__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    /* cursor: none; */
+}
+
+.mouse__wrap p {
+    font-size: 2.5vw;
+    line-height: 2;
+    font-weight: 300;
+}
+
+.mouse__wrap p:last-child {
+    font-size: 3vw;
+    font-weight: 400;
+}
+
+.mouse__wrap p span {
+    border-bottom: 0.15vw dashed #e7d6b2;
+    color: #e7d6b2;
+
+}
+
+.cursor {
+    position: absolute;
+    left: 0;top: 0;
+    width: 200px;height: 200px;
+    z-index: -1;
+    border-radius: 50%;
+    background-image: url(img/images21.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    border: 5px solid #fff;
+}</code></pre></div>
+                                    <div><pre><code class="language-javascript">const cursor = document.querySelector(".cursor");
+
+function follow(e){
+    const circle1 = document.querySelector(".cursor").clientWidth; //190 -> border 값 제외
+    const circle2 = document.querySelector(".cursor").offsetWidth; //200 -> border 값 포함
+    const circle3 = document.querySelector(".cursor").getBoundingClientRect(); //200 -> border 값 포함
+    
+    //getBoundingClientRect: bottom, height, left , right, top, width, x, y
+
+    // console.log(circle1);
+    // console.log(circle2);
+    // console.log(circle3);
+
+    gsap.to(cursor, {duration: .3, left: e.pageX - (circle3.width/2), top: e.pageY - (circle3.height/2)});
+
+    //출력용
+    document.querySelector(".pageX").innerText = e.pageX;
+    document.querySelector(".pageY").innerText = e.pageY;
+}
+
+window.addEventListener("mousemove", follow);</code></pre></div>
                                 </div>
                             </div>
                         </div>

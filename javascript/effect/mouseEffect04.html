@@ -30,6 +30,7 @@
 
         .mouse__img {
             position: relative;
+            /* cursor: none; */
         }
         .mouse__img figure {
             width: 50vw;
@@ -38,7 +39,7 @@
             position: relative;
             /* background-color: #ccc; */
             border: 3px solid #fff;
-            /* overflow: hidden; */
+            overflow: hidden;
         }
 
         .mouse__img figure:hover {
@@ -50,7 +51,7 @@
             left: -5%;top: -5%;
             width: 110%;
             height: 110%;
-            opacity: 0.4;
+            /* opacity: 0.4; */
             object-fit: cover;
         }
 
@@ -70,7 +71,7 @@
 
         .cursor {
             position: absolute;
-            left: 0;top: 0;
+            left: -50px; top: -50px;
             width: 20px;
             height: 20px;
             background-color: #fff;
@@ -80,15 +81,27 @@
             border-radius: 50%;
         }
 
+        .cursor ul {
+            position: absolute;
+            left: 120px; top: 0;
+        }
 
+        .cursor li {
+            white-space: nowrap;
+        }
     </style>
 </head>
 <body class="img14">
     <!-- main -->
     <main>
         <section id="mouseType02">
-            <div class="cursor"></div>
-
+            <div class="cursor">
+                <!-- <ul>
+                    <li>pageX : <span class="pageX">0</span>px</li>
+                    <li>pageY : <span class="pageY">0</span>px</li>
+                </ul> -->
+            </div>
+            
             <div class="mouse__wrap">
                 <div class="mouse__img">
                     <figure>
@@ -156,10 +169,10 @@
 
             <div class="attr">
                 <ul>
-                    <li>pageX : <span class="pageX">0</span>px</li>
-                    <li>pageY : <span class="pageY">0</span>px</li>
-                    <li>standardX : <span class="standardX">0</span>px</li>
-                    <li>standardY : <span class="standardY">0</span>px</li>
+                    <li>mousePageX : <span class="mousePageX">0</span>px</li>
+                    <li>mousePageY : <span class="mousePageY">0</span>px</li>
+                    <li>centerPageX : <span class="centerPageX">0</span>px</li>
+                    <li>centerPageY : <span class="centerPageY">0</span>px</li>
                 </ul>
             </div>
         </div>
@@ -195,9 +208,32 @@
                 let windowWidth3 = window.screen.width; //1440
                 let windowHeight3 = window.screen.height; //900
 
+                let windowWidth = window.outerWidth;
+                let windowHeight = window.outerHeight;
+
+                // 마우스 좌표 값 기준점을 가운데 초기화
+                // 전체길이 /2 - 마우스 x 좌표값 = 0
+                let centerPageX = window.innerWidth/2 - mousePageX;
+                let centerPageY = window.innerHeight/2 - mousePageY;
+
+                //이미지 움직이기
+                // const imgMove = document.querySelector(".mouse__img figure img");
+
+                // imgMove.style.transform = "translate("+ mousePageX/20 +"px, "+ mousePageY/20 + "px)";
+
+                gsap.to(".mouse__img figure img", {duration: 0.3, x: centerPageX/20, y: centerPageY/20});
+
                 // console.log(windowWidth1,windowHeight1); -> 브라우저 크기
                 // console.log(windowWidth2,windowHeight2); -> 브라우저 크기
                 // console.log(windowWidth3,windowHeight3); -> 스크린 크기
+                //출력 
+                // document.querySelector(".pageX").textContent = centerPageX;
+                // document.querySelector(".pageY").textContent = centerPageY;
+                document.querySelector(".mousePageX").textContent = mousePageX;
+                document.querySelector(".mousePageY").textContent = mousePageY;
+                document.querySelector(".centerPageX").textContent = centerPageX;
+                document.querySelector(".centerPageY").textContent = centerPageY;
+
             })
 
         </script>
