@@ -28,10 +28,9 @@
   border-right: 2px solid #2A2A2A;
   border-bottom: 2px solid #2A2A2A;
   position: absolute;
-  left: 50%; top: 50%;
-  transform: translate(-50%, -50%);
+  left: 25%;
+  top: 25%;
   z-index: 10;
-  transform: scaleY(0);
 }
 
 .source .window.show {
@@ -157,6 +156,7 @@
 }
 .source .content-container > .content > .main {
   width: calc(100% - 26px);
+  background-color: #282c34;
 }
 .source .content-container > .content > .scroll {
   width: 26px;

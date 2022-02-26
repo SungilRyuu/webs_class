@@ -1,0 +1,556 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style_yo.css">
+    <style>
+
+.ir_pm {
+    display: block;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    text-indent: -9999px;
+}
+.ir_wa {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    z-index: -1;
+    width: 100px;
+    height: 100px;
+}
+.ir_so {
+    overflow: hidden;
+    position: absolute;
+    width: 0;
+    height: 0;
+    line-height: 0;
+    text-indent: -9999px;
+}
+/* 전체 */
+* {
+    margin: 0;
+    margin: 0 auto;
+}
+body {
+    background-color: #e9e5bd;
+}
+#wrap {
+    width: 100%;
+    height: 10000px;
+}
+
+/* header */
+#header {
+    width: 100%;
+    height: 70px;
+}
+#header .menu {
+    text-align: center;
+}
+#header .menu li {
+    display: inline;
+}
+#header .menu li a {
+    padding: 20px 30px;
+    display: inline-block;
+    position: relative;
+    transition: background 0.4s;
+    text-decoration: none;
+    color: #000;
+}
+
+#header .menu li a:hover {
+    background: #f5f5f5;
+    border-radius: 10px;
+}
+#header .menu li a:hover {
+    border-bottom: 1px solid #000;
+    text-decoration: underline;
+}
+/* //header */
+
+#banner {
+    width: 100%;
+    height: 1080px;
+    position: relative;
+}
+.banner__container {
+    width: 1200px;
+    height: 1080px;
+    margin: 0 auto;
+}
+.img1 {
+    width: 100%;
+    height: 210px;
+    background: url(../img/honey1.png)no-repeat center center;
+    background-size: cover;
+    position: absolute;
+
+}
+.banner_logo {
+    display: flex;
+    flex-direction: column;
+    padding-top: 110px;
+}
+.banner__container .logo {
+    width: 556px;
+    height: 225px;
+    background: url(../img/logo.png)no-repeat center center;
+
+}
+.banner__container .name {
+    font-size: 64px;
+    color: #a7937b;
+}
+.banner__container .textMain {
+    font-size: 96px;
+    color: #987c28;
+}
+
+.banner_text {
+    display: flex;
+    justify-content:space-between
+
+}
+.banner_text .text2 {
+    font-size: 96px;
+    color: #987c28;
+    margin-right: 190px;
+}
+.honey_img {
+    width: 220px;
+    height: 117px;
+    background: url(../img/bg1.svg);
+    position: absolute;
+    left: 46%;
+    bottom: 38%;
+}
+.banner_text .text3 {
+    font-size: 96px;
+    color: #987c28;
+    margin-left: 50px;
+}
+#banner .img3 {
+    position: absolute;
+    width: 100%;
+    height: 340px;
+    background: url(../img/honey2.png)no-repeat center center;
+    background-size: cover;
+    bottom:0;
+}
+/* //banner */
+
+
+/* imgText_Type01 */
+#imgText_type01 {
+    width:  100%;
+}
+.imgText1__container {
+    width: 1920px;
+    height: 900px;
+    position: relative;
+}
+.imgText1__container .Text1__name {
+    font-size: 50px;
+    left:530px;
+    top: 142px;
+    position: relative;
+}
+
+.imgText1__container .Text1__name::after {
+    content: '';
+    position: absolute;
+    left: 0; top: 0;
+    width: 1000px;
+    height: 1px;
+    background-color: #000;
+}
+.imgText1__container .line {
+    position: absolute;
+    border-bottom: 1px solid #000;
+    width: 70.5%;
+    top: 210px;
+    left: -628px;
+    
+}
+.imgText1__container .Text1__text1 {
+    font-size: 27px;
+    color: #411700;
+    position: absolute;
+    left: 339px;
+    top: 31%;
+}
+.imgText1__container .Text1__text2 {
+    font-size: 25px;
+    color: #d65109;
+    position: absolute;
+    left: 339px;
+    bottom: 28%;
+}
+.imgText1__container .img {
+    background:url(../img/편의점.png)no-repeat center ;
+    width: 715px;
+    height: 480px;
+    margin-right: 231px;
+    padding-top: 375px;
+}
+/* //imgText_Type01  */
+
+/* imgText__type02 */
+#imgText__type02 {
+    width:  100%;
+    height: 900px;
+    position: relative;
+}
+.imgText2__container {
+    width: 1920px;
+    height: 900px;
+    margin: 0 auto;
+}
+
+.imgText2__container .Text2__name {
+    font-size: 50px;
+    position: absolute;
+    right:36%;
+    top: 142px;
+}
+.imgText2__container .line {
+    position: absolute;
+    border-bottom: 1px solid #000;
+    width: 46%;
+    top: 210px;
+    right: 5px;
+    
+}
+.imgText2__container .Text2__text1 {
+    font-size: 27px;
+    color: #411700;
+    position: absolute;
+    right: 27%;
+    top: 31%;
+}
+
+.imgText2__container .img {
+    background:url(../img/사용자조사.png)no-repeat center ;
+    width: 715px;
+    height: 480px;
+    margin-left: 231px;
+    padding-top: 504px;
+}
+
+
+
+
+
+/* img_type01 */
+#img_type01 {
+    width:  100%;
+    height: 900px;
+    background-color: #555;
+}
+
+#imgText__type03 {
+    width:  100%;
+    height: 900px;
+    background-color: #666;
+}
+
+/* imgText__type04 */
+#imgText__type04 {
+    width:  100%;
+    height: 900px;
+    position: relative;
+}
+/* #imgText__type04 .honey {
+    width: 800px;
+    height: 1000px;
+    position: absolute;
+    background: url(../img/honey3.png) no-repeat;
+} */
+.imgText4__container {
+    width: 1920px;
+    height: 900px;
+    margin: 0 auto;
+}
+.imgText4__container .img_Text {
+    font-size: 50px;
+    position: absolute;
+    top: 120px;
+    margin-left: 170px;
+    font-weight: normal;
+}
+
+.img__three {
+    display: flex;
+}
+.imgText4__container .imgText1 {
+    width: 400px;
+    height: 330px;
+    background: url(../img/img01.png) no-repeat;
+    display: inline-block;
+    margin-top: 264px;
+}
+.imgText4__container .imgText2 {
+    width: 400px;
+    height: 330px;
+    background: url(../img/img02.png) no-repeat;
+    display: inline-block;
+    margin-top: 418px;
+}
+.imgText4__container .imgText3 {
+    width: 400px;
+    height: 330px;
+    background: url(../img/img03.png) no-repeat;
+    display: inline-block;
+    margin-top: 264px;
+}
+.img__three h3 {
+    font-size: 27px;
+    color: #411700;
+}
+.imgText1 h3 {
+    margin-top: 369px;
+}
+.imgText1 p {
+    padding-top: 35px;
+}
+.imgText2 h3 {
+   position: relative;
+   top: -160px;
+}
+.imgText2 p {
+    position: relative;
+    top: -125px;
+}
+.imgText3 h3 {
+    margin-top: 369px;
+}
+.imgText3 p {
+    padding-top: 35px;
+}
+.img__three p {
+    font-size: 20px;
+    color: #411700;
+}
+
+
+/* imgText__type05 */
+#imgText__type05 {
+    width:  100%;
+    height: 900px;
+}
+.imgText5__container {
+    width: 1920px;
+    height: 900px;
+    margin: 0 auto;
+    background: #555;
+}
+
+.imgText5__container .Text5__name {
+    font-size: 50px;
+
+    font-weight: normal;
+}
+.imgText5__container .line {
+    border-bottom: 1px solid #000;
+    width: 46%;
+    top: 210px;
+    right: 5px;
+    
+}
+.imgText5__container .subtitle {
+    font-size: 40px;
+    font-weight: 300;
+    color: #411700;
+    text-align: center;
+
+}
+.imgText5__container .Text5__text1 {
+    font-size: 27px;
+    color: #411700;
+
+}
+.imgText5__container .img {
+    background:url(../img/img04.png)no-repeat center ;
+    width: 715px;
+    height: 480px;
+}
+
+
+
+
+
+
+
+
+/* imgText__type06 */
+
+#imgText__type06 {
+    width:  100%;
+    height: 900px;
+    position: relative;
+}
+.imgText6__container {
+    width: 1920px;
+    height: 900px;
+    margin: 0 auto;
+}
+.imgText6__container .type06__subtitle {
+    font-size: 40px;
+    font-weight: 300;
+    color: #411700;
+    position: absolute;
+
+}
+.imgText5__container .Text6__text1 {
+    font-size: 27px;
+    color: #411700;
+}
+.imgText6__container .imgText6_img1 {
+    background:url(../img/img05.png)no-repeat center ;
+    width: 715px;
+    height: 480px;
+    position: absolute;
+    right: 50%;
+    bottom: 50%;
+
+}
+
+#img_type02 {}
+
+#imgText__type07 {}
+
+#imgText__type08 {}
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <nav class="menu">
+                <h2 class="ir_so">메인 메뉴</h2>
+                <ul>
+                    <li><a href="#">선정이유</a></li>
+                    <li><a href="#">사용자 조사</a></li>
+                    <li><a href="#">페르소나</a></li>
+                    <li><a href="#">경영전략</a></li>
+                    <li><a href="#">방향성</a></li>
+                    <li><a href="#">활동</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main id="main">
+            <section id="banner">
+                <div class="container">
+                    <div class="img1"></div>
+                    <div class="img3"></div>
+                    <div class="banner__container">
+                        <div class="banner_logo">
+                            <div class="logo"></div>
+                        <h1 class="name">요복조복</h1>
+                        <p class="textMain">요리보고 조리보고 자취생을 위한</p>
+                    </div>
+                    <div class="banner_text">
+                        <p class="text2">초간단</p>
+                        <p class="text3">레시피</p>
+                    </div>
+                    <div class="honey_img"></div>
+                </div>
+            </section>
+
+            <section id="imgText_type01">
+                <div class="imgText1__container">
+                    <h3 class="Text1__name">선정이유</h3>
+                    <div class="line"></div>
+                    <p class="Text1__text1">요리는 어렵고 재료를 사기위해 장보는 것은<br>
+                        귀찮은 자취생들이 자주 먹는 편의점 음식을<br>
+                        더욱 더 맛있게 먹을 수 있도록 <br>
+                        레시피들을 모아서 어디서나 제공할 수 있게<br>
+                        선정하게 되었습니다. </p>
+                    <p class="Text1__text2">그냥 먹기 심심한 편의점 음식들을<br>
+                        어떻게 요리하고 조리해야 맛이 있을까요? </p>
+                    <div class="img"></div>
+                </div>
+            </section>
+
+            <section id="imgText__type02">
+                <div class="imgText2__container">
+                    <h3 class="Text2__name">사용자조사</h3>
+                    <div class="line"></div>
+                    <p class="Text2__text1">전 연령층을 대상으로 편의점 및 편의점<br>
+                        음식에 대한 설문을 실시 했습니다.<br>
+                        과연 편의점을 얼마나 자주 방문하고<br>
+                        편의점 음식을 자주 사 먹는지 알 수 있는<br>
+                        설문 조사입니다.</p>
+                    <div class="img"></div>
+                </div>
+            </section>
+            <section id="img_type01"></section>
+            <section id="imgText__type03"></section>
+
+
+            <section id="imgText__type04">
+                <div class="honey"></div>
+                <div class="imgText4__container">
+                    <div class="img__three">
+                    <h3 class="img_Text">UI/UX 경영전략</h3>
+
+                        <div class="imgText1">
+                            <h3>광고 배너</h3>
+                            <p>사이트 시작 페이지에 요리주제에 맞는 <br>광고를 넣어서 수익 창출</p>
+                        </div>
+
+                        <div class="imgText2">
+                            <h3>유명 요식업 스타들과의 콜라보</h3>
+                            <p>사이트 광고를 유명 요식업 스타들과의 <br>
+                                콜라보로 사용자 유입</p>
+                        </div>
+
+                        <div class="imgText3">
+                             <h3>레시피 등록자 혜택</h3>
+                             <p>등록한 레시피로 인한 혜택 부여</p>
+                            </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <section id="imgText__type05">
+                <div class="imgText5__container">
+                    <h3 class="Text5__name">프로젝트 방향성</h3>
+                    <div class="line"></div>
+                    <h3 class="subtitle">사용자 간의 레시피 공유</h3>
+                    <p class="Text5__text1">사용자들간의 레시피를 공유해서 <br>
+                    보다 편하고 쉽게 편의점 음식을 <br>
+                    다양하게 요리가능</p>
+                    <div class="img"></div>
+                </div>
+            </section>
+
+
+            <section id="imgText__type06">
+                <div class="imgText6__container">
+                <h3 class="type06__subtitle">다양한 요리 소개</h3>
+                <p class="Text6__text1">사용자들간의 레시피를 공유해서 <br>
+                보다 편하고 쉽게 편의점 음식을 <br>
+                다양하게 요리가능</p>
+                <div class="imgText6_img1"></div>
+                <div class="imgText6_img2"></div>
+            </div>
+            </section>
+
+
+
+            <section id="img_type02"></section>
+            <section id="imgText__type07"></section>
+            <section id="imgText__type08"></section>
+        </main>
+        <footer id="footer"></footer>
+    </div>
+</body>
+</html>
