@@ -10,24 +10,170 @@
     <link rel="stylesheet" href="css/custom.css">
 
     <style>
+        #header0 {
+            width: 100%;
+            background-color: #A6AEFF;
+        }
 
+        .header0__wrap {
+            display: flex;
+            justify-content: space-between;
+        }
 
-        #footer {}
+        .header0__left {
+            margin-top: 250px;
+            text-align: left;
+        }
+
+        .header0__left h2 {
+            font-size: 40px;
+            color: #697CE2;
+            font-weight: normal;
+            margin-bottom: 100px;
+            position: relative;
+            z-index: 1;
+        }
+        .header0__left h2::before {
+            content: '';
+            width: 600px; height: 450px;
+            position: absolute;
+            left: -31px; top: -38px;
+            background-color: #DEE1F0;
+            z-index: -1;
+            opacity: 0.6;
+            border-radius: 30px;
+        }
+        .header0__left p {
+            font-size: 30px;
+            color: #Fff;
+            line-height: 2;
+            position: relative;
+            padding-left: 30px;
+            z-index: 1;
+        }
+
+        .header0__right {
+            margin-top: 200px;
+        }
+
+        .header0__right .insta {
+            background-color: #fff;
+            font-size: 25px;
+            width: 350px;
+            text-align: left;
+            padding-left: 50px;
+            position: relative;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        .header0__right .insta::before{
+            position: absolute;
+            content: '';
+            width: 30px; height: 30px;
+            border-radius: 50%;
+            background-color: gray;
+            opacity: 0.7;
+            left: 7.5px; top: 10px;
+
+        }
+        .header0__right .insta__img {
+            width: 400px;
+            height: 433px;
+            background-color: #fff;
+            display: block;
+        }
+        .header0__right p {
+            width: 400px;
+            background-color: #fff;
+            text-align: left;
+            font-size: 20px;
+            position: relative;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+        .header0__right p span {
+            position: absolute;
+            right: 5px;
+        }
+
+        .header1__wrap {
+            margin-top: 200px;
+        }
+
+        .header1__wrap h3 {
+            font-size: 40px;
+            text-align: left;
+            color: #3B4CA8;
+            margin-bottom: 50px;
+        }
+        .header1__span {
+            display: flex;
+        }
+        .header1__span span:nth-child(1){
+            background-image: url(img/0.1.jpg);
+            width: 400px;
+            height: 433px;
+        }
+        .header1__span span:nth-child(2){
+            background-image: url(img/0.2.jpg);
+            width: 400px;
+            height: 433px;
+        }
+        .header1__span span:nth-child(3){
+            background-color: #fff;
+            width: 400px;
+            height: 433px;
+            margin-bottom: 100px;
+        }
     </style>
 </head>
 
 <body>
     <div id="wrap">
-        <header id="header">
-            <div class="bg">
+        <header>  
+            <div id="header0">
                 <div class="container">
-                    <p class="sub_h1">소중한 추억 조각들을 모아 만든</p>
-                    <h1>웹앨범 제작 사이트 'Pics'</h1>
-                    <h2>Purple Identity Cube Story</h2>
-                    <p class="sub_h2"></p>
-                    <div class="foot">
-                        <p class="left">1조 웹 앨범 제작 사이트<br>precious memory storage.</p>
-                        <p class="right">Share precious memories and <br>keep them forever.</p>
+                    <div class="header0__wrap">
+                        <div class="header0__left">
+                            <h2>간편하게 웹 앨범을 사용하세요.</h2>
+                            <p>
+                                다양한 템플릿 보유<br>
+                                직관적 인터페이스<br>
+                                누구나 사용가능
+                            </p>
+                        </div>  
+                        <div class="header0__right">
+                            <p class="insta">나른한 일요일 오후</p>
+                            <span class="insta__img"></span>
+                            <p>아기와 나 <span>2020.02.02</span></p>
+                        </div>  
+                    </div>
+                    <div class="header1__wrap">
+                        <h3>사진 모아보기</h3>
+                        <div class="header1__span">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+
+
+
+
+
+            <div id="header">
+                <div class="bg">
+                    <div class="container">
+                        <p class="sub_h1">소중한 추억 조각들을 모아 만든</p>
+                        <h1>웹앨범 제작 사이트 'Pics'</h1>
+                        <h2>Purple Identity Cube Story</h2>
+                        <p class="sub_h2"></p>
+                        <div class="foot">
+                            <p class="left">1조 웹 앨범 제작 사이트<br>precious memory storage.</p>
+                            <p class="right">Share precious memories and <br>keep them forever.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -42,6 +188,7 @@
                         큐브처럼 작은 조각으로 나눠진 순간의 추억들을 하나로 모은 이야기들, <br>
                         보고싶을 때마다 언제든지 공유하고 볼 수 있도록 하는 웹 앨범 제작 사이트입니다.
                     </p>
+                    <img src="img/intro_bg.jpg" alt="배경">
                 </div>
             </section>
             <section id="contents">
@@ -198,11 +345,184 @@
                 </article>
 
                 <article class="con7">
+                    <div class="container">
                     <h2>Customer Journey Map</h2>
+                    <div class="con7__flex">
+                        <img src="img/c7_1.jpg">
+                        <table class="t1">
+                            <tr>
+                                <td>로그인</td>
+                            </tr>
+                            <tr>
+                                <td>사진 업로드</td>
+                            </tr>
+                            <tr>
+                                <td>사진 공유(최대 3명)</td>
+                            </tr>
+                            <tr>
+                                <td>앨범 제작</td>
+                            </tr>
+                        </table>
+                        <table class="t2">
+                            <tr>
+                                <td>간편한 로그인으로 누구나 쉽게 접속</td>
+                            </tr>
+                            <tr>
+                                <td>올리고 싶은 사진을 선택하여 업로드 하기</td>
+                            </tr>
+                            <tr>
+                                <td>공유할 사람을 선택하여 사진 공유하기</td>
+                            </tr>
+                            <tr>
+                                <td>원하는 레이아웃을 지정하여 웹 앨범 제작하기</td>
+                            </tr>
+                        </table>
+                    </div>
+                    </div>
+                </article>
+
+                <article class="con8">
+                    <div class="container">
+                        <h2>AS IS - TO BE</h2>
+                        <div class="con8__tb">
+                            <table class="con8__tb1">
+                                <tr>
+                                    <td>보고싶은 사진을 일일이<br>찾아야 하는 번거로움</td>
+                                </tr>
+                                <tr>
+                                    <td>인화해야 하는 비용 문제</td>
+                                </tr>
+                                <tr>
+                                    <td>훼손되거나 <br> 분실 위험에서부터 오는 불안감</td>
+                                </tr>
+                                <tr>
+                                <td>항상 정리와 관리가 필요한,<br> 점점 낡아가는 앨범</td>
+                                </tr>
+                            </table>
+                            <table class="con8__tb2">
+                                <tr>
+                                    <td>편리한 휴대성</td>
+                                </tr>
+                                <tr>    
+                                    <td>쉬운 공유 시스템</td>
+                                </tr>
+                                <tr>    
+                                    <td>날짜별 사진 정리</td>
+                                </tr>
+                                <tr>    
+                                    <td>직관적인 UI 디자인</td>
+                                </tr>
+                                <tr>    
+                                    <td>사용자를 고려한 UX 디자인</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="con9">
+                    <div class="container">
+                        <h2>Affinity Diagram</h2>
+                        <div class="con9__table">
+                            <table>
+                                <colgroup>
+                                    <col style="width: 33%">
+                                    <col style="width: 33%">
+                                    <col style="width: 33%">
+                                </colgroup>
+                                <tr>
+                                    <td colspan="3">지향방향</td>
+                                </tr>
+                                <tr>
+                                    <td>누구나</td>
+                                    <td>접근성</td>
+                                    <td>공통점</td>
+                                </tr>
+                                <tr>
+                                    <td>언제</td>
+                                    <td>가까운</td>
+                                    <td>소통</td>
+                                </tr>
+                            </table>
+                            <table>
+                                <col style="width: 33%">
+                                <col style="width: 33%">
+                                <col style="width: 33%">
+                                <tr>
+                                    <td colspan="3">개인</td>
+                                </tr>
+                                <tr>
+                                    <td>나의 공간</td>
+                                    <td>취미</td>
+                                    <td>개인일기</td>
+                                </tr>
+                                <tr>
+                                    <td>촬영</td>
+                                    <td>저장공간</td>
+                                    <td>덕질</td>
+                                </tr>
+                            </table>
+                            <table>
+                                <col style="width: 33%">
+                                <col style="width: 33%">
+                                <col style="width: 33%">
+                                <tr>
+                                    <td colspan="3">공유</td>
+                                </tr>
+                                <tr>
+                                    <td>반려동물</td>
+                                    <td>기록</td>
+                                    <td>스포츠</td>
+                                </tr>
+                                <tr>
+                                    <td>전시</td>
+                                    <td>그림</td>
+                                    <td>추억</td>
+                                </tr>
+                            </table>
+                            <table>
+                                <col style="width: 33%">
+                                <col style="width: 33%">
+                                <col style="width: 33%">
+                                <tr>
+                                    <td colspan="3">기념일</td>
+                                </tr>
+                                <tr>
+                                    <td>생일</td>
+                                    <td>운동회</td>
+                                    <td>축하</td>
+                                </tr>
+                                <tr>
+                                    <td>크리스마스</td>
+                                    <td>이벤트</td>
+                                    <td>특별함</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="con9Img">
+                            <img src="img/c9_1.jpg" alt="과정1">
+                            <img src="img/c9_2.jpg" alt="과정2">
+                        </div>
+                    </div>
+                </article>
+
+                <article class="con10">
+                    <div class="container">
+                        <div class="head">
+                            <h2>와이어 프레임</h2>
+                            <p>웹사이트의 구성을 간략하게 표현하였습니다.</p>
+                        </div>
+                        <img src="img/c10_1.jpg" alt="와이어 프레임">
+                    </div>
                 </article>
             </section>
         </main>
-        <section id="footer"></section>
+
+        <section id="footer">
+            <div class="container">
+                <h2>Pics 시작하기</h2>
+            </div>
+        </section>
     </div>
 
 </html>
