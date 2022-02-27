@@ -108,9 +108,9 @@
     content: '';
     position: absolute;
     background-image: url(../img/intro_right.jpg);
-    width: 342px;
+    width: 255px;
     height: 254px;
-    left: 524px; top: -198px;
+    left: 365px; top: -198px;
 }
 #intro .desc {
     margin-top: 60px;

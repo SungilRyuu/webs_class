@@ -23,6 +23,7 @@
         .header0__left {
             margin-top: 250px;
             text-align: left;
+            margin-bottom: 50px;
         }
 
         .header0__left h2 {
@@ -53,7 +54,7 @@
         }
 
         .header0__right {
-            margin-top: 200px;
+            margin-top: 151px;
         }
 
         .header0__right .insta {
@@ -74,22 +75,24 @@
             background-color: gray;
             opacity: 0.7;
             left: 7.5px; top: 10px;
-
         }
-        .header0__right .insta__img {
+        /* .header0__right .insta__img {
             width: 400px;
             height: 433px;
             background-color: #fff;
             display: block;
-        }
-        /* .header0__right .insta__img1 {
+        } */
+        .header0__right .insta__img1 {
             width: 400px;
             height: 433px;
             background-image: url(img/0.3.jpg);
-            position: sticky;
-            top: 100px;
             display: block;
-            z-index: 1;
+        }
+
+        /* .header0__right .insta__img1.bottoms {
+            width: 400px; height: 433px;
+            position: absolute;
+            bottom: -698px; right: 0;
         } */
         .header0__right p {
             width: 400px;
@@ -98,7 +101,6 @@
             font-size: 20px;
             position: relative;
             padding-top: 5px;
-            padding-bottom: 5px;
         }
         .header0__right p span {
             position: absolute;
@@ -129,21 +131,12 @@
             height: 433px;
         }
         .header1__span span:nth-child(3){
-            background-color: #fff;
+            background-image: url(img/0.3.jpg);
             width: 400px;
             height: 433px;
             margin-bottom: 100px;
+            display: none;
         }
-
-        /* .test1 {
-            width: 100%;
-            background-color: #A7AEF9;
-        }
-        .test1 .container{
-            width: 1200px;
-            height: 1200px;
-            background-image: url(img/00.jpg);
-        } */
 
         
     </style>
@@ -165,9 +158,9 @@
                         </div>  
                         <div class="header0__right">
                             <p class="insta">나른한 일요일 오후</p>
-                            <span class="insta__img"></span>
+                            <p class="insta_banner">아기와 나 <span>2020.02.02</span></p>
+                            <!-- <span class="insta__img"></span> -->
                             <span class="insta__img1"></span>
-                            <p>아기와 나 <span>2020.02.02</span></p>
                         </div>  
                     </div>
                     <div class="header1__wrap">
@@ -175,23 +168,11 @@
                         <div class="header1__span">
                             <span></span>
                             <span></span>
-                            <span></span>
+                            <span class="bottoms"></span>
                         </div>
                     </div>
                 </div>
             </div>
-
-
-            <!-- <div class="test1">
-                <div class="container">
-                    <div class="test1Right">
-                        <img src="img/0.3.jpg" alt="">
-                    </div>
-                </div>
-            </div> -->
-
-
-
 
 
             <div id="header">
@@ -555,5 +536,30 @@
             </div>
         </section>
     </div>
+
+    <script>
+        const header0 = document.querySelector("#header0");
+        const moveImg = header0.querySelector(".insta__img1");
+        const bb = header0.querySelector(".bottoms");
+        // const values = moveImg.getBoundingClientRect();
+
+
+        window.addEventListener("scroll", (e) => {
+            if (window.scrollY <= 588.5){
+                moveImg.style.position = "fixed";
+                bb.style.display = "none";
+                moveImg.style.display = "block";
+            } else {
+                e.preventDefault();
+                moveImg.style.position = "relative";
+                bb.style.display = "block";
+                moveImg.style.display = "none";
+            }
+
+        console.log(window.scrollY);
+        })
+
+    </script>
+    </body>
 
 </html>
