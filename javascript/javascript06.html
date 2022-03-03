@@ -962,30 +962,19 @@
                                 <td class="sample14_M3"></td>
                                 <td class="sample14_R3"></td>
                             </tr>
-                            <tr>
-                                <td class="sample14_N4"></td>
-                                <td class="sample14_Q4"></td>
-                                <td class="sample14_M4"></td>
-                                <td class="sample14_R4"></td>
-                            </tr>
-                            <tr>
-                                <td class="sample14_N5"></td>
-                                <td class="sample14_Q5"></td>
-                                <td class="sample14_M5"></td>
-                                <td class="sample14_R5"></td>
-                            </tr>
-                            <tr>
-                                <td class="sample14_N6"></td>
-                                <td class="sample14_Q6"></td>
-                                <td class="sample14_M6"></td>
-                                <td class="sample14_R6"></td>
-                            </tr>
                         </tbody>
                     </table>
                 </div>
                 <div class="code">
                     <pre class="line-numbers"><code class="language-js">{
+    const text = "javascript";
+    const result = Array.from(text);
+    
+    const text2 = "javascript";
+    const result2 = Array.from(text2, el => el + "10")
 
+    const text3 = "javascript";
+    const result3 = [...text3].map(el => el);
 }</code></pre>
                 </div>
             </div>
