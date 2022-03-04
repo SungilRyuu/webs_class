@@ -5,10 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>3/4 집에 가자</title>
+    <link href="https://webfontworld.github.io/gmarket/GmarketSans.css" rel="stylesheet">
     <style>
         * {
             margin: 0;
             padding: 0;
+            font-family: 'GmarketSans';
+
         }
 
         a {
@@ -16,33 +19,146 @@
             color: #fff;
         }
         #con1 {
-            width: 100%;
-            height: 1000px;
-            background-color: blue;
+            width: 1160px;
+            margin: 0 auto;
         }
         .container {
-            width: 1160px;
+            width: 100%;
             height: 840px;
-            background-color: skyblue;
             margin: 0 auto;
             display: flex;
-            text-align: center;
         }
         .con1__left {
-            margin-top: 160px;
-            display: inline-block;
-            text-align: left;
+            width: 33%;
         }
-        .con1__left span {}
-        .con1__left h3 {}
-        .con1__left p {}
-        .con1__left a {}
-        .con1__center {}
-        .con1__center .img1 {}
-        .con1__center a {}
-        .con1__right {}
-        .con1__right .img2 {}
-        .con1__right a {}
+        .con1__left span {
+            display: inline-block;
+            margin-top: 160px;
+            text-decoration: underline;
+            color: #777;
+            font-size: 16px;
+        }
+        .con1__left h3 {
+            margin-top: 20px;
+            font-size: 50px;
+            font-weight: 300;
+            color: #111;
+        }
+        .con1__left p {
+            margin-top: 35px;
+            font-size: 18px;
+            font-weight: 300;
+            line-height: 1.5;
+            color: #777;
+        }
+        .con1__left a {
+            display: inline-block;
+            margin-top: 30px;
+            font-size: 18px;
+            line-height: 1.53;
+            padding: 10px 25px 9px 24px;
+            background-color: #000;
+            color: #fff;
+            font-weight: 300;
+        }
+
+        .con1__left a:hover {
+            color: #fff;
+            background-color: #777;
+        }
+        .con1__center {
+            width: 33%;
+            margin-left: 61px;
+            margin-top: 199px;
+            position: relative;
+        }
+        .con1__center .img1 {
+            border-radius: 10px;
+            width: 374px;
+            height: 512px;
+            background-image: url(img/web4_1.jpg);
+        }
+        .con1__center a {
+            font-size: 18px;
+            font-weight: 300;
+            line-height: 1.53;
+            padding: 8px 24px 7px 24px;
+            background-color: #000;
+            opacity: 0.4;
+            border-radius: 50px;
+            position: absolute;
+            left: 20px; bottom: 140px;
+        }
+
+        .con1__center a:hover {
+            background-color: #fff;
+            color: #000;
+        }
+        .con1__right {
+            width: 33%;
+            margin-top: 120px;
+            margin-left: 20px;
+            margin-right: 0;
+            position: relative;
+        }
+        .con1__right .img2 {
+            width: 373px;
+            height: 511px;
+            border-radius: 10px;
+            background-image: url(img/web4_2.jpg);
+        }
+        .con1__right a {
+            font-size: 18px;
+            font-weight: 300;
+            line-height: 1.53;
+            padding: 8px 24px 7px;
+            background-color: #000;
+            border-radius: 50px;
+            position: absolute;
+            left: 20px; bottom: 220px;
+        }
+        .con1__right a:hover {
+            background-color: #fff;
+            color: #000;
+        }
+
+        
+        @media (max-width: 1200px) {
+            #con1 {
+                w96%
+            }
+        }
+        @media (max-width: 600px) {
+            .container {
+                flex-direction: column;
+            }
+            .con1__left {
+                width: 100%;
+                margin-left: 10px;
+            }
+            .con1__center {
+                margin: 0 auto;
+                width: 100%;
+                margin-top: 100px;
+                margin-left: 10px;
+            }
+            .con1__center a{
+                left: 44px; 
+                bottom: 27px;
+            }
+            .con1__right {
+                margin: 0 auto;
+                width: 100%;
+                margin-top: 100px;
+                margin-left: 10px;
+            }
+
+            .con1__right a{
+                left: 20px;
+                bottom: 20px;
+            }
+
+        }
     </style>
 </head>
 <body>
