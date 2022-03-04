@@ -19,18 +19,17 @@
             color: #fff;
         }
         #con1 {
-            width: 1160px;
+            width: 100%;
             margin: 0 auto;
         }
         .container {
-            width: 100%;
+            width: 1160px;
             height: 840px;
             margin: 0 auto;
             display: flex;
         }
-        .con1__left {
-            width: 33%;
-        }
+        .con1__left {}
+
         .con1__left span {
             display: inline-block;
             margin-top: 160px;
@@ -67,7 +66,6 @@
             background-color: #777;
         }
         .con1__center {
-            width: 33%;
             margin-left: 61px;
             margin-top: 199px;
             position: relative;
@@ -95,7 +93,6 @@
             color: #000;
         }
         .con1__right {
-            width: 33%;
             margin-top: 120px;
             margin-left: 20px;
             margin-right: 0;
@@ -123,24 +120,29 @@
         }
 
         
-        @media (max-width: 1200px) {
+        /* @media (max-width: 1200px) {
             #con1 {
-                w96%
+                width: 96%;
             }
-        }
+        } */
         @media (max-width: 600px) {
+
+            #con1 {
+            }
             .container {
+                width: 100%;
                 flex-direction: column;
             }
             .con1__left {
-                width: 100%;
-                margin-left: 10px;
+                margin: 0 auto;
+            }
+
+            .con1__left span {
+                margin-top: 20px;
             }
             .con1__center {
                 margin: 0 auto;
-                width: 100%;
                 margin-top: 100px;
-                margin-left: 10px;
             }
             .con1__center a{
                 left: 44px; 
@@ -148,9 +150,7 @@
             }
             .con1__right {
                 margin: 0 auto;
-                width: 100%;
                 margin-top: 100px;
-                margin-left: 10px;
             }
 
             .con1__right a{
