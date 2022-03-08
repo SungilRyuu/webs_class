@@ -398,6 +398,26 @@
             </div>
             <!-- //sample16 -->
 
+            <div id="sample17" class="sample">
+                <h3>17. 재귀함수</h3>
+                <div class="code">
+                    <pre class="line-numbers"><code class="language-js">{
+    function func(a,b){
+        document.write(arguments[0]);
+        document.write(arguments[1]);
+    }
+
+    func("함수가 실행되었습니다.","함수가 실행되었습니다.")
+}</code></pre>
+                </div>
+
+                <div class="result">
+                    <h4>결과보기</h4>
+                    <div class="result12">함수가 실행되었습니다. 함수가 실행되었습니다.</div>
+                </div>
+            </div>
+            <!-- //sample17 -->
+
 
 
         </div>
@@ -409,6 +429,32 @@
     
 
     <script>
+        {
+            //재귀함수: 자기 스스로를 호출(함수를 반복문처럼 씀)
+            {
+                // function func(){
+                //     document.write("함수가 실행되었습니다.");
+                //     func();
+                // }
+                // func();
+
+                function func(num){
+                    if(num <= 1){
+                        document.write("함수가 실행되었습니당.");
+                    } else {
+                        document.write("함수가 실행되었습니다.");
+                        func(num-1);
+                    }
+                }
+                func(5);
+            }
+            //재귀함수 : 반복문
+            {
+                
+            }
+            //콜백함수: 나를 호출한 후, 그 다음 호출
+
+        }
     </script>
 
     <!-- script -->
