@@ -399,21 +399,39 @@
             <!-- //sample16 -->
 
             <div id="sample17" class="sample">
-                <h3>17. 재귀함수</h3>
+                <h3>17. 재귀함수 -기본</h3>
                 <div class="code">
                     <pre class="line-numbers"><code class="language-js">{
-    function func(a,b){
-        document.write(arguments[0]);
-        document.write(arguments[1]);
+    //재귀함수: 자기 스스로를 호출(함수를 반복문처럼 씀)
+    function func(){
+        document.write("함수가 실행되었습니다.");
+        func();
     }
-
-    func("함수가 실행되었습니다.","함수가 실행되었습니다.")
+    func();
 }</code></pre>
                 </div>
-
                 <div class="result">
                     <h4>결과보기</h4>
-                    <div class="result12">함수가 실행되었습니다. 함수가 실행되었습니다.</div>
+                    <div class="result12">함수가 실행되었습니다.</div><br>
+                </div>
+                
+                <h3>17. 재귀함수 -응용</h3>
+                <div class="code">
+                    <pre class="line-numbers"><code class="language-js">{
+    function func(num){
+        if(num &lt;= 1){
+            document.write("함수가 실행되었습니당.");
+        } else {
+            document.write("함수가 실행되었습니다.");
+            func(num-1);
+        }
+    }
+    func(5);
+}</code></pre>
+                </div>
+                <div class="result">
+                    <h4>결과보기</h4>
+                    <div class="result12">함수가 실행되었습니다. 함수가 실행되었습니다. 함수가 실행되었습니다. 함수가 실행되었습니다. 함수가 실행되었습니당.</div>
                 </div>
             </div>
             <!-- //sample17 -->
@@ -431,23 +449,23 @@
     <script>
         {
             //재귀함수: 자기 스스로를 호출(함수를 반복문처럼 씀)
-            {
-                // function func(){
-                //     document.write("함수가 실행되었습니다.");
-                //     func();
-                // }
-                // func();
+            
+            // function func(){
+            //     document.write("함수가 실행되었습니다.");
+            //     func();
+            // }
+            // func();
 
-                function func(num){
-                    if(num <= 1){
-                        document.write("함수가 실행되었습니당.");
-                    } else {
-                        document.write("함수가 실행되었습니다.");
-                        func(num-1);
-                    }
-                }
-                func(5);
-            }
+            // function func(num){
+            //     if(num <= 1){
+            //         document.write("함수가 실행되었습니당.");
+            //     } else {
+            //         document.write("함수가 실행되었습니다.");
+            //         func(num-1);
+            //     }
+            // }
+            // func(5);
+            
             //재귀함수 : 반복문
             {
                 
