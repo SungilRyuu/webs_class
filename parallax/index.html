@@ -72,7 +72,7 @@
         .section2__bg {
             width: 100%;
             height: 100vh;
-            background: #000;
+            background: #222;
         }
 
         .section2__text1 {
@@ -84,6 +84,25 @@
 
         .section2__img1 {
             width: 50vw;
+            top: 80%;
+            /* background-color: #fff; */
+        }
+
+        .section2_img1_site {
+            position: absolute;
+            left: 50%; top: 1.5vw;
+            transform: translate(-50%);
+            width: 39vw;
+            height: calc(100% - 5vw);
+            /* background: #222; */
+            border-radius: 0.7vw 0.7vw 0 0;
+            border: 1px solid #000;
+            overflow: hidden;
+        }
+
+        .section2_img1_site .move{
+            position: absolute;
+            left: 0;top: 0;
         }
         #section3 {}
         #section4 {}
@@ -150,6 +169,12 @@
                 data-7500 = "transform: translate(-50%, -50%) scale(2); top: 50%;"
             >
                 <img src="img/MacBook Pro 13.png" alt="맥북">
+                <div class="section2_img1_site">
+                    <div class="move"
+                    data-7500 = "top: 0%;"
+                    data-9500 = "top: -500%;"
+                    ><img src="img/site_01.jpg" alt="사이트01"></div>
+                </div>
             </div>
         </section> <!-- //section2 -->
         <section id="section3"></section> <!-- //section3 -->
