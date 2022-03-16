@@ -76,3 +76,6 @@
         url('https://cdn.jsdelivr.net/gh/webfontworld/utoImageHand/UtoImageHandBold.ttf') format("truetype");
     font-display: swap;
 }
+
+/* font-family: 'IBM Plex Sans Condensed', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@600;700&display=swap');
