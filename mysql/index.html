@@ -470,6 +470,9 @@ Query OK, 0 rows affected (0.03 sec)</code></pre>
                     <h4 class="pt20">모든 회원의 비밀번호를 '1234'로 변경</h4>
                     <pre class="language-js"><code>mysql> UPDATE myMember set youPass = 1234;</code></pre>
 
+                    <h4 class="pt20">아이디 번호가 3번인 회원의 비밀번호를 '1234'로 변경</h4>
+                    <pre class="language-js"><code>mysql> UPDATE myMember set youPass = 1234 WHERE memberID = 3;</code></pre>
+
                     <h4 class="pt20">5번부터 10번까지 회원의 비밀번호를 '1234567'로 변경</h4>
                     <pre class="language-js"><code>mysql> UPDATE myMember set youPass = 1234567 WHERE memberID BETWEEN 5 and 10;</code></pre>
 
