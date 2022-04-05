@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04/05 집에 가자</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* reset */
+        a { 
+            text-decoration: none; 
+            color: #000;
+        }
+        ul,li {
+            list-style: none;
+        }
+
+        #header {
+            width: 100%;
+            /* background: red; */
+        }
+        .header__container {
+            width: 1200px;
+            margin: 0 auto;
+            /* background: yellow; */
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .header__logo {
+            background-image: url(../img/0405logo.jpg);
+            width: 240px;
+            height: 100px;
+            background-repeat: no-repeat;
+            margin-top: 100px;
+        }
+        .header__nav {
+            margin-top: 100px;
+            flex: 0 0 60%;
+        }
+        .header__nav ul {
+            display: flex;
+            position: relative;
+            background: lightgrey;
+            margin-top: 30px;
+        }
+        .header__nav li {
+            padding: 10px 10px;
+            position: relative;
+            text-align: right;
+            width: 130px;
+        }
+        .header__nav a {
+            font-size: 20px;
+            font-weight: bold;
+            display: block;
+            white-space: nowrap;
+        }
+        .header__nav li:hover {
+            background: grey;
+        }
+
+        .header__nav .subMenu {
+            position: absolute;
+            display: none;
+            right: 0; top: 13px;
+            background: rgb(158, 158, 158);
+        }
+        .header__nav .subMenu li {
+            width: 130px;
+        }
+        .header__nav .subMenu li:hover {
+            background: lightgrey;
+        }
+        .header__nav .subMenu li a {
+            font-size: 20px;
+        }
+        .sec1__container {
+            width: 1200px;
+            height: 468px;
+            background-size: cover;
+            margin: 0 auto;
+            background-image: url(../img/0405sec1.jpg);
+            margin-bottom: 52px;
+        }
+        #section2 {
+            width: 100%;
+        }
+        .sec2__con {
+            display: flex;
+            justify-content: space-between;
+            height: 168px;
+        }
+        #section2 .left {
+            flex: 0 0 49%;
+            background-image: url(../img/0405sec2-1.jpg);
+            background-size: cover;
+            
+        }
+        #section2 .right {
+            flex: 0 0 49%;
+            background-image: url(../img/0405sec2-2.jpg);
+            background-size: cover;
+        }
+        #section2 .cont h3 {
+            font-size: 30px;
+            padding-top: 30px;
+            padding-left: 30px;
+        }
+        #section2 .cont p {
+            padding-left: 30px;
+            margin-top: 10px;
+        }
+        
+        #section2 .left span {
+            position: relative;
+        }
+        #section2 .left span::before {
+            content: '';
+            position: absolute;
+            left: 22px;
+            top: 0;
+            background-image: url(../img/0405where.jpg);
+            width: 27px; height: 27px;
+            background-size: cover;
+        }
+        #section2 .right span {
+            position: relative;
+        }
+        #section2 .right span::before {
+            content: '';
+            position: absolute;
+            left: 22px;
+            top: 0;
+            background-image: url(../img/0405time.jpg);
+            width: 27px; height: 27px;
+            background-size: cover;
+        }
+        #section2 .cont span {
+            padding-left: 60px;
+            padding-top: 5px;
+            display: inline-block;
+        }
+        #section2 .cont span p {
+            display: inline;
+            color: #000;
+            font-weight: lighter;
+        }
+        #section3 {
+            margin-top: 40px;
+            margin-bottom: 600px;
+        }
+
+        #section3 .container {
+            position: relative;
+        }
+        #section3 li {
+            display: inline;
+        }
+        #section3 li.best {
+            display: inline;
+        }
+        #section3 li a {
+            display: inline;
+        }
+        #section3 li a {
+            display: inline;
+            color: grey;
+            font-size: 25px;
+            font-weight: bold;
+        }
+        #section3 li.l {
+            display: inline;
+            color: #000;
+            font-size: 25px;
+            font-weight: bold;
+        }
+        #section3 li.active a {
+            color: #000;
+        }
+
+        .section3__body {
+            display: flex;
+            margin-top: 10px;
+            position: absolute;
+            left: 0;top: 30px;
+        }
+        .section3__body .cont {
+            margin-right: 38px;
+            position: relative;
+        }
+        .section3__body article img {
+            width: 375px;
+            height: 375px;
+        }
+        .section3__body article .num {
+            font-size: 15px;
+            width: 50px; height: 50px;
+            background: #000;
+            text-align: center;
+            display: inline-block;
+            vertical-align: middle;
+            margin-top: 0;
+            position: absolute;
+            left: 20px;
+            top: 20px;
+        }
+        .section3__body article .num span.nums {
+            width: 50px;
+            height: 50px;
+            font-size: 15px;
+            color: #fff;
+            vertical-align: middle;
+            margin-top: 0;
+            display: inline-block;
+        }
+        
+        .section3__body article p {
+            margin-top: 15px;
+            font-size: 25px;
+            font-weight: bold;
+            color: #000;
+            position: relative;
+        }
+        .section3__body article p span.bb {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            right: 0;top: 0px;
+            background-image: url(../img/0405sec3-bb.jpg);
+            background-size: cover;
+        }
+        .section3__body article span.nums {
+            margin-top: 10px;
+            display: inline-block;
+            font-size: 20px;
+            font-weight: bold;
+            color: #000;
+        }
+        .section3__body article span p {
+            display: inline;
+            font-weight: normal;
+            font-size: 20px;
+        }
+        #footer {
+            background: #000;
+            color: #fff;
+        }
+
+        .footer__container {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+        #footer .left {
+            background-image: url(../img/0405footer.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 160px;
+            height: 45px;
+        }
+        #footer .right {
+            flex: 0 0 55%;
+        }
+        #footer .right ul {
+            display: flex;
+            margin-bottom: 30px;
+        }
+        #footer .right li {
+            margin-right: 70px;
+        }
+        #footer .right li a {
+            color: #fff;
+            font-weight: bold;
+        }
+        #footer .right p {
+            color: grey;
+            margin-bottom: 10px;
+        }
+        .container {
+            width: 1200px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <div class="header__container">
+            <div class="header__logo"></div>
+            <div class="header__nav">
+                <ul>
+                    <li><a href="#">COOKIT소개</a>
+                        <ul class="subMenu">
+                            <li><a href="#">sub1</a></li>
+                            <li><a href="#">sub2</a></li>
+                            <li><a href="#">sub3</a></li>
+                            <li><a href="#">sub4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">COOKIT메뉴</a>
+                        <ul class="subMenu">
+                            <li><a href="#">sub1</a></li>
+                            <li><a href="#">sub2</a></li>
+                            <li><a href="#">sub3</a></li>
+                            <li><a href="#">sub4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">리뷰</a>
+                        <ul class="subMenu">
+                            <li><a href="#">sub1</a></li>
+                            <li><a href="#">sub2</a></li>
+                            <li><a href="#">sub3</a></li>
+                            <li><a href="#">sub4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">이벤트</a>
+                        <ul class="subMenu">
+                            <li><a href="#">sub1</a></li>
+                            <li><a href="#">sub2</a></li>
+                            <li><a href="#">sub3</a></li>
+                            <li><a href="#">sub4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">MY쿡킷</a>
+                        <ul class="subMenu">
+                            <li><a href="#">sub1</a></li>
+                            <li><a href="#">sub2</a></li>
+                            <li><a href="#">sub3</a></li>
+                            <li><a href="#">sub4</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    
+    <main id="main">
+        <section id="section1">
+            <div class="sec1__container"></div>
+        </section>
+        <section id="section2">
+            <div class="container sec2__con">
+                <div class="left cont">
+                    <h3>우리집도 COOKIT 배송이 되나요?</h3>
+                    <p>배송이 가능한지 알려드려요.</p>
+                    <span>배송지 검색</span>
+                </div>
+                <div class="right cont">
+                    <h3>7월 30일(화)에 받을 수 있어요</h3>
+                    <p>오전 7시까지 주문하시면 다음날 배송됨니다.</p>
+                    <span>63:28:32 <p>남은 시간</p></span>
+                </div>
+            </div>
+        </section>
+        <section id="section3">
+            <div class="container">
+                <ul>
+                    <li class="active best"><a href="#">실시간 베스트</a> 
+                        <ul class="section3__body">
+                            <li>
+                                <article class="cont cont1">
+                                    <img src="../img/0405sec3-1.jpg" alt="평양식 어복 쟁반">
+                                    <p class="num"><span class="nums">BEST<br>01</span> </p>
+                                    <p>평양식 어복 쟁반<span class="bb"></span></p>
+                                    <span>33,800원 <p>/ 3인분</p></span>
+                                </article>
+                            </li>
+                            <li>
+                                <article class="cont cont2">
+                                    <img src="../img/0405sec3-2.jpg" alt="새우주꾸미삼겹살">
+
+                                    <p class="num"><span class="nums">02</span></p>
+                                    <p>새우주꾸미삼겹살 <span class="bb"></span></p>
+                                    <span>29,800원 <p>/ 3인분</p></span>
+                                </article>
+                            </li>
+                            <li>
+                                <article class="cont cont3">
+                                    <img src="../img/0405sec3-3.jpg" alt="방풍나물 아귀찜">
+                                    <p class="num"><span class="nums">03</span></p>
+                                    <p>방풍나물 아귀찜<span class="bb"></span></p>
+                                    <span>32,800원 <p>/ 3인분</p></span>
+                                </article>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="l"> | </li>
+                    <li><a href="#">생생한 리뷰</a>
+                        <ul class="section3__body">
+                            <li>
+                                <article class="cont cont1">
+                                    <img src="../img/0405sec3-1.jpg" alt="평양식 어복 쟁반">
+                                    <p class="num"><span class="nums"> BEST<br>01</span></p>
+                                    <p>어복 쟁반<span class="bb"></span></p>
+                                    <span>33,800원 <p>/ 3인분</p></span>
+                                </article>
+                            </li>
+                            <li>
+                                <article class="cont cont2">
+                                    <img src="../img/0405sec3-2.jpg" alt="새우주꾸미삼겹살">
+                                    <p class="num"><span class="nums">02</span></p>
+                                    <p>삼겹살<span class="bb"></span></p>
+                                    <span>29,800원 <p>/ 3인분</p></span>
+                                </article>
+                            </li>
+                            <li>
+                                <article class="cont cont3">
+                                    <img src="../img/0405sec3-3.jpg" alt="방풍나물 아귀찜">
+                                    <p class="num"><span class="nums">03</span></p>
+                                    <p>아귀찜<span class="bb"></span></p>
+                                    <span>32,800원 <p>/ 3인분</p></span>
+                                </article>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <div class="container footer__container">
+            <div class="left"></div>
+            <div class="right">
+                <ul>
+                    <li><a href="#">이용약관</a></li>
+                    <li><a href="#">개인정보처리 방침</a></li>
+                    <li><a href="#">법적고지</a></li>
+                    <li><a href="#">사업자정보 확인</a></li>
+                </ul>
+                <p>씨제이제일제당(주) | 대표자 : 신현재</p>
+                <p>주소:서울 중구 동호로330 CJ제일제당 센터 (우)04560 | 사업자등록번호:104-86-09535</p>
+                <p>통신판매업신고 중구 제 07767호 | 개인정보보호책임자:류화정</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="../js/0405.js"></script>
+</body>
+</html>
