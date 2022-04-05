@@ -19,5 +19,28 @@
     }
 
     tabMenu.find("ul > li > a").click(tabList);
-    
+
+
+    var currentIndex = 0;
+
+    setInterval(function(){
+        if(currentIndex < 2){
+            currentIndex++;
+        } else {
+            currentIndex = 0;
+        }
+        var slidePosition = currentIndex * (-1200) + "px";
+        $(".slideList").animate({left: slidePosition},400);
+    },1000);
+
+    $(".right").click(function(){
+        $(".layer").slideDown(300);
+        $(".layer_bg").show();
+    });
+
+    $(".layer .close").click(function(){
+        $(".layer").slideUp(300);
+        $(".layer_bg").hide();
+
+    });
 })(jQuery);
