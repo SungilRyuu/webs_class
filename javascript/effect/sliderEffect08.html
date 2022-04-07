@@ -437,6 +437,28 @@ document.querySelectorAll(".slider__dot .dot").forEach((dot, index) => {
             }
         });
 
+        sliderBtnNext.addEventListener("mouseenter", () => {
+            sliderDot.querySelector(".play").classList.add("show");
+            sliderDot.querySelector(".stop").classList.remove("show");
+            stopPlay();
+        })
+        sliderBtnNext.addEventListener("mouseleave", () => {
+            sliderDot.querySelector(".stop").classList.add("show");
+            sliderDot.querySelector(".play").classList.remove("show");
+            autoPlay();
+        })
+
+        sliderBtnPrev.addEventListener("mouseenter", () => {
+            sliderDot.querySelector(".play").classList.add("show");
+            sliderDot.querySelector(".stop").classList.remove("show");
+            stopPlay();
+        })
+        sliderBtnPrev.addEventListener("mouseleave", () => {
+            sliderDot.querySelector(".stop").classList.add("show");
+            sliderDot.querySelector(".play").classList.remove("show");
+            autoPlay();
+        })
+
         sliderInner.addEventListener("mouseenter", () => {
             sliderDot.querySelector(".play").classList.add("show");
             sliderDot.querySelector(".stop").classList.remove("show");
