@@ -133,7 +133,7 @@
                     </li>
                     <li class="mistake">
                         <p>Mistakes: </p>
-                        <span><b>0</b></span>
+                        <span><b>60</b></span>
                     </li>
                     <li class="wpm">
                         <p>wpm: </p>
@@ -192,12 +192,21 @@
         const typingText = document.querySelector(".typing__text p");
         const inputField = document.querySelector(".input__field");
         const typingMistake = document.querySelector(".mistake span");
-        
+        const typingTime = document.querySelector(".time span b");
+        const typingWpm = document.querySelector(".wpm span");  //1분동안 친 단어 수
+        const typingCpm = document.querySelector(".cpm span");  //1분동안 친 글자 수
+        const typingAgain = document.querySelector(".typing__info button");
+
         let charIndex = 0;
         let mistakes = 0;
+        let timer;
+        let maxTime = 60;
+        let timeLeft = maxTime;
+        let isTyping = 0;
 
         function randomParagraph(){
             let randIndex = Math.floor(Math.random() * paragraphs.length);
+            typingText.innerHTML = "";
             paragraphs[randIndex].split("").forEach(span => {
                 let spanTag = `<span>${span}</span>`;
                 typingText.innerHTML += spanTag;
@@ -211,29 +220,65 @@
             const characters = typingText.querySelectorAll("span");
             let typedChar = inputField.value.split("")[charIndex];
 
-            if(typedChar == null){
-                charIndex--;
-                if(characters[charIndex].classList.contains("incorrect")){
-                    mistakes--;
+            if(charIndex < characters.length - 1 && timeLeft > 0){
+                if(!isTyping){
+                    timer = setInterval(initTimer, 1000);
+                    isTyping = true;
                 }
-                characters[charIndex].classList.remove("correct", "incorrect");
-                // characters[charIndex].classList.add("active");
-            } else { 
-                if(characters[charIndex].innerText == typedChar){
-                    characters[charIndex].classList.add("correct");
-                } else {
-                    mistakes++;
-                    characters[charIndex].classList.add("incorrect");
-                }
-                charIndex++;
-            }
-            characters.forEach(span => span.classList.remove("active"));
-            characters[charIndex].classList.add("active");
-            typingMistake.innerText = mistakes;
 
+                if(typedChar == null){
+                    charIndex--;
+                    if(characters[charIndex].classList.contains("incorrect")){
+                        mistakes--;
+                    }
+                    characters[charIndex].classList.remove("correct", "incorrect");
+                    // characters[charIndex].classList.add("active");
+                } else { 
+                    if(characters[charIndex].innerText == typedChar){
+                        characters[charIndex].classList.add("correct");
+                    } else {
+                        mistakes++;
+                        characters[charIndex].classList.add("incorrect");
+                    }
+                    charIndex++;
+                }
+                characters.forEach(span => span.classList.remove("active"));
+                characters[charIndex].classList.add("active");
+                typingMistake.innerText = mistakes;
+
+                //전체 글자 수 : charIndex
+                let wpm = Math.round((((charIndex - mistakes)/5)/(maxTime - timeLeft)) * 60);
+                let cpm = Math.round(((charIndex - mistakes)/(maxTime - timeLeft)) * 60);
+                wpm = wpm < 0 || !wpm || wpm == Infinity? 0: wpm;
+                typingWpm.innerText = wpm;
+                typingCpm.innerText = cpm;
+            } else {
+                clearInterval(timer);
+                inputField.value = "";
+            }
         }
 
+        function initTimer(){
+            if(timeLeft > 0){
+                timeLeft--;
+                typingTime.innerText = timeLeft;
+            } else {
+                clearInterval(timer);
+            }
+        }
+
+        function resetGame(){
+            randomParagraph();
+            clearInterval(timer);
+            inputField.value = "";
+            timeLeft = maxTime;
+            isTyping = charIndex = mistakes = 0;
+            typingMistake = 0;
+            typingWpm.innerText = 0;
+            typingCpm.innerText = 0;
+        }
         inputField.addEventListener("input", initTyping);
+        typingAgain.addEventListener("click", resetGame);
     </script>
 </body>
 </html>
