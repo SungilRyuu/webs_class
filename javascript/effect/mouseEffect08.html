@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>마우스 이펙트</title>
 
     <link rel="stylesheet" href="css/Nexon.css">
@@ -12,7 +13,7 @@
 
     <style>
         body::before {
-            background: rgb(70, 70, 70, 0.33);
+            background: linear-gradient(#000 0%, #430362 100%)
         }
 
         .mouse__wrap {
@@ -24,87 +25,110 @@
             width: 100%;
             height: 100vh;
             overflow: hidden;
-            /* cursor: none; */
         }
-
-        .mouse__text {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            width: 100%;
-            /* height: 100vh; */
-            overflow: hidden;
+        .mouse__wrap p {
+            font-size: 2.5vw;
+            line-height: 2;
+            font-weight: 300;
+        }
+        .mouse__wrap p:last-child {
+            font-size: 3vw;
+            font-weight: 400;
         }
         
-        .mouse__text p {
-            font-size: 2vw;
-            margin-bottom: 2vw;
-        }
-        .mouse__img {
-            position: relative;
-        }
-        .mouse__img .img {
+        .cursor {
             position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 400px;
-            opacity: 0;
+            left: 0;top: 0;
+            width: 100px;height: 100px;
+            z-index: -1;
+            border-radius: 50%;
+            background-image: url(img/book.jpg);
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed;
+            border: 5px solid steelblue;
+            display: none;
         }
 
-        .mouse__img .txt {
-            font-size: 3vw;
+        .attr .light {
+            font-size: 30px;
+        }
+
+
+
+        .pos-1 {
+            grid-area: 10/1/36/8;
+        }
+
+        .pos-2 {
+            grid-area: 1/21/17/30;
+        }
+
+        .pos-3 {
+            grid-area: 1/36/14/42;
+        }
+
+        .pos-4 {
+            grid-area: 10/10/32/17;
+        }
+
+        .pos-5 {
+            grid-area: 20/35/35/45;
+        }
+
+        .pos-6 {
+            grid-area: 20/46/28/51;
+        }
+
+        .pos-7 {
+            grid-area: 43/1/51/10;
+        }
+
+        .pos-8 {
+            grid-area: 38/14/51/19;
+        }
+
+        .pos-9 {
+            grid-area: 40/26/51/32;
+        }
+
+        .pos-10 {
+            grid-area: 37/39/48/47;
+        }
+
+        b {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            position: absolute;
+            pointer-events: none;
+            background: #55b9f3;
+            transform: translate(-50%, -50%);
+            animation: blow 4s linear infinite;
+        }
+        @keyframes blow {
+        0% {
+            transform: translate(-50%, -50%);
+            opacity: 1;
+            filter: hue-rotate(0deg);
+        }
+        100% {
+                transform: translate(-50%, -1000%);
+                opacity: 0;
+                filter: hue-rotate(720deg);
+            }
         }
     </style>
 </head>
-<body class="img19">
+<body>
     <!-- main -->
     <main>
-        <section id="mouseType02">
+        <section id="mouseType03">
             <div class="cursor"></div>
+
             <div class="mouse__wrap">
-                <div class="mouse__text">
-                    <p>I Never Dreamed About Success, I worked for it.</p>
-                </div>
-                <div>
-                    <a href="#" class="mouse__img">
-                        <div class="img">
-                            <img src="./img/vimages01.jpg" alt="이미지1">
-                        </div>
-                        <span class="txt">나는 </span>
-                    </a>
-                    <a href="#" class="mouse__img">
-                        <div class="img">
-                            <img src="./img/vimages02.jpg" alt="이미지2">
-                        </div>
-                        <span class="txt"> 성공에 대해 </span>
-                    </a>
-                    <a href="#" class="mouse__img">
-                        <div class="img">
-                            <img src="./img/vimages06.jpg" alt="이미지3">
-                        </div>
-                        <span class="txt"> 꿈꾸지 않았다. </span>
-                    </a>
-                    <a href="#" class="mouse__img">
-                        <div class="img">
-                            <img src="./img/vimages04.jpg" alt="이미지4">
-                        </div>
-                        <span class="txt"> 나는 </span>
-                    </a>
-                    <a href="#" class="mouse__img">
-                        <div class="img">
-                            <img src="./img/vimages05.jpg" alt="이미지5">
-                        </div>
-                        <span class="txt"> 꿈을 위해 </span>
-                    </a>
-                    <a href="#" class="mouse__img">
-                        <div class="img">
-                            <img src="./img/vimages03.jpg" alt="이미지6">
-                        </div>
-                        <span class="txt"> 행동했다.</span>
-                    </a>
-                </div>
+                <p>You can find the wise saying.</p>
+                <p>명언을 찾아보세요.</p>
             </div>
         </section>
     </main>
@@ -114,7 +138,7 @@
         <div class="info">
             <div class="title">
                 <h1><a href="mouseEffect.html">Javascript Mouse Effect08</a></h1>
-                <p>마우스 이펙트 - 이미지 오버 효과</p>
+                <p>마우스 이펙트 - 다양한 효과</p>
             </div>
         
             <div class="number">
@@ -159,6 +183,11 @@
                     </div>
                 </div>
             </div>
+
+            <div class="attr">
+                <span class="material-icons light">flashlight_off</span>
+                <!-- <span class="material-icons light">flashlight_off</span> -->
+            </div>
         </div>
             <!-- //info -->
 
@@ -169,6 +198,114 @@
             highlight();
             modal ();
             tabMenu ();
+
+            const mouseWrap = document.querySelector(".mouse__wrap");
+            const light = document.querySelector(".attr span");
+            const cursor = document.querySelector(".cursor");
+
+            light.addEventListener("click", () => {
+                let getText = light.innerText;
+                switch(getText){
+                    case "flashlight_on":
+                        light.innerText = "flashlight_off";
+                        cursor.style.display = "none";
+                        mouseWrap.style.cursor = "default";
+                        break;
+                        case "flashlight_off":
+                            light.innerText = "flashlight_on";
+                            cursor.style.display = "block";
+                            mouseWrap.style.cursor = "crosshair";
+                    break;
+                }
+            })
+
+            function follow(e){
+                const circle1 = document.querySelector(".cursor").clientWidth; //190 -> border 값 제외
+                const circle2 = document.querySelector(".cursor").offsetWidth; //200 -> border 값 포함
+                const circle3 = document.querySelector(".cursor").getBoundingClientRect(); //200 -> border 값 포함
+                
+                //getBoundingClientRect: bottom, height, left , right, top, width, x, y
+
+                // console.log(circle1);
+                // console.log(circle2);
+                // console.log(circle3);
+
+                gsap.to(cursor, {duration: .3, left: e.pageX - (circle3.width/2), top: e.pageY - (circle3.height/2)});
+
+            }
+
+            window.addEventListener("mousemove", follow);
+
+            // //////////////////////////////////////////////////////
+
+        const images = [...document.querySelectorAll("img")];
+
+            const lerp = (a, b, n) => (1 - n) * a + n * b;
+            const map = (x, a, b, c, d) => ((x - a) * (d - c)) / (b - a) + c;
+
+            const getMousePosition = e => {
+            let posX = e.clientX;
+            let posY = e.clientY;
+
+            return {
+                    x: posX,
+                    y: posY
+                };
+            };
+
+            let mousePos = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
+            window.addEventListener("mousemove", e => (mousePos = getMousePosition(e)));
+
+            gsap.fromTo('img', {
+                scale: 1.2,
+                autoAlpha: 0,
+                ease: 'power3.inOut',
+            }, {
+                scale: 1,
+                autoAlpha: 1,
+                stagger: 0.1,
+                duration: 2.5,
+            })
+
+            images.forEach(img => {
+            let values = { x: 0, y: 0 };
+            const xStart = gsap.utils.random(16, 64);
+            const yStart = gsap.utils.random(-16, 64);
+
+            const render = () => {
+                values.x = lerp(
+                values.x,
+                map(mousePos.x, 0, window.innerWidth, -xStart, xStart),
+                0.07
+                );
+
+                values.y = lerp(
+                values.y,
+                map(mousePos.y, 0, window.innerHeight, -yStart, yStart),
+                0.07
+                );
+                gsap.set(img, { x: values.x, y: values.y });
+
+                requestAnimationFrame(render);
+            };
+                render();
+            });
+
+            document.addEventListener('mousemove', function(e) {
+                let body = document.querySelector('body');
+                let circle = document.createElement('b');
+                let x = e.offsetX;
+                let y = e.offsetY;
+                circle.style.left = x + "px";
+                circle.style.top = y + "px";
+                let size = Math.random() * 10;
+                circle.style.width = 20 + size + "px";
+                circle.style.height = 20 + size + "px";
+                body.appendChild(circle);
+                setTimeout(function() {
+                    circle.remove();
+                }, 1800);
+            });
         </script>
 
 </body>

@@ -55,6 +55,7 @@
         body.img23 {background-image: url(../img/images28.jpg);}
         body.img24 {background-image: url(../img/images29.jpg);}
         body.img25 {background-image: url(../img/images30.jpg);}
+        body.img26 {background-image: url(../img/book.jpg);}
 
         body::before {
             content: '';
