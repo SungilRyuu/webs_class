@@ -190,9 +190,107 @@
                                     </ul>
                                 </div>
                                 <div class="view-cont">
-                                    <div><pre><code class="language-html"></code></pre></div>
-                                    <div><pre><code class="language-css"></code></pre></div>
-                                    <div><pre><code class="language-javascript"></code></pre></div>
+                                    <div><pre><code class="language-html">&lt;div class="mouse__text"&gt;
+    &lt;div class="line"&gt;
+        &lt;div class="left"&gt;
+            &lt;div class="spanWrap"&gt;
+                &lt;div class="spanSlow"&gt;Pain Past&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="right"&gt;
+            &lt;div class="spanWrap"&gt;
+                &lt;div class="spanSlow"&gt;Pain Past&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="line"&gt;
+        &lt;div class="left"&gt;
+            &lt;div class="spanWrap"&gt;
+                &lt;div class="spanFast"&gt;is pleasure.&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="right"&gt;
+            &lt;div class="spanWrap"&gt;
+                &lt;div class="spanFast"&gt;is pleasure.&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="line"&gt;
+        &lt;div class="left"&gt;
+            &lt;div class="spanWrap"&gt;
+                &lt;div class="spanSlow"&gt;지나간 고통은&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="right"&gt;
+            &lt;div class="spanWrap"&gt;
+                &lt;div class="spanSlow"&gt;지나간 고통은&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="line"&gt;
+        &lt;div class="left"&gt;
+            &lt;div class="spanWrap"&gt;
+                &lt;div class="spanFast"&gt;쾌락이다.&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="right"&gt;
+            &lt;div class="spanWrap"&gt;
+                &lt;div class="spanFast"&gt;쾌락이다.&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre></div>
+                                    <div><pre><code class="language-css">.mouse__img {
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    width: 50%;
+}
+.mouse__text {
+    position: absolute;
+    left: 50%; top: 60%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 3vw;
+    line-height: 1.5;
+}
+
+.mouse__text .line {
+    width: 100%;
+    display: flex;
+}
+.mouse__text .line .left {
+    width: 50vw;
+    color: orange;
+    transform: skew(0deg, -15deg);
+    overflow: hidden;
+}
+.mouse__text .line .left .spanWrap {
+    width: 100vw;
+    text-align: center;
+}
+
+.mouse__text .line .right {
+    width: 50vw;
+    overflow: hidden;
+    transform: skew(0deg, 15deg);
+}
+
+.mouse__text .line .right .spanWrap {
+    width: 100vw;
+    text-align: center;
+    transform: translateX(-50vw);
+}</code></pre></div>
+<div><pre><code class="language-javascript">function mousemove(e){
+    let positionSlow = (e.pageX - (window.innerWidth/2)) * 0.13;
+    let positionFast = (e.pageX - (window.innerWidth/2)) * 0.25;
+
+    gsap.to(".spanSlow", {duration: 0.4, x: positionSlow});
+    gsap.to(".spanFast", {duration: 0.4, x: -positionFast});
+    gsap.to(".cursor", {duration: 0.3, left: e.pageX, top: e.pageY});
+}
+document.addEventListener("mousemove", mousemove);</code></pre></div>
                                 </div>
                             </div>
                         </div>

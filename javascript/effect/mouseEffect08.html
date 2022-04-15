@@ -173,9 +173,148 @@
                                     </ul>
                                 </div>
                                 <div class="view-cont">
-                                    <div><pre><code class="language-html"></code></pre></div>
-                                    <div><pre><code class="language-css"></code></pre></div>
-                                    <div><pre><code class="language-javascript"></code></pre></div>
+                                    <div><pre><code class="language-html">&lt;div class="mouse__wrap"&gt;
+        &lt;p&gt;You can find the wise saying.&lt;/p&gt;
+        &lt;p&gt;명언을 찾아보세요.&lt;/p&gt;
+    &lt;/div&gt;</code></pre></div>
+                                    <div><pre><code class="language-css">.pos-1 {
+    grid-area: 10/1/36/8;
+}
+
+.pos-2 {
+    grid-area: 1/21/17/30;
+}
+
+.pos-3 {
+    grid-area: 1/36/14/42;
+}
+
+.pos-4 {
+    grid-area: 10/10/32/17;
+}
+
+.pos-5 {
+    grid-area: 20/35/35/45;
+}
+
+.pos-6 {
+    grid-area: 20/46/28/51;
+}
+
+.pos-7 {
+    grid-area: 43/1/51/10;
+}
+
+.pos-8 {
+    grid-area: 38/14/51/19;
+}
+
+.pos-9 {
+    grid-area: 40/26/51/32;
+}
+
+.pos-10 {
+    grid-area: 37/39/48/47;
+}
+
+b {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    position: absolute;
+    pointer-events: none;
+    background: #55b9f3;
+    transform: translate(-50%, -50%);
+    animation: blow 4s linear infinite;
+}
+@keyframes blow {
+0% {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    filter: hue-rotate(0deg);
+}
+100% {
+        transform: translate(-50%, -1000%);
+        opacity: 0;
+        filter: hue-rotate(720deg);
+    }
+}</code></pre></div> 
+                                    <div><pre><code class="language-javascript">gsap.to(cursor, {duration: .3, left: e.pageX - (circle3.width/2), top: e.pageY - (circle3.height/2)});
+
+}
+
+window.addEventListener("mousemove", follow);
+
+// //////////////////////////////////////////////////////
+
+const images = [...document.querySelectorAll("img")];
+
+const lerp = (a, b, n) => (1 - n) * a + n * b;
+const map = (x, a, b, c, d) => ((x - a) * (d - c)) / (b - a) + c;
+
+const getMousePosition = e => {
+let posX = e.clientX;
+let posY = e.clientY;
+
+return {
+        x: posX,
+        y: posY
+    };
+};
+
+let mousePos = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
+window.addEventListener("mousemove", e => (mousePos = getMousePosition(e)));
+
+gsap.fromTo('img', {
+    scale: 1.2,
+    autoAlpha: 0,
+    ease: 'power3.inOut',
+}, {
+    scale: 1,
+    autoAlpha: 1,
+    stagger: 0.1,
+    duration: 2.5,
+})
+
+images.forEach(img => {
+let values = { x: 0, y: 0 };
+const xStart = gsap.utils.random(16, 64);
+const yStart = gsap.utils.random(-16, 64);
+
+const render = () => {
+    values.x = lerp(
+    values.x,
+    map(mousePos.x, 0, window.innerWidth, -xStart, xStart),
+    0.07
+    );
+
+    values.y = lerp(
+    values.y,
+    map(mousePos.y, 0, window.innerHeight, -yStart, yStart),
+    0.07
+    );
+    gsap.set(img, { x: values.x, y: values.y });
+
+    requestAnimationFrame(render);
+};
+    render();
+});
+
+document.addEventListener('mousemove', function(e) {
+    let body = document.querySelector('body');
+    let circle = document.createElement('b');
+    let x = e.offsetX;
+    let y = e.offsetY;
+    circle.style.left = x + "px";
+    circle.style.top = y + "px";
+    let size = Math.random() * 10;
+    circle.style.width = 20 + size + "px";
+    circle.style.height = 20 + size + "px";
+    body.appendChild(circle);
+    setTimeout(function() {
+        circle.remove();
+    }, 1800);
+});</code></pre></div>
                                 </div>
                             </div>
                         </div>

@@ -235,56 +235,71 @@
 .slider__dot .dot.active {
     background: rgb(255,255,255,0.9);
 }</code></pre></div>
-<div><pre><code class="language-javascript">// 1. 기본 설정
-function init(){     // 1-1. 이미지 갯수만큼 dot에 &lt;a&gt;&lt;/a&gt; 만들어야 함
-    slider.forEach(() => {     // slider 안의 이미지 갯수를 가져옴
-        dotIndex += `&lt;a href="#" class="dot"&gt;&lt;/a&gt;`;      // 이미지 갯수만큼 a태그 추가
-    })
-    sliderDot.innerHTML = dotIndex;     // 추가한 것을 sliderDot에 넣어 줌
+<div><pre><code class="language-javascript">/
+    // 이미지 복사 - jQuery = appendTo/prependTo : append/prepend
+    sliderInner.appendChild(cloneFirst);
+    sliderInner.insertBefore(cloneLast, sliderFirst);
 
-    // 1-2. 첫 번째 닷 버튼한테 활성화 표시 (active)
-    sliderDot.firstElementChild.classList.add("active");
-}
-init();
 
-// 2. 슬라이더가 움직일 수 있도록 함
-function gotoSlider(num){     // 2-1. gotoSlider 함수에 num 실행
-    sliderInner.style.transition = "all 0.4s";     // css 넣어줌
-    sliderInner.style.transform = "translateX("+ -sliderWidth * num +"px)";     // css 넣어줌
+    // 이미지 움직이기
+    function gotoSlider(direction){
+        sliderInner.classList.add("transition");
+        posInitial = sliderInner.offsetLeft;
+        console.log(posInitial);
 
-    currentIndex = num;     // 현재 이미지가 num과 같도록 해줌
-
-    // 2-2. dot의 active를 삭제 및 추가
-    dotActive = document.querySelectorAll(".slider__dot .dot");     // dotActive 선언
-    
-    dotActive.forEach(el => {      // dotActive를 각각 선택
-        el.classList.remove("active");     // active를 모두 없애주고
-    })
-    dotActive[num].classList.add("active");     // 현재 이미지의 순서에 맞는 닷에 active를 추가
-}
-
-//3. prev, next 버튼 클릭 시 이동하도록 설계
-document.querySelectorAll(".slider__btn a").forEach((btn, index) => {     
-    btn.addEventListener("click", () => {     // 버튼 각각의 a링크에 클릭 이벤트 넣어줌
-
-        //누르면 해당 이미지로 변화하도록 함
-        let prevIndex = (currentIndex + ( sliderCount - 1 )) % sliderCount;
-        let nextIndex = (currentIndex + 1 ) % sliderCount;
-
-        if(btn.classList.contains("prev")){
-            gotoSlider(prevIndex);
-        } else {
-            gotoSlider(nextIndex);
+        //오른쪽 버튼
+        if(direction == 1){
+            //left: -800px
+            sliderInner.style.left = (posInitial + -sliderWidth) + "px";
+            currentIndex++;
         }
-    })
-})
+        //왼쪽 버튼
+        if(direction == -1){
+            sliderInner.style.left = (posInitial + sliderWidth)  + "px";
+            currentIndex--;
+        }
 
-//4. 닷 버튼 클릭 시 이동하도록 설계
-document.querySelectorAll(".slider__dot .dot").forEach((dot, index) => {
-    dot.addEventListener("click", () => {
-        gotoSlider(index);
-    })
-})</code></pre></div>
+        dotActive();
+    }
+
+    //닷 버튼 활성화
+    function dotActive(){
+        let dotAll = document.querySelectorAll(".slider__dot .dot");
+        dotAll.forEach(dot => { //전체 닷 메뉴 비활성화
+            dot.classList.remove("active");
+        });
+
+    if(currentIndex == sliderLength){
+        dotAll[0].classList.add("active");
+    } else if(currentIndex == -1){
+        dotAll[sliderLength - 1].classList.add("active");
+    } else {dotAll[currentIndex].classList.add("active");}
+         // 현재 보고있는 닷 이미지 활성화
+    }
+
+    //애니메이션 완료 후
+    function checkIndex(){
+        sliderInner.classList.remove("transition");
+
+        //이미지 시작 부분
+        if(currentIndex == -1){
+            sliderInner.style.left = -(sliderLength * sliderWidth) + "px";
+            currentIndex = sliderLength - 1;
+        }
+
+        //이미지 마지막 부분
+        if(currentIndex == sliderLength){
+            sliderInner.style.left = -(1 * sliderWidth) + "px";
+            currentIndex = 0;
+        }
+    }
+
+    //버튼 클릭하기
+    sliderBtnPrev.addEventListener("click", () => {gotoSlider(-1)});
+    sliderBtnNext.addEventListener("click", () => {gotoSlider(1)});
+    sliderInner.addEventListener("transitionend", checkIndex);
+
+    dotInit();</code></pre></div>
 <div><pre><code class="language-jQuery">공사중입니다.</code></pre></div>
                         </div>
                     </div>
