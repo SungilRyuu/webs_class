@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>memoryGame</title>
     <style>
         * {
@@ -89,15 +90,57 @@
             80% {transform: translateX(-8px);}
             100% {transform: translateX(0);}
         }
+
+        .card__sound {
+            position: absolute;
+            right: 20px;
+            top: 20px;
+
+        }
+        .card__sound button {
+            background: #fff;
+            width: 40px;
+            height: 40px;
+            color: #007bff;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            border: 0;
+        }
+
+        .card__start {
+            position: absolute;
+            left: 20px; top: 20px;
+        }
+        .card__start button {
+            background: #fff;
+            width: 40px;
+            height: 40px;
+            color: #007bff;
+            text-align: center;
+            line-height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            border: 0;
+        }
     </style>
 </head>
+
 <body>
     <div class="wrap__card">
         <div class="card__inner">
+            <div class="card__start">
+                <button class="material-icons">smart_toy</button>
+            </div>
+            <div class="card__sound">
+                <button class="material-icons">volume_up</button>
+                <audio id="song" src="audio/Jeremy_Black.mp3"loop="loop"></audio>
+            </div>
             <ul class="cards">
                 <li>
                     <div class="view front">
-                        <img src="img/bird6.png" alt="앵그리">
+                        <img src="img/bird0.png" alt="앵그리">
                     </div>
                     <div class="view back">
                         <img src="img/bird1.png" alt="새">
@@ -105,7 +148,7 @@
                 </li>
                 <li>
                     <div class="view front">
-                        <img src="img/bird6.png" alt="앵그리">
+                        <img src="img/bird0.png" alt="앵그리">
                     </div>
                     <div class="view back">
                         <img src="img/bird1.png" alt="새">
@@ -113,7 +156,7 @@
                 </li>
                 <li>
                     <div class="view front">
-                        <img src="img/bird6.png" alt="앵그리">
+                        <img src="img/bird0.png" alt="앵그리">
                     </div>
                     <div class="view back">
                         <img src="img/bird2.png" alt="새">
@@ -121,7 +164,7 @@
                 </li>
                 <li>
                     <div class="view front">
-                        <img src="img/bird6.png" alt="앵그리">
+                        <img src="img/bird0.png" alt="앵그리">
                     </div>
                     <div class="view back">
                         <img src="img/bird2.png" alt="새">
@@ -129,7 +172,7 @@
                 </li>
                 <li>
                     <div class="view front">
-                        <img src="img/bird6.png" alt="앵그리">
+                        <img src="img/bird0.png" alt="앵그리">
                     </div>
                     <div class="view back">
                         <img src="img/bird3.png" alt="새">
@@ -137,7 +180,7 @@
                 </li>
                 <li>
                     <div class="view front">
-                        <img src="img/bird6.png" alt="앵그리">
+                        <img src="img/bird0.png" alt="앵그리">
                     </div>
                     <div class="view back">
                         <img src="img/bird3.png" alt="새">
@@ -145,7 +188,7 @@
                 </li>
                 <li>
                     <div class="view front">
-                        <img src="img/bird6.png" alt="앵그리">
+                        <img src="img/bird0.png" alt="앵그리">
                     </div>
                     <div class="view back">
                         <img src="img/bird4.png" alt="새">
@@ -153,7 +196,7 @@
                 </li>
                 <li>
                     <div class="view front">
-                        <img src="img/bird6.png" alt="앵그리">
+                        <img src="img/bird0.png" alt="앵그리">
                     </div>
                     <div class="view back">
                         <img src="img/bird4.png" alt="새">
@@ -161,7 +204,7 @@
                 </li>
                 <li>
                     <div class="view front">
-                        <img src="img/bird6.png" alt="앵그리">
+                        <img src="img/bird0.png" alt="앵그리">
                     </div>
                     <div class="view back">
                         <img src="img/bird5.png" alt="새">
@@ -169,7 +212,7 @@
                 </li>
                 <li>
                     <div class="view front">
-                        <img src="img/bird6.png" alt="앵그리">
+                        <img src="img/bird0.png" alt="앵그리">
                     </div>
                     <div class="view back">
                         <img src="img/bird5.png" alt="새">
@@ -177,7 +220,7 @@
                 </li>
                 <li>
                     <div class="view front">
-                        <img src="img/bird6.png" alt="앵그리">
+                        <img src="img/bird0.png" alt="앵그리">
                     </div>
                     <div class="view back">
                         <img src="img/bird8.png" alt="새">
@@ -185,7 +228,7 @@
                 </li>
                 <li>
                     <div class="view front">
-                        <img src="img/bird6.png" alt="앵그리">
+                        <img src="img/bird0.png" alt="앵그리">
                     </div>
                     <div class="view back">
                         <img src="img/bird8.png" alt="새">
@@ -193,7 +236,7 @@
                 </li>
                 <li>
                     <div class="view front">
-                        <img src="img/bird6.png" alt="앵그리">
+                        <img src="img/bird0.png" alt="앵그리">
                     </div>
                     <div class="view back">
                         <img src="img/bird7.png" alt="새">
@@ -201,7 +244,7 @@
                 </li>
                 <li>
                     <div class="view front">
-                        <img src="img/bird6.png" alt="앵그리">
+                        <img src="img/bird0.png" alt="앵그리">
                     </div>
                     <div class="view back">
                         <img src="img/bird7.png" alt="새">
@@ -209,18 +252,18 @@
                 </li>
                 <li>
                     <div class="view front">
-                        <img src="img/bird6.png" alt="앵그리">
+                        <img src="img/bird0.png" alt="앵그리">
                     </div>
                     <div class="view back">
-                        <img src="img/bird9.png" alt="새">
+                        <img src="img/bird6.png" alt="새">
                     </div>
                 </li>
                 <li>
                     <div class="view front">
-                        <img src="img/bird6.png" alt="앵그리">
+                        <img src="img/bird0.png" alt="앵그리">
                     </div>
                     <div class="view back">
-                        <img src="img/bird9.png" alt="새">
+                        <img src="img/bird6.png" alt="새">
                     </div>
                 </li>
             </ul>
@@ -235,10 +278,33 @@
         // 06. 틀린 이미지 애니메이션 효과 주기
         // 07. 빨리 클릭하면 버그 발생 -> 막아주기
 
+        // 08. 다 완성했을 떄 -> 축하합니다.
+        // 09. 카드 섞기
+
         const cards = document.querySelectorAll(".cards li");
+        const cardSound = document.querySelector(".card__sound button");
+        const cardSong = document.querySelector("#song");
+        const cardStart = document.querySelector(".card__start");
+
         let cardOne, cardTwo; 
         let disableDeck = false;
+        let matchedCard = 0;
 
+        let sound = [
+            "audio/match2.mp3",
+            "audio/match.mp3",
+            "audio/up.mp3"
+        ];
+
+        let soundMatch = new Audio(sound[0]);
+        let soundNoMatch = new Audio(sound[1]);
+        let soundSuccess = new Audio(sound[2]);
+
+
+        // 예전 방식
+        // cardSound.addEventListener("click", function(){
+        //     this.classList.toggle("is-playing");
+        // })
         function flipCard(e){
             let clickedCard = e.target;
 
@@ -264,10 +330,19 @@
 
         function matchCards(img1, img2){
             if(img1 == img2){
+                matchedCard++;
+
+                if(matchedCard == 8){
+                    setTimeout(() => {
+                        shuffledCard();
+                    },800)
+                }
+
                 cardOne.removeEventListener("click", flipCard);
                 cardTwo.removeEventListener("click", flipCard);
                 cardOne = cardTwo ="";
                 disableDeck = false;
+                soundMatch.play();
             } else {
                 setTimeout(() => {
                     cardOne.classList.add("shake");
@@ -279,13 +354,60 @@
                     cardTwo.classList.remove("flip", "shake");
                     cardOne = cardTwo ="";
                     disableDeck = false;
+                    soundNoMatch.play();
                 },1200);
             }
         }
 
+        //카드 섞기
+        function shuffledCard(){
+            cardOne, cardTwo = "";
+            disableDeck = false;
+            matchedCard = 0;
+        
+            let arr = [1,2,3,4,5,6,7,8,1,2,3,4,5,6,7,8];
+            let result = arr.sort(() => Math.random() > 0.5 ? 1 : -1);
+
+            cards.forEach((card, index) => {
+                card.classList.remove("flip");
+                setTimeout(() => {    
+                    card.classList.add("flip");
+                },100 * index);
+
+                setTimeout(() => {
+                    card.classList.remove("flip");
+                }, 3000);
+
+                let imgTag = card.querySelector(".back img");
+                imgTag.src =`img/bird${arr[index]}.png`
+            })
+            console.log(result);
+        }
+
+        shuffledCard();
+
+        //뮤직 재생
+        cardSound.addEventListener("click", () => {
+            cardSound.classList.toggle("is-playing");
+
+            if(cardSound.classList.contains("is-playing")){
+                cardSound.innerText = "volume_off";
+                cardSong.play();
+            } else {
+                cardSound.innerText = "volume_up";
+                cardSong.pause();
+            }
+        });
+
+        // 스타트 버튼 
+        cardStart.addEventListener("click", () => {
+            shuffledCard();
+        })
+
         cards.forEach(card => {
             card.addEventListener("click", flipCard);
         })
+
     </script>
 </body>
 </html>
