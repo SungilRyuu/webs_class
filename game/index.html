@@ -93,6 +93,34 @@
             right: 10px;
         }
         
+        .cardGame {
+            position: absolute;
+            top: 1000px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 700px;
+            height: 750px;
+            transition: all 0.4s;
+        }
+        .cardGame.show {
+            top: 80px;
+        }
+        
+        .typingGame {
+            position: absolute;
+            top: 50px;
+            left: -5000px;
+            transform: translateX(-50%);
+            width: 930px;
+            height: 700px;
+            transition: all 1s;
+        }
+        .typingGame.show {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        
         iframe {
             width: 100%;
             height: 100%;
@@ -108,7 +136,7 @@
     <header id="header">
         <div class="header__logo">Game With JavaScript</div>
         <!-- <div class="header__about">Git</div> -->
-        <div class="header__time">2022-04-04 10:10</div>
+        <div class="header__time"></div>
     </header>
     
     <main id="main">
@@ -131,8 +159,11 @@
     <div class="musicBox">
         <iframe class="musicBoxIframe" src="../javascript/musicPlayer/index.html" frameborder="0"></iframe>
     </div>
-    <div class="musicBox">
-        <iframe class="musicBoxIframe" src="../javascript/musicPlayer/index.html" frameborder="0"></iframe>
+    <div class="cardGame">
+        <iframe class="cardGameIframe" src="../javascript/memoryGame/index.html" frameborder="0"></iframe>
+    </div>
+    <div class="typingGame">
+        <iframe class="typingGameIframe" src="../javascript/typingGame/index.html" frameborder="0"></iframe>
     </div>
 
     <div class="cursor">
@@ -145,8 +176,14 @@
         $(".icon2").draggable();
         $(".icon3").draggable();
         
+        $(".icon1").click(function(){
+            $(".typingGame").toggleClass("show")
+        });
         $(".icon2").click(function(){
             $(".musicBox").toggleClass("show")
+        });
+        $(".icon3").click(function(){
+            $(".cardGame").toggleClass("show")
         });
 
         var today = new Date();
@@ -157,7 +194,8 @@
         var minutes = ('0' + today.getMinutes()).slice(-2);
         var timeString = year + '-' + month  + '-' + day + " " + hours + ':' + minutes;
 
-        $(".header__time").text(timeString);
+
+        setTimeout("$(\".header__time\").text(timeString);",1000);
        
 
 
