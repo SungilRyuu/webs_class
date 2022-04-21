@@ -5,128 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/bg.css">
+    <link rel="stylesheet" href="assets/css/bg.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <title>games</title>
     <style>
-        @font-face {
-    font-family: 'LABDigital';
-    font-weight: normal;
-    font-style: normal;
-    src: url('https://cdn.jsdelivr.net/gh/webfontworld/fontlab/LABDigital.eot');
-    src: url('https://cdn.jsdelivr.net/gh/webfontworld/fontlab/LABDigital.eot?#iefix') format('embedded-opentype'),
-         url('https://cdn.jsdelivr.net/gh/webfontworld/fontlab/LABDigital.woff2') format('woff2'),
-         url('https://cdn.jsdelivr.net/gh/webfontworld/fontlab/LABDigital.woff') format('woff'),
-         url('https://cdn.jsdelivr.net/gh/webfontworld/fontlab/LABDigital.ttf') format("truetype");
-    font-display: swap;
-}
-
-        body {
-            width: 100%;
-            height: 100vh;
-            overflow: hidden;
-            font-family: 'LABDigital';
-        }
-        #header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 40px;
-            background: #25398e;
-            display: flex;
-            font-size: 30px;
-            color: #fff;
-            align-items: center;
-        }
-
-        .header__logo {
-            margin-right: auto;
-            margin-left: 5px;
-        }
-
-        .header__about {
-            margin-right: 5px;
-        }
-
-        .header__time {
-            font-size: 25px;
-            margin-right: 5px;
-        }
-
-        #main {
-            margin-top: 100px;
-        font-family: 'LABDigital';
-        }
-        
-        .icons .icon {
-            width: 100px; height: 110px;
-            margin-bottom: 30px;
-            position: relative;
-            /* background: #fff; */
-        }
-
-        .icons .icon img {
-            width: 100px;
-            height: 70px;
-            object-fit: contain;
-            position: relative;
-        }
-
-        .icons .icon p {
-            color: #fff;
-            background: rgb(77, 146, 77);
-            font-size: 20px;
-            display: inline-block;
-        }
-
-
-        /* iframe */
-        .musicBox {
-            position: absolute;
-            right: -500px;
-            top: 100px;
-            width: 380px;
-            height: 588px;
-            transition: all 0.4s;
-        }
-        .musicBox.show {
-            right: 10px;
-        }
-        
-        .cardGame {
-            position: absolute;
-            top: 1000px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 700px;
-            height: 750px;
-            transition: all 0.4s;
-        }
-        .cardGame.show {
-            top: 80px;
-        }
-        
-        .typingGame {
-            position: absolute;
-            top: 50px;
-            left: -5000px;
-            transform: translateX(-50%);
-            width: 930px;
-            height: 700px;
-            transition: all 1s;
-        }
-        .typingGame.show {
-            left: 50%;
-            transform: translateX(-50%);
-        }
-        
-        
-        iframe {
-            width: 100%;
-            height: 100%;
-            border-radius: 20px;
-        }
-
         
 
     </style>
@@ -165,8 +47,8 @@
     <div class="typingGame">
         <iframe class="typingGameIframe" src="../javascript/typingGame/index.html" frameborder="0"></iframe>
     </div>
-
-    <div class="cursor">
+    <div class="memoryBox">
+        <iframe src="assets/memoryGame/index2.html" frameborder="0"></iframe>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -195,7 +77,7 @@
         var timeString = year + '-' + month  + '-' + day + " " + hours + ':' + minutes;
 
 
-        setTimeout("$(\".header__time\").text(timeString);",1000);
+        setInterval("$(\".header__time\").text(timeString);",1000);
        
 
 
