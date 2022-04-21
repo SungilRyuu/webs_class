@@ -127,5 +127,10 @@ iframe {
     background: #fff;
     overflow: hidden;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1), 0 4px 8px 0 rgba(0,0,0,0.17); 
+    transform: scaleY(0);
+    transition: all 0.5s;
 }
 
+.memoryBox.show {
+    transform: scaleY(1);
+}
