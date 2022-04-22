@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <title>games</title>
 </head>
-
 <body>
     <header id="header">
         <div class="header__logo">Game With JavaScript</div>
@@ -19,17 +18,25 @@
     
     <main id="main">
         <div class="icons">
-            <div class="icon1 icon">
-                <img src="assets/images/personalcomputer-light.svg" alt="computer">
-                <p>typing_Game</p>
+            <div class="iconLine_first">
+                <div class="icon1 icon">
+                    <img src="assets/images/personalcomputer-light.svg" alt="computer">
+                    <p>typing_Game</p>
+                </div>
+                <div class="icon2 icon">
+                    <img src="assets/images/guitar-light.svg" alt="guitar">
+                    <p>music_Player</p>
+                </div>
+                <div class="icon3 icon">
+                    <img src="assets/images/tigerface-light.svg" alt="tigerface-light">
+                    <p>card_Game</p>
+                </div>
+                <div class="iconLine_second">
+                    <div class="icon4 icon">
+                        <img src="assets/images/omelette.svg" alt="coffee">
+                        <p class="icon_r">REACT_site</p>
+                    </div>
             </div>
-            <div class="icon2 icon">
-                <img src="assets/images/guitar-light.svg" alt="guitar">
-                <p>music_Player</p>
-            </div>
-            <div class="icon3 icon">
-                <img src="assets/images/tigerface-light.svg" alt="tigerface-light">
-                <p>card_Game</p>
             </div>
         </div>
     </main>
@@ -46,6 +53,13 @@
     <div class="memoryBox">
         <iframe src="assets/memoryGame/index2.html" frameborder="0"></iframe>
     </div>
+    <div class="react_confirm">
+        <p>새 창에서 리액트 사이트를 여시겠습니까?</p>
+        <div class="buttons">
+            <button class="yes" onClick="window.open('https://illieee.netlify.app/')">YES</button>
+            <button class="no">NO</button>
+        </div>
+    </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>  
@@ -53,6 +67,7 @@
         $(".icon1").draggable();
         $(".icon2").draggable();
         $(".icon3").draggable();
+        $(".icon4").draggable();
         
         $(".icon1").click(function(){
             $(".typingGame").toggleClass("show")
@@ -63,6 +78,16 @@
         $(".icon3").click(function(){
             $(".memoryBox").toggleClass("show")
         });
+        $(".icon4").click(function(){
+            $(".react_confirm").toggleClass("show")
+        });
+
+        $(".react_confirm .yes").click(function(){
+            
+        })
+        $(".react_confirm .no").click(function(){
+            $(".react_confirm").removeClass("show");
+        })
 
         var today = new Date();
         var year = today.getFullYear();
@@ -73,7 +98,7 @@
         var timeString = year + '-' + month  + '-' + day + " " + hours + ':' + minutes;
 
 
-        setInterval("$(\".header__time\").text(timeString);",1000);
+        setInterval("$(\".header__time\").text(timeString);",100);
        
 
 

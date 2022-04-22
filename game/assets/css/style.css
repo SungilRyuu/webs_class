@@ -16,6 +16,7 @@ body {
     height: 100vh;
     overflow: hidden;
     font-family: 'LABDigital';
+    overflow: hidden;
 }
 #header {
     position: fixed;
@@ -46,7 +47,8 @@ body {
 
 #main {
     margin-top: 100px;
-font-family: 'LABDigital';
+    font-family: 'LABDigital';
+    overflow: hidden;
 }
 
 .icons .icon {
@@ -54,6 +56,7 @@ font-family: 'LABDigital';
     margin-bottom: 30px;
     position: relative;
     /* background: #fff; */
+    text-align: center;
 }
 
 .icons .icon img {
@@ -68,8 +71,21 @@ font-family: 'LABDigital';
     background: rgb(77, 146, 77);
     font-size: 20px;
     display: inline-block;
+    text-align: center;
+}
+.icons .icon .icon_r {
+    background: steelblue;
 }
 
+#main .icons .iconLine_first {
+    position: relative;
+} 
+
+#main .icons .iconLine_second {
+    position: absolute;
+    top: 0;left: 0;
+    margin-left: 140px;
+}
 
 /* iframe */
 .musicBox {
@@ -133,4 +149,48 @@ iframe {
 
 .memoryBox.show {
     transform: scaleY(1);
+}
+
+.react_confirm {
+    position: absolute;
+    left: 0; top: 0; bottom: 0; right: 0;
+    margin: auto;
+    width: 400px;
+    height: 200px;
+    background: cornflowerblue;
+    color: #fff;
+    text-align: center;
+    transition: all 1s .3s;
+    opacity: 0;
+    transform: scaleX(0);
+}
+.react_confirm.show {
+    opacity: 1;
+    transform: scaleX(1);
+    transition: all .5s;
+}
+
+.react_confirm p {
+    font-size: 1.5rem;
+    margin-top: 1.5em;
+}
+.react_confirm .buttons button {
+    text-align: center;
+    display: inline-block;
+}
+.react_confirm button,
+.react_confirm button a {
+    font-family: 'LABDigital';
+    border: 0;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 1.2rem;
+    color: mintcream;
+    background: midnightblue;
+    padding: 0.4em 1.3em;
+    margin: 1.5em 1em;
+    text-decoration: none;
+}
+.react_confirm button:active {
+    opacity: 0.6;
 }
