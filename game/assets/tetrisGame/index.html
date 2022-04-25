@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tetrisGame</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .start__btn, .info__box, .result__box {
+            display: none;
+        }
+
+        .tetris__inner {
+            width: 250px;
+            margin: 100px auto;
+        }
+
+        .tetris__inner > ul {
+            border: 3px solid #ccc;
+        }
+        .tetris__inner > ul > li {
+            width: 100%;
+            height: 25px;
+        }
+        .tetris__inner > ul > li > ul {
+            display: flex;
+        }
+        .tetris__inner > ul > li > ul > li {
+            width: 25px;
+            height: 25px;
+            border: 1px solid #ccc;
+        }
+        
+        .Tmino {
+            /* background: #a042a2 0.5em outset; */
+            background-color: #952d98;
+            border: 6px outset #a042a2 !important;
+        }
+
+        .Imino {
+            border: #1aa9de 0.5em outset;
+            background-color: #009fda;
+            border: 6px outset #009fda !important;
+        }
+        .Omino {
+            border: #fed01a 0.5em outset;
+            background-color: #fecb00;
+            border: 6px outset #fecb00 !important;
+        }
+        .Zmino {
+            border: #ef3e4d 0.5em outset;
+            background-color: #ed2939;
+            border: 6px outset #ed2939 !important;
+        }
+        .Smino {
+            border: #78c53e 0.5em outset;
+            background-color: #69be28;
+            border: 6px outset #69be28 !important;
+        }
+        .Jmino {
+            border: #1a74c4 0.5em outset;
+            background-color: #0065bd;
+            border: 6px outset #0065bd !important;
+        }
+        .Lmino {
+            border: #ff861a 0.5em outset;
+            background-color: #ff7900;
+            border: 6px outset #ff7900 !important;
+        }
+    </style>
+</head>
+<body>
+    <!-- 시작 버튼 -->
+    <div class="start__btn active">
+        <button>Start</button>
+    </div>
+
+    <!-- 규칙 박스 -->
+    <div class="info__box">
+        <div class="title">메모리 게임을 하기 위한 규칙</div>
+        <div class="list">
+            <ol>
+                <li>두근두근~ 게임이 곧 시작됩니다.</li>
+                <li>카드가 뒤집힐 때까지 기다려주세요.</li>
+                <li>1등에게는 기프티콘 커피를 드립니다.</li>
+                <li>당신에게는 기회가 아주 많이 있습니다.</li>
+                <li>시간이 많이 걸려도 좋습니다. 완성만 해주세요.</li>
+            </ol>
+        </div>
+        <div class="buttons">
+            <button class="start">도전하기</button>
+            <button class="stop">나가기</button>
+        </div>
+    </div>
+
+    <!-- 테트리스 박스 -->
+    <div class="tetris__wrap">
+        <div class="tetris__inner">
+            <ul></ul>
+            <!-- script -->
+        </div>
+    </div>
+
+    <!-- 결과 박스 -->
+    <div class="result__box">
+        <div class="title">카드를 모두 완성하였습니다.</div>
+        <div class="score">
+            <p>아주 멋져! 100점!</p>
+            <p class="score__time mt20">안녕</p>
+            <p class="score__incorrect"></p>
+        </div>
+        <div class="buttons">
+            <button class="stop">나가기</button>
+            <button class="restart">다시도전하기</button>
+        </div>
+    </div>
+
+    <script>
+        const tetrisInner = document.querySelector(".tetris__inner > ul");
+
+        const game_rows = 20;
+        const game_cols = 10;
+
+        let gameScore = 0;
+        let gameDuration = 500; // 내려오는 속도 = 0.5s
+        let gameInterval;
+        let gameMovingItem;
+
+        const blocks = {
+            Tmino : [
+                [[1,0],[0,1],[1,1],[2,1]],
+                [[1,0],[1,2],[1,1],[2,1]],
+                [[0,1],[1,2],[1,1],[2,1]],
+                [[0,1],[1,2],[1,1],[1,0]],
+            ],
+            Imino : [
+                [[0,0],[0,1],[0,2],[0,3]],
+                [[0,0],[1,0],[2,0],[3,0]],
+
+            ],
+            Omino : [
+                [[0,0],[0,1],[1,1],[1,0]],
+            ],
+            Zmino : [
+                [[0,0],[1,0],[1,1],[2,1]],
+                [[1,2],[2,0],[2,1],[1,1]],
+
+            ],
+            Smino : [
+                [[2,0],[1,0],[1,1],[0,1]],
+                [[1,0],[2,2],[2,1],[1,1]],
+
+            ],
+            Jmino : [
+                [[1,0],[1,1],[1,2],[0,2]],
+                [[2,1],[1,1],[0,1],[0,0]],
+                [[1,2],[1,1],[1,0],[2,0]],
+                [[0,1],[1,1],[2,2],[2,1]],
+
+            ],
+            Lmino : [
+                [[1,0],[1,1],[1,2],[2,2]],
+                [[2,1],[0,1],[0,2],[1,1]],
+                [[1,2],[1,0],[0,0],[1,1]],
+                [[0,1],[2,1],[2,0],[1,1]],
+            ]
+        }
+
+        const movingItem = {
+            type: "Lmino",
+            direction: 0,
+            top: 0,
+            left: 3,
+        }
+
+        init();
+
+        // 시작하기
+        function init(){
+            gameMovingItem = {...movingItem};
+            // console.log(gameMovingItem)
+            // 테트리스 라인 그리기
+            for(let i = 0; i < game_rows; i++){
+                tetrisLine();
+            }
+            renderBlocks();
+        }
+
+        // 라인 만들기
+        function tetrisLine(){
+            const li = document.createElement("li");
+            const ul = document.createElement("ul");
+
+            for(let j = 0; j < game_cols; j++){
+                const block = document.createElement("li");
+                ul.prepend(block);
+            }
+            li.prepend(ul);
+            tetrisInner.prepend(li);
+        }
+
+        //불록 출력하기
+        function renderBlocks(){
+            const {type, direction, top, left} = gameMovingItem;
+
+            const movingBlocks = document.querySelectorAll(".moving");
+            movingBlocks.forEach(moving => {
+                moving.classList.remove(type, "moving");
+            })
+
+            blocks[type][direction].forEach(block => {
+                const x = block[0] + left;
+                const y = block[1] + top;
+                const target = tetrisInner.childNodes[y] ? tetrisInner.childNodes[y].childNodes[0].childNodes[x] : null;
+                const isAvailable = checkEmpty(target);
+                if(isAvailable){
+                    target.classList.add(type, "moving");
+                } else {
+                    gameMovingItem = {...movingItem};
+                    setTimeout(() => {
+                        renderBlocks();
+
+                        if(moveType === "top"){
+                            seizeBlock();
+                        }
+                    })
+                }
+            })
+            movingItem.left = left;
+            movingItem.top = top;
+            movingItem.direction = direction;
+        }
+
+        function seizeBlock(){
+            // const 
+            const movingBlocks = document.querySelectorAll(".moving");
+        }
+
+        function checkEmpty(target){
+            if(!target){
+                return false;
+            } else {
+                return true;
+            }
+        }
+
+        function moveBlock(moveType, amount){
+            gameMovingItem[moveType] += amount;
+            renderBlocks();
+        }
+
+        // 모양 변경하기
+        function changeDirection(){
+            const direction = gameMovingItem.direction;
+            direction === 3 ? gameMovingItem.direction = 0 : gameMovingItem.direction++;
+            renderBlocks();
+        }
+        
+        // 키보드를 눌렀을 때 움직임
+        document.addEventListener("keydown", e => {
+            // console.log(e)
+            switch(e.keyCode){
+                case 39:
+                    moveBlock("left", 1);
+                break;
+                case 37:
+                    moveBlock("left", -1);
+                break;
+                case 40:
+                    moveBlock("top", 1);
+                break;
+                case 38:
+                    changeDirection();
+                break;
+
+                default:
+                break;
+            }
+        })
+    </script>
+</body>
+</html>
