@@ -4,38 +4,121 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
     <title>tetrisGame</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: 'Jua';
         }
 
         body {
             height: 100vh;
             overflow: hidden;
+            background: linear-gradient(to bottom, rebeccapurple, navy);
         }
 
         li {
             list-style: none;
         }
 
-        .start__btn, .info__box, .result__box {
-            display: none;
+
+        .start__btn, .info__box, .tetris__wrap, .result__box {
+            position: absolute;
+            left: 50%; top: 50%;
+            transform: translate(-50%, -50%) scale(0.8);
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1), 0 4px 8px 0 rgba(0,0,0,0.17); 
+            opacity: 0;
+            pointer-events: none;
+        }
+        .start__btn.active, .info__box.active, .tetris__wrap.active, .result__box.active {
+            opacity: 1;
+            z-index: 10;
+            pointer-events: auto;
+            transform: translate(-50%, -50%) scale(1);
         }
 
+        .start__btn button {
+            font-size: 40px;
+            color: #fff;
+            background: dodgerblue;
+            padding: 0.1em 0.3em;
+            border-radius: 10px;
+            font-family: 'Bungee Shade', cursive;
+        }
+
+        .info__box, .result__box {
+            background: rgb(248, 246, 255);
+            padding: 1em 1em;
+            font-size: 20px;
+        }
+
+        .info__box .title {
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+        .info__box .list {
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        .tetris__score {
+            position: absolute;
+            left: -200px; top: 100px;
+            background: whitesmoke;
+            font-size: 25px;
+            color: black;
+            padding: .5em .5em;
+            border-radius: 10px;
+        }
+        
+        .tetris__score .s,
+        .tetris__score .t {
+            font-family: 'Bungee Shade', cursive;
+        }
+
+
+        .info__box .buttons, .result__box .buttons {
+            text-align: center;
+        }
+        .info__box button, .result__box button {
+            font-size: 25px;
+            border: 0;
+            background-color: dodgerblue;
+            color: #fff;
+            padding: 0.1em .5em;
+        }
+
+        .result__box .title {
+            font-size: 30px;
+            margin-bottom: 2em;
+            text-align: center;
+        }
+        .result__box .score p {
+            font-size: 25px;
+        }
+        .result__box .score p:first-child {
+            margin-bottom: 1.5em;
+        }
+        .result__box .score p:last-child {
+            margin-bottom: 3em;
+        }
+        
         .tetris__inner {
             width: 250px;
             margin: 100px auto;
         }
 
         .tetris__inner > ul {
-            border: 3px solid #ccc;
+            border: 3px solid #101014;
         }
         .tetris__inner > ul > li {
             width: 100%;
             height: 25px;
+            background: rgba(217, 255, 249, 0.822);
         }
         .tetris__inner > ul > li > ul {
             display: flex;
@@ -43,7 +126,7 @@
         .tetris__inner > ul > li > ul > li {
             width: 25px;
             height: 25px;
-            border: 1px solid #ccc;
+            border: 1px solid #101014;
         }
         
         .Tmino {
@@ -86,7 +169,7 @@
 </head>
 <body>
     <!-- 시작 버튼 -->
-    <div class="start__btn active">
+    <div class="start__btn">
         <button>Start</button>
     </div>
 
@@ -96,22 +179,23 @@
         <div class="list">
             <ol>
                 <li>두근두근~ 게임이 곧 시작됩니다.</li>
-                <li>1줄을 꺠뜨리면 5점이 부여됩니다.</li>
+                <li>1줄을 모두 맞추면 5점이 부여됩니다.</li>
                 <li>자기와의 싸움, 마라톤 테트리스 입니다.</li>
                 <li>테트리스는 게임이 끝날 때 까지 지속됩니다.</li>
-                <li>재시도할 기회는 많습니다. 언제든 방문해주세요!</li>
+                <li>여기는 언제나 열려있습니다. 언제든 방문해주세요!</li>
             </ol>
         </div>
         <div class="buttons">
             <button class="start">도전하기</button>
-            <button class="stop">나가기</button>
         </div>
     </div>
 
     <!-- 테트리스 박스 -->
-    <div class="tetris__wrap">
-        <div class="s">SCORE 0</div>
-        <div class="t">Time 0:00</div>
+    <div class="tetris__wrap active">
+        <div class="tetris__score">
+            <div class="s">SCORE 0</div>
+            <div class="t">Time 0:00</div>
+        </div>
         <div class="tetris__inner">
             <ul></ul>
             <!-- script -->
@@ -120,15 +204,15 @@
 
     <!-- 결과 박스 -->
     <div class="result__box">
-        <div class="title">카드를 모두 완성하였습니다.</div>
+        <div class="title">결과를 발표하겠습니다.</div>
         <div class="score">
-            <p>아주 멋져! 100점!</p>
-            <p class="score__time mt20">안녕</p>
-            <p class="score__incorrect"></p>
+            <p>게임을 끝까지 해낸 것, 멋져, 100점!</p>
+            <p class="score__time mt20">걸린 시간 : 00분 00초</p>
+            <p class="score__incorrect">점수 : 00점</p>
         </div>
         <div class="buttons">
-            <button class="stop">나가기</button>
-            <button class="restart">다시도전하기</button>
+            <button class="start">도전하기</button>
+            <button class="stop">그만하기</button>
         </div>
     </div>
 
@@ -152,10 +236,10 @@
                 [[0,1],[1,2],[1,1],[1,0]],
             ],
             Imino : [
-                [[0,0],[0,1],[0,2],[0,3]],
-                [[0,0],[1,0],[2,0],[3,0]],
-                [[3,0],[3,1],[3,2],[3,3]],
-                [[0,3],[1,3],[2,3],[3,3]],
+                [[2,0],[2,1],[2,2],[2,3]],
+                [[0,2],[1,2],[2,2],[3,2]],
+                [[2,0],[2,1],[2,2],[2,3]],
+                [[0,2],[1,2],[2,2],[3,2]],
 
             ],
             Omino : [
@@ -290,7 +374,7 @@
                     child.remove();
                     tetrisLine();
                     gameScore++;
-                    tetrisS.innerText = gameScore;
+                    tetrisS.innerText = `SCORE ${gameScore * 5}`;
                 }
             })
             generateNewBlock();
