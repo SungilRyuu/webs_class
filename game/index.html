@@ -31,14 +31,14 @@
                     <img src="assets/images/tigerface-light.svg" alt="tigerface-light">
                     <p>card_Game</p>
                 </div>
-                <div class="icon4 icon">
-                    <img src="assets/images/coffee.svg" alt="tigerface-light">
-                    <p>tetris</p>
-                </div>
                 <div class="iconLine_second">
                     <div class="icon4 icon">
                         <img src="assets/images/omelette.svg" alt="coffee">
                         <p class="icon_r">REACT_site</p>
+                    </div>
+                    <div class="icon5 icon">
+                        <img src="assets/images/mushroom.svg" alt="tigerface-light">
+                        <p class="icon_r">tetris</p>
                     </div>
                 </div>
             </div>
@@ -87,7 +87,9 @@
         });
 
         $(".react_confirm .yes").click(function(){
-            
+            setTimeout(()=>{
+            $(".react_confirm").removeClass("show");
+            },1000)
         })
         $(".react_confirm .no").click(function(){
             $(".react_confirm").removeClass("show");
@@ -102,7 +104,7 @@
         var timeString = year + '-' + month  + '-' + day + " " + hours + ':' + minutes;
 
 
-        setInterval("$(\".header__time\").text(timeString);",100);
+        setInterval("$(\".header__time\").text(timeString);",1000);
        
 
 
