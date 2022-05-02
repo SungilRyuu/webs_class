@@ -1,109 +1,118 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://webfontworld.github.io/NexonMaplestory/NexonMaplestory.css" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://webfontworld.github.io/NexonMaplestory/NexonMaplestory.css"
+      rel="stylesheet"
+    />
     <title>memoryGame</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-        
-        * {
-            margin: 0; 
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', 'NexonMaplestory';
-        }
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 
-        body {
-            background: steelblue;
-        }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", "NexonMaplestory";
+      }
 
-        button {
-            border: 0;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-        button:active {
-            opacity: 0.6;
-        }
+      body {
+        background: steelblue;
+      }
 
-        .start__btn, .info__box, .card__wrap, .result__box {
-            position: absolute;
-            left: 50%; top: 50%;
-            transform: translate(-50%, -50%) scale(0.8);
-            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1), 0 4px 8px 0 rgba(0,0,0,0.17); 
-            opacity: 0;
-            pointer-events: none;
-        }
+      button {
+        border: 0;
+        cursor: pointer;
+        transition: all 0.3s;
+      }
+      button:active {
+        opacity: 0.6;
+      }
 
-        .start__btn.active, .info__box.active, .card__wrap.active, .result__box.active {
-            opacity: 1;
-            z-index: 10;
-            pointer-events: auto;
-            transform: translate(-50%, -50%) scale(1);
-        }
+      .start__btn,
+      .info__box,
+      .card__wrap,
+      .result__box {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%) scale(0.8);
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1),
+          0 4px 8px 0 rgba(0, 0, 0, 0.17);
+        opacity: 0;
+        pointer-events: none;
+      }
 
-        .start__btn button {
-            background: #fff;
-            padding: 1rem 2rem;
-            border-radius: 5px;
-            font-size: 1.3em;
-        }
+      .start__btn.active,
+      .info__box.active,
+      .card__wrap.active,
+      .result__box.active {
+        opacity: 1;
+        z-index: 10;
+        pointer-events: auto;
+        transform: translate(-50%, -50%) scale(1);
+      }
 
-        .info__box {
-            width: 500px;
-            background: #fff;
-            border-radius: 5px;
-            font-size: 1.3em;
-            transition: all 0.3s;
-        }
-        
-        .info__box .title {
-            border-bottom: 1px solid #ccc;
-            padding: 1rem 2rem;
-        }
-        .info__box ol {
-            padding: 1.3rem 2.5rem;
+      .start__btn button {
+        background: #fff;
+        padding: 1rem 2rem;
+        border-radius: 5px;
+        font-size: 1.3em;
+      }
 
-        }
-        .info__box .buttons {
-            border-top: 1px solid #ccc;
-            text-align: center;
-        }
-        .info__box .buttons button {
-            background: #fff;
-            color: dodgerblue;
-            padding: 0.4rem 2rem;
-            margin: 0.6rem 0;
-            border-radius: 5px;
-            font-size: 1.1em;
-            border: 1px solid dodgerblue;
-        }
-        .info__box .buttons .start {
-            background: dodgerblue;
-            color: #fff;
-        }
+      .info__box {
+        width: 500px;
+        background: #fff;
+        border-radius: 5px;
+        font-size: 1.3em;
+        transition: all 0.3s;
+      }
 
-        .card__wrap {
-            width: 600px;
-            height: 600px;
-            background: #fff;
-            transition: all 0.3s;
-        }
-        .card__inner {
-            width: 100%;
-            height: 100%;
-            padding: 20px;
-        }
+      .info__box .title {
+        border-bottom: 1px solid #ccc;
+        padding: 1rem 2rem;
+      }
+      .info__box ol {
+        padding: 1.3rem 2.5rem;
+      }
+      .info__box .buttons {
+        border-top: 1px solid #ccc;
+        text-align: center;
+      }
+      .info__box .buttons button {
+        background: #fff;
+        color: dodgerblue;
+        padding: 0.4rem 2rem;
+        margin: 0.6rem 0;
+        border-radius: 5px;
+        font-size: 1.1em;
+        border: 1px solid dodgerblue;
+      }
+      .info__box .buttons .start {
+        background: dodgerblue;
+        color: #fff;
+      }
 
-        .card__wrap li {
-            list-style: none;
-        }
+      .card__wrap {
+        width: 600px;
+        height: 600px;
+        background: #fff;
+        transition: all 0.3s;
+      }
+      .card__inner {
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+      }
 
+      .card__wrap li {
+        list-style: none;
+      }
 
-        /* .wrap__card {
+      /* .wrap__card {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -116,437 +125,448 @@
             padding: 30px;
         } */
 
-        ul {
-            list-style: none;
-        }
+      ul {
+        list-style: none;
+      }
 
-        img {
-            width: 100%;
-            vertical-align: top;
-        }
+      img {
+        width: 100%;
+        vertical-align: top;
+      }
 
-        .cards {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            align-content: space-around;
-            width: 100%; height: 100%;
-        }
-        .cards li {
-            width: calc(100% / 4 - 20px);
-            height: calc(100% / 4 - 20px);
-            border: 1px solid lightgrey;
-            perspective: 1000px;
-            transform-style: preserve-3d;
-            position: relative;
-        }
-        
-        .cards li .view {
-            position: absolute;
-            background: #fff;
-            padding: 10%;
-            transition: transform 0.25s linear;
-            backface-visibility: hidden;
-            user-select: none;
-            pointer-events: none;
-        }
-        .cards li .view.front {
-            z-index: 10;
-            transform: rotateY(0deg);
-            background: #ff6262;
-        }
-        .cards li .view.back {
-            transform: rotateY(180deg);
-        }
-        .cards li.flip .view.front {
-            transform: rotateY(180deg);
-        }
-        .cards li.flip .view.back {
-            transform: rotateY(0deg);
-        }
+      .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-content: space-around;
+        width: 100%;
+        height: 100%;
+      }
+      .cards li {
+        width: calc(100% / 4 - 20px);
+        height: calc(100% / 4 - 20px);
+        border: 1px solid lightgrey;
+        perspective: 1000px;
+        transform-style: preserve-3d;
+        position: relative;
+      }
 
-        .cards li.shake {
-            animation: shake 0.35s ease-in-out;
-        }
-        @keyframes shake {
-            0% {transform: translateX(0);}
-            20% {transform: translateX(-13px);}
-            40% {transform: translateX(13px);}
-            60% {transform: translateX(8px);}
-            80% {transform: translateX(-8px);}
-            100% {transform: translateX(0);}
-        }
+      .cards li .view {
+        position: absolute;
+        background: #fff;
+        padding: 10%;
+        transition: transform 0.25s linear;
+        backface-visibility: hidden;
+        user-select: none;
+        pointer-events: none;
+      }
+      .cards li .view.front {
+        z-index: 10;
+        transform: rotateY(0deg);
+        background: #ff6262;
+      }
+      .cards li .view.back {
+        transform: rotateY(180deg);
+      }
+      .cards li.flip .view.front {
+        transform: rotateY(180deg);
+      }
+      .cards li.flip .view.back {
+        transform: rotateY(0deg);
+      }
 
-        
-.result__box {
-            width: 500px;
-            background: #fff;
-            border-radius: 5px;
-            font-size: 1.3em;
-            z-index: 100;
+      .cards li.shake {
+        animation: shake 0.35s ease-in-out;
+      }
+      @keyframes shake {
+        0% {
+          transform: translateX(0);
         }
-        .result__box .title {
-            border-bottom: 1px solid #ccc;
-            padding: .6rem 2rem;
-            text-align: center;
-            font-size: 1.4em
+        20% {
+          transform: translateX(-13px);
         }
-        .result__box .score {
-            padding: 2rem;
-            height: 300px;
+        40% {
+          transform: translateX(13px);
         }
-        .result__box .buttons {
-            border-top: 1px solid #ccc;
-            padding: .8rem 2rem;
-            text-align: center;
+        60% {
+          transform: translateX(8px);
         }
-        .result__box .buttons button {
-            background: dodgerblue;
-            color: #fff;
-            padding: .4rem 2rem;
-            border-radius: 5px;
-            font-size: 1em;
-            border: 1px solid dodgerblue;
-            margin: 0 0.2em;
-            display: inline-block;
+        80% {
+          transform: translateX(-8px);
         }
-        .result__box .buttons button:first-child {
-            background: #fff;
-            border: 1px solid dodgerblue;
-            color: dodgerblue
+        100% {
+          transform: translateX(0);
         }
+      }
 
-        .mt20 {
-            margin-top: 20px;
-        }
+      .result__box {
+        width: 500px;
+        background: #fff;
+        border-radius: 5px;
+        font-size: 1.3em;
+        z-index: 100;
+      }
+      .result__box .title {
+        border-bottom: 1px solid #ccc;
+        padding: 0.6rem 2rem;
+        text-align: center;
+        font-size: 1.4em;
+      }
+      .result__box .score {
+        padding: 2rem;
+        height: 300px;
+      }
+      .result__box .buttons {
+        border-top: 1px solid #ccc;
+        padding: 0.8rem 2rem;
+        text-align: center;
+      }
+      .result__box .buttons button {
+        background: dodgerblue;
+        color: #fff;
+        padding: 0.4rem 2rem;
+        border-radius: 5px;
+        font-size: 1em;
+        border: 1px solid dodgerblue;
+        margin: 0 0.2em;
+        display: inline-block;
+      }
+      .result__box .buttons button:first-child {
+        background: #fff;
+        border: 1px solid dodgerblue;
+        color: dodgerblue;
+      }
+
+      .mt20 {
+        margin-top: 20px;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <!-- 시작 버튼 -->
     <div class="start__btn active">
-        <button>Start</button>
+      <button>Start</button>
     </div>
 
     <!-- 규칙 박스 -->
     <div class="info__box">
-        <div class="title">메모리 게임을 하기 위한 규칙</div>
-        <div class="list">
-            <ol>
-                <li>두근두근~ 게임이 곧 시작됩니다.</li>
-                <li>카드는 총 16장으로, 8개의 짝을 이뤄주세요.</li>
-                <li>당신에게는 기회가 아주 많이 있습니다.</li>
-                <li>시간이 많이 걸려도 좋습니다. 완성만 해주세요.</li>
-                <li>1등에게는 기프티콘 커피를 드립니다.</li>
-            </ol>
-        </div>
-        <div class="buttons">
-            <button class="start">도전하기</button>
-            <button class="stop">나가기</button>
-        </div>
+      <div class="title">메모리 게임을 하기 위한 규칙</div>
+      <div class="list">
+        <ol>
+          <li>두근두근~ 게임이 곧 시작됩니다.</li>
+          <li>카드는 총 16장으로, 8개의 짝을 이뤄주세요.</li>
+          <li>당신에게는 기회가 아주 많이 있습니다.</li>
+          <li>시간이 많이 걸려도 좋습니다. 완성만 해주세요.</li>
+          <li>1등에게는 기프티콘 커피를 드립니다.</li>
+        </ol>
+      </div>
+      <div class="buttons">
+        <button class="start">도전하기</button>
+        <button class="stop">나가기</button>
+      </div>
     </div>
-    
+
     <div class="card__wrap">
-        <div class="card__inner">
-            <ul class="cards">
-                <li>
-                    <div class="view front">
-                        <img src="img/bird0.png" alt="앵그리">
-                    </div>
-                    <div class="view back">
-                        <img src="img/bird1.png" alt="새">
-                    </div>
-                </li>
-                <li>
-                    <div class="view front">
-                        <img src="img/bird0.png" alt="앵그리">
-                    </div>
-                    <div class="view back">
-                        <img src="img/bird1.png" alt="새">
-                    </div>
-                </li>
-                <li>
-                    <div class="view front">
-                        <img src="img/bird0.png" alt="앵그리">
-                    </div>
-                    <div class="view back">
-                        <img src="img/bird2.png" alt="새">
-                    </div>
-                </li>
-                <li>
-                    <div class="view front">
-                        <img src="img/bird0.png" alt="앵그리">
-                    </div>
-                    <div class="view back">
-                        <img src="img/bird2.png" alt="새">
-                    </div>
-                </li>
-                <li>
-                    <div class="view front">
-                        <img src="img/bird0.png" alt="앵그리">
-                    </div>
-                    <div class="view back">
-                        <img src="img/bird3.png" alt="새">
-                    </div>
-                </li>
-                <li>
-                    <div class="view front">
-                        <img src="img/bird0.png" alt="앵그리">
-                    </div>
-                    <div class="view back">
-                        <img src="img/bird3.png" alt="새">
-                    </div>
-                </li>
-                <li>
-                    <div class="view front">
-                        <img src="img/bird0.png" alt="앵그리">
-                    </div>
-                    <div class="view back">
-                        <img src="img/bird4.png" alt="새">
-                    </div>
-                </li>
-                <li>
-                    <div class="view front">
-                        <img src="img/bird0.png" alt="앵그리">
-                    </div>
-                    <div class="view back">
-                        <img src="img/bird4.png" alt="새">
-                    </div>
-                </li>
-                <li>
-                    <div class="view front">
-                        <img src="img/bird0.png" alt="앵그리">
-                    </div>
-                    <div class="view back">
-                        <img src="img/bird5.png" alt="새">
-                    </div>
-                </li>
-                <li>
-                    <div class="view front">
-                        <img src="img/bird0.png" alt="앵그리">
-                    </div>
-                    <div class="view back">
-                        <img src="img/bird5.png" alt="새">
-                    </div>
-                </li>
-                <li>
-                    <div class="view front">
-                        <img src="img/bird0.png" alt="앵그리">
-                    </div>
-                    <div class="view back">
-                        <img src="img/bird8.png" alt="새">
-                    </div>
-                </li>
-                <li>
-                    <div class="view front">
-                        <img src="img/bird0.png" alt="앵그리">
-                    </div>
-                    <div class="view back">
-                        <img src="img/bird8.png" alt="새">
-                    </div>
-                </li>
-                <li>
-                    <div class="view front">
-                        <img src="img/bird0.png" alt="앵그리">
-                    </div>
-                    <div class="view back">
-                        <img src="img/bird7.png" alt="새">
-                    </div>
-                </li>
-                <li>
-                    <div class="view front">
-                        <img src="img/bird0.png" alt="앵그리">
-                    </div>
-                    <div class="view back">
-                        <img src="img/bird7.png" alt="새">
-                    </div>
-                </li>
-                <li>
-                    <div class="view front">
-                        <img src="img/bird0.png" alt="앵그리">
-                    </div>
-                    <div class="view back">
-                        <img src="img/bird6.png" alt="새">
-                    </div>
-                </li>
-                <li>
-                    <div class="view front">
-                        <img src="img/bird0.png" alt="앵그리">
-                    </div>
-                    <div class="view back">
-                        <img src="img/bird6.png" alt="새">
-                    </div>
-                </li>
-            </ul>
-        </div>
+      <div class="card__inner">
+        <ul class="cards">
+          <li>
+            <div class="view front">
+              <img src="img/bird0.png" alt="앵그리" />
+            </div>
+            <div class="view back">
+              <img src="img/bird1.png" alt="새" />
+            </div>
+          </li>
+          <li>
+            <div class="view front">
+              <img src="img/bird0.png" alt="앵그리" />
+            </div>
+            <div class="view back">
+              <img src="img/bird1.png" alt="새" />
+            </div>
+          </li>
+          <li>
+            <div class="view front">
+              <img src="img/bird0.png" alt="앵그리" />
+            </div>
+            <div class="view back">
+              <img src="img/bird2.png" alt="새" />
+            </div>
+          </li>
+          <li>
+            <div class="view front">
+              <img src="img/bird0.png" alt="앵그리" />
+            </div>
+            <div class="view back">
+              <img src="img/bird2.png" alt="새" />
+            </div>
+          </li>
+          <li>
+            <div class="view front">
+              <img src="img/bird0.png" alt="앵그리" />
+            </div>
+            <div class="view back">
+              <img src="img/bird3.png" alt="새" />
+            </div>
+          </li>
+          <li>
+            <div class="view front">
+              <img src="img/bird0.png" alt="앵그리" />
+            </div>
+            <div class="view back">
+              <img src="img/bird3.png" alt="새" />
+            </div>
+          </li>
+          <li>
+            <div class="view front">
+              <img src="img/bird0.png" alt="앵그리" />
+            </div>
+            <div class="view back">
+              <img src="img/bird4.png" alt="새" />
+            </div>
+          </li>
+          <li>
+            <div class="view front">
+              <img src="img/bird0.png" alt="앵그리" />
+            </div>
+            <div class="view back">
+              <img src="img/bird4.png" alt="새" />
+            </div>
+          </li>
+          <li>
+            <div class="view front">
+              <img src="img/bird0.png" alt="앵그리" />
+            </div>
+            <div class="view back">
+              <img src="img/bird5.png" alt="새" />
+            </div>
+          </li>
+          <li>
+            <div class="view front">
+              <img src="img/bird0.png" alt="앵그리" />
+            </div>
+            <div class="view back">
+              <img src="img/bird5.png" alt="새" />
+            </div>
+          </li>
+          <li>
+            <div class="view front">
+              <img src="img/bird0.png" alt="앵그리" />
+            </div>
+            <div class="view back">
+              <img src="img/bird8.png" alt="새" />
+            </div>
+          </li>
+          <li>
+            <div class="view front">
+              <img src="img/bird0.png" alt="앵그리" />
+            </div>
+            <div class="view back">
+              <img src="img/bird8.png" alt="새" />
+            </div>
+          </li>
+          <li>
+            <div class="view front">
+              <img src="img/bird0.png" alt="앵그리" />
+            </div>
+            <div class="view back">
+              <img src="img/bird7.png" alt="새" />
+            </div>
+          </li>
+          <li>
+            <div class="view front">
+              <img src="img/bird0.png" alt="앵그리" />
+            </div>
+            <div class="view back">
+              <img src="img/bird7.png" alt="새" />
+            </div>
+          </li>
+          <li>
+            <div class="view front">
+              <img src="img/bird0.png" alt="앵그리" />
+            </div>
+            <div class="view back">
+              <img src="img/bird6.png" alt="새" />
+            </div>
+          </li>
+          <li>
+            <div class="view front">
+              <img src="img/bird0.png" alt="앵그리" />
+            </div>
+            <div class="view back">
+              <img src="img/bird6.png" alt="새" />
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
 
     <!-- 결과 박스 -->
     <div class="result__box">
-        <div class="title">카드를 모두 완성하였습니다.</div>
-        <div class="score">
-            <p>아주 멋져! 100점!</p>
-            <p class="score__time mt20">안녕</p>
-            <p class="score__incorrect"></p>
-        </div>
-        <div class="buttons">
-            <button class="stop">나가기</button>
-            <button class="restart">다시도전하기</button>
-        </div>
+      <div class="title">카드를 모두 완성하였습니다.</div>
+      <div class="score">
+        <p>아주 멋져! 100점!</p>
+        <p class="score__time mt20">안녕</p>
+        <p class="score__incorrect"></p>
+      </div>
+      <div class="buttons">
+        <button class="stop">나가기</button>
+        <button class="restart">다시도전하기</button>
+      </div>
     </div>
 
     <script>
-        const startBtn = document.querySelector(".start__btn");
-        const infoBox = document.querySelector(".info__box");
-        const resultBox = document.querySelector(".result__box");
-        const cardWrap = document.querySelector(".card__wrap");
-        const cards = document.querySelectorAll(".cards li");
-        const infoBoxStart = infoBox.querySelector(".start");
-        const stop1 = infoBox.querySelector(".stop");
-        const stop2 = resultBox.querySelector(".stop");
-        const resultBoxRestart = resultBox.querySelector(".restart");
-        const scoreTime = resultBox.querySelector(".score__time")
-        const scoreIncorrect = resultBox.querySelector(".score__incorrect")
+      const startBtn = document.querySelector(".start__btn");
+      const infoBox = document.querySelector(".info__box");
+      const resultBox = document.querySelector(".result__box");
+      const cardWrap = document.querySelector(".card__wrap");
+      const cards = document.querySelectorAll(".cards li");
+      const infoBoxStart = infoBox.querySelector(".start");
+      const stop1 = infoBox.querySelector(".stop");
+      const stop2 = resultBox.querySelector(".stop");
+      const resultBoxRestart = resultBox.querySelector(".restart");
+      const scoreTime = resultBox.querySelector(".score__time");
+      const scoreIncorrect = resultBox.querySelector(".score__incorrect");
 
-        let startTime = "";
-        let endTime = "";
-        let incorrect = 0;
+      let startTime = "";
+      let endTime = "";
+      let incorrect = 0;
 
-        let cardOne, cardTwo;
-        let disableDeck = false;
-        let matchedCard = 0;
-        let sound = [
-            "audio/match2.mp3",
-            "audio/match.mp3",
-            "audio/up.mp3",
-        ]
-        let soundMatch = new Audio(sound[0]);
-        let soundNoMatch = new Audio(sound[1]);
-        let soundSuccess = new Audio(sound[2]);
-        // 시작 버튼
-        startBtn.onclick = () => {
-            infoBox.classList.add("active");
-            startBtn.classList.remove("active");
-        }
-        // 게임시작 버튼
-        infoBoxStart.onclick = () => {
-            cardWrap.classList.add("active");
-            incorrect = 0;
+      let cardOne, cardTwo;
+      let disableDeck = false;
+      let matchedCard = 0;
+      let sound = ["audio/match2.mp3", "audio/match.mp3", "audio/up.mp3"];
+      let soundMatch = new Audio(sound[0]);
+      let soundNoMatch = new Audio(sound[1]);
+      let soundSuccess = new Audio(sound[2]);
+      // 시작 버튼
+      startBtn.onclick = () => {
+        infoBox.classList.add("active");
+        startBtn.classList.remove("active");
+      };
+      // 게임시작 버튼
+      infoBoxStart.onclick = () => {
+        cardWrap.classList.add("active");
+        incorrect = 0;
 
-            setTimeout(() => {
-                infoBox.classList.remove("active");
-                shuffledCard();
-                startTime = new Date().getTime();
-            }, 500)
-        }
-        
-        // 게임 다시 시작 버튼
-        resultBoxRestart.onclick = () => {
-            resultBox.classList.remove("active");
-            infoBox.classList.add("active");
-            cards.forEach(card => {
-                card.classList.remove("flip");
-            })
-            // setTimeout(() => {
-            //     cardWrap.classList.add("active");
-            //     shuffledCard();
-            //     startTime = new Date().getTime();
-            //     incorrect = 0;
-            // },1000)
-        }
+        setTimeout(() => {
+          infoBox.classList.remove("active");
+          shuffledCard();
+          startTime = new Date().getTime();
+        }, 500);
+      };
 
-        // 나가기 버튼
-        stop1.onclick = () => {
-            startBtn.classList.add("active");
-            infoBox.classList.remove("active");
-        }
-        stop2.onclick = () => {
-            startBtn.classList.add("active");
-            resultBox.classList.remove("active");
-        }
-        //카드 클릭
-        cards.forEach(card => {
-            //card.classList.add("flip")
-            card.addEventListener("click", flipCard);
+      // 게임 다시 시작 버튼
+      resultBoxRestart.onclick = () => {
+        resultBox.classList.remove("active");
+        cardWrap.classList.add("active");
+        cards.forEach((card) => {
+          card.classList.remove("flip");
         });
-        function flipCard(e){
-            let clickedCard = e.target;
-            if(clickedCard !== cardOne && !disableDeck){
-                clickedCard.classList.add("flip");
-                if(!cardOne){
-                    return cardOne = clickedCard;
-                }
-                cardTwo = clickedCard;
-                disableDeck = true;
-                let cardOneImg = cardOne.querySelector(".back img").src;
-                let cardTwoImg = cardTwo.querySelector(".back img").src;
-                matchCards(cardOneImg, cardTwoImg);
-            }
-        }
-        //카드 확인하기
-        function matchCards(img1, img2){
-            if(img1 == img2){
-                matchedCard++;
-                //완성했을 때
-                //
-                //
-                //
-                if(matchedCard == 8){
-                    endTime = new Date().getTime();
-                    console.log(endTime)
-                    setTimeout(() => {
-                        cardWrap.classList.remove("active");
-                        resultBox.classList.add("active");
-                        scoreTime.innerText = `총 걸린 시간은 ${Math.floor((endTime - startTime) * 0.001)}초 입니다.`;
-                        if(incorrect == 0){
-                            scoreIncorrect.innerText = `와 하나도 안틀렸네요! 대단합니다!`;
-                        } else {
-                            scoreIncorrect.innerText = `${incorrect}개 정도는 실수니까~ 아주 잘했습니다.`;
-                        }
-                    }, 1000)
-                }
-                cardOne.removeEventListener("click", flipCard);
-                cardTwo.removeEventListener("click", flipCard);
-                cardOne = cardTwo = "";
-                disableDeck = false;
-                soundMatch.play();
-            } else {
-                setTimeout(() => {
-                    cardOne.classList.add("shake");
-                    cardTwo.classList.add("shake");
-                }, 400);
-                setTimeout(() => {
-                    cardOne.classList.remove("shake", "flip");
-                    cardTwo.classList.remove("shake", "flip");
-                    cardOne = cardTwo = "";
-                    disableDeck = false;
-                }, 1200);
-                soundNoMatch.play();
-                incorrect++;
+        setTimeout(() => {
+          cardWrap.classList.add("active");
+          shuffledCard();
+          startTime = new Date().getTime();
+          incorrect = 0;
+        }, 1000);
+      };
 
-            }
+      // 나가기 버튼
+      stop1.onclick = () => {
+        startBtn.classList.add("active");
+        infoBox.classList.remove("active");
+      };
+      stop2.onclick = () => {
+        startBtn.classList.add("active");
+        resultBox.classList.remove("active");
+      };
+      //카드 클릭
+      cards.forEach((card) => {
+        //card.classList.add("flip")
+        card.addEventListener("click", flipCard);
+      });
+      function flipCard(e) {
+        let clickedCard = e.target;
+        if (clickedCard !== cardOne && !disableDeck) {
+          clickedCard.classList.add("flip");
+          if (!cardOne) {
+            return (cardOne = clickedCard);
+          }
+          cardTwo = clickedCard;
+          disableDeck = true;
+          let cardOneImg = cardOne.querySelector(".back img").src;
+          let cardTwoImg = cardTwo.querySelector(".back img").src;
+          matchCards(cardOneImg, cardTwoImg);
         }
-        function shuffledCard(){
-            cardOne, cardTwo = "";
-            disableDeck = true;
-            matchedCard = 0;
-            let arr = [1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8];
-            let result = arr.sort(() => Math.random() > 0.5 ? 1 : -1);
-            cards.forEach((card, index) => {
-                card.addEventListener("click", flipCard);
-                card.classList.remove("flip");
-                setTimeout(() => {
-                    card.classList.add("flip");
-                }, 200 * index);
-                setTimeout(() => {
-                    card.classList.remove("flip");
-                }, 4000);
-                setTimeout(() => {
-                    disableDeck = false;
-                }, 4100)
-                let imgTag = card.querySelector(".back img");
-                imgTag.src = `img/bird${arr[index]}.png`;
-            })
+      }
+      //카드 확인하기
+      function matchCards(img1, img2) {
+        if (img1 == img2) {
+          matchedCard++;
+          //완성했을 때
+          //
+          //
+          //
+          if (matchedCard == 8) {
+            endTime = new Date().getTime();
+            console.log(endTime);
+            setTimeout(() => {
+              cardWrap.classList.remove("active");
+              resultBox.classList.add("active");
+              scoreTime.innerText = `총 걸린 시간은 ${Math.floor(
+                (endTime - startTime) * 0.001
+              )}초 입니다.`;
+              if (incorrect == 0) {
+                scoreIncorrect.innerText = `와 하나도 안틀렸네요! 대단합니다!`;
+              } else {
+                scoreIncorrect.innerText = `${incorrect}개 정도는 실수니까~ 아주 잘했습니다.`;
+              }
+            }, 1000);
+          }
+          cardOne.removeEventListener("click", flipCard);
+          cardTwo.removeEventListener("click", flipCard);
+          cardOne = cardTwo = "";
+          disableDeck = false;
+          soundMatch.play();
+        } else {
+          setTimeout(() => {
+            cardOne.classList.add("shake");
+            cardTwo.classList.add("shake");
+          }, 400);
+          setTimeout(() => {
+            cardOne.classList.remove("shake", "flip");
+            cardTwo.classList.remove("shake", "flip");
+            cardOne = cardTwo = "";
+            disableDeck = false;
+          }, 1200);
+          soundNoMatch.play();
+          incorrect++;
         }
+      }
+      function shuffledCard() {
+        cardOne, (cardTwo = "");
+        disableDeck = true;
+        matchedCard = 0;
+        let arr = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8];
+
+        //랜덤돌림
+        // let result = arr.sort(() => (Math.random() > 0.5 ? 1 : -1));
+        cards.forEach((card, index) => {
+          card.addEventListener("click", flipCard);
+          card.classList.remove("flip");
+          setTimeout(() => {
+            card.classList.add("flip");
+          }, 200 * index);
+          setTimeout(() => {
+            card.classList.remove("flip");
+          }, 4000);
+          setTimeout(() => {
+            disableDeck = false;
+          }, 4100);
+          let imgTag = card.querySelector(".back img");
+          imgTag.src = `img/bird${arr[index]}.png`;
+        });
+      }
     </script>
-</body>
+  </body>
 </html>
