@@ -598,14 +598,11 @@
       
       //재 도전 / 그만하기
       resultBoxTry.addEventListener("click", () => {
-        tetrisWrap.classList.remove("active");
-        resultBox.classList.remove("active");
-        infoBox.classList.add("active");
+        location.reload();
       })
 
       resultBoxStop.addEventListener("click", () => {
-        resultBox.classList.remove("active");
-        tetrisWrap.classList.remove("active");
+        location.reload();
       })
     }
 

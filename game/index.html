@@ -1,119 +1,142 @@
 <!DOCTYPE html>
 <html lang="ko">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/bg.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/bg.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
     <title>games</title>
-</head>
-<body>
+  </head>
+  <body>
     <header id="header">
-        <div class="header__logo">Game With JavaScript</div>
-        <!-- <div class="header__about">Git</div> -->
-        <div class="header__time"></div>
+      <div class="header__logo">Game With JavaScript</div>
+      <!-- <div class="header__about">Git</div> -->
+      <div class="header__time"></div>
     </header>
-    
+
     <main id="main">
-        <div class="icons">
-            <div class="iconLine_first">
-                <div class="icon1 icon">
-                    <img src="assets/images/personalcomputer-light.svg" alt="computer">
-                    <p>typing_Game</p>
-                </div>
-                <div class="icon2 icon">
-                    <img src="assets/images/guitar-light.svg" alt="guitar">
-                    <p>music_Player</p>
-                </div>
-                <div class="icon3 icon">
-                    <img src="assets/images/tigerface-light.svg" alt="tigerface-light">
-                    <p>card_Game</p>
-                </div>
-                <div class="iconLine_second">
-                    <div class="icon4 icon">
-                        <img src="assets/images/omelette.svg" alt="coffee">
-                        <p class="icon_r">REACT_site</p>
-                    </div>
-                    <div class="icon5 icon">
-                        <img src="assets/images/mushroom.svg" alt="mushroom">
-                        <p class="icon_r">tetris</p>
-                    </div>
-                </div>
+      <div class="icons">
+        <div class="iconLine_first">
+          <div class="icon1 icon">
+            <img
+              src="assets/images/personalcomputer-light.svg"
+              alt="computer"
+            />
+            <p>typing_Game</p>
+          </div>
+          <div class="icon2 icon">
+            <img src="assets/images/guitar-light.svg" alt="guitar" />
+            <p>music_Player</p>
+          </div>
+          <div class="icon3 icon">
+            <img
+              src="assets/images/tigerface-light.svg"
+              alt="tigerface-light"
+            />
+            <p>card_Game</p>
+          </div>
+          <div class="iconLine_second">
+            <div class="icon4 icon">
+              <img src="assets/images/omelette.svg" alt="coffee" />
+              <p class="icon_r">REACT_site</p>
             </div>
+            <div class="icon5 icon">
+              <img src="assets/images/mushroom.svg" alt="mushroom" />
+              <p class="icon_r">tetris</p>
+            </div>
+          </div>
         </div>
+      </div>
     </main>
 
     <div class="musicBox">
-        <iframe class="musicBoxIframe" src="../javascript/musicPlayer/index.html" frameborder="0"></iframe>
+      <iframe
+        class="musicBoxIframe"
+        src="../javascript/musicPlayer/index.html"
+        frameborder="0"
+      ></iframe>
     </div>
     <div class="cardGame">
-        <iframe class="cardGameIframe" src="../javascript/memoryGame/index.html" frameborder="0"></iframe>
+      <iframe
+        class="cardGameIframe"
+        src="../javascript/memoryGame/index.html"
+        frameborder="0"
+      ></iframe>
     </div>
     <div class="typingGame">
-        <iframe class="typingGameIframe" src="../javascript/typingGame/index.html" frameborder="0"></iframe>
+      <iframe
+        class="typingGameIframe"
+        src="../javascript/typingGame/index.html"
+        frameborder="0"
+      ></iframe>
     </div>
+
     <div class="memoryBox">
-        <iframe src="assets/memoryGame/index2.html" frameborder="0"></iframe>
+      <iframe src="assets/memoryGame/index2.html" frameborder="0"></iframe>
     </div>
-    <div class="tetrisBox show">
-        <iframe src="assets/tetrisGame/index.html" frameborder="0"></iframe>
+
+    <div class="tetrisBox">
+      <iframe src="assets/tetrisGame/index.html" frameborder="0"></iframe>
     </div>
+
     <div class="react_confirm">
-        <p>새 창에서 리액트 사이트를 여시겠습니까?</p>
-        <div class="buttons">
-            <button class="yes" onClick="window.open('https://illieee.netlify.app/')">YES</button>
-            <button class="no">NO</button>
-        </div>
+      <p>새 창에서 리액트 사이트를 여시겠습니까?</p>
+      <div class="buttons">
+        <button
+          class="yes"
+          onClick="window.open('https://illieee.netlify.app/')"
+        >
+          YES
+        </button>
+        <button class="no">NO</button>
+      </div>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>  
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script>
-        $(".icon1").draggable();
-        $(".icon2").draggable();
-        $(".icon3").draggable();
-        $(".icon4").draggable();
-        
-        $(".icon1").click(function(){
-            $(".typingGame").toggleClass("show")
-        });
-        $(".icon2").click(function(){
-            $(".musicBox").toggleClass("show")
-        });
-        $(".icon3").click(function(){
-            $(".memoryBox").toggleClass("show")
-        });
-        $(".icon4").click(function(){
-            $(".react_confirm").toggleClass("show")
-        });
+      $(".icon1").draggable();
+      $(".icon2").draggable();
+      $(".icon3").draggable();
+      $(".icon4").draggable();
+      $(".icon5").draggable();
 
-        $(".react_confirm .yes").click(function(){
-            setTimeout(()=>{
-            $(".react_confirm").removeClass("show");
-            },1000)
-        })
-        $(".react_confirm .no").click(function(){
-            $(".react_confirm").removeClass("show");
-        })
+      $(".icon1").click(function () {
+        $(".typingGame").toggleClass("show");
+      });
+      $(".icon2").click(function () {
+        $(".musicBox").toggleClass("show");
+      });
+      $(".icon3").click(function () {
+        $(".memoryBox").toggleClass("show");
+      });
+      $(".icon4").click(function () {
+        $(".react_confirm").toggleClass("show");
+      });
+      $(".icon5").click(function () {
+        $(".tetrisBox").toggleClass("show");
+      });
 
-        var today = new Date();
-        var year = today.getFullYear();
-        var month = ('0' + (today.getMonth() + 1)).slice(-2);
-        var day = ('0' + today.getDate()).slice(-2);
-        var hours = ('0' + today.getHours()).slice(-2); 
-        var minutes = ('0' + today.getMinutes()).slice(-2);
-        var timeString = year + '-' + month  + '-' + day + " " + hours + ':' + minutes;
+      $(".react_confirm .yes").click(function () {
+        setTimeout(() => {
+          $(".react_confirm").removeClass("show");
+        }, 1000);
+      });
+      $(".react_confirm .no").click(function () {
+        $(".react_confirm").removeClass("show");
+      });
 
+      var today = new Date();
+      var year = today.getFullYear();
+      var month = ("0" + (today.getMonth() + 1)).slice(-2);
+      var day = ("0" + today.getDate()).slice(-2);
+      var hours = ("0" + today.getHours()).slice(-2);
+      var minutes = ("0" + today.getMinutes()).slice(-2);
+      var timeString =
+        year + "-" + month + "-" + day + " " + hours + ":" + minutes;
 
-        setInterval("$(\".header__time\").text(timeString);",1000);
-       
-
-
-        
-
-    </script>  
-</body>
-
+      setInterval('$(".header__time").text(timeString);', 1000);
+    </script>
+  </body>
 </html>
