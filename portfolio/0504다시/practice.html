@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            height: 2000px;
+        }
+.overflowBox {
+    height: 30vh;
+    margin-top: 30vh;
+}
+.overflowBox .top {
+    height: 15vh;
+    overflow: hidden;
+}
+.overflowBox .bottom {
+    height: 15vh;
+    overflow: hidden;
+}
+
+.sec1_text1 {
+  font-size: 6.8vw;
+  font-weight: 600;
+  color: blue;
+  background: yellow;
+  text-align: center;
+  height: 30vh;
+}
+.sec1_text2{
+  font-size: 6.8vw;
+  font-weight: 600;
+  color: #fff;
+  background: red;
+  text-align: center;
+  height: 30vh;
+  transform: translateY(-15vh);
+}
+
+    </style>
+</head>
+<body>
+    <div class="overflowBox">
+        <div class="top">
+            <p class="sec1_text1">프론트엔드 개발자<br> 포트폴리오</p>
+        </div>
+        <div class="bottom">
+            <p class="sec1_text2"
+                data-0="transform: translateY(-15vh);"
+                data-100="transform: translateY(-5vh);"
+            >프론트엔드 개발자<br> 포트폴리오</p>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="assets/js/skrollr.min.js"></script>
+</html>

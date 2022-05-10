@@ -1,0 +1,90 @@
+/* header */
+#header {
+  position: fixed;
+  left: 0; top: 0;
+  width: 100%;
+  z-index: 10;
+  color: #fff;
+  /* backdrop-filter: saturate(90%) blur(5px); */
+}
+
+.header__links {
+  display: flex;
+  margin: 0 auto;
+  max-width: 1000px;
+  height: 50px;
+}
+
+#header h1 {
+  font-size: 1.5rem;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  padding-left: 1rem;
+}
+
+#header a {
+  display: flex;
+  font-size: 1.2rem;
+  height: 100%;
+  align-items: center;
+  color: var(--light_letter);
+}
+
+#header a:not(.contact){
+  margin-right: 2em;
+}
+
+#header a:last-child {
+  padding-right: 1rem;
+}
+#header p {
+  position: absolute;
+  font-size: 1.2rem;
+  left: 50%; top: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  opacity: 0;
+}
+/* sec1 */
+.sec1_bg {
+  background: url(../img/mountain.jpg);
+  background-position: center center;
+  background-size: cover;
+  animation: hue-rotate 3s linear infinite;
+  background-blend-mode: hard-light;
+  width: 100%;
+  height: 100vh;
+  z-index: 0;
+  /* background-attachment: fixed; */
+}
+
+
+@keyframes hue-rotate {
+  from {
+    filter: hue-rotate(0);
+  }
+  to {
+    filter: hue-rotate(360deg);
+  }
+}
+
+.sec1_text{
+  position: relative;
+  color: #fff;
+  font-size: 5rem;
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+  font-weight: bold;
+}
+.sec1_text .text1 {
+  position: absolute;
+  left: 50%; top: 50%;
+  transform: translate3d(-50%, -50%, 0);
+}
+.sec1_text .text2 {
+  opacity: 0;
+}
+.sec1_text .text3 {
+  opacity: 0;
+}

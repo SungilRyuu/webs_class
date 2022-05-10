@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>portfolio</title>
+    <style>
+        /* .longTexts {
+            font-size: 4rem;
+            color: #fff;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            font-family: 'Suncheon';
+            transform: translate3d(-50%, 100%, 0);
+        } */
+
+        .fixedModify {
+            position: fixed;
+            left: 50%; top: 50%;
+            z-index: 1000;
+            /* transform: translate3d(-50%, -50%, 0) sk;   */
+        }
+        /* #originalBg { */
+            
+        /* #fakeBg .bg {
+            width: 10%;
+            height: 100vh;
+            position: fixed;
+            left: 0; bottom: 100%;
+        }
+        #fakeBg .bg1 {background: #45418390; left: 0;}
+        #fakeBg .bg2 {background: #b2d0d990; left: 10%;}
+        #fakeBg .bg3 {background: #CDC8C690; left: 20%;}
+        #fakeBg .bg4 {background: #90C3CF90; left: 30%;}
+        #fakeBg .bg5 {background: #68A5B990; left: 40%;}
+        #fakeBg .bg6 {background: #8e7cb590; left: 50%;}
+        #fakeBg .bg7 {background: #509BCA90; left: 60%;}
+        #fakeBg .bg8 {background: #72CBEA90; left: 70%;}
+        #fakeBg .bg9 {background: #82DBDB90; left: 80%;}
+        #fakeBg .bg10 {background: #5E868790; left: 90%;}
+
+        #about_bg {
+            position: fixed;
+            left: 0; bottom: 0;
+            width: 100%; height: 300vh;
+            background-color: whitesmoke;
+            display: none;
+            opacity: 0;
+            z-index: 1112;
+            overflow: hidden;
+        } */
+        .sec1_star .dot {
+            position: fixed;
+            left: 10%; top: 0%;
+            width: 0.5vw; height: 0.5vw;
+            border-radius: 50%;
+            background: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="scrollTop">0</div>
+
+    <header id="header"
+        data-800="backdrop-filter: saturate(90%) blur(5px);"
+        data-900="backdrop-filter: saturate(1) blur(0px);"
+    >
+        <div class="header__links">
+            <h1 href="#">Illie <em>'s Portfolio</em></h1>
+            <a href="#">about</a>
+            <a href="#">project</a>
+            <a href="#" class="contact">contact</a>
+            <p
+                data-1100="opacity: 0;"
+                data-1200="opacity: 1;"
+                data-1800="opacity: 1;"
+                data-2000="opacity: 0;"
+            >Thank you for visiting</p>
+        </div>
+    </header>
+    
+    <section id="section1" class="sec1_bg fixed"
+    ></section>
+
+    <section class="sec1_text"
+     data-1300="display: block"
+     data-1301="display: none"
+    >
+        <p class="text1">프론트엔드 개발자<br> 포트폴리오</p>
+        <p class="text2 fixedModify"
+            data-300="opacity:0;
+            transform: translate3d(-50%, -20%, 0);"
+            data-450="opacity:1; 
+            transform: translate3d(-50%, -50%, 0);"
+            data-650="opacity:1; 
+            transform: translate3d(-50%, -50%, 0);"
+            data-800="opacity:0; 
+            transform: translate3d(-50%, -80%, 0);"
+        >안녕하세요,<br>류성일입니다.</p>
+        <p class="text3 fixedModify"
+            data-800="opacity:0;transform: translate3d(-50%, -20%, 0);"
+            data-950="opacity:1; 
+            transform: translate3d(-50%, -50%, 0);"
+            data-1150="opacity:1; 
+            transform: translate3d(-50%, -50%, 0);"
+            data-1300="opacity:0; 
+            transform: translate3d(-50%, -80%, 0);"
+        >방문해주셔서 감사합니다.</p>
+    </section>
+
+    <section class="sec1_star">
+        <div class="dot"
+            data-0="
+            left: 10%; top: 0%; 
+            width: 0.5vw; height: 0.5vw;"
+            data-1000="
+            left: 95%; top: 80%; 
+            width: 5vw; height: 5vw;"
+        ></div>
+    </section>
+
+    <!-- <section id="fakeBg"
+        data-1299="display: none;"
+        data-1300="display: flex;"
+        data-2500="display: flex"
+        data-2501="display: none"
+    >
+        <div class="bg bg1"
+            data-1350="bottom: 100%;"
+            data-1550="bottom: 0%;"
+        ></div>
+        <div class="bg bg2"
+            data-1400="bottom: 100%;"
+            data-1600="bottom: 0%;"
+        ></div>
+        <div class="bg bg3"
+            data-1450="bottom: 100%;"
+            data-1650="bottom: 0%;"
+        ></div>
+        <div class="bg bg4"
+            data-1500="bottom: 100%;"
+            data-1700="bottom: 0%;"
+        ></div>
+        <div class="bg bg5"
+            data-1550="bottom: 100%;"
+            data-1750="bottom: 0%;"
+        ></div>
+        <div class="bg bg6"
+            data-1600="bottom: 100%;"
+            data-1800="bottom: 0%;"
+        ></div>
+        <div class="bg bg7"
+            data-1650="bottom: 100%;"
+            data-1850="bottom: 0%;"
+        ></div>
+
+        <div class="bg bg8"
+            data-1700="bottom: 100%;"
+            data-1900="bottom: 0%;"
+        ></div>
+        <div class="bg bg9"
+            data-1750="bottom: 100%;"
+            data-1950="bottom: 0%;"
+        ></div>
+
+        <div class="bg bg10"
+            data-1800="bottom: 100%;"
+            data-2000="bottom: 0%;"
+        ></div>
+    </section> -->
+    
+
+    <!-- <section id="originalBg"
+        data-1999="display: none;"
+        data-2000="display: block; opacity: 0; transform: translate3d(0, -200%, 0);"
+        data-2300="display: block; opacity: 1; transform: translate3d(0, 50%, 0);"
+        data-2500="display: block; opacity: 1; transform: translate3d(0, 100%, 0);"
+    ></section> -->
+
+    <!-- <section id="about_bg"
+        data-2500="display: none;"
+        data-2501="display: block; opacity:0;"
+        data-2800=" opacity:1;"
+    ></section> -->
+
+
+    <!-- <p class="longTexts"
+         data-0="transform: translate3d(-50%,100%, 0);)"
+    >
+        <em class="longText1 longText">안녕하세요, 신입 프론트엔드 개발자<br> 류성일입니다. </em> 
+        <em class="longText2 longText">상상한 것들을 코드로<br>설계하고, 구현하는 일이 즐거워 개발<br>자가 되기로 결심하였습니다.</em> 
+        <em class="longText3 longText">모든 <br>상상이 마음처럼 잘 구현되지는 않지만,</em> 
+        <em class="longText4 longText">그 경험들이 쌓여 다음을 만들 것을 잘<br>알기 때문에 포기하지 않고 달릴 수 <br>있습니다.</em> 
+        <em class="longText5 longText">오늘보다 나은 내일이 될 수<br> 있도록 노력하는 개발자가 되겠습니다. <br></em> 
+        <em class="longText6 longText">방문해주셔서 감사합니다.</em>
+    </p> -->
+
+    <script type="text/javascript" src="assets/js/skrollr.min.js"></script>
+    <script type="text/javascript" src="assets/js/index.js"></script>
+</body>
+</html>
