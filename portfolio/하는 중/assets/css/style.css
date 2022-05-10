@@ -120,5 +120,36 @@
   font-weight: bold;
 }
 
-.sce2_2__title {}
-.sce2_2__desc {}
+.sec2_2__title {
+  color: rgb(58, 50, 50);
+  font-size: 5rem;
+  font-weight: bold;
+  margin-left: .5em;
+}
+.sec2_2__desc {
+  color: #6E6E73;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-left: 2em;
+}
+.sec2_3__title {
+  color: rgb(58, 50, 50);
+  font-size: 5rem;
+  font-weight: bold;
+  text-align: right;
+  
+}
+.sec2_3__desc {
+  color: #6E6E73;
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-left: 2em;
+  text-align: right;
+}
+
+
+@media (max-width: 1435px) {
+  .sec1_text {
+      font-size: 4.7vw;
+  }
+}
