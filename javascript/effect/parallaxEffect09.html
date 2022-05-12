@@ -134,7 +134,31 @@
         #section4 .sec4 .item:nth-child(4) {background: lightgreen;}
         #section5 {background-color: #555; z-index: 5000;}
         #section6 {background-color: #444; z-index: 6000;}
-        #section7 {background-color: #333; z-index: 7000;}
+        #section7 {
+            background-color: brown; 
+            z-index: 4000;
+            height: 400vh;
+        }
+        #section7 .sec7 {
+            position: fixed;
+            left: 0;top: 0; 
+            width: 500vh; height: 100%;
+            background-color: red;
+            display: flex;
+        }
+        
+        #section7 .sec7 .item {
+            width: 100vh;
+            height: 100vh;
+            position: relative;
+        }
+        #section7 .sec7 .item:nth-child(1) {background-color: rgb(74, 110, 124);}
+        #section7 .sec7 .item:nth-child(2) {background: #e79e9e;}
+        #section7 .sec7 .item:nth-child(3) {background: rgb(230, 230, 87);}
+        #section7 .sec7 .item:nth-child(4) {background: lightgreen;}
+        #section7 .sec7 .item .content__item__num {
+            font-size: 10vw;
+        }
         #section8 {background-color: #222; z-index: 8000;}
         #section9 {background-color: #111; z-index: 9000;}
     </style>
@@ -173,7 +197,6 @@
         <!-- //section3 -->
         <section id="section4" class="content__item">
             <div class="sec4">
-                <span class="content__item__num"></span>
                 <div class="item">
                     <span class="content__item__num">04-1</span></div>
                 <div class="item">
@@ -194,7 +217,16 @@
         </section>
         <!-- //section6 -->
         <section id="section7" class="content__item">
-            <span class="content__item__num">07</span>
+            <div class="sec7">
+                <div class="item">
+                    <span class="content__item__num">07-1</span></div>
+                <div class="item">
+                    <span class="content__item__num">07-2</span></div>
+                <div class="item">
+                    <span class="content__item__num">07-3</span></div>
+                <div class="item">
+                    <span class="content__item__num">07-4</span></div>
+            </div>
         </section>
         <!-- //section7 -->
         <section id="section8" class="content__item">
@@ -222,12 +254,20 @@
             let scrollTop = window.pageYOffset || document.documentElement.scrollTop ||  window.screenY;
             document.querySelector(".scrollTop").innerText = pageYOffset + "px";
             const startSec4 = document.querySelector("#section4").offsetTop;
+            const startSec7 = document.querySelector("#section7").offsetTop;
             let offset = scrollTop - startSec4;
+            let offset2 = scrollTop - startSec7;
             if (pageYOffset >= startSec4){
                 // document.querySelector("#section4 .sec4").style.backgroundColor = "blue";
                 gsap.to(".sec4", {left: -offset, ease:"linear"},)
             } else {
                 document.querySelector("#section4 .sec4").style.backgroundColor = "red"; 
+            };
+            if (pageYOffset >= startSec7){
+                // document.querySelector("#section4 .sec4").style.backgroundColor = "blue";
+                gsap.to(".sec7", {left: -offset2, ease:"linear"},)
+            } else {
+                // document.querySelector("#section4 .sec4").style.backgroundColor = "red"; 
             };
             // console.log("pageYOffset", pageYOffset)
             // console.log("startSec4", startSec4)
