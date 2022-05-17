@@ -20,7 +20,7 @@
     transform: translate3d(-50%, -30%, 0);
     width: 1200px;
     height: 10vh;
-    font-family: 'Harry Potter';
+    font-family: 'Harry Potter' !important;
     font-size: 10rem;
     color: #fdc913;
     z-index: 10;
