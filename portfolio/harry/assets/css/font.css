@@ -1,8 +1,13 @@
 @import url('http://fonts.cdnfonts.com/css/harry-potter');
 @import url('https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap');
 /* Teko */
-@import url('https://webfontworld.github.io/nixgon/NixgonFonts.css');
-@import url('https://webfontworld.github.io/suseong/SuseongHyejeong.css');
-@import url('https://webfontworld.github.io/jeongseon/JSDongkang.css');
 @import url('https://webfontworld.github.io/vitro/VitroCore.css');
 @import url('https://webfontworld.github.io/vitro/VitroPride.css');
+
+@font-face {
+    font-family: 'Harry Potter';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Harry Potter'), url('https://fonts.cdnfonts.com/s/25438/HARRP___.woff') format('woff');
+}
+
