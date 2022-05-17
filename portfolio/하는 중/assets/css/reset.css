@@ -12,9 +12,8 @@ body {
 }
 
 :root {
-    --font_Gimpo: 'GimpoGothic';
-    --font_Sun: 'Suncheon';
-    --font_apple: 'apple';
+    /* --text_dark: rgb(63, 70, 68);
+    --text_light: rgb(222, 233, 230); */
 }
 
 html {
@@ -95,3 +94,15 @@ img {
     line-height: 30px;
     z-index: 2000;
   }
+
+  .mt10 {margin-top: 10px;}
+  .mt20 {margin-top: 20px;}
+  .mt30 {margin-top: 30px;}
+  .mt40 {margin-top: 40px;}
+  .mt50 {margin-top: 50px;}
+
+  .mb10 {margin-bottom: 10px;}
+  .mb20 {margin-bottom: 20px;}
+  .mb30 {margin-bottom: 30px;}
+  .mb40 {margin-bottom: 40px;}
+  .mb50 {margin-bottom: 50px;}
