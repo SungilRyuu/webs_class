@@ -1,5 +1,5 @@
 /* 배경 */
-.sec1__bg {
+#section1 {
     width: 100%;
     height: 100vh;
     background:
@@ -17,6 +17,17 @@
   background-color:#b03;
   background-size:100px 100px;
 }
+
+.sec1__bg {}
+.sec1__bg .frame {
+    width: 100%;
+    height: 100vh;
+}
+.sec1__bg .frame iframe {
+    width: 100%;
+    height: 100vh;
+}
+
 .sec2__bg {
     width: 100%;
     height: 100vh;
