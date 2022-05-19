@@ -11,7 +11,7 @@ function init(){
   canvas.width = ww;
   canvas.height = wh;
   
-  for(var i=0;i<100;i++){
+  for(var i=0;i<200;i++){
     hearts.push(new Heart());
   }
 }
@@ -53,7 +53,7 @@ function render(){
   // ctx.globalAlpha = 1;
   // ctx.fillStyle = "rgba(255,255,255,0.3)";
   // ctx.fillRect(0,0,ww, wh);
-  for(var i=0;i<100;i++){
+  for(var i=0;i<200;i++){
     hearts[i].update();
     hearts[i].draw();
   }
