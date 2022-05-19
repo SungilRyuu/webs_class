@@ -18,21 +18,6 @@
 .sec1__text p:hover {
     opacity: 1;
 }
-/* .sec1__text h1:before {
-        content: 'DEVELOPER';
-        position: absolute;
-        overflow: hidden;
-        max-width: 7em;
-        white-space: nowrap;
-        color: rgb(0, 255, 98);
-        animation: loading 8s linear infinite;
-        border: 0;
-      }
-      @keyframes loading {
-        0% {
-          max-width: 0;
-      }
-} */
 .sec1__text h1 {
     position: absolute;
     left: 50%; top: 60%; 
@@ -47,6 +32,46 @@
     font-weight: bold;
     border: 0;
 }
+.loading {
+    --color: #f5f9ff;
+    --duration: 2000ms;
+    font-family: Roboto, Arial;
+    font-size: 24px;
+    position: relative;
+    white-space: nowrap;
+    user-select: none;
+    color: var(--color);
+  }
+  .loading span {
+    --x: 0;
+    --y: 0;
+    --move-y: 0;
+    --move-y-s: 0;
+    --delay: 0ms;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    text-indent: calc(var(--x) * -1);
+    overflow: hidden;
+    transform: translate(var(--x), var(--y));
+  }
+  .loading.start div {
+    opacity: 0;
+  }
+  .loading.start span {
+    animation: move var(--duration) ease-in-out var(--delay);
+  }
+  
+  @keyframes move {
+    30% {
+      transform: translate(var(--x), var(--move-y));
+    }
+    82% {
+      transform: translate(var(--x), var(--move-y-s));
+    }
+  }
 /* @keyframes scak {
     0% {transform: translate3d(-50%, -50%, 0) scaleY(2) skewX(-20deg);}
     50% {transform: translate3d(-50%, -50%, 0) scaleY(2) skewX(-20deg);}

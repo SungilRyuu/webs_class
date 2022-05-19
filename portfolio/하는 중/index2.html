@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style2.css">
+    <title>Portfolio</title>
+</head>
+<body>
+    <section id="section1">
+        <div class="sec1__bg">
+            <div class="lines">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="mirror">
+                <img src="assets/img/mirror.png" alt="">
+            </div>
+            <div class="frame">
+                <iframe src="heart/heart.html" frameborder="0"></iframe>
+            </div>
+        </div>
+        <div class="sec1__text">
+            <h1 class="loading">DEVELOPER</h1>
+            <p>front-end<br>Portfolio</p>
+        </div>
+    </section>
+
+    <section id="section2">
+        <div class="sec2__bg"></div>
+    </section>
+    
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
+    <script>
+        window.onresize = () => {
+            location.reload();
+        };
+        // //resize
+        
+        $(document).ready(function () {
+    let loading = $(".loading").wrapInner("<div></div>"),
+        min = 20,
+        max = 100,
+        minMove = 20,
+        maxMove = 30;
+
+    startAnimation(loading);
+
+    loading.on(
+        "animationend webkitAnimationEnd oAnimationEnd",
+        "span:last-child",
+        (e) => {
+            startAnimation(loading);
+        }
+    );
+
+    //Set CSS vars & generate spans if needed
+    function setCSSVars(elem, min, max, minMove, maxMove) {
+        let width = Math.ceil(elem.width()),
+            text = elem.text();
+        for (let i = 1; i < width; i++) {
+            let num = Math.floor(Math.random() * (max - min + 1)) + min,
+                numMove =
+                    Math.floor(Math.random() * (maxMove - minMove + 1)) +
+                    minMove,
+                dir = i % 2 == 0 ? 1 : -1,
+                spanCurrent = elem.find("span:eq(" + i + ")"),
+                span = spanCurrent.length ? spanCurrent : $("<span />");
+            span.css({
+                "--x": i - 1 + "px",
+                "--move-y": num * dir + "px",
+                "--move-y-s":
+                    (i % 2 == 0 ? num * dir - numMove : num * dir + numMove) +
+                    "px",
+                "--delay": i * 10 + "ms"
+            });
+            if (!spanCurrent.length) {
+                elem.append(span.text(text));
+            }
+        }
+    }
+
+    //Start animation
+    function startAnimation(elem) {
+        elem.removeClass("start");
+        setCSSVars(elem, min, max, minMove, maxMove);
+        void elem[0].offsetWidth;
+        elem.addClass("start");
+    }
+});
+
+    </script>
+
+</body>
+</html>
