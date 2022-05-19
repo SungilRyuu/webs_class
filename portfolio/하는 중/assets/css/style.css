@@ -7,13 +7,27 @@
     text-align: center;
     width: 100%;
     position: absolute;
-    left: 0; top: 0;
+    left: 0; top: 1%;
     font-size: 2.5vw;
     z-index: 12;
-    letter-spacing: 100%;
     line-height: 95%;
+    text-transform: uppercase;
 }
-.sec1__text h1 {}
+.sec1__text h1 {
+    position: absolute;
+    left: 50%; top: 50%; 
+    transform: translate3d(-50%, -50%, 0) scaleY(2.5) skewX(20deg);
+    text-transform: uppercase;
+    color: #fff;
+    z-index: 15;
+    font-size: 10vw;
+    animation: scak 2s infinite;
+}
+/* @keyframes scak {
+    0% {transform: translate3d(-50%, -50%, 0) scaleY(2) skewX(-30deg);}
+    50% {transform: translate3d(-50%, -50%, 0) scaleY(1) skewX(30deg);}
+    100% {transform: translate3d(-50%, -50%, 0) scaleY(2) skewX(-30deg);}
+} */
 /* 배경 */
 /* sec1 - 하트배경 */
 #section1 {
@@ -31,7 +45,7 @@
     radial-gradient(circle closest-side at 40% 22%, #d35 45%, rgba(221,51,85,0) 46%) 50px 50px,
     radial-gradient(circle closest-side at 60% 22%, #d35 45%, rgba(221,51,85,0) 46%) 50px 50px,
     radial-gradient(circle closest-side at 50% 35%, #d35 30%, rgba(221,51,85,0) 31%) 50px 50px;
-  background-color:#b03;
+  background-color:rgb(175, 36, 73);
   background-size:100px 100px;
 }
 
