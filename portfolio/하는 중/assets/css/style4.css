@@ -160,7 +160,7 @@
     transform-origin: top;
     position: absolute;
     left: 50%; top: 60%;
-    transform: translate3d(-50%, -50%, 0);
+    transform: translate3d(-50%, -50%, 0) skewX(-15deg);
     z-index: 15;
   }
   .sec1__text .fg{
@@ -172,6 +172,6 @@
     transform: scale(1);
     position: absolute;
     left: 49%; top: 60%;
-    transform: translate3d(-50%, -50%, 0);
+    transform: translate3d(-50%, -50%, 0) skewX(-15deg);
     z-index: 15;
   }

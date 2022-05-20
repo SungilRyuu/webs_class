@@ -119,7 +119,19 @@
     width: 100%;
     height: 100vh;
 }
-/*  */
+/* sec2 배경 */
+
+.sec2__bg {
+    width: 100%;
+    height: 100vh;
+    background:
+        radial-gradient(#dd3255 25%, transparent 16%) 0 0,
+        radial-gradient(#ba0d33 25%, transparent 16%) 8px 8px,
+        radial-gradient(rgba(255,255,255,.2) 15%, transparent 50%) 0 1px,
+        radial-gradient(rgba(255,255,255,.2) 15%, transparent 50%) 8px 9px;
+    background-color:#851b36;
+    background-size:16px 16px;
+}
 
 /* reset */
 * {
