@@ -215,6 +215,9 @@ background-size:100px 100px;
     padding: 0;
     font-family: 'abel';
 }
+html {
+  font-size: 14px;
+}
 :root {
   --gold: #ffb338;
   --light-shadow: #77571d;
@@ -223,4 +226,41 @@ background-size:100px 100px;
 a {
   color: #000;
   text-decoration: none;
+}
+
+@media (min-width:1200px) {
+  .sec1__text p {
+    font-size: 2.5em;
+  }
+  .banner a {font-size: 2em;}
+  .banner a:before {
+    width: 1.5em; height: 1.5em;
+    left: -1.6em; top: -0.2em;
+  }
+
+  .sec2__text {
+    color: #efefef;
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 15vw;
+  }
+  .sec2__text .wise {
+    font-size: 3.5em;
+    text-align: right;
+  }
+  .sec2__text .desc {
+    margin-top: 8vw;
+    font-size: 2.2em;
+  }
+  .sec2__text .more__desc {
+    display: inline-block;
+    margin-top: 20vw;
+    margin-bottom: 15vw;
+    font-size: 2.5vw;
+    display: flex;
+    justify-content: space-between;
+  }
+  .sec2__text .more__desc a {
+    color: #efefef;
+  } 
 }
