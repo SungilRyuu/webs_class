@@ -138,7 +138,7 @@ background-size:100px 100px;
 #section2 {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 200vh;
   background:
       radial-gradient(#dd3255 25%, transparent 16%) 0 0,
       radial-gradient(#ba0d33 25%, transparent 16%) 8px 8px,
@@ -181,6 +181,34 @@ background-size:100px 100px;
 .banner a:hover:before {
   transform: translateY(-1.5vw) translateX(.3vw);
 }
+
+.sec2__text {
+  color: #efefef;
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 15vw;
+  
+}
+.sec2__text .wise {
+  font-size: 4vw;
+  text-align: right;
+}
+.sec2__text .desc {
+  margin-top: 8vw;
+  font-size: 2.5vw;
+}
+.sec2__text .more__desc {
+  display: inline-block;
+  margin-top: 20vw;
+  margin-bottom: 15vw;
+  font-size: 2.5vw;
+  display: flex;
+  justify-content: space-between;
+}
+.sec2__text .more__desc a {
+  color: #efefef;
+}
+
 /* reset */
 * {
     margin: 0; 
