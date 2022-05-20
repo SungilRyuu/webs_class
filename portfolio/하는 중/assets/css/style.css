@@ -14,25 +14,11 @@
     opacity: 0.5;
     z-index: 100;
     transition: all 0.3s;
+    text-align: center;
 }
 .sec1__text p:hover {
     opacity: 1;
 }
-/* .sec1__text h1:before {
-        content: 'DEVELOPER';
-        position: absolute;
-        overflow: hidden;
-        max-width: 7em;
-        white-space: nowrap;
-        color: rgb(0, 255, 98);
-        animation: loading 8s linear infinite;
-        border: 0;
-      }
-      @keyframes loading {
-        0% {
-          max-width: 0;
-      }
-} */
 .sec1__text h1 {
     position: absolute;
     left: 50%; top: 60%; 
@@ -47,30 +33,25 @@
     font-weight: bold;
     border: 0;
 }
-/* @keyframes scak {
-    0% {transform: translate3d(-50%, -50%, 0) scaleY(2) skewX(-20deg);}
-    50% {transform: translate3d(-50%, -50%, 0) scaleY(2) skewX(-20deg);}
-    100% {transform: translate3d(-50%, -50%, 0) scaleY(2) skewX(-20deg);}
-} */
 /* 배경 */
 /* sec1 - 하트배경 */
 #section1 {
-    width: 100%;
-    height: 100vh;
-    background:
-    radial-gradient(circle closest-side at 60% 43%, #851b36 26%, rgba(187,0,51,0) 27%),
-    radial-gradient(circle closest-side at 40% 43%, #851b36 26%, rgba(187,0,51,0) 27%),
-    radial-gradient(circle closest-side at 40% 22%, #d35 45%, rgba(221,51,85,0) 46%),
-    radial-gradient(circle closest-side at 60% 22%, #d35 45%, rgba(221,51,85,0) 46%),
-    radial-gradient(circle closest-side at 50% 35%, #d35 30%, rgba(221,51,85,0) 31%),
-    
-    radial-gradient(circle closest-side at 60% 43%, #851b36 26%, rgba(187,0,51,0) 27%) 50px 50px,
-    radial-gradient(circle closest-side at 40% 43%, #851b36 26%, rgba(187,0,51,0) 27%) 50px 50px,
-    radial-gradient(circle closest-side at 40% 22%, #d35 45%, rgba(221,51,85,0) 46%) 50px 50px,
-    radial-gradient(circle closest-side at 60% 22%, #d35 45%, rgba(221,51,85,0) 46%) 50px 50px,
-    radial-gradient(circle closest-side at 50% 35%, #d35 30%, rgba(221,51,85,0) 31%) 50px 50px;
-  background-color:#851b36;
-  background-size:100px 100px;
+  width: 100%;
+  height: 100vh;
+  background:
+  radial-gradient(circle closest-side at 60% 43%, #851b36 26%, rgba(187,0,51,0) 27%),
+  radial-gradient(circle closest-side at 40% 43%, #851b36 26%, rgba(187,0,51,0) 27%),
+  radial-gradient(circle closest-side at 40% 22%, #d35 45%, rgba(221,51,85,0) 46%),
+  radial-gradient(circle closest-side at 60% 22%, #d35 45%, rgba(221,51,85,0) 46%),
+  radial-gradient(circle closest-side at 50% 35%, #d35 30%, rgba(221,51,85,0) 31%),
+  
+  radial-gradient(circle closest-side at 60% 43%, #851b36 26%, rgba(187,0,51,0) 27%) 50px 50px,
+  radial-gradient(circle closest-side at 40% 43%, #851b36 26%, rgba(187,0,51,0) 27%) 50px 50px,
+  radial-gradient(circle closest-side at 40% 22%, #d35 45%, rgba(221,51,85,0) 46%) 50px 50px,
+  radial-gradient(circle closest-side at 60% 22%, #d35 45%, rgba(221,51,85,0) 46%) 50px 50px,
+  radial-gradient(circle closest-side at 50% 35%, #d35 30%, rgba(221,51,85,0) 31%) 50px 50px;
+background-color:#851b36;
+background-size:100px 100px;
 }
 
 
@@ -110,32 +91,75 @@
     width: 100%;
     height: 100vh;
 }
-.sec1__bg .frame iframe {
-    width: 100%;
-    height: 100vh;
-}
 
 .sec2__bg {
     width: 100%;
     height: 100vh;
 }
-/* sec2 배경 */
+/*  */
 
 .sec2__bg {
-    width: 100%;
-    height: 100vh;
-    background:
-        radial-gradient(#dd3255 25%, transparent 16%) 0 0,
-        radial-gradient(#ba0d33 25%, transparent 16%) 8px 8px,
-        radial-gradient(rgba(255,255,255,.2) 15%, transparent 50%) 0 1px,
-        radial-gradient(rgba(255,255,255,.2) 15%, transparent 50%) 8px 9px;
-    background-color:#851b36;
-    background-size:16px 16px;
+  width: 100%;
+  height: 100vh;
+  background:
+      radial-gradient(#dd3255 25%, transparent 16%) 0 0,
+      radial-gradient(#ba0d33 25%, transparent 16%) 8px 8px,
+      radial-gradient(rgba(255,255,255,.2) 15%, transparent 50%) 0 1px,
+      radial-gradient(rgba(255,255,255,.2) 15%, transparent 50%) 8px 9px;
+  background-color:#851b36;
+  background-size:16px 16px;
 }
-
 /* reset */
 * {
     margin: 0; 
     padding: 0;
     font-family: 'abel';
 }
+:root {
+  --gold: #ffb338;
+  --light-shadow: #77571d;
+  --dark-shadow: #3e2904;
+}
+
+.sec1__text {
+    display: grid;
+    grid-template-areas: 'overlap';
+    place-content: center;
+    text-transform: uppercase;
+  }
+  .sec1__text > div {
+    background-clip: text;  
+    -webkit-background-clip: text;
+    color: #363833;
+    font-weight: 900;
+    font-size: clamp( 3em, 18vw, 15rem);
+    grid-area: overlap;
+    letter-spacing: 1px;
+    -webkit-text-stroke: 4px transparent;
+  }
+  .sec1__text .bg {
+    background-image: repeating-linear-gradient( 105deg, 
+      var(--gold) 0% , 
+      var(--dark-shadow) 5%,
+      var(--gold) 12%);
+    color: transparent;
+    filter: drop-shadow(5px 15px 15px black);
+    transform: scaleY(1.05);
+    transform-origin: top;
+    position: absolute;
+    left: 50%; top: 60%;
+    transform: translate3d(-50%, -50%, 0) skewX(-15deg);
+    z-index: 15;
+  }
+  .sec1__text .fg{
+    background-image: repeating-linear-gradient( 5deg,  
+      var(--gold) 0% , 
+      var(--light-shadow) 23%, 
+      var(--gold) 31%);
+    color: #fff;
+    transform: scale(1);
+    position: absolute;
+    left: 49%; top: 60%;
+    transform: translate3d(-50%, -50%, 0) skewX(-15deg);
+    z-index: 15;
+  }
