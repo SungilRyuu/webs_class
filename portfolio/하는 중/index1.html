@@ -4,41 +4,135 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style1.css">
-    <title>Portfolio</title>
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #section5 {
+            background: #eee;
+        }
+        .project {
+            width: 100%;
+            height: 100vh;
+            display: inline-block;
+        }
+        .project__more {
+            display: block;
+            width: 65vw;
+            margin: 0 auto;
+            text-align: right;
+            margin-top: 5rem;
+        }
+        .project__img {
+            width: 65vw;
+            height: calc(65vw * 0.5);
+            filter: grayscale(100%);
+            margin: 0 auto;
+            position: relative;
+            transition: all 0.5s ease;
+        }
+        .project__img:hover {
+            filter: grayscale(0%);
+        }
+        .project__title {
+            position: absolute;
+            left: -1vw;top: -2vw;
+            color: #fff;
+            font-size: 4vw;
+            padding: 0.2vw 2vw;
+            text-transform: uppercase;
+            filter: grayscale(0%);
+        }
+        .project__desc {
+            margin: 0 auto;
+            margin-top: 2vw;
+            width: 65vw;
+            display: flex;
+            justify-content: space-between;
+        }
+        .desc__title {
+            white-space: nowrap;
+            font-size: 2.5vw;
+
+        }
+        .project__desc .right {}
+        .project__desc .right .desc__desc {
+            text-align: right;
+            white-space: nowrap;
+            font-size: 1.6vw;
+        }
+        .project__desc .right .desc__more {
+            text-align: right;
+            font-size: 1.5vw;
+            margin-top: 1vw;
+        }
+        .project__desc .right .desc__more:hover {
+            text-decoration: underline;
+        }
+
+        .project__title.title1 {
+            background-color: rebeccapurple;
+        }
+        .project__title.title2 {
+            background-color: #339999;
+        }
+        .project .img1 {
+            background: url(assets/img/project1.jpg);
+            background-size: cover;
+        }
+        .project .img2 {
+            background: url(assets/img/project2.jpg);
+            background-size: cover;
+        }
+    </style>
 </head>
 <body>
-    <section id="section1">
-        <div class="sec1__bg">
-            <div class="lines">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
+    <section id="section5">
+        <div class="project">
+            <a href="#2" class="project__more">사이트 방문하기</a>
+            <div class="project__img img1">
+                <div class="project__title title1">Team project</div>
             </div>
-            <div class="mirror">
-                <img src="assets/img/mirror.png" alt="">
-            </div>
-            <div class="frame">
-                <iframe src="heart/heart.html" frameborder="0"></iframe>
+            <div class="project__desc">
+                <div class="desc__title">추억을 남기는 웹앨범 사이트</div>
+                <div class="right">
+                    <p class="desc__desc">php와 sql을 사용하여<br>
+                        회원가입, 로그인, 게시글, 댓글 등을 구현하였습니다.</p>
+                    <p class="desc__more">설명 더보기</p>
+                </div>
             </div>
         </div>
-        <div class="sec1__text">
-            <h1>DEVELOPER</h1>
-            <p>front-end<br>Portfolio</p>
+        <div class="project">
+            <a href="#2" class="project__more">사이트 방문하기</a>
+            <div class="project__img img2">
+                <div class="project__title title2">react site</div>
+            </div>
+            <div class="project__desc">
+                <div class="desc__title">리액트를 활용하여 만든 사이트</div>
+                <div class="right">
+                    <p class="desc__desc">리액트 라이브러리를 통하여<br>
+                        tmdb API, youtube API를 활용하였습니다.</p>
+                    <p class="desc__more">설명 더보기</p>
+                </div>
+            </div>
+        </div>
+        <div class="project">
+            <a href="#2" class="project__more">사이트 방문하기</a>
+            <div class="project__img img2">
+                <div class="project__title title2">Team project</div>
+            </div>
+            <div class="project__desc">
+                <div class="desc__title">리액트를 활용하여 만든 사이트</div>
+                <div class="right">
+                    <p class="desc__desc">리액트 라이브러리를 통하여<br>
+                        tmdb API, youtube API를 활용하였습니다.</p>
+                    <p class="desc__more">설명 더보기</p>
+                </div>
+            </div>
         </div>
     </section>
-
-    <section id="section2">
-        <div class="sec2__bg"></div>
-    </section>
-    
-    <script>
-        window.onresize = () => {
-            location.reload();
-        };
-    </script>
 
 </body>
 </html>

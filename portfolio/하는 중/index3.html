@@ -4,42 +4,213 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style3.css">
-    <title>Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #section7 {
+            background: #ccc;
+            width: 100%;
+            height: 100vh;
+        }
+        .pacman__wrap {
+            position: relative;
+            background: #000;
+        }
+        .pacman{
+            width: 9vw;
+            height: 9vw;
+            border-radius: 50%;
+            background: #f3c04b;
+            position: relative;
+            border: 0;
+        }
+        .pacman .mouth {
+            top: 50%; left: 50%;
+            transform: translate3d(-50%, -50%, 0);
+            background: #000;
+            position: absolute;
+            width: 10vw;
+            height: 10vw;
+            clip-path: polygon(100% 74%, 44% 48%, 100% 21%);
+            animation-name: eat;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes eat {
+            0% {clip-path: polygon(100% 74%, 44% 48%, 100% 21%);}
+            25% {clip-path: polygon(100% 60%, 44% 48%, 100% 40%);}
+            50% {clip-path: polygon(100% 50%, 44% 48%, 100% 50%);}
+            75% {clip-path: polygon(100% 59%, 44% 48%, 100% 35%);}
+            100% {clip-path: polygon(100% 74%, 44% 48%, 100% 21%);}
+        }
+        .foods {
+            position: absolute;
+            left: 0;top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+        }
+        .food {
+            width: 3vw; height: 3vw;
+            border-radius: 50%;
+            margin-right: 10vw;
+            background: yellow;
+        }
+        .food:last-child {
+            margin-right: 0;
+        }
+        .ghost{
+            display: inline-block;
+            width: 9vw;
+            height: 7.5vw;
+            border-radius:50% 50% 0 0;
+            position: relative;
+        }
+        .ghost .eye_left {
+            position: absolute;
+            top: 40%;left: 50%;
+            transform: translate3d(-20%, -50%, 0);
+            background: #fff;
+            width: 2vw;
+            height: 3vw;
+            border-radius: 50%;
+        }
+        .ghost .eye_right {
+            position: absolute;
+            top: 40%;left: 80%;
+            transform: translate3d(-40%, -50%, 0);
+            background: #fff;
+            width: 2vw;
+            height: 3vw;
+            border-radius: 50%;
+            
+        }
+        .ghost .eye_left_color {
+            position: absolute;
+            top: 40%;left: 61%;
+            transform: translate3d(-40%, -50%, 0);
+            width: 1vw;
+            height: 1vw;
+            border-radius: 50%;
+            background-color: #44609e;
+        }
+        .ghost .eye_right_color {
+            position: absolute;
+            top: 40%;left: 86%;
+            transform: translate3d(-40%, -50%, 0);
+            width: 1vw;
+            height: 1vw;
+            border-radius: 50%;
+            background-color: #44609e;
+        }
+        .ghost .tail1 {
+            position: absolute;
+            left: 0; bottom: -1vw;
+            width: 3vw;
+            height: 3vw;
+            border-radius: 50%;
+            background-color: #333;
+        }
+        .ghost .tail2 {
+            position: absolute;
+            left: 3vw; bottom: -1vw;
+            width: 3vw;
+            height: 3vw;
+            border-radius: 50%;
+            background-color: #333;
+        }
+        .ghost .tail3 {
+            position: absolute;
+            left: 6vw; bottom: -1vw;
+            width: 3vw;
+            height: 3vw;
+            border-radius: 50%;
+            background-color: #333;
+        }
+        .ghost1, .ghost1 .tail1, .ghost1 .tail2, .ghost1 .tail3 {
+            background-color: #ce293d;
+        }
+        .ghost2, .ghost2 .tail1, .ghost2 .tail2, .ghost2 .tail3 {
+            background-color: #e5a8cf;
+        }
+        .ghost3, .ghost3 .tail1, .ghost3 .tail2, .ghost3 .tail3 {
+            background-color: #62d6c2;
+        }
+        .ghost4, .ghost4 .tail1, .ghost4 .tail2, .ghost4 .tail3 {
+            background-color: #e5893d;
+        }
+
+
+    </style>
+    <title>Document</title>
 </head>
 <body>
-    <section id="section1">
-        <div class="sec1__bg">
-            <div class="lines">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <div class="mirror">
-                <img src="assets/img/mirror.png" alt="">
-            </div>
-            <div class="frame">
-                <iframe src="heart/heart.html" frameborder="0"></iframe>
+    <div class="pacman__wrap">
+        <div class="pacman">
+            <div class="mouth"></div>
+        </div>
+        <div class="ghost ghost1">
+            <div class="eye_left"></div>
+            <div class="eye_right"></div>
+            <div class="eye_left_color"></div>
+            <div class="eye_right_color"></div>
+            <div class="tails">
+                <div class="tail1"></div>
+                <div class="tail2"></div>
+                <div class="tail3"></div>
             </div>
         </div>
-        <div class="sec1__text">
-            <div class="bg">DEVELOPER</div>
-            <div class="fg">DEVELOPER</div>
-            <p>front-end<br>Portfolio</p>
+        <div class="ghost ghost2">
+            <div class="eye_left"></div>
+            <div class="eye_right"></div>
+            <div class="eye_left_color"></div>
+            <div class="eye_right_color"></div>
+            <div class="tails">
+                <div class="tail1"></div>
+                <div class="tail2"></div>
+                <div class="tail3"></div>
+            </div>
         </div>
-    </section>
-
-    <section id="section2">
-        <div class="sec2__bg"></div>
+        <div class="ghost ghost3">
+            <div class="eye_left"></div>
+            <div class="eye_right"></div>
+            <div class="eye_left_color"></div>
+            <div class="eye_right_color"></div>
+            <div class="tails">
+                <div class="tail1"></div>
+                <div class="tail2"></div>
+                <div class="tail3"></div>
+            </div>
+        </div>
+        <div class="ghost ghost4">
+            <div class="eye_left"></div>
+            <div class="eye_right"></div>
+            <div class="eye_left_color"></div>
+            <div class="eye_right_color"></div>
+            <div class="tails">
+                <div class="tail1"></div>
+                <div class="tail2"></div>
+                <div class="tail3"></div>
+            </div>
+        </div>
+        <div class="foods">
+            <div class="food"></div>
+            <div class="food"></div>
+            <div class="food"></div>
+            <div class="food"></div>
+            <div class="food"></div>
+            <div class="food"></div>
+            <div class="food"></div>
+            <div class="food"></div>
+        </div>
+    </div>
+    <section id="section7">
+        <div class="sec7__header">
+            <!-- 오락실 게임 -->
+        </div>
+        <div class="sec7__body"></div>
     </section>
     
-    <script>
-        window.onresize = () => {
-            location.reload();
-        };
-    </script>
-
 </body>
 </html>
