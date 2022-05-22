@@ -4,41 +4,115 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style4.css">
-    <title>Portfolio</title>
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #section7 {
+            background: #ccc;
+            width: 100%;
+            height: 100vh;
+        }
+        .sec7__header {
+            width: 100%;
+            height: 5vw;
+            background: crimson;
+        }
+        .sec7__header p {
+            font-size: 5vw;
+            white-space: nowrap;
+            color: #fff;
+            text-align: center;
+        }
+        .sec7__body {
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .sec7__body .left {
+            width: 40%;
+            margin-top: 7.5vw;
+        }
+        .sec7__body .left img{
+            width: 80%;
+            margin: 0 auto;
+        }
+        .sec7__body .right {
+            width: 40%;
+            margin-top: 15vw;
+            font-size: 2.8vw;
+        }
+        .sec7__body .right p {
+            margin-bottom: 1vw;
+            font-weight: lighter;
+            padding-left: 4vw;
+        }
+        .sec7__body .right .call,.sec7__body .right .email,.sec7__body .right .git,.sec7__body .right .tistory {
+            position: relative;
+        }
+        .sec7__body .right .call:before {
+            content: '';
+            position: absolute;
+            left: 0; top: 0;
+            background: url(assets/img/phone-call.svg);
+            background-size: cover;
+            width: 3vw;
+            height: 3vw;
+        }
+        .sec7__body .right .email:before {
+            content: '';
+            position: absolute;
+            left: 0; top: 0;
+            background: url(assets/img/email-down.svg);
+            background-size: cover;
+            width: 3vw;
+            height: 3vw;
+        }
+        .sec7__body .right .git:before {
+            content: '';
+            position: absolute;
+            left: 0; top: 0;
+            background: url(assets/img/github.svg);
+            background-size: cover;
+            width: 3vw;
+            height: 3vw;
+        }
+        .sec7__body .right .tistory:before {
+            content: '';
+            position: absolute;
+            left: 0; top: 0;
+            background: url(assets/img/book-one.svg);
+            background-size: cover;
+            width: 3vw;
+            height: 3vw;
+        }
+        .sec7__body .right .title {
+            display: inline-block;
+            font-size: 2.5vw;
+            padding-left: 0;
+            margin-bottom: 3vw;
+        }
+
+        </style>
 </head>
 <body>
-    <section id="section1">
-        <div class="sec1__bg">
-            <div class="lines">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <div class="mirror">
+    <section id="section7">
+        <div class="sec7__header">
+            <p>THANK YOU FOR VISITING MY PORTFOLIO!</p>
+        </div>
+        <div class="sec7__body">
+            <div class="left">
                 <img src="assets/img/mirror.png" alt="">
             </div>
-            <div class="frame">
-                <iframe src="heart/heart.html" frameborder="0"></iframe>
+            <div class="right">
+                <p class="title">성장하는 개발자가 되겠습니다.<br>방문해주셔서 감사합니다.</p>
+                <p class="call">010-1111-1111</p>
+                <p class="email">abc@google.com</p>
+                <p class="git">abc.github.com</p>
+                <p class="tistory">abc.tistory.com</p>
             </div>
         </div>
-        <div class="sec1__text">
-            <div class="bg">DEVELOPER</div>
-            <div class="fg">DEVELOPER</div>
-            <p>front-end<br>Portfolio</p>
-        </div>
     </section>
-
-    <section id="section2">
-        <div class="sec2__bg"></div>
-    </section>
-    <script>
-        window.onresize = () => {
-            location.reload();
-        };
-    </script>
-
 </body>
 </html>

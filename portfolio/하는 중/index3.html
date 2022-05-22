@@ -55,7 +55,7 @@
             width: 3vw; height: 3vw;
             border-radius: 50%;
             margin-right: 10vw;
-            background: yellow;
+            background: #f7b97e;
         }
         .food:last-child {
             margin-right: 0;
@@ -107,37 +107,45 @@
         .ghost .tail1 {
             position: absolute;
             left: 0; bottom: -1vw;
-            width: 3vw;
-            height: 3vw;
+            width: calc(9vw / 4);
+            height: calc(9vw / 4);
             border-radius: 50%;
             background-color: #333;
         }
         .ghost .tail2 {
             position: absolute;
-            left: 3vw; bottom: -1vw;
-            width: 3vw;
-            height: 3vw;
+            left: calc(9vw / 4); bottom: -1vw;
+            width: calc(9vw / 4);
+            height: calc(9vw / 4);
             border-radius: 50%;
             background-color: #333;
         }
         .ghost .tail3 {
             position: absolute;
-            left: 6vw; bottom: -1vw;
-            width: 3vw;
-            height: 3vw;
+            left: calc(9vw / 4 * 2); bottom: -1vw;
+            width: calc(9vw / 4);
+            height: calc(9vw / 4);
             border-radius: 50%;
             background-color: #333;
         }
-        .ghost1, .ghost1 .tail1, .ghost1 .tail2, .ghost1 .tail3 {
+        .ghost .tail4 {
+            position: absolute;
+            left: calc(9vw / 4 * 3);; bottom: -1vw;
+            width: calc(9vw / 4);
+            height: calc(9vw / 4);
+            border-radius: 50%;
+            background-color: #333;
+        }
+        .ghost1, .ghost1 .tail1, .ghost1 .tail2, .ghost1 .tail3, .ghost1 .tail4 {
             background-color: #ce293d;
         }
-        .ghost2, .ghost2 .tail1, .ghost2 .tail2, .ghost2 .tail3 {
+        .ghost2, .ghost2 .tail1, .ghost2 .tail2, .ghost2 .tail3, .ghost2 .tail4 {
             background-color: #e5a8cf;
         }
-        .ghost3, .ghost3 .tail1, .ghost3 .tail2, .ghost3 .tail3 {
+        .ghost3, .ghost3 .tail1, .ghost3 .tail2, .ghost3 .tail3, .ghost3 .tail4 {
             background-color: #62d6c2;
         }
-        .ghost4, .ghost4 .tail1, .ghost4 .tail2, .ghost4 .tail3 {
+        .ghost4, .ghost4 .tail1, .ghost4 .tail2, .ghost4 .tail3, .ghost4 .tail4 {
             background-color: #e5893d;
         }
 
@@ -159,6 +167,7 @@
                 <div class="tail1"></div>
                 <div class="tail2"></div>
                 <div class="tail3"></div>
+                <div class="tail4"></div>
             </div>
         </div>
         <div class="ghost ghost2">
@@ -170,6 +179,7 @@
                 <div class="tail1"></div>
                 <div class="tail2"></div>
                 <div class="tail3"></div>
+                <div class="tail4"></div>
             </div>
         </div>
         <div class="ghost ghost3">
@@ -181,6 +191,7 @@
                 <div class="tail1"></div>
                 <div class="tail2"></div>
                 <div class="tail3"></div>
+                <div class="tail4"></div>
             </div>
         </div>
         <div class="ghost ghost4">
@@ -192,6 +203,7 @@
                 <div class="tail1"></div>
                 <div class="tail2"></div>
                 <div class="tail3"></div>
+                <div class="tail4"></div>
             </div>
         </div>
         <div class="foods">
@@ -205,12 +217,6 @@
             <div class="food"></div>
         </div>
     </div>
-    <section id="section7">
-        <div class="sec7__header">
-            <!-- 오락실 게임 -->
-        </div>
-        <div class="sec7__body"></div>
-    </section>
     
 </body>
 </html>
