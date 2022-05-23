@@ -34,6 +34,13 @@
         <div class="frame">
             <iframe src="heart/heart.html" frameborder="0"></iframe>
         </div>
+        <div class="loader loader__active">
+          <div class="loader__tile"></div>
+          <div class="loader__tile"></div>
+          <div class="loader__tile"></div>
+          <div class="loader__tile"></div>
+          <div class="loader__tile"></div>
+        </div>
     </section>
 
     <main>
@@ -277,7 +284,9 @@
                 </div>
                 <div class="sec6__body">
                         <p>PLAY THe GAME <svg></svg></p>
-                        <iframe class="iframe" src="../../game/index.html" frameborder="0"></iframe>
+                        <div class="iframe">
+                            <iframe src="../../game/index.html" frameborder="0"></iframe>
+                        </div>
                 </div>
             </section>
             
@@ -311,7 +320,14 @@
     <script>
         window.onresize = () => {
             location.reload();
-            }
+        }
+
+        const loaders = document.querySelector(".loader");
+        window.onload = function(){
+            setTimeout(() => {
+                loaders.classList.remove('loader__active');
+            }, 1000);
+        };
     </script>
 
 

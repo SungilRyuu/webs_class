@@ -6,115 +6,99 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
-    html {
-      background-color: #5138BE;
-      height: 100%;
+    * {
+      margin: 0;
+      padding: 0;
     }
-    
     body {
-      color: #FFFFFF;
-      display: flex;
+      background-color: #ccc;
     }
-    
-    .Words {
-      margin: 0 auto;
-      padding: 80px 0;
-      font-family: "VitroPride", Helvetica, Arial, sans-serif;
-      font-size: 68px;
-      font-weight: 900;
-      letter-spacing: -2px;
-      text-transform: uppercase;
-      transform: translate3d(0, 0, 0);
-      -webkit-font-smoothing: antialiased;
-      -webkit-font-kerning: normal;
-      -webkit-text-size-adjust: 100%;
-    }
-    
-    .Words-line {
-      height: 50px;
-      overflow: hidden;
-      position: relative;
-    }
-    .Words-line:nth-child(odd) {
-      transform: skew(60deg, -30deg) scaleY(0.66667);
-    }
-    .Words-line:nth-child(even) {
-      transform: skew(0deg, -30deg) scaleY(1.33333);
-    }
-    .Words-line:nth-child(1) {
-      left: 29px;
-    }
-    .Words-line:nth-child(2) {
-      left: 58px;
-    }
-    .Words-line:nth-child(3) {
-      left: 87px;
-    }
-    .Words-line:nth-child(4) {
-      left: 116px;
-    }
-    .Words-line:nth-child(5) {
-      left: 145px;
-    }
-    .Words-line:nth-child(6) {
-      left: 174px;
-    }
-    .Words-line:nth-child(7) {
-      left: 203px;
-    }
-    
-    /*
-    ** Fine-grained text styles
-    */
-    p {
-      height: 50px;
-      line-height: 45px;
-      padding: 0 10px;
-      transition: all 0.4s ease-in-out;
-      transform: translate3d(0, 0, 0);
-      vertical-align: top;
-      white-space: nowrap;
-    }
-    
-    /*
-    ** The hover interaction
-    */
-    .Words:hover p {
-      transform: translate3d(0, -50px, 0);
-    }</style>
+
+.loader {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100vh;
+  transition: width 0s 1.4s ease;
+}
+.loader .loader__tile {
+  position: absolute;
+  left: 0;
+  width: 0;
+  height: 20%;
+  background-color: #007AE5;
+  transition: width 0.7s ease;
+}
+.loader .loader__tile:nth-child(0) {
+  top: calc(-1 * 20%);
+  transition-delay: -0.2s;
+}
+.loader .loader__tile:nth-child(1) {
+  top: calc(0 * 20%);
+  transition-delay: 0s;
+}
+.loader .loader__tile:nth-child(2) {
+  top: calc(1 * 20%);
+  transition-delay: 0.2s;
+}
+.loader .loader__tile:nth-child(3) {
+  top: calc(2 * 20%);
+  transition-delay: 0.4s;
+}
+.loader .loader__tile:nth-child(4) {
+  top: calc(3 * 20%);
+  transition-delay: 0.6s;
+}
+.loader .loader__tile:nth-child(5) {
+  top: calc(4 * 20%);
+  transition-delay: 0.8s;
+}
+.loader--active {
+  width: 100%;
+  transition-delay: 0s;
+}
+.loader--active .loader__tile {
+  width: 100%;
+}
+.loader--active .loader__tile:nth-child(0) {
+  transition-delay: -0.2s;
+}
+.loader--active .loader__tile:nth-child(1) {
+  transition-delay: 0s;
+}
+.loader--active .loader__tile:nth-child(2) {
+  transition-delay: 0.2s;
+}
+.loader--active .loader__tile:nth-child(3) {
+  transition-delay: 0.4s;
+}
+.loader--active .loader__tile:nth-child(4) {
+  transition-delay: 0.6s;
+}
+.loader--active .loader__tile:nth-child(5) {
+  transition-delay: 0.8s;
+}
+  </style>
 </head>
 <body>
+  <div class="loader loader--active">
+    <div class="loader__tile"></div>
+    <div class="loader__tile"></div>
+    <div class="loader__tile"></div>
+    <div class="loader__tile"></div>
+    <div class="loader__tile"></div>
+  </div>
 
-  <ul class="Words">
-    <li class="Words-line">
-      <p>&nbsp;</p>
-      <p>안녕하세요,</p>
-    </li>
-    <li class="Words-line">
-      <p>안녕하세요,</p>
-      <p>신입 프론트엔드 개발자 류성일입니다.</p>
-    </li>
-    <li class="Words-line">
-      <p>신입 프론트엔드 개발자 류성일입니다.</p>
-      <p>위기를 기회로</p>
-    </li>
-    <li class="Words-line">
-      <p>위기를 기회로</p>
-      <p>실패를 성공의 밑바탕으로</p>
-    </li>
-    <li class="Words-line">
-      <p>실패를 성공의 밑바탕으로</p>
-      <p>레몬을 레몬에이드로 만들 수 있는</p>
-    </li>
-    <li class="Words-line">
-      <p>레몬을 레몬에이드로 만들 수 있는</p>
-      <p>탐구하는 개발자가 되도록 노력하겠습니다.</p>
-    </li>
-    <li class="Words-line">
-      <p>탐구하는 개발자가 되도록 노력하겠습니다.</p>
-      <p>&nbsp;</p>
-    </li>
-  </ul>
-  
+  <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
+  <script>
+    var $loader = document.querySelector('.loader')
+
+  window.onload = function() {
+    $loader.classList.remove('loader--active')
+  };
+
+  </script>
 </body>
 </html>
