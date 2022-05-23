@@ -439,7 +439,9 @@ background-size:100px 100px;
   position: relative;
   border: 0;
   z-index: 10;
+  animation: pacman 5s linear infinite;
 }
+
 .pacman .mouth {
   top: 50%; left: 50%;
   transform: translate3d(-50%, -50%, 0);
