@@ -1,3 +1,8 @@
+/* 영역확인 */
+/* #section5 {border: 10px solid red;}
+#section6 {border: 10px solid red;}
+#section7 {border: 10px solid red;} */
+
 /* 효과 */
 /* sec1 */
 .sec1__text {}
@@ -855,8 +860,8 @@ background-size:100px 100px;
   transition: width 0s 1.4s ease;
 }
 .loader__active {
-width: 100%;
-transition-delay: 0s;
+  width: 100%;
+  transition-delay: 0s;
 }
 .loader .loader__tile {
   width: 0;
