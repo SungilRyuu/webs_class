@@ -434,6 +434,7 @@ background-size:100px 100px;
   position: relative;
   display: flex;
   overflow: hidden;
+  padding: 2.5vw 0;
   
   /* background: #000; */
 }
@@ -467,8 +468,8 @@ background-size:100px 100px;
 }
 @keyframes foody2 {
   0% {opacity: 1;}
-  7% {opacity: 1;}
-  8% {opacity: 0;}
+  9.5% {opacity: 1;}
+  10% {opacity: 0;}
   99% {opacity: 0;}
   100% {opacity: 1;}
 }
@@ -477,8 +478,8 @@ background-size:100px 100px;
 }
 @keyframes foody3 {
   0% {opacity: 1;}
-  15% {opacity: 1;}
-  16% {opacity: 0;}
+  16% {opacity: 1;}
+  17% {opacity: 0;}
   99% {opacity: 0;}
   100% {opacity: 1;}
 }
@@ -487,8 +488,8 @@ background-size:100px 100px;
 }
 @keyframes foody4 {
   0% {opacity: 1;}
-  23% {opacity: 1;}
-  24% {opacity: 0;}
+  22% {opacity: 1;}
+  23% {opacity: 0;}
   99% {opacity: 0;}
   100% {opacity: 1;}
 }
@@ -497,8 +498,8 @@ background-size:100px 100px;
 }
 @keyframes foody4 {
   0% {opacity: 1;}
-  27% {opacity: 1;}
-  28% {opacity: 0;}
+  25.5% {opacity: 1;}
+  26% {opacity: 0;}
   99% {opacity: 0;}
   100% {opacity: 1;}
 }
@@ -507,8 +508,8 @@ background-size:100px 100px;
 }
 @keyframes foody5 {
   0% {opacity: 1;}
-  35% {opacity: 1;}
-  36% {opacity: 0;}
+  34.5% {opacity: 1;}
+  35.5% {opacity: 0;}
   99% {opacity: 0;}
   100% {opacity: 1;}
 }
@@ -527,8 +528,8 @@ background-size:100px 100px;
 }
 @keyframes foody7 {
   0% {opacity: 1;}
-  52% {opacity: 1;}
-  53% {opacity: 0;}
+  51.5% {opacity: 1;}
+  52% {opacity: 0;}
   99% {opacity: 0;}
   100% {opacity: 1;}
 }
@@ -537,8 +538,8 @@ background-size:100px 100px;
 }
 @keyframes foody8 {
   0% {opacity: 1;}
-  59% {opacity: 1;}
-  60% {opacity: 0;}
+  59.5% {opacity: 1;}
+  60.5% {opacity: 0;}
   99% {opacity: 0;}
   100% {opacity: 1;}
 }
