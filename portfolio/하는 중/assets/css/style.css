@@ -428,6 +428,7 @@ background-size:100px 100px;
 .pacman__wrap {
   position: relative;
   display: flex;
+  overflow: hidden;
   
   /* background: #000; */
 }
@@ -438,10 +439,104 @@ background-size:100px 100px;
   background: #f3c04b;
   position: relative;
   border: 0;
-  z-index: 10;
-  animation: pacman 5s linear infinite;
+  z-index: 6;
 }
-
+.pacman, .ghost1, .ghost2, .ghost3, .ghost4 {
+  animation: pacman 10s linear infinite;
+}
+@keyframes pacman {
+  0% {transform: translateX(-600%);}
+  100% {transform: translateX(+1100%);}
+}
+.food:nth-child(1) {
+  animation: foody1 10s linear infinite;
+}
+@keyframes foody1 {
+  0% {opacity: 1;}
+  1% {opacity: 0;}
+  99% {opacity: 0;}
+  100% {opacity: 1;}
+}
+.food:nth-child(2) {
+  animation: foody2 10s linear infinite;
+}
+@keyframes foody2 {
+  0% {opacity: 1;}
+  7% {opacity: 1;}
+  8% {opacity: 0;}
+  99% {opacity: 0;}
+  100% {opacity: 1;}
+}
+.food:nth-child(3) {
+  animation: foody3 10s linear infinite;
+}
+@keyframes foody3 {
+  0% {opacity: 1;}
+  15% {opacity: 1;}
+  16% {opacity: 0;}
+  99% {opacity: 0;}
+  100% {opacity: 1;}
+}
+.food:nth-child(4) {
+  animation: foody4 10s linear infinite;
+}
+@keyframes foody4 {
+  0% {opacity: 1;}
+  23% {opacity: 1;}
+  24% {opacity: 0;}
+  99% {opacity: 0;}
+  100% {opacity: 1;}
+}
+.food:nth-child(4) {
+  animation: foody4 10s linear infinite;
+}
+@keyframes foody4 {
+  0% {opacity: 1;}
+  27% {opacity: 1;}
+  28% {opacity: 0;}
+  99% {opacity: 0;}
+  100% {opacity: 1;}
+}
+.food:nth-child(5) {
+  animation: foody5 10s linear infinite;
+}
+@keyframes foody5 {
+  0% {opacity: 1;}
+  35% {opacity: 1;}
+  36% {opacity: 0;}
+  99% {opacity: 0;}
+  100% {opacity: 1;}
+}
+.food:nth-child(6) {
+  animation: foody6 10s linear infinite;
+}
+@keyframes foody6 {
+  0% {opacity: 1;}
+  44% {opacity: 1;}
+  45% {opacity: 0;}
+  99% {opacity: 0;}
+  100% {opacity: 1;}
+}
+.food:nth-child(7) {
+  animation: foody7 10s linear infinite;
+}
+@keyframes foody7 {
+  0% {opacity: 1;}
+  52% {opacity: 1;}
+  53% {opacity: 0;}
+  99% {opacity: 0;}
+  100% {opacity: 1;}
+}
+.food:nth-child(8) {
+  animation: foody8 10s linear infinite;
+}
+@keyframes foody8 {
+  0% {opacity: 1;}
+  59% {opacity: 1;}
+  60% {opacity: 0;}
+  99% {opacity: 0;}
+  100% {opacity: 1;}
+}
 .pacman .mouth {
   top: 50%; left: 50%;
   transform: translate3d(-50%, -50%, 0);
@@ -451,14 +546,17 @@ background-size:100px 100px;
   height: 10vw;
   clip-path: polygon(100% 74%, 44% 48%, 100% 21%);
   animation-name: eat;
-  animation-duration: 1s;
+  animation-duration: .5s;
   animation-iteration-count: infinite;
+  z-index: 8;
 }
 @keyframes eat {
   0% {clip-path: polygon(100% 74%, 44% 48%, 100% 21%);}
-  25% {clip-path: polygon(100% 60%, 44% 48%, 100% 40%);}
-  50% {clip-path: polygon(100% 50%, 44% 48%, 100% 50%);}
-  75% {clip-path: polygon(100% 59%, 44% 48%, 100% 35%);}
+  12.5% {clip-path: polygon(100% 60%, 44% 48%, 100% 40%);}
+  25% {clip-path: polygon(100% 50%, 44% 48%, 100% 50%);}
+  37.5% {clip-path: polygon(100% 59%, 44% 48%, 100% 35%);}
+  50% {clip-path: polygon(100% 74%, 44% 48%, 100% 21%);}
+  51% {clip-path: polygon(100% 74%, 44% 48%, 100% 21%);}
   100% {clip-path: polygon(100% 74%, 44% 48%, 100% 21%);}
 }
 .foods {
@@ -466,13 +564,14 @@ background-size:100px 100px;
   left: 0;top: 50%;
   transform: translateY(-50%);
   display: flex;
-  z-index: 9;
+  z-index: 7;
 }
 .food {
   width: 3vw; height: 3vw;
   border-radius: 50%;
   margin-right: 10vw;
   background: #f7b97e;
+  z-index: 8;
 }
 .food:last-child {
   margin-right: 0;
