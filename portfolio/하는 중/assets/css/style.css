@@ -217,6 +217,7 @@ background-size:100px 100px;
   margin-right: 1vw;
 }
 @media (min-width:1200px) {
+  #section2 {height: 100vh;}
   .sec2__text1 {font-size: 4.2rem;}
   .sec2__text2 {font-size: 4.7rem;}
   .sec2__text3 {font-size: 9.65rem; margin-top: 0.3em;margin-bottom: 0.8em;}
@@ -242,6 +243,7 @@ background-size:100px 100px;
   margin-top: 10vw;
   text-align: left;
   font-size: 2.8vw;
+  line-height: 1.6;
 }
 .sec4__desc {
   margin-top: 10vw;
@@ -286,13 +288,10 @@ background-size:100px 100px;
 }
 
 @media (min-width:1200px) {
-  #section4 {
-    width: 80%;
-    max-width: 1000px;
-    /* border: 1px solid red; */
-  }
+  #section4 {width: 80%;max-width: 1000px;}
   .sec4__wise {margin-top: 5em; font-size: 3rem;}
   .sec4__info {margin-top: 2em; font-size: 2rem;}
+  .sec4__desc {margin-top: 10em;}
   .sec4__desc a {font-size: 2rem;}
   .sec4__skills .inner span {font-size: 2.4rem; padding: 0.5rem 0;}
   .sec5__title {margin-top: 3em; font-size: 5rem; margin-bottom: 3em;}

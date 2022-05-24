@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Akshar:wght@400&display=swap" rel="stylesheet">
   <title>Document</title>
   <style>
     * {
@@ -15,30 +17,28 @@
     }
     #section1 {
       width: 100%;
-      height: 100vh;
     }
     .sec1__title {
       width: 100%;
       white-space: nowrap;
       line-height: 1;
-      padding-top: 3vw;
+      padding: 3vw 0;
     }
     .sec1__title .letters {
-      width: 70vw;
-      margin: 0 auto;
       overflow: hidden;
+      font-family: 'Akshar';
+      letter-spacing: 0.2vw;
     }
     .sec1__title .letters .desc {
       font-size: 1vw;
-      text-align: right;
+      font-family: 'Noto Sans KR';
+      text-align: center;
     }
     .sec1__title .letters .title {
       font-size: 7.3vw;
       width: 100%;
-      /* transform: scaleX(0.5); */
       text-align: center;
       font-weight: 900;
-      letter-spacing: -.5vw;
     }
     .sec1__hook {
       width: 70vw;
@@ -103,7 +103,7 @@
     }
     .sec1__wrap p {position: absolute; right: 0; bottom: 0; text-align: right; font-size: 0.9vw; line-height: 150%; transform: scaleY(1.2);}
 
-    .gallery {position: absolute; background: #fff; border: 2px solid #000;  background-position: center center; background-size: cover; z-index: 10;}
+    .gallery {position: absolute; background: #fff; border: 2px solid #000;  background-position: center center; background-size: cover; z-index: 10; transition: filter 0.3s ease;}
     .gallery1 {left: 3.5vw; top: 1.8vw; width: 12.6vw; height: 9.7vw; background-image: url("https://source.unsplash.com/featured/?travel");}
     .gallery2 {left: 20.6vw; top: 1.8vw; width: 6.6vw; height: 9.7vw; background-image: url("https://source.unsplash.com/featured/?Ferris+wheel");}
     .gallery3 {left: 32.7vw; top: 1.2vw; width: 9.6vw; height: 14.1vw; background-image: url("https://source.unsplash.com/featured/?museum+art");}
@@ -116,10 +116,19 @@
     .gallery10 {left: 32.8vw; top: 20.0vw; width: 7.6vw; height: 7.7vw; border-radius: 50%; background-image: url("https://source.unsplash.com/featured/?Africa");}
     /* .gallery11 {left: 20.6vw; top: 14.3vw; width: 8.1vw; height: 5vw;} */
     .gallery12 {left: 22.7vw; top: 15.2vw; width: 9.6vw; height: 14.8vw; background-image: url("https://source.unsplash.com/featured/?tour");}
-    .gallery13 {left: 9.2vw; top: 23.3vw; width: 7.6vw; height: 6.6vw;background-image: url("https://source.unsplash.com/featured/?Loud");}
+    .gallery13 {left: 9.2vw; top: 23.3vw; width: 7.6vw; height: 6.6vw;background-image: url("https://source.unsplash.com/featured/?Vienna");}
     .gallery14 {left: 14.9vw; top: 13.6vw; width: 5.1vw; height: 6.6vw; background-image: url("https://source.unsplash.com/featured/?london+city");}
     .gallery15 {left: 0; top: 13.4vw; width: 7.6vw; height: 12.7vw; background-image: url("https://source.unsplash.com/featured/interior+design");}
 
+    .gallery p {opacity: 0; transition: opacity 0.4s ease;}
+    .gallery:hover p {opacity: 1; color: #fff; background: #000;font-family: 'Akshar'; font-size: 1vw;}
+    .gallery:hover {filter: grayscale(50%);}
+    @media (max-width: 900px) {
+    .gallery:hover p {opacity: 0;}
+    .gallery:hover {filter: none;}
+    }
+    /* blur(2px) */
+    #section2 { width: 100%; height: 100vh; background: pink;}
   </style>
 </head>
 <body>
@@ -142,26 +151,28 @@
       <div class="wire wire15"><div class="top"></div><div class="line"></div><div class="bottom"></div></div>
     </div>
     <div class="sec1__wrap">
-      <div class="gallery gallery1"></div>
-      <div class="gallery gallery2"></div>
-      <div class="gallery gallery3"></div>
-      <div class="gallery gallery4"></div>
-      <div class="gallery gallery5"></div>
-      <div class="gallery gallery6"></div>
-      <div class="gallery gallery7"></div>
-      <div class="gallery gallery8"></div>
-      <!-- <div class="gallery gallery9"></div> -->
+      <div class="gallery gallery1"><p>TRAVEL</p></div>
+      <div class="gallery gallery2"><p>FERRIS WHEEL</p></div>
+      <div class="gallery gallery3"><p>ART</p></div>
+      <div class="gallery gallery4"><p>MAGAZINE</p></div>
+      <div class="gallery gallery5"><p>POSTER</p></div>
+      <div class="gallery gallery6"><p>ROME</p></div>
+      <div class="gallery gallery7"><p>OLYMPICS</p></div>
+      <div class="gallery gallery8"><p>FILM</p></div>
+      <!-- <div class="gallery gallery9"><p>TRAVEL</p></div> -->
       <div class="gallery gallery10"></div>
-      <!-- <div class="gallery gallery11"></div> -->
-      <div class="gallery gallery12"></div>
-      <div class="gallery gallery13"></div>
-      <div class="gallery gallery14"></div>
-      <div class="gallery gallery15"></div>
+      <!-- <div class="gallery gallery11"><p>TRAVEL</p></div> -->
+      <div class="gallery gallery12"><p>TOUR</p></div>
+      <div class="gallery gallery13"><p>Vienna</p></div>
+      <div class="gallery gallery14"><p>LONDON</p></div>
+      <div class="gallery gallery15"><p>INTERIOR</p></div>
     </div>
     <div class="sec1__title"><div class="letters">
-      <p class="desc">unsplash API를 활용하여 화면을 구성하였습니다. 새로고침을 누르면 사진이 변경됩니다.</p>
       <p class="title">FRONTEND PORTFOLIO</p>
+      <p class="desc">unsplash API를 활용하여 화면을 구성하였습니다. 새로고침을 누르면 사진이 변경됩니다.</p>
     </div></div>
   </section>
+
+  <section id="section2"></section>
 </body>
 </html>

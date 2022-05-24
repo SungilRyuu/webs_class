@@ -12,6 +12,7 @@
 
 
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/popup.css">
     <title>Portfolio</title>
 </head>
 <body>
@@ -67,8 +68,8 @@
                     신입 프론트엔드 개발자 류성일입니다.<br>
                     <br>
                     위기를 기회로<br>
-                    실패를 성공의 밑바탕으로<br>
-                    레몬을 레몬에이드로 만들 수 있는<br>
+                    실패를 도전의 밑바탕으로<br>
+                    고민하고 반성하고 깊이 생각하는<br>
                     탐구하는 개발자가 되도록 노력하겠습니다.
                 </div>
                 <div class="sec4__desc">
@@ -312,12 +313,40 @@
     </section>
         </div>
 
+        <div class="popup__layout"></div>
+        <div class="popup">
+            <div class="popup__close">X</div>
+            <div class="popup__header">ABOUT ME</div>
+            <div class="popup__title">WHY DEVELOPER
+            <div class="popup__img"></div>
+            </div>
+            <div class="popup__body">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore, ipsa maiores? Odit perspiciatis vel facere quam sunt, debitis id magni laudantium ipsa tenetur aperiam amet commodi libero harum optio est.</div>
+            <div class="popup__footer"><a href="#1">닫기</a></div>
+        </div>
     </main>
 
     <!-- <div class="scrollTop">0</div> -->
     <!-- <script type="text/javascript" src="assets/js/skrollr.min.js"></script> -->
     <script type="text/javascript" src="assets/js/index.js"></script>
     <script>
+        const about = document.querySelectorAll(".sec4__desc a");
+        const popup = document.querySelector(".popup");
+        const popupClose1 = popup.querySelector(".popup__close");
+        const popupClose2 = popup.querySelector(".popup__footer a");
+        const popupLayout = document.querySelector(".popup__layout");
+        
+        about.forEach(el => {
+            el.addEventListener("click", () => {
+                popup.style.opacity = "1";
+                popupLayout.style.opacity = "0.5";
+            })
+        })
+        popupClose1.addEventListener("click", el => {
+            popup.style.opacity = "0";
+        })
+        popupClose2.addEventListener("click", el => {
+            popup.style.opacity = "0";
+        })
     </script>
 
 
