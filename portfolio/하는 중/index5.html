@@ -22,63 +22,122 @@
       height: 5px;
       margin: 0 auto;
       background: darkgrey;
+      position: relative;
     }
+    .wire .top {position: absolute; border: 1px solid #000; width: .3vw; height: 10px; background: #000;}
+    .wire1 .top {left: calc(3.5vw + 12.6vw / 2);}
+    .wire2 .top {left: calc(20.6vw + 6.6vw / 2);}
+    .wire3 .top {left: calc(32.7vw + 9.6vw / 2);}
+    .wire4 .top {left: calc(49.2vw + 5.2vw / 2);}
+    .wire5 .top {right: calc(9.7vw / 2);}
+    .wire6 .top {right: calc(15.2vw / 2);}
+    .wire7 .top {left: calc(44.6vw + 7.6vw / 2);}
+    .wire8 .top {left: calc(41.8vw + 9.8vw / 2); }
+    .wire9 .top {left: calc(33.4vw + 5vw / 2);}
+    .wire10 .top {left: calc(31.8vw + 7.6vw / 2);}
+    .wire11 .top {left: calc(20.6vw + 8.1vw / 2);}
+    .wire12 .top {left: calc(22.7vw + 9.6vw / 2);}
+    .wire13 .top {left: calc(9.2vw + 7.6vw / 2); }
+    .wire14 .top {left: calc(14.9vw + 5.1vw / 2);}
+    .wire15 .top {left: calc(7.6vw / 2);}
+
+    .wire .line {position: absolute; border: 1px solid #000; width: 0.01px; background: #000;}
+    .wire1 .line {left: calc(3.5vw + 12.6vw / 2 + 0.15vw); top: 0; height: calc(5vw + 1.8vw);}
+    .wire2 .line {left: calc(20.6vw + 6.6vw / 2 + 0.15vw); top: 0; height: calc(5vw + 1.8vw);}
+    .wire3 .line {left: calc(32.7vw + 9.6vw / 2 + 0.15vw); top: 0; height: calc(5vw + 1.2vw);}
+    .wire4 .line {left: calc(49.2vw + 5.2vw / 2 + 0.15vw); top: 0; height: calc(5vw);}
+    .wire5 .line {right: calc(9.7vw / 2 + 0.15vw); top: 0; height: calc(5vw);}
+    .wire6 .line {right: calc(15.2vw / 2 + 0.15vw); top: 0; height: calc(5vw + 18.5vw);}
+    .wire7 .line {left: calc(44.6vw + 7.6vw / 2 + 0.15vw); top: 0; height: calc(5vw + 9.2vw);}
+    .wire8 .line {left: calc(41.8vw + 9.8vw / 2 + 0.15vw);  top: 0; height: calc(5vw + 20.2vw);}
+    .wire9 .line {left: calc(33.4vw + 5vw / 2 + 0.15vw); top: 0; height: calc(5vw + 18.5vw);}
+    .wire10 .line {left: calc(31.8vw + 7.6vw / 2 + 0.15vw); top: 0; height: calc(5vw + 27.0vw);}
+    .wire11 .line {left: calc(20.6vw + 8.1vw / 2 + 0.15vw); top: 0; height: calc(5vw + 14.3vw);}
+    .wire12 .line {left: calc(22.7vw + 9.6vw / 2 + 0.15vw); top: 0; height: calc(5vw + 15.2vw);}
+    .wire13 .line {left: calc(9.2vw + 7.6vw / 2 + 0.15vw); top: 0; height: calc(5vw + 23.3vw);}
+    .wire14 .line {left: calc(14.9vw + 5.1vw / 2 + 0.15vw); top: 0; height: calc(5vw + 13.6vw);}
+    .wire15 .line {left: calc(7.6vw / 2 + 0.15vw); top: 0; height: calc(5vw + 13.4vw);}
+
+    .wire .bottom {position: absolute; border: 1px solid #000; width: .3vw; height: 10px; background: #000;}
+    .wire1 .bottom {left: calc(3.5vw + 12.6vw / 2); top: calc(5vw + 1.8vw);}
+    .wire2 .bottom {left: calc(20.6vw + 6.6vw / 2); top: calc(5vw + 1.8vw);}
+    .wire3 .bottom {left: calc(32.7vw + 9.6vw / 2); top: calc(5vw + 1.2vw);}
+    .wire4 .bottom {left: calc(49.2vw + 5.2vw / 2); top: calc(5vw);}
+    .wire5 .bottom {right: calc(9.7vw / 2); top: calc(5vw);}
+    .wire6 .bottom {right: calc(15.2vw / 2); top: calc(5vw + 18.5vw);}
+    .wire7 .bottom {left: calc(44.6vw + 7.6vw / 2); top: calc(5vw + 9.2vw);}
+    .wire8 .bottom {left: calc(41.8vw + 9.8vw / 2);  top: calc(5vw + 20.2vw);}
+    .wire9 .bottom {left: calc(33.4vw + 5vw / 2); top: calc(5vw + 18.5vw);}
+    .wire10 .bottom {left: calc(31.8vw + 7.6vw / 2); top: calc(5vw + 27.0vw);}
+    .wire11 .bottom {left: calc(20.6vw + 8.1vw / 2); top: calc(5vw + 14.3vw);}
+    .wire12 .bottom {left: calc(22.7vw + 9.6vw / 2); top: calc(5vw + 15.2vw);}
+    .wire13 .bottom {left: calc(9.2vw + 7.6vw / 2);  top: calc(5vw + 23.3vw);}
+    .wire14 .bottom {left: calc(14.9vw + 5.1vw / 2); top: calc(5vw + 13.6vw);}
+    .wire15 .bottom {left: calc(7.6vw / 2); top: calc(5vw + 13.4vw);}
+
     .sec1__wrap {
       width: 70vw;
       height: 35vw;
       margin: 0 auto;
       margin-top: 5vw;
-      border: 5px solid red;
+      /* border: 5px solid red; */
       position: relative;
     }
 
-    .gallery {position: absolute; background: #fff; border: 1.5px solid #000;}
-    .gallery1 {left: 3.5vw; top: 1.8vw; width: 12.6vw; height: 9.7vw;}
-    .gallery2 {left: 20.6vw; top: 1.8vw; width: 6.6vw; height: 9.7vw;}
-    .gallery3 {left: 32.4vw; top: 1.2vw; width: 9.6vw; height: 14.1vw;}
-    .gallery4 {left: 49.2vw; top: 0; width: 5.2vw; height: 7.6vw;}
-    .gallery5 {right: 0; top: 0; width: 9.7vw; height: 15.1vw;}
-    .gallery6 {right: 0; top: 18.5vw; width: 15.2vw; height: 10.6vw;}
-    .gallery7 {left: 44.6vw; top: 9.2vw; width: 7.6vw; height: 10.1vw;}
-    .gallery8 {left: 41.8vw; top: 20.2vw; width: 9.8vw; height: 14.8vw;}
-    .gallery9 {left: 33.4vw; top: 18.5vw; width: 5vw; height: 7.6vw;}
-    .gallery10 {left: 31.8vw; top: 26.5vw; width: 7.6vw; height: 7.7vw; border-radius: 50%;}
-    .gallery11 {left: 20.6vw; top: 14.3vw; width: 8.1vw; height: 5vw;}
-    .gallery12 {left: 20.2vw; top: 20.2vw; width: 9.6vw; height: 14.8vw;}
-    .gallery13 {left: 9.2vw; top: 23.3vw; width: 7.6vw; height: 6.6vw;}
-    .gallery14 {left: 10.9vw; top: 13.6vw; width: 5.1vw; height: 6.6vw;}
-    .gallery15 {left: 0; top: 13.4vw; width: 7.6vw; height: 12.7vw;}
+    .gallery {position: absolute; background: #fff; border: 2px solid #000;  background-position: center center; background-size: cover;}
+    .gallery1 {left: 3.5vw; top: 1.8vw; width: 12.6vw; height: 9.7vw; background-image: url("https://source.unsplash.com/featured/?travel");}
+    .gallery2 {left: 20.6vw; top: 1.8vw; width: 6.6vw; height: 9.7vw; background-image: url("https://source.unsplash.com/featured/?Iran");}
+    .gallery3 {left: 32.7vw; top: 1.2vw; width: 9.6vw; height: 14.1vw; background-image: url("https://source.unsplash.com/featured/?Rodin");}
+    .gallery4 {left: 49.2vw; top: 0; width: 5.2vw; height: 7.6vw; background-image: url("https://source.unsplash.com/featured/?vangogh");}
+    .gallery5 {right: 0; top: 0; width: 9.7vw; height: 15.1vw; background-image: url("https://source.unsplash.com/featured/?Poster");}
+    /* .gallery6 {right: 0; top: 18.5vw; width: 15.2vw; height: 10.6vw;} */
+    .gallery7 {left: 44.6vw; top: 9.2vw; width: 7.6vw; height: 10.1vw; background-image: url("https://source.unsplash.com/featured/?olympics");}
+    /* .gallery8 {left: 41.8vw; top: 20.2vw; width: 9.8vw; height: 14.8vw;} */
+    /* .gallery9 {left: 33.4vw; top: 18.5vw; width: 5vw; height: 7.6vw;} */
+    /* .gallery10 {left: 31.8vw; top: 27.0vw; width: 7.6vw; height: 7.7vw; border-radius: 50%;} */
+    /* .gallery11 {left: 20.6vw; top: 14.3vw; width: 8.1vw; height: 5vw;} */
+    .gallery12 {left: 22.7vw; top: 15.2vw; width: 9.6vw; height: 14.8vw; background-image: url("https://source.unsplash.com/featured/?tour");}
+    /* .gallery13 {left: 9.2vw; top: 23.3vw; width: 7.6vw; height: 6.6vw;} */
+    .gallery14 {left: 14.9vw; top: 13.6vw; width: 5.1vw; height: 6.6vw; background-image: url("https://source.unsplash.com/featured/?skiing");}
+    .gallery15 {left: 0; top: 13.4vw; width: 7.6vw; height: 12.7vw; background-image: url("https://source.unsplash.com/featured/interior");}
 
-    .wires {}
   </style>
 </head>
 <body>
   <section id="section1">
-    <div class="sec1__hook"></div>
+    <div class="sec1__hook">
+      <div class="wire wire1"><div class="top"></div><div class="line"></div><div class="bottom"></div></div>
+      <div class="wire wire2"><div class="top"></div><div class="line"></div><div class="bottom"></div></div>
+      <div class="wire wire3"><div class="top"></div><div class="line"></div><div class="bottom"></div></div>
+      <div class="wire wire4"><div class="top"></div><div class="line"></div><div class="bottom"></div></div>
+      <div class="wire wire5"><div class="top"></div><div class="line"></div><div class="bottom"></div></div>
+      <!-- <div class="wire wire6"><div class="top"></div><div class="line"></div><div class="bottom"></div></div> -->
+      <div class="wire wire7"><div class="top"></div><div class="line"></div><div class="bottom"></div></div>
+      <!-- <div class="wire wire8"><div class="top"></div><div class="line"></div><div class="bottom"></div></div> -->
+      <!-- <div class="wire wire9"><div class="top"></div><div class="line"></div><div class="bottom"></div></div> -->
+      <!-- <div class="wire wire10"><div class="top"></div><div class="line"></div><div class="bottom"></div></div>
+      <div class="wire wire11"><div class="top"></div><div class="line"></div><div class="bottom"></div></div> -->
+      <div class="wire wire12"><div class="top"></div><div class="line"></div><div class="bottom"></div></div>
+      <!-- <div class="wire wire13"><div class="top"></div><div class="line"></div><div class="bottom"></div></div> -->
+      <div class="wire wire14"><div class="top"></div><div class="line"></div><div class="bottom"></div></div>
+      <div class="wire wire15"><div class="top"></div><div class="line"></div><div class="bottom"></div></div>
+    </div>
     <div class="sec1__wrap">
       <div class="gallery gallery1"></div>
       <div class="gallery gallery2"></div>
       <div class="gallery gallery3"></div>
       <div class="gallery gallery4"></div>
       <div class="gallery gallery5"></div>
-      <div class="gallery gallery6"></div>
+      <!-- <div class="gallery gallery6"></div> -->
       <div class="gallery gallery7"></div>
-      <div class="gallery gallery8"></div>
-      <div class="gallery gallery9"></div>
-      <div class="gallery gallery10"></div>
-      <div class="gallery gallery11"></div>
+      <!-- <div class="gallery gallery8"></div> -->
+      <!-- <div class="gallery gallery9"></div> -->
+      <!-- <div class="gallery gallery10"></div> -->
+      <!-- <div class="gallery gallery11"></div> -->
       <div class="gallery gallery12"></div>
-      <div class="gallery gallery13"></div>
+      <!-- <div class="gallery gallery13"></div> -->
       <div class="gallery gallery14"></div>
       <div class="gallery gallery15"></div>
-    </div>
-    <div class="wires">
-      <div class="wire wire1"><div class="top"></div><div class="line"></div><div class="bottome"></div></div>
-      <div class="wire wire1">
-        <div class="top"></div>
-        <div class="line"></div>
-        <div class="bottome"></div>
-      </div>
     </div>
   </section>
 </body>
