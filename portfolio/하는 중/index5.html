@@ -11,94 +11,75 @@
       padding: 0;
     }
     body {
-      background-color: #ccc;
+      background-color: #eee;
+    }
+    #section1 {
+      width: 100%;
+      height: 100vh;
+    }
+    .sec1__hook {
+      width: 70vw;
+      height: 5px;
+      margin: 0 auto;
+      background: darkgrey;
+    }
+    .sec1__wrap {
+      width: 70vw;
+      height: 35vw;
+      margin: 0 auto;
+      margin-top: 5vw;
+      border: 5px solid red;
+      position: relative;
     }
 
-.loader {
-  position: fixed;
-  z-index: 999;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100vh;
-  transition: width 0s 1.4s ease;
-}
-.loader .loader__tile {
-  position: absolute;
-  left: 0;
-  width: 0;
-  height: 20%;
-  background-color: #007AE5;
-  transition: width 0.7s ease;
-}
-.loader .loader__tile:nth-child(0) {
-  top: calc(-1 * 20%);
-  transition-delay: -0.2s;
-}
-.loader .loader__tile:nth-child(1) {
-  top: calc(0 * 20%);
-  transition-delay: 0s;
-}
-.loader .loader__tile:nth-child(2) {
-  top: calc(1 * 20%);
-  transition-delay: 0.2s;
-}
-.loader .loader__tile:nth-child(3) {
-  top: calc(2 * 20%);
-  transition-delay: 0.4s;
-}
-.loader .loader__tile:nth-child(4) {
-  top: calc(3 * 20%);
-  transition-delay: 0.6s;
-}
-.loader .loader__tile:nth-child(5) {
-  top: calc(4 * 20%);
-  transition-delay: 0.8s;
-}
-.loader--active {
-  width: 100%;
-  transition-delay: 0s;
-}
-.loader--active .loader__tile {
-  width: 100%;
-}
-.loader--active .loader__tile:nth-child(0) {
-  transition-delay: -0.2s;
-}
-.loader--active .loader__tile:nth-child(1) {
-  transition-delay: 0s;
-}
-.loader--active .loader__tile:nth-child(2) {
-  transition-delay: 0.2s;
-}
-.loader--active .loader__tile:nth-child(3) {
-  transition-delay: 0.4s;
-}
-.loader--active .loader__tile:nth-child(4) {
-  transition-delay: 0.6s;
-}
-.loader--active .loader__tile:nth-child(5) {
-  transition-delay: 0.8s;
-}
+    .gallery {position: absolute; background: #fff; border: 1.5px solid #000;}
+    .gallery1 {left: 3.5vw; top: 1.8vw; width: 12.6vw; height: 9.7vw;}
+    .gallery2 {left: 20.6vw; top: 1.8vw; width: 6.6vw; height: 9.7vw;}
+    .gallery3 {left: 32.4vw; top: 1.2vw; width: 9.6vw; height: 14.1vw;}
+    .gallery4 {left: 49.2vw; top: 0; width: 5.2vw; height: 7.6vw;}
+    .gallery5 {right: 0; top: 0; width: 9.7vw; height: 15.1vw;}
+    .gallery6 {right: 0; top: 18.5vw; width: 15.2vw; height: 10.6vw;}
+    .gallery7 {left: 44.6vw; top: 9.2vw; width: 7.6vw; height: 10.1vw;}
+    .gallery8 {left: 41.8vw; top: 20.2vw; width: 9.8vw; height: 14.8vw;}
+    .gallery9 {left: 33.4vw; top: 18.5vw; width: 5vw; height: 7.6vw;}
+    .gallery10 {left: 31.8vw; top: 26.5vw; width: 7.6vw; height: 7.7vw; border-radius: 50%;}
+    .gallery11 {left: 20.6vw; top: 14.3vw; width: 8.1vw; height: 5vw;}
+    .gallery12 {left: 20.2vw; top: 20.2vw; width: 9.6vw; height: 14.8vw;}
+    .gallery13 {left: 9.2vw; top: 23.3vw; width: 7.6vw; height: 6.6vw;}
+    .gallery14 {left: 10.9vw; top: 13.6vw; width: 5.1vw; height: 6.6vw;}
+    .gallery15 {left: 0; top: 13.4vw; width: 7.6vw; height: 12.7vw;}
+
+    .wires {}
   </style>
 </head>
 <body>
-  <div class="loader loader--active">
-    <div class="loader__tile"></div>
-    <div class="loader__tile"></div>
-    <div class="loader__tile"></div>
-    <div class="loader__tile"></div>
-    <div class="loader__tile"></div>
-  </div>
-
-  <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
-  <script>
-    var $loader = document.querySelector('.loader')
-
-  window.onload = function() {
-    $loader.classList.remove('loader--active')
-  };
-
-  </script>
+  <section id="section1">
+    <div class="sec1__hook"></div>
+    <div class="sec1__wrap">
+      <div class="gallery gallery1"></div>
+      <div class="gallery gallery2"></div>
+      <div class="gallery gallery3"></div>
+      <div class="gallery gallery4"></div>
+      <div class="gallery gallery5"></div>
+      <div class="gallery gallery6"></div>
+      <div class="gallery gallery7"></div>
+      <div class="gallery gallery8"></div>
+      <div class="gallery gallery9"></div>
+      <div class="gallery gallery10"></div>
+      <div class="gallery gallery11"></div>
+      <div class="gallery gallery12"></div>
+      <div class="gallery gallery13"></div>
+      <div class="gallery gallery14"></div>
+      <div class="gallery gallery15"></div>
+    </div>
+    <div class="wires">
+      <div class="wire wire1"><div class="top"></div><div class="line"></div><div class="bottome"></div></div>
+      <div class="wire wire1">
+        <div class="top"></div>
+        <div class="line"></div>
+        <div class="bottome"></div>
+      </div>
+    </div>
+  </section>
 </body>
 </html>
