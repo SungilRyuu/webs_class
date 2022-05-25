@@ -113,9 +113,9 @@
       margin-top: 5vw;
       /* border: 5px solid red;  */
       position: relative;
-      overflow-x: hidden;
     }
-    .gallery {position: absolute; left: 0; top: 0; background-position: center center; background-size: cover; border: 0.1vw solid #000;}
+    .gallery {position: absolute; left: 0; top: 0; background-position: center center; background-size: cover; border: 0.1vw solid #000; filter: grayscale(75%) blur(1px); transition: filter 0.3s ease;}
+    .gallery:hover {filter: grayscale(0%) blur(0);}
     .gallery1 {left: 2.2vw; top: 11vw; width: 5.761vw; height: 7.65vw; background-image: url("https://source.unsplash.com/featured/?i̇spanya");}
     .gallery2 {left: 21.1vw; top: 3.8vw; width: 9.55vw; height: 7.35vw; background-image: url("https://source.unsplash.com/featured/?Ferris+wheel");}
     .gallery3 {left: 33.5vw; top: 3.2vw; width: 6.14vw; height: 3.79vw; background-image: url("https://source.unsplash.com/featured/?symbol");}
