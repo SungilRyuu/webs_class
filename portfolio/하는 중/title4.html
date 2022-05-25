@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Akshar:wght@400&display=swap" rel="stylesheet">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background-color: #eee;
+    }
+    #section1 {
+      width: 100%;
+      height: 100vh;
+    }
+    .sec1__hook {width: 100%; height: 0.7vw; background: lightgrey;}
+    .wire .top {position: absolute; width: .3vw; height: 1vw; top: 0; background: #000;}
+    .wire1 .top {left: calc(10.9vw + 9.3vw / 2);}
+    .wire2 .top {left: calc(23.3vw + 7.3vw / 2);}
+    .wire3 .top {left: calc(33vw + 9.8vw / 2);}
+    .wire4 .top {left: calc(45.8vw + 5.6vw / 2);}
+    .wire5 .top {left: calc(54.5vw + 6.4vw / 2);}
+    .wire6 .top {left: calc(63.3vw + 7.3vw / 2);}
+    .wire7 .top {left: calc(73vw + 7.3vw / 2);}
+    .wire8 .top {left: calc(82.6vw + 9.9vw / 2);}
+    .wire9 .top {left: calc(4.5vw + 11vw / 2);}
+    .wire10 .top {left: calc(19.6vw + 8.5vw / 2);}
+    .wire11 .top {left: calc(30.7vw + 6vw / 2);}
+    .wire12 .top {left: calc(39vw + 5.8vw / 2);}
+    .wire13 .top {left: calc(47.8vw + 6.4vw / 2);}
+    .wire14 .top {left: calc(56.9vw + 6vw / 2);}
+    .wire15 .top {left: calc(65.2vw + 7.4vw / 2);}
+    .wire16 .top {left: calc(74.7vw + 6vw / 2);}
+    .wire17 .top {left: calc(82.4vw + 8.2vw / 2);}
+
+    .wire18 .top {left: calc(2.2vw + 5.761vw / 2);}
+    .wire19 .top {left: calc(21.1vw + 9.55vw / 2);}  
+    .wire20 .top {left: calc(33.5vw + 6.14vw / 2);} 
+    .wire21 .top {left: calc(48.6vw + 8.6vw / 2);}  
+    .wire22 .top {left: calc(78vw + 5.76vw / 2);} 
+    .wire23 .top {left: calc(4.5vw + 5.76vw / 2);}  
+    .wire24 .top {left: calc(90.2vw + 5.2vw / 2);}  
+    .wire25 .top {left: calc(93.1vw + 7.35vw / 2);} 
+    .wire26 .top {left: calc(92.2vw + 5.76vw / 2);} 
+    
+    .wire .line {position: absolute; width: .01vw; top: 0; background: #000;}
+    .wire1 .line {left: calc(10.9vw + 9.3vw / 2 + 0.1vw); height: calc(6vw + 5.9vw);}
+    .wire2 .line {left: calc(23.3vw + 7.3vw / 2 + 0.1vw); height: calc(6vw + 12.6vw);}
+    .wire3 .line {left: calc(33vw + 9.8vw / 2 + 0.1vw); height: calc(6vw + 8.6vw);}
+    .wire4 .line {left: calc(45.8vw + 5.6vw / 2 + 0.1vw); height: calc(6vw + 9.9vw);}
+    .wire5 .line {left: calc(54.5vw + 6.4vw / 2 + 0.1vw); height: calc(6vw + 9.1vw);}
+    .wire6 .line {left: calc(63.3vw + 7.3vw / 2 + 0.1vw); height: calc(6vw + 7.2vw);}
+    .wire7 .line {left: calc(73vw + 7.3vw / 2 + 0.1vw); height: calc(6vw + 11.5vw);}
+    .wire8 .line {left: calc(82.6vw + 9.9vw / 2 + 0.1vw); height: calc(6vw + 8.6vw);}
+    .wire9 .line {left: calc(4.5vw + 11vw / 2 + 0.1vw); height: calc(6vw + 19.5vw);}
+    .wire10 .line {left: calc(19.6vw + 8.5vw / 2 + 0.1vw); height: calc(6vw + 25.3vw);}
+    .wire11 .line {left: calc(30.7vw + 6vw / 2 + 0.1vw); height: calc(6vw + 24.7vw);}
+    .wire12 .line {left: calc(39vw + 5.8vw / 2 + 0.1vw); height: calc(6vw + 22vw);}
+    .wire13 .line {left: calc(47.8vw + 6.4vw / 2 + 0.1vw); height: calc(6vw + 21.3vw);}
+    .wire14 .line {left: calc(56.9vw + 6vw / 2 + 0.1vw); height: calc(6vw + 22.6vw);}
+    .wire15 .line {left: calc(65.2vw + 7.4vw / 2 + 0.1vw); height: calc(6vw + 21.1vw);}
+    .wire16 .line {left: calc(74.7vw + 6vw / 2 + 0.1vw); height: calc(6vw + 20.9vw);}
+    .wire17 .line {left: calc(82.4vw + 8.2vw / 2 + 0.1vw); height: calc(6vw + 20.2vw);}
+    
+    .wire18 .line {left: calc(2.2vw + 5.761vw / 2 + 0.1vw); height: calc(6vw + 11vw);}
+    .wire19 .line {left: calc(21.1vw + 9.55vw / 2 + 0.1vw); height: calc(6vw + 3.8vw);}
+    .wire20 .line {left: calc(33.5vw + 6.14vw / 2 + 0.1vw); height: calc(6vw + 3.2vw);}
+    .wire21 .line {left: calc(48.6vw + 8.6vw / 2 + 0.1vw); height: calc(6vw + 1vw);}
+    .wire22 .line {left: calc(78vw + 5.76vw / 2 + 0.1vw); height: calc(6vw + 2.9vw);}
+    .wire23 .line {left: calc(4.5vw + 5.76vw / 2 + 0.1vw); height: calc(6vw +  3.3vw);}
+    .wire24 .line {left: calc(90.2vw + 5.2vw / 2 + 0.1vw); height: calc(6vw + 0.5vw);}
+    .wire25 .line {left: calc(93.1vw + 7.35vw / 2 + 0.1vw); height: calc(6vw + 11.2vw);}
+    .wire26 .line {left: calc(92.2vw + 5.76vw / 2 + 0.1vw); height: calc(6vw + 24.5vw);}
+
+    .wire .bottom {position: absolute; width: .3vw; height: .7vw; background: #000;}
+    .wire1 .bottom {left: calc(10.9vw + 9.3vw / 2); top: calc(5vw + 5.9vw);}
+    .wire2 .bottom {left: calc(23.3vw + 7.3vw / 2); top: calc(5vw + 12.6vw);}
+    .wire3 .bottom {left: calc(33vw + 9.8vw / 2); top: calc(5vw + 8.6vw);}
+    .wire4 .bottom {left: calc(45.8vw + 5.6vw / 2); top: calc(5vw + 9.9vw);}
+    .wire5 .bottom {left: calc(54.5vw + 6.4vw / 2); top: calc(5vw + 9.1vw);}
+    .wire6 .bottom {left: calc(63.3vw + 7.3vw / 2); top: calc(5vw + 7.2vw);}
+    .wire7 .bottom {left: calc(73vw + 7.3vw / 2); top: calc(5vw + 11.5vw);}
+    .wire8 .bottom {left: calc(82.6vw + 9.9vw / 2); top: calc(5vw + 8.6vw);}
+    .wire9 .bottom {left: calc(4.5vw + 11vw / 2); top: calc(5vw + 19.5vw);}
+    .wire10 .bottom {left: calc(19.6vw + 8.5vw / 2); top: calc(5vw + 25.3vw);}
+    .wire11 .bottom {left: calc(30.7vw + 6vw / 2); top: calc(5vw + 24.7vw);}
+    .wire12 .bottom {left: calc(39vw + 5.8vw / 2); top: calc(5vw + 22vw);}
+    .wire13 .bottom {left: calc(47.8vw + 6.4vw / 2); top: calc(5vw + 21.3vw);}
+    .wire14 .bottom {left: calc(56.9vw + 6vw / 2); top: calc(5vw + 22.6vw);}
+    .wire15 .bottom {left: calc(65.2vw + 7.4vw / 2); top: calc(5vw + 21.1vw);}
+    .wire16 .bottom {left: calc(74.7vw + 6vw / 2); top: calc(5vw + 20.9vw);}
+    .wire17 .bottom {left: calc(82.4vw + 8.2vw / 2); top: calc(5vw + 20.2vw);}
+
+    .wire18 .bottom {left: calc(2.2vw + 5.761vw / 2); top: calc(5vw + 11vw);}
+    .wire19 .bottom {left: calc(21.1vw + 9.55vw / 2); top: calc(5vw + 3.8vw);}
+    .wire20 .bottom {left: calc(33.5vw + 6.14vw / 2); top: calc(5vw + 3.2vw);}
+    .wire21 .bottom {left: calc(48.6vw + 8.6vw / 2); top: calc(5vw + 1vw);}
+    .wire22 .bottom {left: calc(78vw + 5.76vw / 2); top: calc(5vw + 2.9vw);}
+    .wire23 .bottom {left: calc(4.5vw + 5.76vw / 2); top: calc(5vw +  3.3vw);}
+    .wire24 .bottom {left: calc(90.2vw + 5.2vw / 2); top: calc(5vw + 0.5vw);}
+    .wire25 .bottom {left: calc(93.1vw + 7.35vw / 2); top: calc(5vw + 11.2vw);}
+    .wire26 .bottom {left: calc(92.2vw + 5.76vw / 2); top: calc(5vw + 24.5vw);}
+
+    .sec1__wrap {
+      width: 100%;
+      height: 35vw;
+      margin-top: 5vw;
+      /* border: 5px solid red;  */
+      position: relative;
+      overflow-x: hidden;
+    }
+    .gallery {position: absolute; left: 0; top: 0; background-position: center center; background-size: cover; border: 0.1vw solid #000;}
+    .gallery1 {left: 2.2vw; top: 11vw; width: 5.761vw; height: 7.65vw; background-image: url("https://source.unsplash.com/featured/?i̇spanya");}
+    .gallery2 {left: 21.1vw; top: 3.8vw; width: 9.55vw; height: 7.35vw; background-image: url("https://source.unsplash.com/featured/?Ferris+wheel");}
+    .gallery3 {left: 33.5vw; top: 3.2vw; width: 6.14vw; height: 3.79vw; background-image: url("https://source.unsplash.com/featured/?symbol");}
+    .gallery4 {left: 48.6vw; top: 1vw; width: 8.6vw; height: 6.19vw; background-image: url("https://source.unsplash.com/featured/?museum+art");}
+    .gallery5 {left: 78vw; top: 2.9vw; width: 5.76vw; height: 5vw; background-image: url("https://source.unsplash.com/featured/?germany");}
+    .gallery6 {left: 4.5vw; top: 3.3vw; width: 5.76vw; height: 5.83vw; background-image: url("https://source.unsplash.com/featured/?disneyland+park");}
+    .gallery7 {left: 90.2vw; top: 0.5vw; width: 5.2vw; height: 7.6vw; background-image: url("https://source.unsplash.com/featured/?poster+design");}
+    .gallery8 {left: 93.1vw; top: 11.2vw; width: 5.35vw; height: 7.44vw; background-image: url("https://source.unsplash.com/featured/?up+to+the+sky");}
+    .gallery9 {left: 92.2vw; top: 24.5vw; width: 5.76vw; height: 7.65vw; background-image: url("https://source.unsplash.com/featured/?activity");}
+
+    .letter {position: absolute; left: 0; top: 0; background-position: center center; background-size: cover; border: 0.1vw solid #fff;}
+    .letter1 {left: 10.9vw; top: 5.9vw; width: 9.3vw; height: 12.4vw; background-image: url(assets/img/letter1.jpg);}
+    .letter2 {left: 23.3vw; top: 12.6vw; width: 7.3vw; height: 10.6vw; background-image: url(assets/img/letter2.jpg);}
+    .letter3 {left: 33vw; top: 8.6vw; width: 9.8vw; height: 11.2vw; background-image: url(assets/img/letter3.jpg);}
+    .letter4 {left: 45.8vw; top: 9.9vw; width: 5.6vw; height: 8.4vw; background-image: url(assets/img/letter4.jpg);}
+    .letter5 {left: 54.5vw; top: 9.1vw; width: 6.4vw; height: 10.7vw; background-image: url(assets/img/letter5.jpg);}
+    .letter6 {left: 63.3vw; top: 7.2vw; width: 7.3vw; height: 10.4vw; background-image: url(assets/img/letter6.jpg);}
+    .letter7 {left: 73vw; top: 11.5vw; width: 7.3vw; height: 5.8vw; background-image: url(assets/img/letter7.jpg);}
+    .letter8 {left: 82.6vw; top: 8.6vw; width: 9.9vw; height: 7.6vw; background-image: url(assets/img/letter8.jpg);}
+    .letter9 {left: 4.5vw; top: 19.5vw; width: 11vw; height: 14.6vw; background-image: url(assets/img/letter9.jpg);}
+    .letter10 {left: 19.6vw; top: 25.3vw; width: 8.5vw; height: 8.8vw; background-image: url(assets/img/letter10.jpg);}
+    .letter11 {left: 30.7vw; top: 24.7vw; width: 6vw; height: 7.16vw; background-image: url(assets/img/letter11.jpg);}
+    .letter12 {left: 39vw; top: 22vw; width: 5.8vw; height: 10.8vw; background-image: url(assets/img/letter12.jpg);}
+    .letter13 {left: 47.8vw; top: 21.3vw; width: 6.4vw; height: 10.4vw; background-image: url(assets/img/letter13.jpg);}
+    .letter14 {left: 56.9vw; top: 22.6vw; width: 6vw; height: 7.14vw; background-image: url(assets/img/letter14.jpg);}
+    .letter15 {left: 65.2vw; top: 21.1vw; width: 7.4vw; height: 10.4vw; background-image: url(assets/img/letter15.jpg);}
+    .letter16 {left: 74.7vw; top: 20.9vw; width: 6vw; height: 9vw; background-image: url(assets/img/letter16.jpg);}
+    .letter17 {left: 82.4vw; top: 20.2vw; width: 8.2vw; height: 8.2vw; background-image: url(assets/img/letter17.jpg);}
+    /* blur(2px) */
+    #section2 { width: 100%; height: 100vh; background: pink;}
+  </style>
+</head>
+<body>
+  <section id="section1">
+    <div class="sec1__hook">
+      <div class="wire wire1"><div class="top"></div><div class="line"></div><div class="bottom"></div></div>
+      <div class="wire wire2"><div class="top"></div><div class="line"></div><div class="bottom"></div></div>
+      <div class="wire wire3"><div class="top"></div><div class="line"></div><div class="bottom"></div></div>
+      <div class="wire wire4"><div class="top"></div><div class="line"></div><div class="bottom"></div></div>
+      <div class="wire wire5"><div class="top"></div><div class="line"></div><div class="bottom"></div></div>
+      <div class="wire wire6"><div class="top"></div><div class="line"></div><div class="bottom"></div></div>
+      <div class="wire wire7"><div class="top"></div><div class="line"></div><div class="bottom"></div></div>
+      <div class="wire wire8"><div class="top"></div><div class="line"></div><div class="bottom"></div></div>
+      <div class="wire wire9"><div class="top"></div><div class="line"></div><div class="bottom"></div></div>
+      <div class="wire wire10"><div class="top"></div><div class="line"></div><div class="bottom"></div></div>
+      <div class="wire wire11"><div class="top"></div><div class="line"></div><div class="bottom"></div></div>
+      <div class="wire wire12"><div class="top"></div><div class="line"></div><div class="bottom"></div></div>
+      <div class="wire wire13"><div class="top"></div><div class="line"></div><div class="bottom"></div></div>
+      <div class="wire wire14"><div class="top"></div><div class="line"></div><div class="bottom"></div></div>
+      <div class="wire wire15"><div class="top"></div><div class="line"></div><div class="bottom"></div></div>
+      <div class="wire wire16"><div class="top"></div><div class="line"></div><div class="bottom"></div></div>
+      <div class="wire wire17"><div class="top"></div><div class="line"></div><div class="bottom"></div></div>
+      <!-- // LETTERS -->
+      <div class="wire wire18"><div class="top"></div><div class="line"></div><div class="bottom"></div></div>
+      <div class="wire wire19"><div class="top"></div><div class="line"></div><div class="bottom"></div></div>
+      <div class="wire wire20"><div class="top"></div><div class="line"></div><div class="bottom"></div></div>
+      <div class="wire wire21"><div class="top"></div><div class="line"></div><div class="bottom"></div></div>
+      <div class="wire wire22"><div class="top"></div><div class="line"></div><div class="bottom"></div></div>
+      <div class="wire wire23"><div class="top"></div><div class="line"></div><div class="bottom"></div></div>
+      <div class="wire wire24"><div class="top"></div><div class="line"></div><div class="bottom"></div></div>
+      <div class="wire wire25"><div class="top"></div><div class="line"></div><div class="bottom"></div></div>
+      <div class="wire wire26"><div class="top"></div><div class="line"></div><div class="bottom"></div></div>
+    </div>
+    <div class="sec1__wrap">
+        <div class="letter letter1"></div>
+        <div class="letter letter2"></div>
+        <div class="letter letter3"></div>
+        <div class="letter letter4"></div>
+        <div class="letter letter5"></div>
+        <div class="letter letter6"></div>
+        <div class="letter letter7"></div>
+        <div class="letter letter8"></div>
+        <div class="letter letter9"></div>
+        <div class="letter letter10"></div>
+        <div class="letter letter11"></div>
+        <div class="letter letter12"></div>
+        <div class="letter letter13"></div>
+        <div class="letter letter14"></div>
+        <div class="letter letter15"></div>
+        <div class="letter letter16"></div>
+        <div class="letter letter17"></div>
+        <div class="gallery gallery1"></div>
+        <div class="gallery gallery2"></div>
+        <div class="gallery gallery3"></div>
+        <div class="gallery gallery4"></div>
+        <div class="gallery gallery5"></div>
+        <div class="gallery gallery6"></div>
+        <div class="gallery gallery7"></div>
+        <div class="gallery gallery8"></div>
+        <div class="gallery gallery9"></div>
+  </section>
+
+  <section id="section2"></section>
+</body>
+</html>
