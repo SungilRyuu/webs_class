@@ -20,3 +20,11 @@ window.onload = function(){
         loaders.classList.remove('loader__active');
     }, 700);
 };
+
+// 키드 방향 키  막기
+window.addEventListener("keydown", function(e) {
+    // space and arrow keys
+    if([32, 37, 38, 39, 40].indexOf(e.key || e.keyCode ) > -1) {
+        e.preventDefault();
+    }
+}, false);

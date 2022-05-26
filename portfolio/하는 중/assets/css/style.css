@@ -748,6 +748,7 @@ background-size:100px 100px;
     background: #000;
     margin-top: 10vw;
     margin-left: 15vw;
+    overscroll-behavior: none;
 }
 .sec6__body .iframe iframe {
   width: 100%;

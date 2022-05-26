@@ -1,11 +1,22 @@
-.popup__layout { 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {margin: 0; padding: 0;}
+        body {
+            background-image: url(assets/img/test1.png);
+            background-size: cover;
+        }
+        .popup__layout { 
     position: fixed; 
     width: 100%; 
     height: 100vh; 
     background: #000; 
-    /* opacity: 0.5; */
-    opacity: 0;
-    display: none;
+    opacity: 0.5;
 }
 .popup {
     position: fixed; 
@@ -13,12 +24,9 @@
     top: 50%; 
     transform: translate3d(-50%, -50%, 0); 
     width: 60vw; min-height: calc(60vw / 1.6); 
-    background: #cddafe;
+    background: #e5e5e1;
     padding: 1vw;
-    color: #5a4340;
-    opacity: 0;
-    display: none;
-    transition: all .5s ease;
+    color: #252321;
 }
 .popup__close {
     text-align: right;
@@ -29,16 +37,16 @@
     margin-left: 3vw;
     margin-top: 1vw;
     font-size: 3.5vw;
-    color: #f4edf0;
+    color: #f9e300;
     font-weight: bold;
-    background: #545fab;
+    background: #444997;
     padding: 0 .5em;
 }
 .popup__title {
     margin-left: 3vw;
     margin-top: 2vw;
     font-size: 3vw;
-    color: #1a1c6d;
+    color: #252321;
 }
 .popup__body {
     margin-left: 3vw;
@@ -46,7 +54,7 @@
     margin-top: 2vw;
     font-size: 2vw;
     position: relative;
-    color: #1a1c6d;
+    color: #252321;
 }
 .popup__footer {
     margin-top: 5vw;
@@ -61,18 +69,18 @@
     text-align: center;
     /* border: 1px solid #000; */
     margin-right: 1vw;
-    color: #f4f4f2;
-    background: #535fab;
+    color: #f9e300;
+    background: #444997;
 }
 .popup__img {
     position: absolute;
-    right: -17vw; top: 50%; transform: translateY(-50%);
-    background-image: url(../img/computer.png);
+    right: -10vw; top: 50%; transform: translateY(-50%);
+    background-image: url(assets/img/macaroon.png);
     background-size: contain;
     background-position: center center;
     background-repeat: no-repeat;
-    width: 35vw;
-    height: 40vw;
+    width: 29vw;
+    height: 30vw;
     z-index: 20;
 }
 
@@ -85,3 +93,19 @@
     .popup__footer a {padding: 1rem 0; width: 13em;}
     .popup__img {left: 67%;}
 }
+
+    </style>
+</head>
+<body>
+    <div class="popup__layout"></div>
+    <div class="popup">
+        <div class="popup__close">X</div>
+        <div class="popup__header">ABOUT ME</div>
+        <div class="popup__title">MY STRENGTHS
+        <div class="popup__img"></div>
+        </div>
+        <div class="popup__body">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore, ipsa maiores? Odit perspiciatis vel facere quam sunt, debitis id magni laudantium ipsa tenetur aperiam amet commodi libero harum optio est.</div>
+        <div class="popup__footer"><a href="#1">닫기</a></div>
+    </div>
+</body>
+</html>

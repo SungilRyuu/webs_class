@@ -1,11 +1,22 @@
-.popup__layout { 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {margin: 0; padding: 0;}
+        body {
+            background-image: url(assets/img/test1.png);
+            background-size: cover;
+        }
+        .popup__layout { 
     position: fixed; 
     width: 100%; 
     height: 100vh; 
     background: #000; 
-    /* opacity: 0.5; */
-    opacity: 0;
-    display: none;
+    opacity: 0.5;
 }
 .popup {
     position: fixed; 
@@ -16,9 +27,6 @@
     background: #cddafe;
     padding: 1vw;
     color: #5a4340;
-    opacity: 0;
-    display: none;
-    transition: all .5s ease;
 }
 .popup__close {
     text-align: right;
@@ -85,3 +93,19 @@
     .popup__footer a {padding: 1rem 0; width: 13em;}
     .popup__img {left: 67%;}
 }
+
+    </style>
+</head>
+<body>
+    <div class="popup__layout"></div>
+    <div class="popup">
+        <div class="popup__close">X</div>
+        <div class="popup__header">ABOUT ME</div>
+        <div class="popup__title">WHY DEVELOPER
+        <div class="popup__img"></div>
+        </div>
+        <div class="popup__body">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore, ipsa maiores? Odit perspiciatis vel facere quam sunt, debitis id magni laudantium ipsa tenetur aperiam amet commodi libero harum optio est.</div>
+        <div class="popup__footer"><a href="#1">닫기</a></div>
+    </div>
+</body>
+</html>

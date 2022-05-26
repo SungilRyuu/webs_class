@@ -315,7 +315,6 @@
 
         <div class="popup__layout"></div>
         <div class="popup">
-            <div class="popup__close">X</div>
             <div class="popup__header">ABOUT ME</div>
             <div class="popup__title">WHY DEVELOPER
             <div class="popup__img"></div>
@@ -331,22 +330,65 @@
     <script>
         const about = document.querySelectorAll(".sec4__desc a");
         const popup = document.querySelector(".popup");
-        const popupClose1 = popup.querySelector(".popup__close");
         const popupClose2 = popup.querySelector(".popup__footer a");
         const popupLayout = document.querySelector(".popup__layout");
         
         about.forEach(el => {
             el.addEventListener("click", () => {
-                popup.style.opacity = "1";
-                popupLayout.style.opacity = "0.5";
+                popup.style.display = "block";
+                setTimeout(() => {
+                    popup.style.opacity = "1";
+                    popupLayout.style.opacity = "0.5";
+                    
+                }, 500);
             })
-        })
-        popupClose1.addEventListener("click", el => {
-            popup.style.opacity = "0";
         })
         popupClose2.addEventListener("click", el => {
             popup.style.opacity = "0";
+            setTimeout(() => {
+                popup.style.display = "none";
+            }, 500);
         })
+
+        	
+// 먼저 눌린 키를 수신할 이벤트 리스너 필요
+document.addEventListener("keydown", keyDownHandler, false);
+document.addEventListener("keyup", keyUpHandler, false);
+ 
+// 키보드가 눌렸을 때 일어나는 함수 (매개변수: e)
+// 각 방향키의 keycode와 방향이 맞다면, 해당 변수들 true 
+function keyDownHandler(e) {
+	if(e.key == 37 || e.key == "ArrowRight") {
+		rightPressed = true;
+	}
+	else if(e.key == 39 || e.key == "ArrowLeft") {
+	  leftPressed = true;
+  }
+  else if(e.key == 38 || e.key == "ArrowUp") {
+	  upPressed = true;
+  }
+  else if(e.key == 40 || e.key == "ArrowDown") {
+	  downPressed = true;
+  }
+}
+ 
+ 
+// 키보드가 안 눌렸을 때 일어나는 함수 (매개변수: e)
+// 각 방향키의 keycode와 방향이 맞다면, 해당 변수들 false > 초기화
+function keyUpHandler(e) {
+	if(e.key == 37 || e.key == "ArrowRight") {
+	  rightPressed = false;
+  }
+  else if(e.key == 39 || e.key == "ArrowLeft") {
+	  leftPressed = false;
+  }
+  else if(e.key == 38 || e.key == "ArrowUp") {
+	  upPressed = false;
+  }
+  else if(e.key == 40 || e.key == "ArrowDown") {
+	  downPressed = false;
+  }
+}
     </script>
 
 
