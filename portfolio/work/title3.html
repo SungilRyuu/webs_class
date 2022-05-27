@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/font.css">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+    #section1 {
+      width: 100%;
+      height: 50vw;
+      overflow: hidden;
+      position: relative;
+    }
+    .sec1__title {
+      width: 100%;
+      white-space: nowrap;
+      line-height: 1;
+      padding: 2.3vw 0;
+      position: absolute;
+      left: 50%; top: 35%;
+      transform: translate3d(-50%, -50%, 0);
+      background: lightgrey;
+      z-index: 100;
+      opacity: 0.8;
+    }
+    .sec1__title .letters {
+      overflow: hidden;
+      font-weight: bold;
+    }
+    .sec1__desc {
+      font-size: 1vw;
+      font-family: 'Noto Sans KR';
+      text-align: right;
+      margin-top: 3.5vw;
+      margin-right: 1vw;
+    }
+    .sec1__title .letters .title {
+      font-size: 5vw;
+      width: 100%;
+      text-align: center;
+      font-family: 'Orbitron' !important;
+      font-weight: 700;
+      letter-spacing: 0.5vw;
+    }
+        #section1 {
+            width: 100%;
+            height: calc(100vw / 1.6);
+            background-color: #f1f1f1;
+            display: inline-block;
+        }
+        .sec1__hook {
+            width: 100%;
+            height: .5vw;
+            background: rgb(200, 200, 200);
+            position: relative;
+        }
+        .wire .top {position: absolute; top: 0; width: .3vw; height: 10px; background: #000;}
+        .wire1 .top {left: calc(81.9vw + 9.8vw / 2);} 
+        .wire2 .top {left: calc(78.8vw + 9.9vw / 2);} 
+        .wire3 .top {left: calc(39.3vw + 9.5vw / 2);}
+        .wire4 .top {left: calc(19.9vw + 11.2vw / 2);}
+        .wire5 .top {left: calc(23.9vw + 12.4vw / 2);} 
+        .wire6 .top {left: calc(14.1vw + 7.1vw / 2);}
+        .wire7 .top {left: calc(16.8vw + 7.1vw / 2);}
+        .wire8 .top {left: calc(8.3vw + 8.9vw / 2);}
+        .wire9 .top {left: calc(33.4vw + 9.2vw / 2);}
+        .wire10 .top {left: calc(26.5vw + 15.1vw / 2);}
+        .wire11 .top {left: calc(44.6vw + 9.3vw / 2);}
+        .wire12 .top {left: calc(56.7vw + 6.5vw / 2);}
+        .wire13 .top {left: calc(66.3vw + 12vw / 2);}
+        .wire14 .top {left: calc(66.3vw + 9.4vw / 2);}
+        .wire15 .top {left: calc(77.5vw + .3vw / 2);}
+        .wire16 .top {left: calc(67.9vw + 7vw / 2);}
+        .wire17 .top {left: calc(52.5vw + 12.1vw / 2);}
+        .wire18 .top {left: calc(45.8vw + 16.9vw / 2);}
+
+        .wire .line {position: absolute; border: 1px solid #000; top: 0; width: 0.01px; background: #000;}
+        .wire1 .line {left: calc(81.9vw + 9.8vw / 2 + 0.1vw); height: calc(3.5vw + 25.7vw);} 
+        .wire2 .line {left: calc(78.8vw + 9.9vw / 2 + 0.1vw); height: calc(3.5vw + 11vw);} 
+        .wire3 .line {left: calc(39.3vw + 9.5vw / 2 + 0.1vw); height: calc(3.5vw + 2.5vw);}
+        .wire4 .line {left: calc(19.9vw + 11.2vw / 2 + 0.1vw); height: calc(3.5vw + 13.4vw);}
+        .wire5 .line {left: calc(23.9vw + 12.4vw / 2 + 0.1vw); height: calc(3.5vw + 0vw);} 
+        .wire6 .line {left: calc(14.1vw + 7.1vw / 2 + 0.1vw); height: calc(3.5vw + 4.7vw);}
+        .wire7 .line {left: calc(16.8vw + 7.1vw / 2 + 0.1vw); height: calc(3.5vw + 25.7vw);}
+        .wire8 .line {left: calc(8.3vw + 8.9vw / 2 + 0.1vw); height: calc(3.5vw + 15vw);}
+        .wire9 .line {left: calc(33.4vw + 9.2vw / 2 + 0.1vw); height: calc(3.5vw + 16.2vw);}
+        .wire10 .line {left: calc(26.5vw + 15.1vw / 2 + 0.1vw); height: calc(3.5vw + 25.7vw);}
+        .wire11 .line {left: calc(44.6vw + 9.3vw / 2 + 0.1vw); height: calc(3.5vw + 29.8vw);}
+        .wire12 .line {left: calc(56.7vw + 6.5vw / 2 + 0.1vw); height: calc(3.5vw + 30.1vw);}
+        .wire13 .line {left: calc(66.3vw + 12vw / 2 + 0.1vw); height: calc(3.5vw + 25.7vw);}
+        .wire14 .line {left: calc(66.3vw + 9.4vw / 2 + 0.1vw); height: calc(3.5vw + 14.3vw);}
+        .wire15 .line {left: calc(77.5vw + .3vw / 2 + 0.1vw); height: calc(3.5vw + 2vw);}
+        .wire16 .line {left: calc(67.9vw + 7vw / 2 + 0.1vw); height: calc(3.5vw + 2vw);}
+        .wire17 .line {left: calc(52.5vw + 12.1vw / 2 + 0.1vw); height: calc(3.5vw + 0.3vw);}
+        .wire18 .line {left: calc(45.8vw + 16.9vw / 2 + 0.1vw); height: calc(3.5vw + 14.3vw);}
+
+
+        /* .wire1 .line {left: calc(16.9vw + 6.1vw / 2 + 0.1vw); height: calc(9vw + 13.2vw);} */
+
+        .wire .bottom {position: absolute; width: .3vw; height: 10px; background: #000;}
+        .wire1 .bottom {left: calc(81.9vw + 9.8vw / 2); top: calc(3.5vw + 25.7vw);} 
+        .wire2 .bottom {left: calc(78.8vw + 9.9vw / 2); top: calc(3.5vw + 11vw);} 
+        .wire3 .bottom {left: calc(39.3vw + 9.5vw / 2); top: calc(3.5vw + 2.5vw);}
+        .wire4 .bottom {left: calc(19.9vw + 11.2vw / 2); top: calc(3.5vw + 13.4vw);}
+        .wire5 .bottom {left: calc(23.9vw + 12.4vw / 2); top: calc(3.5vw + 0vw);} 
+        .wire6 .bottom {left: calc(14.1vw + 7.1vw / 2); top: calc(3.5vw + 4.7vw);}
+        .wire7 .bottom {left: calc(16.8vw + 7.1vw / 2); top: calc(3.5vw + 25.7vw);}
+        .wire8 .bottom {left: calc(8.3vw + 8.9vw / 2); top: calc(3.5vw + 15vw);}
+        .wire9 .bottom {left: calc(33.4vw + 9.2vw / 2); top: calc(3.5vw + 16.2vw);}
+        .wire10 .bottom {left: calc(26.5vw + 15.1vw / 2); top: calc(3.5vw + 25.7vw);}
+        .wire11 .bottom {left: calc(44.6vw + 9.3vw / 2); top: calc(3.5vw + 29.8vw);}
+        .wire12 .bottom {left: calc(56.7vw + 6.5vw / 2); top: calc(3.5vw + 30.1vw);}
+        .wire13 .bottom {left: calc(66.3vw + 12vw / 2); top: calc(3.5vw + 25.7vw);}
+        .wire14 .bottom {left: calc(66.3vw + 9.4vw / 2); top: calc(3.5vw + 14.3vw);}
+        .wire15 .bottom {left: calc(77.5vw + .3vw / 2); top: calc(3.5vw + 2vw);}
+        .wire16 .bottom {left: calc(67.9vw + 7vw / 2); top: calc(3.5vw + 2vw);}
+        .wire17 .bottom {left: calc(52.5vw + 12.1vw / 2); top: calc(3.5vw + 0.3vw);}
+        .wire18 .bottom {left: calc(45.8vw + 16.9vw / 2); top: calc(3.5vw + 14.3vw);}
+
+
+        .sec1__wrap {
+            margin-top: 3.5vw;
+            width: 100%;
+            height: 42vw;
+            /* border: 1px solid red; */
+            position: relative;
+        }
+
+        .gallery {position: absolute; background-image: url(assets/img/mainbg.jpg); border: 1px solid #000; background-size: cover;}
+        .gallery1 {left: 81.9vw; top: 25.7vw; width: 9.8vw; height: 8.3vw;}
+        .gallery2 {left: 78.8vw; top: 11vw; width: 9.9vw; height: 10.8vw;}
+        .gallery3 {left: 39.3vw; top: 2.5vw; width: 9.5vw; height: 8.3vw;}
+        .gallery4 {left: 19.9vw; top: 13.4vw; width: 11.2vw; height: 9.5vw;}
+        .gallery5 {left: 23.9vw; top: 0vw; width: 12.4vw; height: 10.8vw;}
+        .gallery6 {left: 14.1vw; top: 4.7vw; width: 7.1vw; height: 6.5vw;}
+        .gallery7 {left: 16.8vw; top: 25.7vw; width: 7.1vw; height: 7.2vw;}
+        .gallery8 {left: 8.3vw; top: 15vw; width: 8.9vw; height: 7.6vw;}
+        .gallery9 {left: 33.4vw; top: 16.2vw; width: 9.2vw; height: 6.7vw;}
+        .gallery10 {left: 26.5vw; top: 25.7vw; width: 15.1vw; height: 12vw;}
+        .gallery11 {left: 44.6vw; top: 29.8vw; width: 9.3vw; height: 11vw;}
+        .gallery12 {left: 56.7vw; top: 30.1vw; width: 6.5vw; height: 8.1vw;}
+        .gallery13 {left: 66.3vw; top: 25.7vw; width: 12vw; height: 10.3vw;}
+        .gallery14 {left: 66.3vw; top: 14.3vw; width: 9.4vw; height: 8.4vw;}
+        .gallery15 {left: 77.5vw; top: 2vw; width: 5.3vw; height: 6.1vw;}
+        .gallery16 {left: 67.9vw; top: 2vw; width: 7vw; height: 9vw;}
+        .gallery17 {left: 52.5vw; top: 0.3vw; width: 12.1vw; height: 9.4vw;}
+        .gallery18 {left: 45.8vw; top: 14.3vw; width: 16.9vw; height: 12vw;}
+        
+    </style>
+</head>
+<body>
+    <section id="section1">
+        <div class="sec1__hook">
+          <div class="wire wire1"><div class="top"></div><div class="line"></div><div class="bottom"></div></div>
+          <div class="wire wire2"><div class="top"></div><div class="line"></div><div class="bottom"></div></div>
+          <div class="wire wire3"><div class="top"></div><div class="line"></div><div class="bottom"></div></div>
+          <div class="wire wire4"><div class="top"></div><div class="line"></div><div class="bottom"></div></div>
+          <div class="wire wire5"><div class="top"></div><div class="line"></div><div class="bottom"></div></div>
+          <div class="wire wire6"><div class="top"></div><div class="line"></div><div class="bottom"></div></div>
+          <div class="wire wire7"><div class="top"></div><div class="line"></div><div class="bottom"></div></div>
+          <div class="wire wire8"><div class="top"></div><div class="line"></div><div class="bottom"></div></div>
+          <div class="wire wire9"><div class="top"></div><div class="line"></div><div class="bottom"></div></div>
+          <div class="wire wire10"><div class="top"></div><div class="line"></div><div class="bottom"></div></div>
+          <div class="wire wire11"><div class="top"></div><div class="line"></div><div class="bottom"></div></div>
+          <div class="wire wire12"><div class="top"></div><div class="line"></div><div class="bottom"></div></div>
+          <div class="wire wire13"><div class="top"></div><div class="line"></div><div class="bottom"></div></div>
+          <div class="wire wire14"><div class="top"></div><div class="line"></div><div class="bottom"></div></div>
+          <div class="wire wire15"><div class="top"></div><div class="line"></div><div class="bottom"></div></div>
+          <div class="wire wire16"><div class="top"></div><div class="line"></div><div class="bottom"></div></div>
+          <div class="wire wire17"><div class="top"></div><div class="line"></div><div class="bottom"></div></div>
+          <div class="wire wire18"><div class="top"></div><div class="line"></div><div class="bottom"></div></div>
+        </div>
+        <div class="sec1__wrap">
+            <div class="gallery gallery1"></div>
+            <div class="gallery gallery2"></div>
+            <div class="gallery gallery3"></div>
+            <div class="gallery gallery4"></div>
+            <div class="gallery gallery5"></div>
+            <div class="gallery gallery6"></div>
+            <div class="gallery gallery7"></div>
+            <div class="gallery gallery8"></div>
+            <div class="gallery gallery9"></div>
+            <div class="gallery gallery10"></div>
+            <div class="gallery gallery11"></div>
+            <div class="gallery gallery12"></div>
+            <div class="gallery gallery13"></div>
+            <div class="gallery gallery14"></div>
+            <div class="gallery gallery15"></div>
+            <div class="gallery gallery16"></div>
+            <div class="gallery gallery17"></div>
+            <div class="gallery gallery18"></div>
+          </div>
+          <div class="sec1__title"><div class="letters">
+            <p class="title">FRONTEND PORTFOLIO</p>
+          </div></div>
+          <p class="sec1__desc">unsplash API를 활용하여 화면을 구성하였습니다. 새로고침을 누르면 사진이 변경됩니다.</p>
+    </section>
+
+
+    <section id="section2">
+        <div class="sec2__text1"><span>Web</span>Product
+        
+            <svg class="small__heart" width="8vw" height="8vw" viewBox="0 0 200 200">
+                <g transform="translate(100 100)">
+            <style type="text/css">
+                .st0{fill:#E52E44;}
+                .st1{fill:#FA4654;}
+                .st2{fill:#EA792E;}
+                .st3{fill:#FF8B00;}
+                .st4{fill:#E2A427;}
+                .st5{fill:#F9C744;}
+                .st6{fill:#14A36D;}
+                .st7{fill:#15BE79;}
+                .st8{fill:#0989D8;}
+                .st9{fill:#29A3FB;}
+                .st10{fill:#8D00AF;}
+                .st11{fill:#AA0DD1;}
+                .st12{fill:#FB626E;}
+                .st13{fill:#FBD9A3;}
+                .st14{fill:#FFAC52;}
+            </style>
+            <g transform="translate(-50 -50)">
+                <g>
+                    <path class="st0" d="M92.5,44.5L55,82c-2.7,2.7-7.2,2.7-9.9,0L13.9,50.9l-6.4-6.4C2.5,39.5,0,33,0,26.4c0-6.5,2.5-13.1,7.5-18.1
+                        c1.2-1.2,2.5-2.3,3.9-3.2c9.9-6.6,23.5-5.5,32.2,3.2l6.4,6.4l6.4-6.4c5-5,11.5-7.5,18.1-7.5c6.5,0,13.1,2.5,18.1,7.5
+                        C102.5,18.3,102.5,34.5,92.5,44.5z"/>
+                    <path class="st1" d="M92.5,44.5L62.1,74.9c-2.7,2.7-7.2,2.7-9.9,0L21,43.8l-6.4-6.4c-5-5-7.5-11.5-7.5-18.1
+                        c0-4.9,1.4-9.9,4.3-14.1c9.9-6.6,23.5-5.5,32.2,3.2l6.4,6.4l6.4-6.4c5-5,11.5-7.5,18.1-7.5c6.5,0,13.1,2.5,18.1,7.5
+                        C102.5,18.3,102.5,34.5,92.5,44.5z"/>
+                    <path class="st2" d="M50,14.8L50,14.8l-47.2,0C0.9,18.4,0,22.4,0,26.4c0,0.7,0,1.5,0.1,2.2h99.8c0.4-4.7-0.5-9.5-2.7-13.9L50,14.8
+                        L50,14.8z"/>
+                    <path class="st3" d="M50,14.8L50,14.8l-42.5,0c-0.3,1.5-0.4,3-0.4,4.5c0,3.2,0.6,6.3,1.8,9.3h91c0.4-4.7-0.5-9.5-2.7-13.9L50,14.8
+                        L50,14.8z"/>
+                    <path class="st4" d="M5.7,42.5h88.6c3.3-4.1,5.2-8.9,5.6-13.9H0.1C0.5,33.6,2.4,38.4,5.7,42.5z"/>
+                    <path class="st5" d="M99.9,28.6h-91c1.2,3.2,3.1,6.2,5.7,8.7l5.1,5.1h74.6C97.6,38.4,99.5,33.6,99.9,28.6z"/>
+                    <path class="st6" d="M5.7,42.5c0.6,0.7,1.2,1.4,1.8,2l6.4,6.4l5.5,5.5h61.3l11.9-11.9c0.6-0.6,1.2-1.3,1.8-2H5.7z"/>
+                    <path class="st7" d="M19.7,42.5l1.3,1.3l12.6,12.6h47l11.9-11.9c0.6-0.6,1.2-1.3,1.8-2H19.7z"/>
+                    <polygon class="st8" points="33.2,70.2 66.8,70.2 80.6,56.4 19.3,56.4 		"/>
+                    <polygon class="st9" points="80.6,56.4 33.6,56.4 47.5,70.2 66.8,70.2 		"/>
+                    <path class="st10" d="M66.8,70.2H33.2L45,82c2.7,2.7,7.2,2.7,9.9,0L66.8,70.2z"/>
+                    <path class="st11" d="M47.5,70.2l4.7,4.7c2.7,2.7,7.2,2.7,9.9,0l4.7-4.7H47.5z"/>
+                </g>
+                <path class="st12" d="M91.1,19.3c-2.1,2.9-7.7,2.4-12.5-1.2c-1.4-1-2.5-2.2-3.4-3.4c-2.2-3-2.9-6.2-1.3-8.2
+                    c2.1-2.9,7.7-2.3,12.5,1.2c2.8,2.1,4.6,4.7,5.3,7.1C92.2,16.5,92,18.1,91.1,19.3z"/>
+                <path class="st13" d="M93.7,35.3c-2.2,0.3-4.5-2.4-5-6.1c0-0.2,0-0.4-0.1-0.5c-0.4-3.5,1-6.5,3.1-6.8c2.2-0.3,4.5,2.4,5,6.1
+                    c0,0.2,0.1,0.5,0.1,0.7C97.2,32,95.8,34.9,93.7,35.3z"/>
+                <path class="st14" d="M78.7,18.1c-1.4-1-2.5-2.2-3.4-3.4h16.4c0.5,1.7,0.3,3.3-0.6,4.5C89,22.2,83.4,21.6,78.7,18.1z"/>
+                <path class="st14" d="M96.9,28.6h-8.2c-0.4-3.5,1-6.5,3.1-6.8c2.2-0.3,4.5,2.4,5,6.1C96.8,28.2,96.8,28.4,96.9,28.6z"/>
+            </g>
+                <animateTransform 
+                    attributeName="transform" 
+                    type="scale" 
+                    values="1; 1.5; 1.25; 1.5; 1.5; 1;" 
+                    dur="1s" 
+                    repeatCount="indefinite"
+                    additive="sum">      
+                </animateTransform>
+            </g>
+            </svg>
+            <svg class="big__heart" width="85" height="80" viewBox="0 0 200 200">
+                <g transform="translate(100 100)">
+            <style type="text/css">
+                .st0{fill:#E52E44;}
+                .st1{fill:#FA4654;}
+                .st2{fill:#EA792E;}
+                .st3{fill:#FF8B00;}
+                .st4{fill:#E2A427;}
+                .st5{fill:#F9C744;}
+                .st6{fill:#14A36D;}
+                .st7{fill:#15BE79;}
+                .st8{fill:#0989D8;}
+                .st9{fill:#29A3FB;}
+                .st10{fill:#8D00AF;}
+                .st11{fill:#AA0DD1;}
+                .st12{fill:#FB626E;}
+                .st13{fill:#FBD9A3;}
+                .st14{fill:#FFAC52;}
+            </style>
+            <g transform="translate(-50 -50)">
+                <g>
+                    <path class="st0" d="M92.5,44.5L55,82c-2.7,2.7-7.2,2.7-9.9,0L13.9,50.9l-6.4-6.4C2.5,39.5,0,33,0,26.4c0-6.5,2.5-13.1,7.5-18.1
+                        c1.2-1.2,2.5-2.3,3.9-3.2c9.9-6.6,23.5-5.5,32.2,3.2l6.4,6.4l6.4-6.4c5-5,11.5-7.5,18.1-7.5c6.5,0,13.1,2.5,18.1,7.5
+                        C102.5,18.3,102.5,34.5,92.5,44.5z"/>
+                    <path class="st1" d="M92.5,44.5L62.1,74.9c-2.7,2.7-7.2,2.7-9.9,0L21,43.8l-6.4-6.4c-5-5-7.5-11.5-7.5-18.1
+                        c0-4.9,1.4-9.9,4.3-14.1c9.9-6.6,23.5-5.5,32.2,3.2l6.4,6.4l6.4-6.4c5-5,11.5-7.5,18.1-7.5c6.5,0,13.1,2.5,18.1,7.5
+                        C102.5,18.3,102.5,34.5,92.5,44.5z"/>
+                    <path class="st2" d="M50,14.8L50,14.8l-47.2,0C0.9,18.4,0,22.4,0,26.4c0,0.7,0,1.5,0.1,2.2h99.8c0.4-4.7-0.5-9.5-2.7-13.9L50,14.8
+                        L50,14.8z"/>
+                    <path class="st3" d="M50,14.8L50,14.8l-42.5,0c-0.3,1.5-0.4,3-0.4,4.5c0,3.2,0.6,6.3,1.8,9.3h91c0.4-4.7-0.5-9.5-2.7-13.9L50,14.8
+                        L50,14.8z"/>
+                    <path class="st4" d="M5.7,42.5h88.6c3.3-4.1,5.2-8.9,5.6-13.9H0.1C0.5,33.6,2.4,38.4,5.7,42.5z"/>
+                    <path class="st5" d="M99.9,28.6h-91c1.2,3.2,3.1,6.2,5.7,8.7l5.1,5.1h74.6C97.6,38.4,99.5,33.6,99.9,28.6z"/>
+                    <path class="st6" d="M5.7,42.5c0.6,0.7,1.2,1.4,1.8,2l6.4,6.4l5.5,5.5h61.3l11.9-11.9c0.6-0.6,1.2-1.3,1.8-2H5.7z"/>
+                    <path class="st7" d="M19.7,42.5l1.3,1.3l12.6,12.6h47l11.9-11.9c0.6-0.6,1.2-1.3,1.8-2H19.7z"/>
+                    <polygon class="st8" points="33.2,70.2 66.8,70.2 80.6,56.4 19.3,56.4 		"/>
+                    <polygon class="st9" points="80.6,56.4 33.6,56.4 47.5,70.2 66.8,70.2 		"/>
+                    <path class="st10" d="M66.8,70.2H33.2L45,82c2.7,2.7,7.2,2.7,9.9,0L66.8,70.2z"/>
+                    <path class="st11" d="M47.5,70.2l4.7,4.7c2.7,2.7,7.2,2.7,9.9,0l4.7-4.7H47.5z"/>
+                </g>
+                <path class="st12" d="M91.1,19.3c-2.1,2.9-7.7,2.4-12.5-1.2c-1.4-1-2.5-2.2-3.4-3.4c-2.2-3-2.9-6.2-1.3-8.2
+                    c2.1-2.9,7.7-2.3,12.5,1.2c2.8,2.1,4.6,4.7,5.3,7.1C92.2,16.5,92,18.1,91.1,19.3z"/>
+                <path class="st13" d="M93.7,35.3c-2.2,0.3-4.5-2.4-5-6.1c0-0.2,0-0.4-0.1-0.5c-0.4-3.5,1-6.5,3.1-6.8c2.2-0.3,4.5,2.4,5,6.1
+                    c0,0.2,0.1,0.5,0.1,0.7C97.2,32,95.8,34.9,93.7,35.3z"/>
+                <path class="st14" d="M78.7,18.1c-1.4-1-2.5-2.2-3.4-3.4h16.4c0.5,1.7,0.3,3.3-0.6,4.5C89,22.2,83.4,21.6,78.7,18.1z"/>
+                <path class="st14" d="M96.9,28.6h-8.2c-0.4-3.5,1-6.5,3.1-6.8c2.2-0.3,4.5,2.4,5,6.1C96.8,28.2,96.8,28.4,96.9,28.6z"/>
+            </g>
+                <animateTransform 
+                    attributeName="transform" 
+                    type="scale" 
+                    values="1; 1.5; 1.25; 1.5; 1.5; 1;" 
+                    dur="1s" 
+                    repeatCount="indefinite"
+                    additive="sum">      
+                </animateTransform>
+            </g>
+            </svg>
+        </div>
+        <div class="sec2__text2">P<span class="circle__o">O</span>RTF<span class="circle__o">O</span>LI<span class="circle__o">O</span>
+            <div class="sec2__circle sec2__circle1"></div>
+            <div class="sec2__circle sec2__circle2"></div>
+            <div class="sec2__circle sec2__circle3"></div>
+        </div>
+        <div class="sec2__text3">
+            <div class="line"></div>
+            <p>creative developer</p>
+        </div>
+    </section>
+    <!-- //section2 -->
+</body>
+</html>
