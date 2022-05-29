@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/pacman.css">
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Lato:100,300,400,400i,700");
+        @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&display=swap');
+        
+        * {margin: 0; padding: 0; background-color: #f1f1f1;}
+        .mail {
+            right: 3vw; bottom: -7vw;
+            border-radius: 20px;
+            position: fixed;
+            width: 60vw;
+            height: 55vw;
+            border: 1px solid #000;
+            font-family: 'Gowun Dodum';
+            overflow: hidden;
+            font-size: 2.5vw;
+        }
+        .mail__header {
+            padding: 1vw;
+            background-color: #000;
+            display: flex;
+        }
+        .mail__header p {
+            background-color: #000;
+            color: #fff;
+        }
+        .mail__header p:nth-child(1) {
+            margin-right: auto;
+        }
+        .mail__header p:nth-child(2) {
+            margin-right: 0.5vw;
+            /* border: 1px solid #fff; */
+            padding: 0.1vw 0.5vw;
+        }
+        .mail__who {
+            padding: 1vw;
+            border-bottom: 1px solid #000;
+            font-size: 2vw;
+        }
+        .mail__title {
+            padding: 1vw;
+            border-bottom: 1px solid #000;
+            font-size: 2vw;
+        }
+        .mail__desc {
+            padding: 1vw;
+            font-size: 2vw;
+            /* border: 1px solid red; */
+            height: 25vw;
+            border-bottom: 1px solid #000;
+        }
+        .mail__send {
+            height: 4vw;
+            position: relative;
+            padding: 0.25em;
+        }
+        .mail__send p {
+            position: absolute;
+            display: inline-block;
+            color: #fff;
+            background-color: #000;
+            right: 0.5em; top: 50%;
+            transform: translate3d(0, -50%, 0);
+            padding: 0.2em 0.7em;
+            font-size: 2vw;
+        }
+    </style>
+    <title>test</title>
+</head>
+<body>
+    <article class="mail">
+        <div class="mail__header">
+            <p>로그인 없이 메일 보내기</p>
+            <p>닫기</p>
+        </div>
+        <div class="mail__who">
+            <p>답장 받을 이메일</p>
+        </div>
+        <div class="mail__title">
+            <p>제목</p>
+        </div>
+        <div class="mail__desc">
+            <p>내용</p>
+        </div>
+        <div class="mail__send">
+            <p>보내기</p>
+        </div>
+    </article>
+    
+</body>
+</html>

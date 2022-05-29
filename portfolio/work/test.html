@@ -7,184 +7,241 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/pacman.css">
+    <link rel="stylesheet" href="assets/css/mail.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
     <style>
-        @import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700");
+        @import url("https://fonts.googleapis.com/css?family=Lato:100,300,400,400i,700");
         @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&display=swap');
         
         * {margin: 0; padding: 0;}
-        #section9 {
+        #section10 {
+            width: 100%;
+            background: #f1f1f1;
+            display: block;
+        }
+        .sec10__header {
+            overflow: hidden;
+            margin-top: 10vw;
+            margin-bottom: 15vw;
+        }
+        .sec10__header .games {
+            display: flex;
+            width: 125vw;
+        }
+        .sec10__header .games .game {
+            width: 30vw;
+            height: calc(30vw / 1.6);
+            background-color: #000;
+            margin-right: 1vw;
+        }
+        .sec10__header .games .game1 {}
+        .sec10__header .games .game2 {}
+        .sec10__header .games .game3 {}
+        .sec10__header .games .game4 {}
+
+        .sec10__header p {
+            font-family: "Lato";
+            text-align: center;
+            font-size: 6.5vw;
+            font-weight: 300;
+            letter-spacing: 2vw;
+            margin: 6vw 0;
+            white-space: nowrap;
+        }
+        .sec10__header .gameCircle {
+            position: relative;
+            width: 14vw;
+            height: 14vw;
+            margin-left: calc(50vw - 14vw / 2);
+            border-radius: 50%;
+            text-align: center;
+            display: block;
+            border: 1px solid #000;
+        }
+        .sec10__header .gameCircle p {
+            position: absolute;
+            left: 50%; top: 10%;
+            transform: translate3d(-50%, -50%, 0);
+            text-transform: uppercase;
+            font-size: 1.7vw;
+            letter-spacing: normal;
+            text-align: center;
+            white-space: nowrap;
+        }
+        .sec10__body {
+            background-color: #000;
             width: 100%;
             display: inline-block;
-            background: #f1f1f1;
-            position: relative;
-        }
-        .sec9__wrap {
-            width: 66vw;
-            height: 45vw;
-            margin: 0 auto;
-            margin-top: 10vw;
-            margin-bottom: 10vw;
-            background-image: url(assets/img/sec9_back.png);
-            background-size: cover;
-            position: relative;
-        }
-        .sec9__wrap__inner {
-            position: absolute;
-            left: 50%; top: 50%;    
-            transform: translate3d(-50%, -50%, 0);
-            width: 62.5vw;
-            height: 40vw;
-            background-color: #fff;
-            margin: 0 auto;
-            margin-top: 0vw;
-        }
-        .sec9__header {}
-        .sec9__header p {
-            font-family: 'Lato';
-            font-size: 3.5vw;
-            font-weight: 700;
-            letter-spacing: 1.5vw;
-            padding: 0.4em 0;
             text-align: center;
-            border-bottom: 1px solid #000;
+            padding-bottom: 100px;
         }
-        .sec9__body {
-            font-family: 'Barlow Condensed';
-            display: flex;
-            padding: 1vw;
-            justify-content: space-between;
-        }
-        .sec9__body .left {
-            border: 1px solid red;
-            width: 50%;
-        }
-        .sec9__body .left .body__title {
-            border: 1px solid orange;
-            margin-top: 1vw;
-            margin-bottom: 1vw;
-            border-bottom: 1px solid #000;
-        }
-        .sec9__body .left .body__title p {
-            margin-left: 1vw;
-            line-height: 1.5;
-            font-size: 2vw;
-        }
-        .sec9__body .left .body__desc {
-            margin-left: 1vw;
-            font-family: 'Gowun Dodum';
-            border: 1px solid blue;
-            color: #838383;
-        }
-        .sec9__body .left .body__desc p:nth-child(1) {
-            margin-bottom: 0.5em;
-            font-size: 1.9vw;
-        }
-        .sec9__body .left .body__desc p:nth-child(2) {
-            font-size: 1.8vw;
-            margin-left: 0.5em;
-        }
-        .sec9__body .left .body__desc p:nth-child(3),
-        .sec9__body .left .body__desc p:nth-child(4),
-        .sec9__body .left .body__desc p:nth-child(5) {
-            font-size: 1.5vw;
-            margin-left: 1em;
-        }
-        .sec9__body .right {}
-        .sec9__body .right .img {
-            width: 23vw;
-            height: calc(23vw / 1.6);
-        }
-        .sec9__body .right .img1 {
-            background: #273e73;
-            margin-bottom: 1vw;
-        }
-        .sec9__body .right .img2 {
-            background: #f0d9ba;
-        }
-        .sec9__wrap__cover {
-            width: 66vw;
-            height: 45vw;
+        .sec10__body .information {
+            width: 75vw;
+            height: calc(75vw / 1.6);
+            background: lightgrey;
             margin: 0 auto;
             margin-top: 10vw;
-            background-image: url(assets/img/sec9_front.png);
-            background-size: cover;
-            position: absolute;
-            z-index: 100;
-            top: 0;
-            /* 열렸을 때 */
-            left: -48%;
-            /* 닫혔을 때 */
-            /* left: 16%; */
         }
-        @media (min-width: 1200px) {
-            #section9 {width: 1200px; margin: 0 auto; display: block;
-                border: 1px solid #000;
-            }
-            .sec9__wrap {width: 830px; height: 560px; margin-top: 138px; margin-bottom: 138px;}
-            .sec9__wrap__inner {width: 790px; height: 500px;}
-            .sec9__header {}
-            .sec9__header p {font-size: 50px; letter-spacing: 20px;}
-            .sec9__body {padding: 10px;}
-            .sec9__body .left .body__title {margin-top: 15px; margin-bottom: 15px;
-                border-bottom: 1px solid #000;
-                border: 1px solid orange;
-            }
-            .sec9__body .left .body__title p {margin-left: 20px; font-size: 23px;}
-            .sec9__body .left .body__desc {margin-left: 10px;
-                border: 1px solid blue;
-            }
-            .sec9__body .left .body__desc p:nth-child(1) {font-size: 25px;}
-            .sec9__body .left .body__desc p:nth-child(2) {font-size: 20px;}
-            .sec9__body .left .body__desc p:nth-child(3),
-            .sec9__body .left .body__desc p:nth-child(4),
-            .sec9__body .left .body__desc p:nth-child(5) {font-size: 18px; margin-left: 20px;}
-            .sec9__body .right .img {width: 280px; height: calc(280px / 1.6);}
-            .sec9__body .right .img1 {margin-bottom: 15px;}
-            .sec9__wrap__cover {width: 830px; height: 560px; margin-top: 138px; 
-                /* 열렸을 때 */
-                left: -610px;
-                /* 닫혔을 때 */
-                /* left: 175px; */
-            }
+        .sec10__body iframe {
+            display: none;
+        }
+        .sec10__body p {
+            display: block;
+            margin: 0 auto;
+            margin-top: 8vw;
+            text-align: center;
+            font-family: "Gowun Dodum";
+            text-align: center;
+            color: #fff;
+            font-size: 4vw;
+            text-decoration: unset;
+        }
+        .sec10__body p:hover {
+            text-decoration: underline;
+        }
+        @media (min-width:1200px) {
+        #section10 {text-align: center; display: inline-block;}
+        .sec10__header .games .game1 {}
+        .sec10__header .games .game2 {}
+        .sec10__header .games .game3 {}
+        .sec10__header .games .game4 {}
+        .sec10__header p { font-size: 74px; letter-spacing: 30px;  margin: 80px 0;}
+        .sec10__header .gameCircle {width: 180px; height: 180px; margin-left: calc(50% - 180px / 2);}
+        .sec10__header .gameCircle p {font-size: 24px; top: 5%;}
+        .sec10__body {width: 100%;}
+        .sec10__body .information {display: none;}
+        .sec10__body iframe {display: block; width: 900px; height: calc(900px / 1.6); background: lightgrey; margin: 0 auto; margin-top: 120px;}
+        .sec10__body p {margin-top: 100px; font-size: 50px;}
         }
     </style>
     <title>test</title>
 </head>
 <body>
-    <section id="section9">
-        <div class="sec9__wrap__cover"></div>
-        <div class="sec9__wrap">
-            <div class="sec9__wrap__inner">
-                <div class="sec9__header">
-                    <p>CLASSIFIED</p>
-                </div>
-                <div class="sec9__body">
-                    <div class="left">
-                        <div class="body__title">
-                            <p>Name : 류 성 일 / Sungil Ryu</p>
-                            <p>Position : Frontend Developer</p>
-                        </div>
-                        <div class="body__desc">
-                            <p>
-                                성장하는 개발자가 되겠습니다.<br>
-                                방문해주셔서 감사합니다.<br>
-                                <br>
-                            </p>
-                            <p>&lt;자격 현황&gt;</p>
-                            <p>- SQLD</p>
-                            <p>- 정보처리기사 (6월 1일 발표)</p>
-                            <p>- 웹디자인기능사 (6월 12일 실기)</p>
-                            
+    <section id="section10">
+        <div class="sec10__header">
+            <div class="games">
+                <a href="#3" class="game game1"></a>
+                <a href="#3" class="game game2"></a>
+                <a href="#3" class="game game3"></a>
+                <a href="#3" class="game game4"></a>
+            </div>
+            <p>PLAY THE GAME</p>
+            <a href="#3" class="gameCircle">
+                <p>explore<br> game site</p>
+            </a>
+        </div>
+        <div class="sec10__body">
+            <div class="pacman__wrapwrap">
+                <div class="pacman__wrap">
+                    <div class="ghost ghost1">
+                        <div class="eye_left"></div>
+                        <div class="eye_right"></div>
+                        <div class="eye_left_color"></div>
+                        <div class="eye_right_color"></div>
+                        <div class="tails">
+                            <div class="tail1"></div>
+                            <div class="tail2"></div>
+                            <div class="tail3"></div>
+                            <div class="tail4"></div>
                         </div>
                     </div>
-                    <div class="right">
-                        <div class="img img1"></div>
-                        <div class="img img2"></div>
+                    <div class="ghost ghost2">
+                        <div class="eye_left"></div>
+                        <div class="eye_right"></div>
+                        <div class="eye_left_color"></div>
+                        <div class="eye_right_color"></div>
+                        <div class="tails">
+                            <div class="tail1"></div>
+                            <div class="tail2"></div>
+                            <div class="tail3"></div>
+                            <div class="tail4"></div>
+                        </div>
+                    </div>
+                    <div class="ghost ghost3">
+                        <div class="eye_left"></div>
+                        <div class="eye_right"></div>
+                        <div class="eye_left_color"></div>
+                        <div class="eye_right_color"></div>
+                        <div class="tails">
+                            <div class="tail1"></div>
+                            <div class="tail2"></div>
+                            <div class="tail3"></div>
+                            <div class="tail4"></div>
+                        </div>
+                    </div>
+                    <div class="ghost ghost4">
+                        <div class="eye_left"></div>
+                        <div class="eye_right"></div>
+                        <div class="eye_left_color"></div>
+                        <div class="eye_right_color"></div>
+                        <div class="tails">
+                            <div class="tail1"></div>
+                            <div class="tail2"></div>
+                            <div class="tail3"></div>
+                            <div class="tail4"></div>
+                        </div>
+                    </div>
+                    <div class="pacman">
+                        <div class="mouth"></div>
                     </div>
                 </div>
-            </div> 
-        </div> 
+            </div>
+            <div class="information"></div>
+            <iframe  src="" frameborder="0"></iframe>
+            <p>로그인 없이 메일보내기</p>
+
+        </div>
     </section>
     
+<!-- START HERE -->
+   
+   <form class="gform pure-form pure-form-stacked mail" method="POST" data-email="x7nxc3@google.com"
+   action="https://script.google.com/macros/s/AKfycbyldJEk0TmEqaf_cPSpCNbapKu-xxXQBZOoW__h_mvpZndaWGuJb3_TlzvIAzgx3eRH/exec">
+   
+   <article class="mail">
+        <div class="mail__header">
+            <p>로그인 없이 메일 보내기</p>
+            <p class="close">닫기</p>
+        </div>
+        <!-- // 메일 헤더 -->
+        <div class="form-elements">
+            <fieldset class="pure-group mail__who">
+            <label for="email" class="ir_pm">Your Email Address</label>
+            <input id="email" name="email" type="email" value="" required placeholder="답장 받을 이메일"/>
+            </fieldset>
+            <!-- // 답장 답을 이메일 -->
+            <fieldset class="pure-group mail__title">
+            <label for="name" class="ir_pm">Your Title</label>
+            <input id="name" name="name" placeholder="제목" />
+            </fieldset>
+            <!-- // 제목 -->
+            <fieldset class="pure-group mail__desc">
+            <label for="message" class="ir_pm">내용</label>
+            <textarea id="message" name="message" rows="10" placeholder="내용"></textarea>
+            </fieldset>
+
+            <div class="mail__send">
+                <button class="button-success pure-button button-xlarge sending">보내기</button>
+            </div>
+        </div>
+        <div style="display:none;" class="thankyou_message">
+            <h2>메일이 정상적으로 전송되었습니다.<br>감사합니다.</h2>
+        </div>
+    </article>
+  </form>
+  <script data-cfasync="false" type="text/javascript"
+src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script>
+
+<script>
+    const mail = document.querySelector(".mail")
+    const ingMail = document.querySelector(".sec10__body p")
+
+    ingMail.addEventListener("click",() => {
+    })
+
+</script>
 </body>
 </html>

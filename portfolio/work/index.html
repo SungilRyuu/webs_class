@@ -6,9 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="assets/css/font.css">
+    <link rel="stylesheet" href="assets/css/mail.css">
+    <link rel="stylesheet" href="assets/css/pacman.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <title>Document</title>
     <style>
         .scrollTop {
@@ -602,7 +608,121 @@
             </div> 
         </div> 
     </section>
-    <!-- <div class="scrollTop">0</div> -->
+    <!-- // -->
+    <section id="section10">
+        <div class="sec10__header">
+            <div class="games">
+                <a href="#3" class="game game1"></a>
+                <a href="#3" class="game game2"></a>
+                <a href="#3" class="game game3"></a>
+                <a href="#3" class="game game4"></a>
+            </div>
+            <p>PLAY THE GAME</p>
+            <a href="#3" class="gameCircle">
+                <p>explore<br> game site</p>
+            </a>
+        </div>
+        <div class="sec10__body">
+            <div class="pacman__wrapwrap">
+                <div class="pacman__wrap">
+                    <div class="ghost ghost1">
+                        <div class="eye_left"></div>
+                        <div class="eye_right"></div>
+                        <div class="eye_left_color"></div>
+                        <div class="eye_right_color"></div>
+                        <div class="tails">
+                            <div class="tail1"></div>
+                            <div class="tail2"></div>
+                            <div class="tail3"></div>
+                            <div class="tail4"></div>
+                        </div>
+                    </div>
+                    <div class="ghost ghost2">
+                        <div class="eye_left"></div>
+                        <div class="eye_right"></div>
+                        <div class="eye_left_color"></div>
+                        <div class="eye_right_color"></div>
+                        <div class="tails">
+                            <div class="tail1"></div>
+                            <div class="tail2"></div>
+                            <div class="tail3"></div>
+                            <div class="tail4"></div>
+                        </div>
+                    </div>
+                    <div class="ghost ghost3">
+                        <div class="eye_left"></div>
+                        <div class="eye_right"></div>
+                        <div class="eye_left_color"></div>
+                        <div class="eye_right_color"></div>
+                        <div class="tails">
+                            <div class="tail1"></div>
+                            <div class="tail2"></div>
+                            <div class="tail3"></div>
+                            <div class="tail4"></div>
+                        </div>
+                    </div>
+                    <div class="ghost ghost4">
+                        <div class="eye_left"></div>
+                        <div class="eye_right"></div>
+                        <div class="eye_left_color"></div>
+                        <div class="eye_right_color"></div>
+                        <div class="tails">
+                            <div class="tail1"></div>
+                            <div class="tail2"></div>
+                            <div class="tail3"></div>
+                            <div class="tail4"></div>
+                        </div>
+                    </div>
+                    <div class="pacman">
+                        <div class="mouth"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="information"></div>
+            <iframe  src="" frameborder="0"></iframe>
+            <p>로그인 없이 메일보내기</p>
+
+        </div>
+    </section>
+    <!-- //section10 play the game -->
+   <form class="gform pure-form pure-form-stacked mail" method="POST" data-email="x7nxc3@google.com"
+   action="https://script.google.com/macros/s/AKfycbyldJEk0TmEqaf_cPSpCNbapKu-xxXQBZOoW__h_mvpZndaWGuJb3_TlzvIAzgx3eRH/exec">
+   
+   <article class="mail">
+        <div class="mail__header">
+            <p>로그인 없이 메일 보내기</p>
+            <p class="close">닫기</p>
+        </div>
+        <!-- // 메일 헤더 -->
+        <div class="form-elements">
+            <fieldset class="pure-group mail__who">
+            <label for="email" class="ir_pm">Your Email Address</label>
+            <input id="email" name="email" type="email" value="" required placeholder="답장 받을 이메일"/>
+            </fieldset>
+            <!-- // 답장 답을 이메일 -->
+            <fieldset class="pure-group mail__title">
+            <label for="name" class="ir_pm">Your Title</label>
+            <input id="name" name="name" placeholder="제목" />
+            </fieldset>
+            <!-- // 제목 -->
+            <fieldset class="pure-group mail__desc">
+            <label for="message" class="ir_pm">내용</label>
+            <textarea id="message" name="message" rows="10" placeholder="내용"></textarea>
+            </fieldset>
+
+            <div class="mail__send">
+                <button class="button-success pure-button button-xlarge sending">보내기</button>
+            </div>
+        </div>
+        <div style="display:none;" class="thankyou_message">
+            <h2>메일이 정상적으로 전송되었습니다.<br>감사합니다.</h2>
+        </div>
+    </article>
+  </form>
+  <!-- // 메일 보내기 -->
+
+  <script data-cfasync="false" type="text/javascript"
+src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script>
     <script src="assets/js/index.js"></script>
     <script>
         function scroll(){
@@ -613,5 +733,5 @@
         }
         scroll();
         </script>
-</body>
+        
 </html>

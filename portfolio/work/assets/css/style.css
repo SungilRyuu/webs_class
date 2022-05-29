@@ -494,10 +494,111 @@ body {
     .sec9__body .left .body__desc p:nth-child(5) {font-size: 18px; margin-left: 20px;}
     .sec9__body .right .img {width: 280px; height: calc(280px / 1.6);}
     .sec9__body .right .img1 {margin-bottom: 15px;}
-    .sec9__wrap__cover {width: 830px; height: 560px; margin-top: 138px;  top: -150px;
+    .sec9__wrap__cover {width: 830px; height: 560px; margin-top: 138px;  top: -138px;
         /* 열렸을 때 */
         left: -610px;
         /* 닫혔을 때 */
         /* left: 175px; */
     }
+}
+/* //section9 */
+
+#section10 {
+    width: 100%;
+    background: #f1f1f1;
+    display: block;
+}
+.sec10__header {
+    overflow: hidden;
+    margin-top: 10vw;
+    margin-bottom: 15vw;
+}
+.sec10__header .games {
+    display: flex;
+    width: 125vw;
+}
+.sec10__header .games .game {
+    width: 30vw;
+    height: calc(30vw / 1.6);
+    background-color: #000;
+    margin-right: 1vw;
+}
+.sec10__header .games .game1 {}
+.sec10__header .games .game2 {}
+.sec10__header .games .game3 {}
+.sec10__header .games .game4 {}
+
+.sec10__header p {
+    font-family: "Lato";
+    text-align: center;
+    font-size: 6.5vw;
+    font-weight: 300;
+    letter-spacing: 2vw;
+    margin: 6vw 0;
+    white-space: nowrap;
+}
+.sec10__header .gameCircle {
+    position: relative;
+    width: 14vw;
+    height: 14vw;
+    margin-left: calc(50vw - 14vw / 2);
+    border-radius: 50%;
+    text-align: center;
+    display: block;
+    border: 1px solid #000;
+}
+.sec10__header .gameCircle p {
+    position: absolute;
+    left: 50%; top: 10%;
+    transform: translate3d(-50%, -50%, 0);
+    text-transform: uppercase;
+    font-size: 1.7vw;
+    letter-spacing: normal;
+    text-align: center;
+    white-space: nowrap;
+}
+.sec10__body {
+    background-color: #000;
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    padding-bottom: 100px;
+}
+.sec10__body .information {
+    width: 75vw;
+    height: calc(75vw / 1.6);
+    background: lightgrey;
+    margin: 0 auto;
+    margin-top: 10vw;
+}
+.sec10__body iframe {
+    display: none;
+}
+.sec10__body p {
+    display: block;
+    margin: 0 auto;
+    margin-top: 8vw;
+    text-align: center;
+    font-family: "Gowun Dodum";
+    text-align: center;
+    color: #fff;
+    font-size: 4vw;
+    text-decoration: unset;
+}
+.sec10__body p:hover {
+    text-decoration: underline;
+}
+@media (min-width:1200px) {
+#section10 {text-align: center; display: inline-block;}
+.sec10__header .games .game1 {}
+.sec10__header .games .game2 {}
+.sec10__header .games .game3 {}
+.sec10__header .games .game4 {}
+.sec10__header p { font-size: 74px; letter-spacing: 30px;  margin: 80px 0;}
+.sec10__header .gameCircle {width: 180px; height: 180px; margin-left: calc(50% - 180px / 2);}
+.sec10__header .gameCircle p {font-size: 24px; top: 5%;}
+.sec10__body {width: 100%;}
+.sec10__body .information {display: none;}
+.sec10__body iframe {display: block; width: 900px; height: calc(900px / 1.6); background: lightgrey; margin: 0 auto; margin-top: 120px;}
+.sec10__body p {margin-top: 100px; font-size: 50px;}
 }
