@@ -1,4 +1,15 @@
 
+    const prevMail = document.querySelector(".sec10__body p");
+    const formMail = document.querySelector(".mail");
+    const closeMail = document.querySelector(".mail__header .close")
+
+    prevMail.addEventListener("click", () => {
+      formMail.style.display = "block";
+    })
+    closeMail.addEventListener("click", () => {
+      formMail.style.display = "none";
+    })
+// 고래
     const canvas = document.getElementById("canvas");
     const whale = document.getElementById("whale");
     const eyeOpen = document.getElementById("eye_open");
@@ -120,3 +131,5 @@
     document.addEventListener("DOMContentLoaded", () => {
       initParticles();
     });
+
+    // 이메일

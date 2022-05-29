@@ -12,11 +12,11 @@
     <link rel="stylesheet" href="assets/css/pacman.css">
     <link rel="stylesheet" href="assets/css/mail.css">
     <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <style>
         @import url("https://fonts.googleapis.com/css?family=Lato:100,300,400,400i,700");
         @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&display=swap');
-        
-        * {margin: 0; padding: 0;}
+/*         
         #section10 {
             width: 100%;
             background: #f1f1f1;
@@ -115,7 +115,10 @@
         .sec10__body .information {display: none;}
         .sec10__body iframe {display: block; width: 900px; height: calc(900px / 1.6); background: lightgrey; margin: 0 auto; margin-top: 120px;}
         .sec10__body p {margin-top: 100px; font-size: 50px;}
-        }
+        } */
+        /* form {
+            display: none;
+        } */
     </style>
     <title>test</title>
 </head>
@@ -190,10 +193,11 @@
                 </div>
             </div>
             <div class="information"></div>
-            <iframe  src="" frameborder="0"></iframe>
+            <iframe  src="../../game/index.html" frameborder="0"></iframe>
             <p>로그인 없이 메일보내기</p>
 
         </div>
+        <!-- 팩맨 -->
     </section>
     
 <!-- START HERE -->
@@ -235,13 +239,8 @@
   <script data-cfasync="false" type="text/javascript"
 src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script>
 
+<script src="assets/js/index.js"></script>
 <script>
-    const mail = document.querySelector(".mail")
-    const ingMail = document.querySelector(".sec10__body p")
-
-    ingMail.addEventListener("click",() => {
-    })
-
 </script>
 </body>
 </html>

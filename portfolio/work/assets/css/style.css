@@ -70,9 +70,9 @@ body {
     text-transform: uppercase;
 }
 .sec2__circle {position: absolute; border-radius: 50%; background-size: cover;}
-.sec2__circle1 {left: 12.1vw; top: -0.8vw; width: 11.5vw; height: 11.5vw; background-color: tomato;}
-.sec2__circle2 {left: 56.2vw; top: -0.4vw; width: 12vw; height: 12vw; background-color: tan;}
-.sec2__circle3 {left: 83.8vw; top: -0.4vw; width: 12vw; height: 12vw; background-color: teal;}
+.sec2__circle1 {left: 12.1vw; top: -0.8vw; width: 11.5vw; height: 11.5vw; background-image: url(../img/complete/face3.jpg);}
+.sec2__circle2 {left: 56.2vw; top: -0.4vw; width: 12vw; height: 12vw; background-image: url(../img/complete/face4.jpg);}
+.sec2__circle3 {left: 83.8vw; top: -0.4vw; width: 12vw; height: 12vw; background-image: url(../img/complete/face1.jpg);}
 
 @media (min-width: 1200px) {
     #section2 {width: 1200px; height:900px; margin: 0 auto; display: block;}
@@ -258,7 +258,22 @@ body {
     margin: 0 auto;
     margin-top: 10vw;
     position: relative;
+    filter: grayscale(75%);
+    transition: filter 0.4s ease;
 }
+.sec6__img:hover {
+    filter: grayscale(0);
+}
+.sec6__img1 {background-image: url(../img/complete/site/project1.jpg); background-repeat: no-repeat; background-size: cover;}
+.sec6__img2 {background-image: url(../img/complete/site/project2.jpg); background-repeat: no-repeat; background-size: cover;}
+.sec6__img3 {background-image: url(../img/complete/site/php.jpg); background-repeat: no-repeat; background-size: cover;}
+.sec6__img4 {background-image: url(../img/complete/site/web.jpg); background-repeat: no-repeat; background-size: cover;}
+.sec6__img5 {background-image: url(../img/complete/site/search.jpg); background-repeat: no-repeat; background-size: cover;}
+.sec6__img6 {background-image: url(../img/complete/site/slider.jpg); background-repeat: no-repeat; background-size: cover;}
+.sec6__img7 {background-image: url(../img/complete/site/mouse.jpg); background-repeat: no-repeat; background-size: cover;}
+.sec6__img8 {background-image: url(../img/complete/site/quiz.jpg); background-repeat: no-repeat; background-size: cover;}
+.sec6__img9 {background-image: url(../img/complete/site/parall.jpg); background-repeat: no-repeat; background-size: cover;}
+
 .sec6__img .title {
     font-family: 'Rajdhani';
     font-size: 5vw;
@@ -270,6 +285,15 @@ body {
     position: absolute;
     left: 15vw; top: -5vw;
 }
+.sec6__img .title1 {background: rebeccapurple;}
+.sec6__img .title2 {background: #349a99;}
+.sec6__img .title3 {background: #006da0;}
+.sec6__img .title4 {background: #9c3e2e;}
+.sec6__img .title5 {background: #87bfe3;}
+.sec6__img .title6 {background: #d089aa;}
+.sec6__img .title7 {background: #4c57a5;}
+.sec6__img .title8 {background: #db8e18;}
+.sec6__img .title9 {background: #345a0f;}
 .sec6__img .site {
     position: absolute; 
     right: 4vw; bottom: 4.5vw;
@@ -326,11 +350,8 @@ body {
     margin-top: 20vw;
 }
 
-.sec6__footer p {
-}
-
 @media (min-width:1200px) {
-    #section6 {width: 1200px; margin: 0 auto; display: block; border: 1px solid #000;}
+    #section6 {width: 1200px; margin: 0 auto; display: block;}
     .sec6__title {margin-top: 8em; margin-bottom: 8em;}
     .sec6__title p:nth-child(1) {font-size: 4.3rem; margin-left: 4.5em;}
     .sec6__p1:before {left: -0.9em; top: 0em; width: 4.9em; height: 1.5em;}
@@ -341,7 +362,7 @@ body {
     .sec6__title .big__heart {display: block; position: absolute; left: 40em; top: 3em;}
 
     .sec6__project {width: 98%; height: 1000px;}
-    .sec6__img {width: 100%; height: calc(1200px / 1.6); margin-top: 3em;}
+    .sec6__img {width: 100%; height: calc(1000px / 1.6); margin-top: 3em;}
     .sec6__img .title {font-size: 4.5rem; padding: 0.1em 0.5em; left: 2.7em; top: -0.6em;}
     .sec6__img .site {right: 78px; bottom: 85px; font-size: 3rem;}
     .sec6__img .site__circle {right: 20px; bottom: 20px; width: 190px; height: 190px;}
@@ -523,10 +544,10 @@ body {
     background-color: #000;
     margin-right: 1vw;
 }
-.sec10__header .games .game1 {}
-.sec10__header .games .game2 {}
-.sec10__header .games .game3 {}
-.sec10__header .games .game4 {}
+.sec10__header .games .game1 {background-image: url(../img/complete/games/music.jpg); background-size: cover;}
+.sec10__header .games .game2 {background-image: url(../img/complete/games/card.jpg); background-size: cover;}
+.sec10__header .games .game3 {background-image: url(../img/complete/games/tetris.jpg); background-size: cover;}
+.sec10__header .games .game4 {background-image: url(../img/complete/games/typing.jpg); background-size: cover;}
 
 .sec10__header p {
     font-family: "Lato";
@@ -546,6 +567,11 @@ body {
     text-align: center;
     display: block;
     border: 1px solid #000;
+    transition: background-color 0.5s ease;
+}
+.sec10__header .gameCircle:hover {
+    color: #fff;
+    background-color: #000;
 }
 .sec10__header .gameCircle p {
     position: absolute;
@@ -584,16 +610,14 @@ body {
     color: #fff;
     font-size: 4vw;
     text-decoration: unset;
+    cursor: pointer;
 }
 .sec10__body p:hover {
     text-decoration: underline;
 }
 @media (min-width:1200px) {
 #section10 {text-align: center; display: inline-block;}
-.sec10__header .games .game1 {}
-.sec10__header .games .game2 {}
-.sec10__header .games .game3 {}
-.sec10__header .games .game4 {}
+.sec10__header {margin-bottom: 100px;}
 .sec10__header p { font-size: 74px; letter-spacing: 30px;  margin: 80px 0;}
 .sec10__header .gameCircle {width: 180px; height: 180px; margin-left: calc(50% - 180px / 2);}
 .sec10__header .gameCircle p {font-size: 24px; top: 5%;}
@@ -601,4 +625,5 @@ body {
 .sec10__body .information {display: none;}
 .sec10__body iframe {display: block; width: 900px; height: calc(900px / 1.6); background: lightgrey; margin: 0 auto; margin-top: 120px;}
 .sec10__body p {margin-top: 100px; font-size: 50px;}
+.sec10__header .gameCircle { display: none;}
 }
