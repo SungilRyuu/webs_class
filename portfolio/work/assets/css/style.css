@@ -471,6 +471,12 @@ body {
     font-size: 1.5vw;
     margin-left: 1em;
 }
+.sec9__body .left .body__desc p {
+    transition: color 0.4s ease;
+}
+.sec9__body .left .body__desc p:hover {
+    color: #000;
+}
 .sec9__body .right {}
 .sec9__body .right .img {
     width: 23vw;
