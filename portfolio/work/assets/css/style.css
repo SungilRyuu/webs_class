@@ -70,7 +70,7 @@ body {
     text-transform: uppercase;
 }
 .sec2__circle {position: absolute; border-radius: 50%; background-size: cover;}
-.sec2__circle1 {left: 12.1vw; top: -0.8vw; width: 11.5vw; height: 11.5vw; background-image: url(../img/faces.jpg);}
+.sec2__circle1 {left: 12.1vw; top: -0.8vw; width: 11.5vw; height: 11.5vw; background-image: url(../img/complete/faces.jpg);}
 .sec2__circle2 {left: 56.2vw; top: -0.4vw; width: 12vw; height: 12vw; background-image: url(../img/complete/face3.jpg);}
 .sec2__circle3 {left: 83.8vw; top: -0.4vw; width: 12vw; height: 12vw; background-image: url(../img/complete/face1.jpg);}
 
@@ -238,7 +238,7 @@ body {
 .sec6__circle {
     position: absolute; 
     border-radius: 50%;
-    background-image: url(../img/computer.jpg);
+    background-image: url(../img/complete/computer.jpg);
      background-size: cover;
     left: 44.5vw; 
     top: 11vw; 
