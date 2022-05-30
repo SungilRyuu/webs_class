@@ -51,7 +51,7 @@
   top: 9.6vw;
   width: 35.8vw;
   height: 33.9vw;
-  background-image: url(https://source.unsplash.com/800x600/?muesum+art);
+  background-image: url(https://source.unsplash.com/800x600/?Louvre);
   background-size: cover;
   z-index: 2;
 }
@@ -74,6 +74,76 @@
   z-index: 2;
 }
 
+.reveal {position: absolute; background-color: #000; border: 0.4vw solid #000;}
+.reveal1 {left: 27.3vw; top: 31.7vw; width: 20.8vw; height: 29.4vw; z-index: 10; animation: reveal1 1s linear forwards;}
+.reveal2 {left: 16.3vw; top: 28.6vw; width: 11.9vw; height: 16.3vw; z-index: 2; animation: reveal2 1s linear 0.8s forwards;}
+.reveal3 {left: 24.5vw; top: 14.0vw; width: 17.9vw; height: 25.8vw; z-index: 1; animation: reveal3 1s linear 1s forwards;}
+.reveal4 {left: 37.4vw; top: 9.6vw; width: 35.8vw; height: 33.9vw; z-index: 2; animation: reveal4 1s linear 1.5s  forwards;}
+.reveal5 {left: 68.8vw; top: 25.4vw; width: 13.1vw; height: 18.7vw; z-index: 2; animation: reveal5 1s linear 2s forwards;}
+.reveal6 {left: 79vw; top: 15.5vw; width: 10.2vw; height: 14.4vw; z-index: 2; animation: reveal6 1s linear 2.5s forwards;}
+
+@keyframes reveal1 {
+  0% {width: 20.8vw; height: 29.4vw;}
+  99% {width: 20.8vw; height: 0%; opacity: 1;}
+  100% {width: 0%; height: 0%; opacity: 0;}
+}
+@keyframes reveal2 {
+  0% {width: 11.9vw; height: 16.3vw;}
+  99% {width: 11.9vw; height: 0%; opacity: 1;}
+  100% {width: 0%; height: 0%; opacity: 0;}
+}
+@keyframes reveal3 {
+  0% {width: 17.9vw; height: 25.8vw;}
+  99% {width: 17.9vw; height: 0%; opacity: 1;}
+  100% {width: 0%; height: 0%; opacity: 0;}
+}
+@keyframes reveal4 {
+  0% {width: 35.8vw; height: 33.9vw; }
+  99% {width: 35.8vw; height: 0%; opacity: 1;}
+  100% {width: 0%; height: 0%; opacity: 0;}
+}
+@keyframes reveal5 {
+  0% {width: 13.1vw; height: 18.7vw;}
+  99% {width: 13.1vw; height: 0%; opacity: 1;}
+  100% {width: 0%; height: 0%; opacity: 0;}
+}
+@keyframes reveal6 {
+  0% {width: 10.2vw; height: 14.4vw;}
+  99% {width: 10.2vw; height: 0%; opacity: 1;}
+  100% {width: 0%; height: 0%; opacity: 0;}
+}
+@keyframes revealing1 {
+  0% {width: 20.8vw; height: 0;}
+  100% {width: 20.8vw; height: 29.4vw;}
+}
+@keyframes revealing2 {
+  0% {width: 11.9vw; height: 0;}
+  100% {width: 11.9vw; height: 16.3vw;}
+}
+@keyframes revealing3 {
+  0% {width: 17.9vw; height: 0;}
+  100% {width: 17.9vw; height: 25.8vw;}
+}
+@keyframes revealing4 {
+  0% {width: 35.8vw; height: 0; }
+  100% {width: 35.8vw; height: 33.9vw; }
+}
+@keyframes revealing5 {
+  0% {width: 13.1vw; height: 0;}
+  100% {width: 13.1vw; height: 18.7vw;}
+}
+@keyframes revealing6 {
+  0% {width: 10.2vw; height: 0vw;}
+  100% {width: 10.2vw; height: 14.4vw;}
+}
+
+.reveal1.revealing {animation: revealing1 1s linear forwards;}
+.reveal2.revealing {animation: revealing2 1s linear forwards;}
+.reveal3.revealing {animation: revealing3 1s linear forwards;}
+.reveal4.revealing {animation: revealing4 1s linear forwards;}
+.reveal5.revealing {animation: revealing5 1s linear forwards;}
+.reveal6.revealing {animation: revealing6 1s linear forwards;}
+
 .gallery:hover {
   filter: grayscale(0%);
 }
@@ -91,4 +161,15 @@
   font-weight: 300;
   text-align: right;
   font-size: 1.2vw;
+}
+
+.sec1__btn {
+  position: absolute;
+  right: 10vw; top: 10vw;
+  width: 5vw; height: 5vw;
+  background-image: url(../img/svg/reload.svg);
+  background-position: center center;
+  background-size: cover;
+  border: 0;
+  background-color: #f0f2f4;
 }

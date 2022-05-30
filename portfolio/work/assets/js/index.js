@@ -18,6 +18,18 @@ document.querySelector("#section10").addEventListener("mousemove", (e) => {
 
   gsap.to(".games", {duration: 0.3, x: centerPage/10});
 })
+
+// section1 액자
+  document.querySelector(".sec1__btn").addEventListener("click", () => {reload1()});
+function reload1(){
+    document.querySelectorAll(".reveal").forEach(reveal => {
+      reveal.classList.add("revealing");
+      setTimeout(() => {
+        location.reload();
+      }, 1000);
+    })
+  }
+
 // 고래
     const canvas = document.getElementById("canvas");
     const whale = document.getElementById("whale");
