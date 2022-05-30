@@ -1,13 +1,23 @@
-    const prevMail = document.querySelector(".sec10__body p");
-    const formMail = document.querySelector(".mail");
-    const closeMail = document.querySelector(".mail__header .close")
+// 메일 보내기
+const prevMail = document.querySelector(".sec10__body p");
+const formMail = document.querySelector(".mail");
+const closeMail = document.querySelector(".mail__header .close")
 
-    prevMail.addEventListener("click", () => {
-      formMail.style.display = "block";
-    })
-    closeMail.addEventListener("click", () => {
-      formMail.style.display = "none";
-    })
+prevMail.addEventListener("click", () => {
+  formMail.style.display = "block";
+})
+closeMail.addEventListener("click", () => {
+  formMail.style.display = "none";
+})
+
+// 마우스
+document.querySelector("#section10").addEventListener("mousemove", (e) => {
+  let mousePageX = e.pageX;
+  let windowWidth = window.outerWidth;
+  let centerPage = windowWidth/2 - mousePageX;
+
+  gsap.to(".games", {duration: 0.3, x: centerPage/10});
+})
 // 고래
     const canvas = document.getElementById("canvas");
     const whale = document.getElementById("whale");

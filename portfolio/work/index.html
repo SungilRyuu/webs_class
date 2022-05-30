@@ -8,29 +8,27 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/font.css">
-    <link rel="stylesheet" href="assets/css/mail.css">
-    <link rel="stylesheet" href="assets/css/pacman.css">
-    <link rel="stylesheet" href="assets/css/reset.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <title>Portfolio</title>
-    <style>
-        .scrollTop {
-            position: fixed;
-            left: 0; top: 0;
-            z-index: 100;
-            background: #000;
-            color: #fff;
-            font-size: 5rem;
-          }
-          </style>
 </head>
 <body>
-    <!-- <section id="section1">
-
-    </section> -->
+    <section id="section1">
+      <div class="sec1__wrap">
+          <div class="gallery gallery1"></div>
+          <div class="gallery gallery2"></div>
+          <div class="gallery gallery3"></div>
+          <div class="gallery gallery4"></div>
+          <div class="gallery gallery5"></div>
+          <div class="gallery gallery6"></div>
+        </div>
+        <div class="sec1__text">
+          <p>portfolio</p>
+          <p>unsplash API를 활용하여 액자를 구성하였습니다.</p>
+        </div>
+  </section>
     <!-- //section1 -->
     <section id="section2">
         <div class="sec2__text1"><span>Web</span>Product
@@ -767,7 +765,7 @@
             </div>
             <div class="information"></div>
             <iframe  src="../../game/index.html" frameborder="0"></iframe>
-            <p>로그인 없이 메일보내기</p>
+            <p>메일보내기</p>
 
         </div>
     </section>
@@ -810,15 +808,17 @@
 
   <script data-cfasync="false" type="text/javascript"
 src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
     <script src="assets/js/index.js"></script>
     <script>
-        function scroll(){
-            let scrollTop = window.clientWidth;
-            document.querySelector(".scrollTop").innerText = Math.round(scrollTop);    
+        document.querySelector("#section10").addEventListener("mousemove", (e) => {
+          let mousePageX = e.pageX;
+          let windowWidth = window.outerWidth;
+          let centerPage = windowWidth/2 - mousePageX;
         
-            requestAnimationFrame(scroll);
-        }
-        scroll();
+          gsap.to(".games", {duration: 0.3, x: centerPage/10});
+        })
         </script>
         
 </html>

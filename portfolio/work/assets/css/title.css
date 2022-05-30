@@ -1,0 +1,94 @@
+#section1 {
+  width: 100%;
+  height: calc(100vw / 1.6);
+  background-image: url(../img/mainbg.jpg);
+  background-size: cover;
+  background-position: center center;
+  overflow: hidden;
+  position: relative;
+}
+.sec1__wrap {
+  width: 100%;
+  overflow: hidden;
+}
+.gallery {
+  position: absolute;
+  background-color: #fff;
+  border: 0.4vw solid #000;
+  filter: grayscale(70%);
+  transition: filter 0.3s ease-in-out;
+  background-position: center center;
+}
+.gallery1 {
+  left: 27.3vw;
+  top: 31.7vw;
+  width: 20.8vw;
+  height: 29.4vw;
+  z-index: 10;
+  background-image: url(https://source.unsplash.com/600x800/?flower);
+  background-size: cover;
+}
+.gallery2 {
+  left: 16.3vw;
+  top: 28.6vw;
+  width: 11.9vw;
+  height: 16.3vw;
+  background-image: url(https://source.unsplash.com/800x600/?Vienna);
+  background-size: cover;
+  z-index: 2;
+}
+.gallery3 {
+  left: 24.5vw;
+  top: 14vw;
+  width: 17.9vw;
+  height: 25.8vw;
+  background-image: url(https://source.unsplash.com/600x800/?poster+art);
+  background-size: cover;
+  z-index: 1;
+}
+.gallery4 {
+  left: 37.4vw;
+  top: 9.6vw;
+  width: 35.8vw;
+  height: 33.9vw;
+  background-image: url(https://source.unsplash.com/800x600/?muesum+art);
+  background-size: cover;
+  z-index: 2;
+}
+.gallery5 {
+  left: 68.8vw;
+  top: 25.4vw;
+  width: 13.1vw;
+  height: 18.7vw;
+  background-image: url(https://source.unsplash.com/800x600/?tree);
+  background-size: cover;
+  z-index: 2;
+}
+.gallery6 {
+  left: 79vw;
+  top: 15.5vw;
+  width: 10.2vw;
+  height: 14.4vw;
+  background-image: url(../img/complete/face1.jpg);
+  background-size: cover;
+  z-index: 2;
+}
+
+.gallery:hover {
+  filter: grayscale(0%);
+}
+.sec1__text {
+  position: absolute;
+  right: 4vw;
+  bottom: 1vw;
+  font-family: "Kumbh Sans", "GmarketSans";
+}
+.sec1__text p:nth-child(1) {
+  font-size: 5.4vw;
+  text-transform: uppercase;
+}
+.sec1__text p:nth-child(2) {
+  font-weight: 300;
+  text-align: right;
+  font-size: 1.2vw;
+}

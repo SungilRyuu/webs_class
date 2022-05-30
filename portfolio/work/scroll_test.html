@@ -111,13 +111,14 @@
   <div class="container">
     <section data-bgcolor="#bcb8ad" data-textcolor="#032f35">
       <div>
-        <h1 data-scroll data-scroll-speed="1">
+        <h1>
           <span>Horizontal</span>
           <span>scroll</span>
           <span>section</span>
         </h1>
-        <p data-scroll data-scroll-speed="2" data-scroll-delay="0.2">with GSAP ScrollTrigger & Locomotive Scroll</p>
+        <p>with GSAP ScrollTrigger & Locomotive Scroll</p>
       </div>
+
     </section>
 
     <section id="sectionPin">
@@ -145,8 +146,7 @@
     (function () {
         var scroll = new LocomotiveScroll();
     })();
-</script>
-  <script>
+    
     gsap.registerPlugin(ScrollTrigger);
 
 const pageContainer = document.querySelector(".container");
