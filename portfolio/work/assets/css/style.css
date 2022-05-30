@@ -479,16 +479,13 @@ body {
     color: #000;
 }
 .sec9__body .right {}
+
 .sec9__body .right .img {
     width: 23vw;
-    height: calc(23vw / 1.6);
-}
-.sec9__body .right .img1 {
-    background: #273e73;
-    margin-bottom: 1vw;
-}
-.sec9__body .right .img2 {
-    background: #f0d9ba;
+    height: calc(23vw / 1.6 * 2);
+    background-image: url(../img/complete/face1.jpg);
+    background-size: cover;
+    background-position: center center;
 }
 .sec9__wrap__cover {
     width: 66vw;
@@ -520,8 +517,14 @@ body {
     .sec9__body .left .body__desc p:nth-child(3),
     .sec9__body .left .body__desc p:nth-child(4),
     .sec9__body .left .body__desc p:nth-child(5) {font-size: 18px; margin-left: 20px;}
-    .sec9__body .right .img {width: 280px; height: calc(280px / 1.6);}
-    .sec9__body .right .img1 {margin-bottom: 15px;}
+    .sec9__body .right .img {
+        width: 280px; height: calc(280px / 1.6 * 2);
+        background-color: white;
+        background-image: url(../img/complete/face1.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
     .sec9__wrap__cover {width: 830px; height: 560px; margin-top: 138px;  top: -138px;
         /* 열렸을 때 */
         left: -610px;
@@ -603,11 +606,11 @@ body {
     /* background: lightgrey; */
     margin: 0 auto;
     margin-top: 10vw;
-    background-image: url(../img/complete/face1.jpg);
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     background-color: #000;
     background-position: center center;
+    display: none;
 }
 .sec10__body iframe {
     display: none;
