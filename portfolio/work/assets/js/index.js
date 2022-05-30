@@ -1,4 +1,3 @@
-
     const prevMail = document.querySelector(".sec10__body p");
     const formMail = document.querySelector(".mail");
     const closeMail = document.querySelector(".mail__header .close")
