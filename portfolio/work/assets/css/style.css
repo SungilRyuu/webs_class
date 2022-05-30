@@ -410,7 +410,7 @@ body {
     margin: 0 auto;
     margin-top: 10vw;
     margin-bottom: 10vw;
-    background-image: url(../img/sec9_back.png);
+    background-image: url(../img/complete/sec9_back.png);
     background-size: cover;
     position: relative;
 }
@@ -495,7 +495,7 @@ body {
     height: 45vw;
     margin: 0 auto;
     margin-top: 10vw;
-    background-image: url(../img/sec9_front.png);
+    background-image: url(../img/complete/sec9_front.png);
     background-size: cover;
     position: absolute;
     z-index: 100;
