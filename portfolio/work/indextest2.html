@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/loco.css">
+    <style>
+        * {margin: 0; padding: 0;}
+        body {
+            background: #f1f1f1;
+        }
+
+#section3, #section5 {
+    width: 100%;
+    height: 25vw;
+    background-color: #f1f1f1;
+    position: relative;
+    overflow: hidden;
+}
+.sec3__svg, .sec5__svg {
+    position: absolute;
+    left: 0; top: -75%;
+    width: 99vw;
+    height: 37vw;
+    background-image: url(../img/svg/bird.svg);
+    background-size: cover;
+    background-position: center center;
+}
+
+#section4 {
+    width: 100%;
+    height: 100vw;
+    background: #f1f1f1;
+    display: inline-block;
+    z-index: 100;
+}
+.sec4__info {
+    margin: 0 auto;
+    margin-top: 10vw;
+    font-size: 2.8vw;
+    line-height: 1.3;
+    font-weight: lighter;
+    padding-left: 44vw;
+    letter-spacing: -0.2vw;
+    display: inline-block;
+}
+.sec4__info .white {
+    color: #fff;
+    background: #000;
+}
+.sec4__desc {
+  margin-top: 5vw;
+  margin-bottom: 5vw;
+  display: flex;
+  justify-content: space-evenly;
+}
+.sec4__desc a {
+  font-size: 2.5vw;
+  font-weight: lighter;
+  letter-spacing: -0.2vw;
+  cursor: default;
+  opacity: 0;
+}
+.sec4__footer {
+    width: 68%;
+    margin: 0 auto;
+}
+
+.sec4__footer p {
+    font-family: 'Raleway Dots';
+    text-transform: uppercase;
+    font-size: 5.3vw;
+    white-space: nowrap;
+    text-align: center;
+    background: #946BC6;
+    color: #fff;
+    border-radius: 100px;
+}
+
+@media (min-width:1200px) {
+    #section4 {/* border: 1px solid red; */ width: 1200px; height: 1200px; margin: 0 auto; display: block;}
+    .sec4__info {margin-top: 5em; font-size: 2.2rem; padding-left: 17.5em; letter-spacing: -0.01em;}
+    .sec4__desc {margin-top: 2em; margin-bottom: 2em;}
+    .sec4__desc a {font-size: 2.2rem; letter-spacing: -0.1em;}
+    .sec4__footer {width: 820px;}
+    .sec4__footer p {font-size: 4.6rem;}
+}
+/* //section4 */
+
+#section6 {
+    width: 100%;
+    background-color: #f1f1f1;
+    display: inline-block;
+}
+
+.sec6__title {
+    width: 99%;
+    margin: 0 auto;
+    margin-top: 10vw;
+    margin-bottom: 10vw;
+    /* border: 1px solid red; */
+    position: relative;
+}
+.sec6__title p:nth-child(1) {
+    font-family: 'Kumar One';
+    font-size: 4.8vw;
+    color: #fff;
+    display: inline-block;
+    transform: scaleY(1.1);
+    margin-left: 21vw;
+    position: relative;
+}
+.sec6__p1:before {
+    content: '';
+    position: absolute;
+    left: -4vw; top: -0.3vw;
+    width: 23vw; height: 7.5vw;
+    background: #2D6EC7;
+    z-index: -1;
+    border-radius: 100px;
+    
+}
+.sec6__title p:nth-child(2) {
+    font-family: 'Abel';
+    font-size: 3vw;
+    text-transform: uppercase;
+    color: #E76D41;
+    position: absolute;
+    left: 40.2vw;
+    top: -5vw;
+}
+.sec6__title p:nth-child(3) {
+    font-family: 'Porter Sans Block';
+    font-size: 9.5vw;
+    margin-top: 4vw;
+    transform: scaleX(1.1) scaleY(1.2);
+    margin-left: 36vw;
+    display: inline-block;
+    position: relative;
+}
+.sec6__title .small__heart {display: block; position: absolute; left: 46.5vw; top: 3vw;}
+.sec6__title .big__heart {display: none;}
+.sec6__circle {
+    position: absolute; 
+    border-radius: 50%;
+    background-image: url(../img/complete/computer.jpg);
+     background-size: cover;
+    left: 44.5vw; 
+    top: 11vw; 
+    width: 12vw; 
+    height: 11vw; 
+    background-color: tomato;
+}
+.sec6__project {
+    width: 95vw;
+    height: 90vw;
+    margin: 0 auto;
+    /* border: 1px solid red; */
+}
+.sec6__img {
+    background-color: lightgrey;
+    width: 95vw;
+    height: calc(95vw / 1.6);
+    margin: 0 auto;
+    margin-top: 10vw;
+    position: relative;
+    filter: grayscale(75%);
+    transition: filter 0.4s ease;
+}
+.sec6__img:hover {
+    filter: grayscale(0);
+}
+.sec6__img1 {background-image: url(../img/complete/site/project1.jpg); background-repeat: no-repeat; background-size: cover;}
+.sec6__img2 {background-image: url(../img/complete/site/project2.jpg); background-repeat: no-repeat; background-size: cover;}
+.sec6__img3 {background-image: url(../img/complete/site/php.jpg); background-repeat: no-repeat; background-size: cover;}
+.sec6__img4 {background-image: url(../img/complete/site/web.jpg); background-repeat: no-repeat; background-size: cover;}
+.sec6__img5 {background-image: url(../img/complete/site/search.jpg); background-repeat: no-repeat; background-size: cover;}
+.sec6__img6 {background-image: url(../img/complete/site/slider.jpg); background-repeat: no-repeat; background-size: cover;}
+.sec6__img7 {background-image: url(../img/complete/site/mouse.jpg); background-repeat: no-repeat; background-size: cover;}
+.sec6__img8 {background-image: url(../img/complete/site/quiz.jpg); background-repeat: no-repeat; background-size: cover;}
+.sec6__img9 {background-image: url(../img/complete/site/parall.jpg); background-repeat: no-repeat; background-size: cover;}
+
+.sec6__img .title {
+    font-family: 'Rajdhani';
+    font-size: 5vw;
+    color: #fff;
+    background: #000;
+    display: inline-block;
+    text-transform: uppercase;
+    padding: 0.1em 0.5em;
+    position: absolute;
+    left: 15vw; top: -5vw;
+}
+.sec6__img .title1 {background: rebeccapurple;}
+.sec6__img .title2 {background: #349a99;}
+.sec6__img .title3 {background: #006da0;}
+.sec6__img .title4 {background: #9c3e2e;}
+.sec6__img .title5 {background: #87bfe3;}
+.sec6__img .title6 {background: #d089aa;}
+.sec6__img .title7 {background: #4c57a5;}
+.sec6__img .title8 {background: #db8e18;}
+.sec6__img .title9 {background: #345a0f;}
+.sec6__img .site {
+    position: absolute; 
+    right: 4vw; bottom: 4.5vw;
+    font-size: 3.5vw;
+    color: #fff;
+    text-transform: uppercase;
+    z-index: 10;
+    font-family: 'Abel';
+}
+.sec6__img .site__circle {
+    position: absolute;
+    right: 1vw; bottom: 1vw;
+    font-size: 5vw;
+    border-radius: 50%;
+    width: 12vw; height: 12vw;
+    background: #000;
+    z-index: 0;
+}
+.sec6__desc {
+    display: flex;
+    margin: 0 auto;
+    margin-top: 1.5vw;
+    justify-content: space-between;
+    line-height: 2vw;
+    /* border: 1px solid yellow; */
+}
+.sec6__desc .title {
+    font-family: 'GmarketSans';
+    position: relative;
+    font-weight: bold;
+    font-size: 2vw;
+    margin-left: 13vw;
+    margin-right: 9vw;
+    padding-left: 2.5vw;
+    white-space: nowrap;
+}
+.sec6__desc .title:before {
+    position: absolute;
+    left: 0; top: 0.3vw;
+    content: '';
+    width: 2vw; height: 2vw;
+    border-radius: 50%;
+    background: #000;
+}
+.sec6__desc .desc {
+    font-family: 'GmarketSans';
+    font-weight: lighter;
+    font-size: 1.3vw;
+    margin-right: 15vw;
+}
+.sec6__footer {
+    width: 67%;
+    margin: 0 auto;
+    margin-top: 20vw;
+}
+
+@media (min-width:1200px) {
+    #section6 {width: 1200px; margin: 0 auto; display: block;}
+    .sec6__title {margin-top: 8em; margin-bottom: 8em;}
+    .sec6__title p:nth-child(1) {font-size: 4.3rem; margin-left: 4.5em;}
+    .sec6__p1:before {left: -0.9em; top: 0em; width: 4.9em; height: 1.5em;}
+    .sec6__title p:nth-child(2) {font-size: 2.5rem; left: 14.1em; top: -1.3em;}
+    .sec6__title p:nth-child(3) {font-size: 8.5rem; margin-top: 0.3em; margin-left: 3.6em;}
+    .sec6__circle {left: 38.2em; top: 8.5em;  width: 10em; height: 10em;}
+    .sec6__title .small__heart {display: none;}
+    .sec6__title .big__heart {display: block; position: absolute; left: 40em; top: 3em;}
+
+    #project {width: 12000px; margin: 0 auto; display: flex; justify-content: space-evenly !important;}
+    .sec6__project {width: 98%; height: 1000px;}
+    .sec6__img {width: 100%; height: calc(1000px / 1.6); margin-top: 3em;}
+    .sec6__img .title {font-size: 4.5rem; padding: 0.1em 0.5em; left: 2.7em; top: -0.6em;}
+    .sec6__img .site {right: 78px; bottom: 85px; font-size: 3rem;}
+    .sec6__img .site__circle {right: 20px; bottom: 20px; width: 190px; height: 190px;}
+
+    .sec6__desc {margin-top: 1.5em; line-height: 190%;}
+    .sec6__desc .title {font-size: 1.8rem; margin-left: 7em; margin-right: 0em; padding-left: 1.7em;}
+    .sec6__desc .title:before {left: 0em; top: 0em; width: 1em; height: 1em;}
+    .sec6__desc .desc {font-size: 1.1em; margin-right: 15em;}
+}
+    </style>
+    <title>Portfolio</title>
+</head>
+<body>
+    <section id="section3">
+        <div class="sec3__svg"></div>
+    </section>
+    <!-- //section3 -->
+    <section id="section4">
+        <div class="sec4__info">
+            안녕하세요,<br>
+            <span class="white">신입 프론트엔드 개발자 류성일</span>입니다.<br>
+            <br>
+            실패를 도전의 밑바탕으로<br>
+            고민하고 반성하고 깊이 생각하는<br>
+            <span class="white">탐구하는 개발자</span>가 되도록 노력하겠습니다.
+        </div>
+        <div class="sec4__desc">
+            <a href="#1"> &#183; 왜 개발자인가</a>
+            <a href="#1"> &#183; 개발자가 되기 이전</a>
+            <a href="#1"> &#183; 나만의 장점들</a>
+        </div>
+        <div class="sec4__bee">
+        </div>
+        <div class="sec4__footer">
+            <p>frontend developer</p>
+        </div>
+    </section> -->
+    <!-- //section4 -->
+    <section id="section5">
+        <div class="sec5__svg"></div>
+    </section>
+    <!-- //section5 -->
+    <section id="section6" class="">
+        <div class="sec6__title">
+            <p class="sec6__p1">work</p>
+            <p>site</p>
+            <p>c<span class="circle__o">o</span>ding
+                <div class="sec6__circle"></div>
+            </p>
+        </div>
+    </section>
+    <article class="horizontal-scroll">
+        <div id="project" class="pin-wrap">
+            <div class="sec6__project">
+                <div class="sec6__img sec6__img1">
+                    <div class="title title1">Team Project</div>
+                    <a href = "http://pics.dothome.co.kr/php/mainPage/service.php" class="site">site</a>
+                    <div class="site__circle"></div>
+                </div>
+                <div class="sec6__desc">
+                    <div class="title">추억을 남기는 웹앨범 사이트</div>
+                    <div class="desc">php와 sql을 사용하여<br>
+                        회원가입, 로그인, 게시글, 댓글 등을 구현하였습니다.</div>
+                </div>
+            </div>
+            <div class="sec6__project">
+                <div class="sec6__img sec6__img2">
+                    <div class="title title2">React Site</div>
+                    <a href="https://illieee.netlify.app/" class="site site2">site</a>
+                    <div class="site__circle site__circle2"></div>
+                </div>
+                <div class="sec6__desc">
+                    <div class="title">리액트를 활용하여 만든 사이트</div>
+                    <div class="desc">리액트 라이브러리를 통하여<br>
+                        tmdb API, youtube API를 활용하였습니다.
+                    </div>
+                </div>
+            </div>
+            <div class="sec6__project">
+                <div class="sec6__img sec6__img3">
+                    <div class="title title3">PHP SITE</div>
+                    <a href="http://sungil.dothome.co.kr/php/pages/main.php" class="site">site</a>
+                    <div class="site__circle"></div>
+                </div>
+                <div class="sec6__desc">
+                    <div class="title">PHP 사이트</div>
+                    <div class="desc">PHP를 활용하여<br>
+                        회원가입, 로그인, 게시판 등을 구현하였습니다.
+                    </div>
+                </div>
+            </div>
+            <div class="sec6__project">
+                <div class="sec6__img sec6__img4">
+                    <div class="title title4">WEBSTANDARD SITE</div>
+                    <a href="https://sungilryuu.github.io/webs_class/webstandard/index.html" class="site">site</a>
+                    <div class="site__circle"></div>
+                </div>
+                <div class="sec6__desc">
+                    <div class="title">웹 표준 사이트</div>
+                    <div class="desc">웹 표준을 준수하여 사이트를 만들었습니다.</div>
+                </div>
+            </div>
+            <div class="sec6__project">
+                <div class="sec6__img sec6__img5">
+                    <div class="title title5">Search effect</div>
+                    <a href="https://sungilryuu.github.io/webs_class/javascript/effect/searchEffect01.html" class="site">site</a>
+                    <div class="site__circle"></div>
+                </div>
+                <div class="sec6__desc">
+                    <div class="title">CSS 속성 검색하기</div>
+                    <div class="desc">자바스크립트를 활용하여<br>
+                        원하는 정보를 다양한 방식으로 검색할 수 있습니다.
+                    </div>
+                </div>
+            </div>
+            <div class="sec6__project">
+                <div class="sec6__img sec6__img6">
+                    <div class="title title6">Slider effect</div>
+                    <a href="https://sungilryuu.github.io/webs_class/javascript/effect/sliderEffect01.html" class="site">site</a>
+                    <div class="site__circle"></div>
+                </div>
+                <div class="sec6__desc">
+                    <div class="title">이미지 슬라이드</div>
+                    <div class="desc">자바스크립트를 활용하여<br>
+                        이미지를 다양한 방식으로 효과를 주었습니다.
+                    </div>
+                </div>
+            </div>
+            <div class="sec6__project">
+                <div class="sec6__img sec6__img7">
+                    <div class="title title7">Mouse effect</div>
+                    <a href="https://sungilryuu.github.io/webs_class/javascript/effect/mouseEffect01.html" class="site">site</a>
+                    <div class="site__circle"></div>
+                </div>
+                <div class="sec6__desc">
+                    <div class="title">마우스 효과</div>
+                    <div class="desc">자바스크립트를 활용하여<br>
+                        마우스 커서 모양을 다양한 모양으로 효과를 주었습니다.
+                    </div>
+                </div>
+            </div>
+            <div class="sec6__project">
+                <div class="sec6__img sec6__img8">
+                    <div class="title title8">Quiz effect</div>
+                    <a href="https://sungilryuu.github.io/webs_class/javascript/effect/quizEffect01.html" class="site">site</a>
+                    <div class="site__circle"></div>
+                </div>
+                <div class="sec6__desc">
+                    <div class="title">퀴즈 효과</div>
+                    <div class="desc">자바스크립트를 활용하여<br>
+                        퀴즈를 풀 수 있도록 효과를 주었습니다.
+                    </div>
+                </div>
+            </div>
+            <div class="sec6__project">
+                <div class="sec6__img sec6__img9">
+                    <div class="title title9">PARALLAX EFFECT</div>
+                    <a href="https://sungilryuu.github.io/webs_class/javascript/effect/parallaxEffect01.html" class="site">site</a>
+                    <div class="site__circle"></div>
+                </div>
+                <div class="sec6__desc">
+                    <div class="title">패럴럭스 효과</div>
+                    <div class="desc">자바스크립트를 활용하여<br>
+                        스크롤에 따라 이미지 효과를 다양하게 주었습니다.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+    
+    <script data-cfasync="false" type="text/javascript"
+    src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+    <script src="assets/js/locomotive-scroll.min.js"></script>
+
+    <script>
+
+      window.addEventListener("load", function () {
+        gsap.registerPlugin(ScrollTrigger);
+        const pageContainer = document.querySelector("body");
+        pageContainer.setAttribute("data-scroll-container", "");
+        const scroller = new LocomotiveScroll({
+          el: pageContainer,
+          smooth: true,
+          getDirection: true,
+        });
+        scroller.on("scroll", function (t) {
+          document.documentElement.setAttribute("data-direction", t.direction);
+        });
+        scroller.on("scroll", ScrollTrigger.update);
+        ScrollTrigger.scrollerProxy(pageContainer, {
+          scrollTop(value) {
+            return arguments.length
+              ? scroller.scrollTo(value, 0, 0)
+              : scroller.scroll.instance.scroll.y;
+          },
+          getBoundingClientRect() {
+            return {
+              left: 0,
+              top: 0,
+              width: window.innerWidth,
+              height: window.innerHeight,
+            };
+          },
+          pinType: pageContainer.style.transform ? "transform" : "fixed",
+        });
+
+        // 가로 효과
+        let horizontalSection = document.querySelector(".horizontal-scroll");
+        let pinWrap = horizontalSection.querySelector(".pin-wrap");
+        let pinWrapWidth = pinWrap.offsetWidth;
+        console.log(pinWrapWidth)
+        let horizontalScrollLength = pinWrapWidth - window.innerWidth;
+        gsap.to(pinWrap, {
+            scrollTrigger: {
+              scroller: "[data-scroll-container]",
+              scrub: true,
+              trigger: horizontalSection,
+              pin: true,
+              start: "top top",
+              end: () => `+=${pinWrapWidth}`,
+              invalidateOnRefresh: true,
+              markers: true,
+            },
+            x: -horizontalScrollLength,
+            ease: "none",
+          });
+
+
+        // let horizontalSections = document.querySelectorAll(".horizontal-scroll");
+        // horizontalSections.forEach((horizontalSection) => {
+        //   let pinWrap = horizontalSection.querySelector(".pin-wrap");
+        //   let pinWrapWidth = pinWrap.offsetWidth;
+        //   let horizontalScrollLength = pinWrapWidth - window.innerWidth;
+        //   gsap.to(pinWrap, {
+        //     scrollTrigger: {
+        //       scroller: "[data-scroll-container]",
+        //       scrub: true,
+        //       trigger: horizontalSection,
+        //       pin: true,
+        //       start: "top top",
+        //       end: () => `+=${pinWrapWidth}`,
+        //       invalidateOnRefresh: true,
+        //     //   markers: true,
+        //     },
+        //     x: -horizontalScrollLength,
+        //     ease: "none",
+        //   });
+        // });
+
+        ScrollTrigger.addEventListener("refresh", () => scroller.update());
+        ScrollTrigger.refresh();
+      });
+    
+
+
+    </script>
+    </body>
+        
+  
+</html>
