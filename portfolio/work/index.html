@@ -819,16 +819,6 @@ src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
     <script src="assets/js/index.js"></script>
     <script>
-        document.querySelector(".sec1__btn").addEventListener("click", () => {reload1()});
-
-        function reload1(){
-            document.querySelectorAll(".reveal").forEach(reveal => {
-            reveal.classList.add("revealing");
-            setTimeout(() => {
-                location.reload();
-            }, 1000);
-        })  
-      }
         document.querySelector("#section10").addEventListener("mousemove", (e) => {
           let mousePageX = e.pageX;
           let windowWidth = window.outerWidth;

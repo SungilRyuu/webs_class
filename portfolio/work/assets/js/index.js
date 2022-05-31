@@ -20,22 +20,26 @@ document.querySelector("#section10").addEventListener("mousemove", (e) => {
 })
 
 // section1 액자
-  let reloading = true;
-  document.querySelector(".sec1__btn").addEventListener("click", () => {reload1()});
-  setTimeout(() => {
-    reloading = false;
-  }, 3000);
-  function reload1(){
-    if(reloading == false){
+  document.querySelector(".sec1__btn").addEventListener("click", () => {reload()});
+  let reloadTime = true;
+
+  function reload(){
+    setTimeout(() => {
+      reloadTime = false;
+    }, 3000);
+
+    if(reloadTime == false){
       document.querySelectorAll(".reveal").forEach(reveal => {
         reveal.classList.add("revealing");
         setTimeout(() => {
           location.reload();
         }, 1000);
-        reloading = true;
       })
+      reloadTime = true;
     }
   }
+  reload();
+</script>
 
 // 고래
     const canvas = document.getElementById("canvas");
