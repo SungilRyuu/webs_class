@@ -717,6 +717,62 @@ src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-
           gsap.to(".games", {duration: 0.3, x: centerPage/10});
         })
 
+
+      window.addEventListener("load", function () {
+        gsap.registerPlugin(ScrollTrigger);
+        const pageContainer = document.querySelector("body");
+        pageContainer.setAttribute("data-scroll-container", "");
+        const scroller = new LocomotiveScroll({
+          el: pageContainer,
+          smooth: true,
+          getDirection: true,
+        });
+        scroller.on("scroll", function (t) {
+          document.documentElement.setAttribute("data-direction", t.direction);
+        });
+        scroller.on("scroll", ScrollTrigger.update);
+        ScrollTrigger.scrollerProxy(pageContainer, {
+          scrollTop(value) {
+            return arguments.length
+              ? scroller.scrollTo(value, 0, 0)
+              : scroller.scroll.instance.scroll.y;
+          },
+          getBoundingClientRect() {
+            return {
+              left: 0,
+              top: 0,
+              width: window.innerWidth,
+              height: window.innerHeight,
+            };
+          },
+          pinType: pageContainer.style.transform ? "transform" : "fixed",
+        });
+
+        // 가로 효과
+        let horizontalSection = document.querySelector(".horizontal-scroll");
+        let pinWrap = horizontalSection.querySelector(".pin-wrap");
+        let pinWrapWidth = pinWrap.offsetWidth;
+        console.log(pinWrapWidth)
+        let horizontalScrollLength = pinWrapWidth - window.innerWidth;
+        gsap.to(pinWrap, {
+            scrollTrigger: {
+              scroller: "[data-scroll-container]",
+              scrub: true,
+              trigger: horizontalSection,
+              pin: true,
+              start: "top top",
+              end: () => `+=${pinWrapWidth}`,
+              invalidateOnRefresh: true,
+              markers: true,
+            },
+            x: -horizontalScrollLength,
+            ease: "none",
+          });
+
+        ScrollTrigger.addEventListener("refresh", () => scroller.update());
+        ScrollTrigger.refresh();
+      });
+
         </script>
         
 </html>
