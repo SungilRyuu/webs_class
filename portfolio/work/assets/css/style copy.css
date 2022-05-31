@@ -352,6 +352,11 @@ body {
     margin-top: 20vw;
 }
 
+#project {width: 100%; margin: 0 auto; display: block; }
+    .sec6__project {width: 100%; margin: 0 auto; height: inherit; margin-left: 0;}
+    .sec6__project:nth-child(1){margin-left: 0;}
+    .sec6__project:nth-child(9){margin-right: 0;}
+
 @media (min-width:1200px) {
     #section6 {width: 1200px; margin: 0 auto; display: block;}
     .sec6__title {margin-top: 8em; margin-bottom: 8em;}
@@ -363,7 +368,7 @@ body {
     .sec6__title .small__heart {display: none;}
     .sec6__title .big__heart {display: block; position: absolute; left: 40em; top: 3em;}
 
-    #project {width: 1200px; margin: 0 auto;}
+    #project {width: 12000px; margin: 0 auto; display: flex; justify-content: space-evenly !important;}
     .sec6__project {width: 98%; height: 1000px; margin-left: 1%;}
     .sec6__project:nth-child(1){margin-left: 1%;}
     .sec6__project:nth-child(9){margin-right: 1%;}
