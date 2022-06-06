@@ -7,11 +7,6 @@
 html {
   font-size: 14px;
 }
-:root {
-  --gold: #ffb338;
-  --light-shadow: #77571d;
-  --dark-shadow: #3e2904;
-}
 a {
   color: #000;
   text-decoration: none;

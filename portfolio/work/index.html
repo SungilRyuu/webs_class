@@ -18,25 +18,26 @@
 <body>
     <section id="section1">
       <div class="sec1__wrap">
-          <div class="gallery gallery1"></div>
-          <div class="gallery gallery2"></div>
-          <div class="gallery gallery3"></div>
-          <div class="gallery gallery4"></div>
-          <div class="gallery gallery5"></div>
-          <div class="gallery gallery6"></div>
-          <div class="reveal reveal1"></div>
-          <div class="reveal reveal2"></div>
-          <div class="reveal reveal3"></div>
-          <div class="reveal reveal4"></div>
-          <div class="reveal reveal5"></div>
-          <div class="reveal reveal6"></div>
+        <div class="sec1__imgWrap">
+          <div class="sec1__img1"></div>
+          <div class="sec1__img2"></div>
         </div>
-        <div class="sec1__text">
-          <p>portfolio</p>
-          <p>unsplash API를 활용하여 액자를 구성하였습니다.</p>
+        <div class="sec1__textWrap">
+          <p class="sec1__text1">Portfolio</p>
+          <p class="sec1__text2">가치있는 사람이 되려고 노력하라.</p>
         </div>
-        <button class="sec1__btn"></button>
-  </section>
+        <div class="sec1__clock">
+            <div class="post-wrap">
+                <div id="clock-body">
+                    <div id="center"></div>
+                    <div id="seconds"></div>
+                    <div id="minutes"></div>
+                    <div id="hours"></div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </section>
     <!-- //section1 -->
     <section id="section2">
         <div class="sec2__text1"><span>Web</span>Product
@@ -706,8 +707,9 @@
 
   <script data-cfasync="false" type="text/javascript"
 src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+<script src='https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js'></script>
     <script src="assets/js/index.js"></script>
     <script>
         document.querySelector("#section10").addEventListener("mousemove", (e) => {

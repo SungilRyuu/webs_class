@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/style3.css">
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/font.css">
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <title>Portfolio</title>
+</head>
+<body>
+  <section id="section1">
+    <div class="sec1__wrap">
+      <div class="sec1__imgWrap">
+        <div class="sec1__img1"></div>
+        <div class="sec1__img2"></div>
+      </div>
+      <div class="sec1__textWrap">
+        <p class="sec1__text1">Portfolio</p>
+        <p class="sec1__text2">가치있는 사람이 되려고 노력하라.</p>
+      </div>
+      <div class="sec1__clock">
+          <div class="post-wrap">
+              <div id="clock-body">
+                  <div id="center"></div>
+                  <div id="seconds"></div>
+                  <div id="minutes"></div>
+                  <div id="hours"></div>
+              </div>
+          </div>
+      </div>
+    </div>
+  </section>
+  <!-- // section1 -->
+  <section id="section2">
+
+  </section>
+  <!-- // section2 -->
+</body>
+<script src='https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js'></script>
+<script>
+    var lastHr,
+        lastMin;
+    function leTime() {
+        this.fullDate = new Date();
+        this.secs = this.fullDate.getSeconds();
+        this.mins = this.fullDate.getMinutes();
+        this.hrs = this.fullDate.getHours() % 12;
+        return this;
+    }
+    function leClock() {
+        var sec = document.getElementById("seconds"),
+            min = document.getElementById("minutes"),
+            hr = document.getElementById("hours");
+        if (leTime().secs == 0) {
+            TweenMax.to(sec, 0.35, {
+                rotation: 360,
+                ease: Elastic.easeOut.config(1, 0.4),
+                clearProps: "all"
+            });
+        } else {
+            TweenMax.to(sec, 0.35, {
+                rotation: leTime().secs * 6,
+                ease: Elastic.easeOut.config(1, 0.4)
+            });
+        }
+        if (leTime().mins !== lastMin) {
+            if (leTime().mins == 0) {
+                TweenMax.to(min, 0.35, {
+                    rotation: 360,
+                    ease: Elastic.easeOut.config(1, 0.4),
+                    clearProps: "all"
+                });
+            } else {
+                TweenMax.to(min, 0.35, {
+                    rotation: leTime().mins * 6,
+                    ease: Elastic.easeOut.config(1, 0.4)
+                });
+            }
+        }
+        if (leTime().hrs !== lastHr) {
+            if (leTime().hrs == 0) {
+                TweenMax.to(hr, 0.35, {
+                    rotation: 360,
+                    ease: Elastic.easeOut.config(1, 0.4),
+                    clearProps: "all"
+                });
+            } else {
+                TweenMax.to(hr, 0.35, {
+                    rotation: leTime().hrs * 30,
+                    ease: Elastic.easeOut.config(1, 0.4)
+                });
+            }
+        }
+        lastHr = leTime().hrs;
+        lastMin = leTime().mins;
+        setTimeout("leClock()", 1000);
+    }
+    window.onload = leClock();
+</script>
+</html>
