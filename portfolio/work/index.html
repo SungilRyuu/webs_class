@@ -16,6 +16,8 @@
     <title>Portfolio</title>
 </head>
 <body>
+    <main id="main">
+        <div id="vertical">
     <section id="section1">
       <div class="sec1__wrap">
         <div class="sec1__imgWrap">
@@ -479,8 +481,9 @@
             </svg>
         </div>
     </section>
-    <article class="horizontal-scroll">
-        <div id="project" class="pin-wrap">
+    </div>
+    <article id="horizon">
+        <div id="project">
             <div class="sec6__project">
                 <div class="sec6__img sec6__img1">
                     <div class="title title1">Team Project</div>
@@ -756,6 +759,7 @@
         </div>
     </article>
   </form>
+</main>
   <!-- // 메일 보내기 -->
 
   <script data-cfasync="false" type="text/javascript"
@@ -772,7 +776,7 @@ src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-
         
           gsap.to(".games", {duration: 0.3, x: centerPage/10});
         })
-        
+
         gsap.registerPlugin(ScrollTrigger);
         const pageContents = document.getElementById("main");
         const scroller = new LocomotiveScroll({
