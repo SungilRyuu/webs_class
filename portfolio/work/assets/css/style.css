@@ -505,6 +505,7 @@ body {
     left: -48%;
     /* 닫혔을 때 */
     /* left: 16%; */
+    /* left: 5%; */
 }
 @media (min-width: 1200px) {
     #section9 {width: 1200px; margin: 0 auto; display: block;}
@@ -531,9 +532,10 @@ body {
     }
     .sec9__wrap__cover {width: 830px; height: 560px; margin-top: 138px;  top: -138px;
         /* 열렸을 때 */
-        left: -610px;
+        /* left: -610px; */
         /* 닫혔을 때 */
         /* left: 175px; */
+        left: -600px;
     }
 }
 /* //section9 */
