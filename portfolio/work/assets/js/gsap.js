@@ -32,7 +32,7 @@ window.addEventListener("load", function () {
             trigger: "#horizon",
             pin: true,
             start: "top top",
-            markers: true,
+            // markers: true,
             end: sec6WrapWidth
         },
         x: -horizontal6,
