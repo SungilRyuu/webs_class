@@ -204,4 +204,3 @@ document.querySelector("#section10").addEventListener("mousemove", (e) => {
       initParticles();
     });
 
-    // 이메일

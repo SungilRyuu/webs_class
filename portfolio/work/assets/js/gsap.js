@@ -21,6 +21,7 @@ ScrollTrigger.scrollerProxy(pageContents, {
     },
     pinType: pageContents.style.transform ? "transform" : "fixed"
 });
+
 window.addEventListener("load", function () {
     let sec6WrapWidth = document.querySelector("#project").offsetWidth;
     let horizontal6 = sec6WrapWidth - window.innerWidth;
@@ -40,3 +41,4 @@ window.addEventListener("load", function () {
     ScrollTrigger.addEventListener("refresh", () => scroller.update());
     ScrollTrigger.refresh();
 });
+
