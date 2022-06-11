@@ -11,8 +11,8 @@
   <body>
     <header id="header">
       <div class="header__logo">Game With JavaScript</div>
-      <!-- <div class="header__about">Git</div> -->
       <div class="header__time"></div>
+      <div class="header__about">[닫기]</div>
     </header>
 
     <main id="main">
@@ -126,6 +126,14 @@
       $(".react_confirm .no").click(function () {
         $(".react_confirm").removeClass("show");
       });
+
+      $(".header__about").click(function () {
+        $(".typingGame").removeClass("show");
+        $(".musicBox").removeClass("show");
+        $(".memoryBox").removeClass("show");
+        $(".react_confirm").removeClass("show");
+        $(".tetrisBox").removeClass("show");
+      })
 
       var today = new Date();
       var year = today.getFullYear();
