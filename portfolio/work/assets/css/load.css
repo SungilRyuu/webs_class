@@ -6,7 +6,7 @@
   height: 100%;
   z-index: 10;
   overflow: hidden;
-  background: #555555;
+  background: #222222;
 }
 #loader-wrapper.loaded {
   display: none;
