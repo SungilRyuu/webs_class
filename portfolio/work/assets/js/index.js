@@ -1,16 +1,15 @@
 // // 로딩
 function loadings(){
-  setTimeout(() => {
     gsap.to("#loader-wrapper", {
       opacity: 0,
+      delay: 2,
     })
     setTimeout(() => {
       document.querySelector("#loader-wrapper").classList.add("loaded");
-    }, 100);
-  }, 3000);
+    }, 3000);
 }
+loadings();
 
-window.onload = loadings();
 
 // 시계
     var lastHr,
