@@ -271,8 +271,8 @@
       .ghost .eye_right {width: 25px; height: 40px;}
       .ghost .eye_left_color {width: 14px; height: 14px;}
       .ghost .eye_right_color {width: 14px; height: 14px;}
-      .ghost .tail1 {left: calc(110px / 4 * 0); bottom: - calc(110px / 4); width: calc(110px / 4); height: calc(110px / 4);}
-      .ghost .tail2 {left: calc(110px / 4 * 1); bottom: - calc(110px / 4); width: calc(110px / 4); height: calc(110px / 4);}
-      .ghost .tail3 {left: calc(110px / 4 * 2); bottom: - calc(110px / 4); width: calc(110px / 4); height: calc(110px / 4);}
-      .ghost .tail4 {left: calc(110px / 4 * 3); bottom: - calc(110px / 4); width: calc(110px / 4); height: calc(110px / 4);}
+      .ghost .tail1 {left: calc(110px / 4 * 0); bottom: calc(110px / -9); width: calc(110px / 4); height: calc(110px / 4);}
+      .ghost .tail2 {left: calc(110px / 4 * 1); bottom: calc(110px / -9); width: calc(110px / 4); height: calc(110px / 4);}
+      .ghost .tail3 {left: calc(110px / 4 * 2); bottom: calc(110px / -9); width: calc(110px / 4); height: calc(110px / 4);}
+      .ghost .tail4 {left: calc(110px / 4 * 3); bottom: calc(110px / -9); width: calc(110px / 4); height: calc(110px / 4);}
   }
