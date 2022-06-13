@@ -8,7 +8,9 @@ function loadings(){
       document.querySelector("#loader-wrapper").classList.add("loaded");
     }, 3000);
 }
-loadings();
+window.addEventListener('load', function(){
+  loadings();
+})
 
 
 // 시계

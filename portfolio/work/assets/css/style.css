@@ -561,13 +561,15 @@ body {
 .sec10__header .games .game {
     width: 30vw;
     height: calc(30vw / 1.6);
-    background-color: #000;
     margin-right: 1vw;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
 }
-.sec10__header .games .game1 {background-image: url(../img/complete/games/music.jpg); background-size: cover;}
-.sec10__header .games .game2 {background-image: url(../img/complete/games/card.jpg); background-size: cover;}
-.sec10__header .games .game3 {background-image: url(../img/complete/games/tetris.jpg); background-size: cover;}
-.sec10__header .games .game4 {background-image: url(../img/complete/games/typing.jpg); background-size: cover;}
+.sec10__header .games .game1 {background-color: #ffd3d3; background-image: url(../../../../assets/img/icon/live.png);}
+.sec10__header .games .game2 {background-color: #ffe18c; background-image: url(../img/game/memory.png);}
+.sec10__header .games .game3 {background-color: #7e8fdf; background-image: url(../img/game/tetris.png);}
+.sec10__header .games .game4 {background-color: #23b5aa; background-image: url(../img/game/computer.png);}
 
 .sec10__header p {
     font-family: "Lato";
