@@ -10,34 +10,44 @@
 }
 
 .sec1__img1 {
+  border: 0.4vw solid #000;
   position: absolute;
-  width: 35.69vw;
-  height: 31vw;
   left: 37.73vw;
+  /* left: 38.1vw; */
   top: 10.47vw;
+  /* top: 10.7vw; */
+  width: 35.69vw;
+  /* width: 33.7vw; */
+  height: 31vw;
+  /* height: 30.7vw; */
   background-image: url(../img/complete/louvres1.jpg);
   background-size: cover;
   background-position: center center;
-  border: 0.3vw solid #000;
 }
 
 .sec1__img2 {
   position: absolute;
-  width: 20vw;
+  /* width: 20vw;
   height: 23.3vw;
   left: 84.72vw;
-  top: 12.1vw;
+  top: 12.1vw; */
+  left: 88.1vw;
+  top: 12.8vw;
+  width: 18vw;
+  height: 22.7vw;
   background-size: cover;
   background-image: url(../img/complete/face1.jpg);
-  border: 0.3vw solid #000;
+  border: 0.4vw solid #000;
+  filter: saturate(10%);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
+  transition: filter 0.5s ease;
 }
 
-.sec1__img1, .sec1__img2 {filter: saturate(100%); transition: filter 0.3s ease;}
-.sec1__img1:hover, .sec1__img2:hover {filter: saturate(130%);}
+.sec1__img2:hover {filter: saturate(100%);}
 
 .sec1__textWrap {
   position: absolute;
-  right: 0.5vw;
+  right: 1vw;
   bottom: 0.5vw;
   text-align: right;
 }
@@ -61,21 +71,19 @@
   height: 13vw;
   width: 13vw;
 }
-@media (max-width: 700px) {
-  .sec1__clock {display: none;}
-}
+
 #clock-body {
   position: relative;
   height: 10vw;
   width: 10vw;
   border-radius: 50%;
-  border: 3px solid white;
+  border: 0.2vw solid #000;
 }
 #center, #seconds, #minutes, #hours {
   position: absolute;
-  background-color: white;
+  background-color: #000;
   backface-visibility: hidden;
-  outline: 1px solid transparent;
+  outline: 0.1vw solid transparent;
 }
 #center {
   z-index: 4;
@@ -84,7 +92,7 @@
   top: 50%;
   left: 50%;
   border-radius: 100%;
-  border: 3px solid white;
+  border: 0.2vw solid #000;
   transform: translate3d(-50%, -50% ,0);
 }
 #seconds {
@@ -121,9 +129,9 @@
   transform-origin: bottom;
 }
 .post-wrap {
-  width: 100vw;
+  width: 10vw;
   height: (1/1)*100vw; /* height:width ratio */
-  max-height: 100vh;
+  max-height: 10vw;
   max-width: (1/1)*100vh; /* height:width ratio */
   margin: 0 auto;
   position: absolute;
