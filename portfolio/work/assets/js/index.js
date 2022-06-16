@@ -1,3 +1,6 @@
+// resize 
+window.onresize = function(){location.reload();}
+
 // // 로딩
 function loadings(){
     gsap.to("#loader-wrapper", {
