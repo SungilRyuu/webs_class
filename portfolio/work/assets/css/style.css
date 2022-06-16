@@ -651,7 +651,7 @@ body {
 .sec10__header .gameCircle p {font-size: 24px; top: 5%;}
 .sec10__body {width: 100%;}
 .sec10__body .information {display: none;}
-.sec10__body iframe {display: block; width: 90vw; height: 90vh; background: lightgrey; margin: 0 auto; margin-top: 120px;}
+.sec10__body iframe {display: block; width: 88vw; height: 90vh; background: lightgrey; margin: 0 auto; margin-top: 120px;}
 .sec10__body p {margin-top: 100px; font-size: 50px;}
 .sec10__header .gameCircle { display: none;}
 }
