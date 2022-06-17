@@ -16,16 +16,6 @@ em {
   font-style: none;
 }
 
-.scrollTop {
-  position: fixed;
-  left: 0;
-  top: 0;
-  z-index: 100;
-  background: #000;
-  color: #fff;
-  font-size: 5rem;
-}
-
 .ir_pm {
   display: block;
   overflow: hidden;

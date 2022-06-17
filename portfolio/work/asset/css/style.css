@@ -1,6 +1,72 @@
 @import url(reset.css);
 @import url(title.css);
+@import url(font.css);
 
+#section2 {
+  width: 100%;
+  background-color: #f1f1f1;
+  display: inline-block;
+  text-align: center;
+}
+
+.sec2__text1 {
+  margin-top: 20vw;
+  position: relative;
+}
+.sec2__text1 p:nth-child(1) {
+  font-family: 'Kumar One';
+  color: #2D6EC7;
+  font-size: 10.5vw;
+  margin-left: 18.1vw;
+  line-height: 1.3;
+}
+.sec2__text1 p:nth-child(2) {
+  font-family: 'Abel';
+  font-weight: lighter;
+  color: #E76D41;
+  font-size: 3vw;
+  position: absolute;
+  left: 49.7vw;
+  top: -0.5vw;
+  line-height: 1;
+  transform: scaleY(1.2);
+}
+.sec2__text2 {
+  margin-bottom: 5.4vw;
+}
+.sec2__text2 p {
+  font-family: 'Porter Sans Block';
+  font-size: 10.5vw;
+}
+.sec2__text3 {
+  display: flex;
+  /* justify-content: space-between; */
+  margin-bottom: 20vw;
+}
+.sec2__text3 .left {
+  border-top: 1px solid #E76D41;
+  width: 40vw;
+}
+.sec2__text3 .right {
+  display: inline-block;
+  font-family: 'Poiret One';
+  text-transform: uppercase;
+  color: #fff;
+  background: #F2B63F;
+  padding: 1vw 3.5vw;
+  font-size: 5.3vw;
+  margin-left: 10vw;
+}
+@media (min-width: 1200px) {
+  #section2 {height: 100vh;}
+  .sec2__text1 {margin-top: 230px;}
+  .sec2__text1 p:nth-child(1) {font-size: 9rem; margin-left: 1.7em;}
+  .sec2__text1 p:nth-child(2) {font-size: 2.4rem; left: 50%; top: -5%;}
+  .sec2__text2 {margin-bottom: 46px;}
+  .sec2__text2 p {font-size: 9.1rem;}
+  .sec2__text3 {margin-bottom: 200px;}
+  .sec2__text3 .right {font-size: 4.4rem; padding: 0.2em 0.7em; margin-left: 180px}
+}
 #section15 {
   width: 100%;
   height: 100vh;
