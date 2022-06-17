@@ -32,19 +32,18 @@
   height: 23.3vw;
   left: 84.72vw;
   top: 12.1vw; */
-  left: 88.1vw;
+  left: 90.1vw;
   top: 12.8vw;
   width: 18vw;
   height: 22.7vw;
   background-size: cover;
   background-image: url(../img/complete/face1.jpg);
   border: 0.4vw solid #000;
-  filter: saturate(10%);
   box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
-  transition: filter 0.5s ease;
 }
 
-.sec1__img2:hover {filter: saturate(100%);}
+.sec1__img1, .sec1__img2 {filter: saturate(10%); transition: filter 0.5s ease;}
+.sec1__img1:hover, .sec1__img2:hover {filter: saturate(100%);}
 
 .sec1__textWrap {
   position: absolute;
@@ -79,6 +78,7 @@
   width: 10vw;
   border-radius: 50%;
   border: 0.2vw solid #000;
+  box-shadow: 0 0.2vw 0.2vw rgba(0, 0, 0, .6);
 }
 
 #center, #seconds, #minutes, #hours {
