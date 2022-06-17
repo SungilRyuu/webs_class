@@ -1,0 +1,8 @@
+@import url(reset.css);
+@import url(title.css);
+
+#section2 {
+  width: 100%;
+  height: 100vh;
+  background-color: yellow;
+}
