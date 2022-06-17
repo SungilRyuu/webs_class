@@ -134,7 +134,7 @@
 .post-wrap {
   width: 10vw;
   /* height: (1/1)*100vw; height:width ratio */
-  max-height: 10vw;
+  max-height: 11vw;
   /* max-width: (1/1)*100vh; height:width ratio */
   margin: 0 auto;
   position: absolute;
