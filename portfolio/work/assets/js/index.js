@@ -77,16 +77,16 @@ function leClock() {
 window.onload = leClock();
 
 // 메일 보내기
-// const prevMail = document.querySelector(".sec10__body p");
-// const formMail = document.querySelector(".mail");
-// const closeMail = document.querySelector(".mail__header .close")
+const prevMail = document.querySelector(".sec10__body p");
+const formMail = document.querySelector(".mail");
+const closeMail = document.querySelector(".mail__header .close")
 
-// prevMail.addEventListener("click", () => {
-//   formMail.style.display = "block";
-// })
-// closeMail.addEventListener("click", () => {
-//   formMail.style.display = "none";
-// })
+prevMail.addEventListener("click", () => {
+  formMail.style.display = "block";
+})
+closeMail.addEventListener("click", () => {
+  formMail.style.display = "none";
+})
 
 // 마우스
 document.querySelector("#section10").addEventListener("mousemove", (e) => {
