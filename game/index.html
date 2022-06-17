@@ -135,16 +135,24 @@
         $(".tetrisBox").removeClass("show");
       })
 
-      var today = new Date();
-      var year = today.getFullYear();
-      var month = ("0" + (today.getMonth() + 1)).slice(-2);
-      var day = ("0" + today.getDate()).slice(-2);
-      var hours = ("0" + today.getHours()).slice(-2);
-      var minutes = ("0" + today.getMinutes()).slice(-2);
-      var timeString =
-        year + "-" + month + "-" + day + " " + hours + ":" + minutes;
+      function clock(){
+        var today = new Date();
+        var year = today.getFullYear();
+        var month = ("0" + (today.getMonth() + 1)).slice(-2);
+        var day = ("0" + today.getDate()).slice(-2);
+        var hours = ("0" + today.getHours()).slice(-2);
+        var minutes = ("0" + today.getMinutes()).slice(-2);
+        var timeString =
+          year + "-" + month + "-" + day + " " + hours + ":" + minutes;
+        $(".header__time").text(timeString);
+      }
 
-      setInterval('$(".header__time").text(timeString);', 1000);
+
+      function init(){
+        clock();
+        setInterval(clock, 1000);
+      }
+      init();
     </script>
   </body>
 </html>
