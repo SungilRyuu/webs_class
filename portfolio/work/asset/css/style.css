@@ -1,6 +1,7 @@
 @import url(reset.css);
 @import url(title.css);
 @import url(font.css);
+@import url(bird.css);
 
 #section2 {
   width: 100%;
@@ -56,6 +57,7 @@
   padding: 1vw 3.5vw;
   font-size: 5.3vw;
   margin-left: 10vw;
+  white-space: nowrap;
 }
 @media (min-width: 1200px) {
   #section2 {height: 100vh;}
@@ -66,22 +68,6 @@
   .sec2__text2 p {font-size: 9.1rem;}
   .sec2__text3 {margin-bottom: 200px;}
   .sec2__text3 .right {font-size: 4.4rem; padding: 0.2em 0.7em; margin-left: 10vw}
-}
-#section3 {
-  width: 100%;
-  height: 25vw;
-  background-color: #f1f1f1;
-  position: relative;
-  overflow: hidden;
-}
-.sec3__svg {
-  position: absolute;
-  left: 0; top: -75%;
-  width: 99vw;
-  height: 37vw;
-  background-image: url(../img/svg/bird.svg);
-  background-size: cover;
-  background-position: center center;
 }
 #section4 {
   width: 100%;
