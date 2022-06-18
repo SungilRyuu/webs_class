@@ -22,21 +22,21 @@
   100% {transform: translate3d(0, 0, 0);}
 }
 /* 2번 새 */
-#section3 svg path:nth-child(15) {
+#section3 svg path:nth-child(15), #section3 svg path:nth-child(16), #section3 svg path:nth-child(17) {
   animation: scale1 1s linear infinite;
+}
+#section3 svg path:nth-child(17) {
+  animation: scale2 1s linear infinite;
 }
 @keyframes scale1 {
   0% {transform: translate3d(-0.05%, 0, 0);}
   50% {transform: translate3d(0.05%, 0, 0);}
   100% {transform: translate3d(-0.05%, 0, 0);}
 }
-#section3 svg path:nth-child(16) {
-  animation: scale2 1s linear infinite;
-}
 @keyframes scale2 {
-  0% {transform: translate3d(0.01%, 0, 0);}
-  50% {transform: translate3d(-0.01%, 0, 0);}
-  100% {transform: translate3d(0.01%, 0, 0);}
+  0% {transform: translate3d(-0.05%, 0.25%, 0);}
+  50% {transform: translate3d(0.05%, 0, 0);}
+  100% {transform: translate3d(-0.05%, 0.25%, 0);}
 }
 
 /* 1번 새 */
