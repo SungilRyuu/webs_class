@@ -214,14 +214,16 @@
 .sec7__text p:nth-child(1) {
   margin-right: auto;
   font-size: 2vw;
+  padding-left: 3vw;
   position: relative;
 }
 .sec7__text1-1::before {
   content: '';
   position: absolute;
-  left: 0; top: 0;
-  width: 2vw; height: 2vw;
+  left: 0vw; top: 0.2vw;
+  width: 1.8vw; height: 1.8vw;
   border-radius: 50%;
+  background-color: #000;
 }
 .sec7__text p:nth-child(2) {}
 
