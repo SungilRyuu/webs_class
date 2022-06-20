@@ -1,0 +1,278 @@
+.sec10__body .pacman__wrapwrap {
+    width: 100%;
+    height: 10vw;
+    /* border: 1px solid red; */
+    margin-top: 5vw;
+}
+.pacman__wrap {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    padding-top: 0.5vw;
+  }
+  .pacman{
+    width: 9vw;
+    max-width: 150px;
+    height: 9vw;
+    max-height: 150px;
+    border-radius: 50%;
+    background: #f3c04b;
+    position: relative;
+    border: 0;
+    z-index: 6;
+  }
+  .pacman, .ghost1, .ghost2, .ghost3, .ghost4 {
+    animation: pacman 10s linear infinite;
+  }
+  @keyframes pacman {
+    0% {transform: translateX(-600%);}
+    100% {transform: translateX(+1100%);}
+  }
+  .food:nth-child(1) {
+    animation: foody1 10s linear infinite;
+  }
+  @keyframes foody1 {
+    0% {opacity: 1;}
+    1% {opacity: 0;}
+    99% {opacity: 0;}
+    100% {opacity: 1;}
+  }
+  .food:nth-child(2) {
+    animation: foody2 10s linear infinite;
+  }
+  @keyframes foody2 {
+    0% {opacity: 1;}
+    9.5% {opacity: 1;}
+    10% {opacity: 0;}
+    99% {opacity: 0;}
+    100% {opacity: 1;}
+  }
+  .food:nth-child(3) {
+    animation: foody3 10s linear infinite;
+  }
+  @keyframes foody3 {
+    0% {opacity: 1;}
+    16% {opacity: 1;}
+    17% {opacity: 0;}
+    99% {opacity: 0;}
+    100% {opacity: 1;}
+  }
+  .food:nth-child(4) {
+    animation: foody4 10s linear infinite;
+  }
+  @keyframes foody4 {
+    0% {opacity: 1;}
+    22% {opacity: 1;}
+    23% {opacity: 0;}
+    99% {opacity: 0;}
+    100% {opacity: 1;}
+  }
+  .food:nth-child(4) {
+    animation: foody4 10s linear infinite;
+  }
+  @keyframes foody4 {
+    0% {opacity: 1;}
+    25.5% {opacity: 1;}
+    26% {opacity: 0;}
+    99% {opacity: 0;}
+    100% {opacity: 1;}
+  }
+  .food:nth-child(5) {
+    animation: foody5 10s linear infinite;
+  }
+  @keyframes foody5 {
+    0% {opacity: 1;}
+    34.5% {opacity: 1;}
+    35.5% {opacity: 0;}
+    99% {opacity: 0;}
+    100% {opacity: 1;}
+  }
+  .food:nth-child(6) {
+    animation: foody6 10s linear infinite;
+  }
+  @keyframes foody6 {
+    0% {opacity: 1;}
+    45% {opacity: 1;}
+    45.5% {opacity: 0;}
+    99% {opacity: 0;}
+    100% {opacity: 1;}
+  }
+  .food:nth-child(7) {
+    animation: foody7 10s linear infinite;
+  }
+  @keyframes foody7 {
+    0% {opacity: 1;}
+    51.5% {opacity: 1;}
+    52% {opacity: 0;}
+    99% {opacity: 0;}
+    100% {opacity: 1;}
+  }
+  .food:nth-child(8) {
+    animation: foody8 10s linear infinite;
+  }
+  @keyframes foody8 {
+    0% {opacity: 1;}
+    59.5% {opacity: 1;}
+    60.5% {opacity: 0;}
+    99% {opacity: 0;}
+    100% {opacity: 1;}
+  }
+  .pacman .mouth {
+    top: 50%; left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    background: #000;
+    position: absolute;
+    width: 10vw;
+    height: 10vw;
+    max-width: 150px;
+    max-height: 150px;
+    clip-path: polygon(100% 74%, 44% 48%, 100% 21%);
+    animation-name: eat;
+    animation-duration: .5s;
+    animation-iteration-count: infinite;
+    z-index: 8;
+  }
+  @keyframes eat {
+    0% {clip-path: polygon(100% 74%, 44% 48%, 100% 21%);}
+    12.5% {clip-path: polygon(100% 60%, 44% 48%, 100% 40%);}
+    25% {clip-path: polygon(100% 50%, 44% 48%, 100% 50%);}
+    37.5% {clip-path: polygon(100% 59%, 44% 48%, 100% 35%);}
+    50% {clip-path: polygon(100% 74%, 44% 48%, 100% 21%);}
+    51% {clip-path: polygon(100% 74%, 44% 48%, 100% 21%);}
+    100% {clip-path: polygon(100% 74%, 44% 48%, 100% 21%);}
+  }
+  .foods {
+    position: absolute;
+    left: 0;top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    z-index: 7;
+  }
+  .food {
+    width: 3vw; height: 3vw;
+    max-width: 40px;
+    max-height: 40px;
+    border-radius: 50%;
+    margin-right: 10vw;
+    background: #f7b97e;
+    z-index: 8;
+  }
+  .food:last-child {
+    margin-right: 0;
+  }
+  .ghost{
+    display: inline-block;
+    width: 9vw;
+    max-width: 150px;
+    max-height: 150px;
+    height: 7.5vw;
+    border-radius:50% 50% 0 0;
+    position: relative;
+    z-index: 10;
+    margin-right: 3vw;
+  }
+  .ghost .eye_left {
+    position: absolute;
+    top: 40%;left: 50%;
+    transform: translate3d(-20%, -50%, 0);
+    background: #fff;
+    width: 2vw;
+    height: 3vw;
+    border-radius: 50%;
+  }
+  .ghost .eye_right {
+    position: absolute;
+    top: 40%;left: 80%;
+    transform: translate3d(-40%, -50%, 0);
+    background: #fff;
+    width: 2vw;
+    height: 3vw;
+    border-radius: 50%;
+    
+  }
+  .ghost .eye_left_color {
+    position: absolute;
+    top: 40%;left: 61%;
+    transform: translate3d(-40%, -50%, 0);
+    width: 1vw;
+    height: 1vw;
+    border-radius: 50%;
+    background-color: #44609e;
+  }
+  .ghost .eye_right_color {
+    position: absolute;
+    top: 40%;left: 86%;
+    transform: translate3d(-40%, -50%, 0);
+    width: 1vw;
+    height: 1vw;
+    border-radius: 50%;
+    background-color: #44609e;
+  }
+  .ghost .tail1 {
+    position: absolute;
+    left: 0; bottom: -1vw;
+    width: calc(9vw / 4);
+    height: calc(9vw / 4);
+    border-radius: 50%;
+    background-color: #333;
+  }
+  .ghost .tail2 {
+    position: absolute;
+    left: calc(9vw / 4); bottom: -1vw;
+    width: calc(9vw / 4);
+    height: calc(9vw / 4);
+    border-radius: 50%;
+    background-color: #333;
+  }
+  .ghost .tail3 {
+    position: absolute;
+    left: calc(9vw / 4 * 2); bottom: -1vw;
+    width: calc(9vw / 4);
+    height: calc(9vw / 4);
+    border-radius: 50%;
+    background-color: #333;
+  }
+  .ghost .tail4 {
+    position: absolute;
+    left: calc(9vw / 4 * 3);; bottom: -1vw;
+    width: calc(9vw / 4);
+    height: calc(9vw / 4);
+    border-radius: 50%;
+    background-color: #333;
+  }
+  .ghost1, .ghost1 .tail1, .ghost1 .tail2, .ghost1 .tail3, .ghost1 .tail4 {
+    background-color: #ce293d;
+  }
+  .ghost2, .ghost2 .tail1, .ghost2 .tail2, .ghost2 .tail3, .ghost2 .tail4 {
+    background-color: #e5a8cf;
+  }
+  .ghost3, .ghost3 .tail1, .ghost3 .tail2, .ghost3 .tail3, .ghost3 .tail4 {
+    background-color: #62d6c2;
+  }
+  .ghost4, .ghost4 .tail1, .ghost4 .tail2, .ghost4 .tail3, .ghost4 .tail4 {
+    background-color: #e5893d;
+  }
+
+  @media (min-width:1200px) {
+    .sec10__body .pacman__wrapwrap {height: 120px; margin-top: 60px;
+        /* border: 1px solid red; */
+    }
+    @keyframes pacman {
+      0% {transform: translateX(-600%);}
+      100% {transform: translateX(+2000%);}
+    }
+    .foods {display: none;}
+    .pacman__wrap {padding-top: 5px;}
+      .pacman{width: 110px; height: 110px;}
+      .pacman .mouth {width: 120px; height: 120px;}
+      .food {width: 35px; height: 35px;}
+      .ghost{width: 110px; height: 90px;}
+      .ghost .eye_left {width: 25px; height: 40px;}
+      .ghost .eye_right {width: 25px; height: 40px;}
+      .ghost .eye_left_color {width: 14px; height: 14px;}
+      .ghost .eye_right_color {width: 14px; height: 14px;}
+      .ghost .tail1 {left: calc(110px / 4 * 0); bottom: calc(110px / -9); width: calc(110px / 4); height: calc(110px / 4);}
+      .ghost .tail2 {left: calc(110px / 4 * 1); bottom: calc(110px / -9); width: calc(110px / 4); height: calc(110px / 4);}
+      .ghost .tail3 {left: calc(110px / 4 * 2); bottom: calc(110px / -9); width: calc(110px / 4); height: calc(110px / 4);}
+      .ghost .tail4 {left: calc(110px / 4 * 3); bottom: calc(110px / -9); width: calc(110px / 4); height: calc(110px / 4);}
+  }
