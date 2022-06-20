@@ -25,14 +25,14 @@ ScrollTrigger.scrollerProxy(pageContents, {
 window.addEventListener("load", function () {
     let sec6WrapWidth = document.querySelector("#project").offsetWidth;
     let horizontal6 = sec6WrapWidth - window.innerWidth;
-    gsap.to("#horizon #project", {
+    gsap.to("#project", {
         scrollTrigger: {
             scroller: pageContents,
             scrub: true,
-            trigger: "#horizon",
+            trigger: "#section7",
             pin: true,
             start: "top top",
-            // markers: true,
+            markers: true,
             end: sec6WrapWidth
         },
         x: -horizontal6,
