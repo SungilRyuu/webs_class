@@ -15,16 +15,16 @@
   position: relative;
 }
 .sec2__text1 p:nth-child(1) {
-  font-family: 'Kumar One';
-  color: #2D6EC7;
+  font-family: "Kumar One";
+  color: #2d6ec7;
   font-size: 10.5vw;
   margin-left: 18.1vw;
   line-height: 1.3;
 }
 .sec2__text1 p:nth-child(2) {
-  font-family: 'Abel';
+  font-family: "Abel";
   font-weight: lighter;
-  color: #E76D41;
+  color: #e76d41;
   font-size: 3vw;
   position: absolute;
   left: 49.7vw;
@@ -36,7 +36,7 @@
   margin-bottom: 5.4vw;
 }
 .sec2__text2 p {
-  font-family: 'Porter Sans Block';
+  font-family: "Porter Sans Block";
   font-size: 10.5vw;
 }
 .sec2__text3 {
@@ -45,29 +45,50 @@
   margin-bottom: 20vw;
 }
 .sec2__text3 .left {
-  border-top: 0.13vw solid #E76D41;
+  border-top: 0.13vw solid #e76d41;
   width: 40vw;
 }
 .sec2__text3 .right {
   display: inline-block;
-  font-family: 'Poiret One';
+  font-family: "Poiret One";
   text-transform: uppercase;
   color: #fff;
-  background: #F2B63F;
+  background: #f2b63f;
   padding: 1vw 3.5vw;
   font-size: 5.3vw;
   margin-left: 10vw;
   white-space: nowrap;
 }
 @media (min-width: 1200px) {
-  #section2 {height: 100vh;}
-  .sec2__text1 {margin-top: 230px;}
-  .sec2__text1 p:nth-child(1) {font-size: 9rem; margin-left: 1.7em;}
-  .sec2__text1 p:nth-child(2) {font-size: 2.4rem; left: 50%; top: -5%;}
-  .sec2__text2 {margin-bottom: 46px;}
-  .sec2__text2 p {font-size: 9.1rem;}
-  .sec2__text3 {margin-bottom: 200px;}
-  .sec2__text3 .right {font-size: 4.4rem; padding: 0.2em 0.7em; margin-left: 10vw}
+  #section2 {
+    height: 100vh;
+  }
+  .sec2__text1 {
+    margin-top: 230px;
+  }
+  .sec2__text1 p:nth-child(1) {
+    font-size: 9rem;
+    margin-left: 1.7em;
+  }
+  .sec2__text1 p:nth-child(2) {
+    font-size: 2.4rem;
+    left: 50%;
+    top: -5%;
+  }
+  .sec2__text2 {
+    margin-bottom: 46px;
+  }
+  .sec2__text2 p {
+    font-size: 9.1rem;
+  }
+  .sec2__text3 {
+    margin-bottom: 200px;
+  }
+  .sec2__text3 .right {
+    font-size: 4.4rem;
+    padding: 0.2em 0.7em;
+    margin-left: 10vw;
+  }
 }
 #section4 {
   width: 100%;
@@ -76,39 +97,50 @@
   z-index: 100;
 }
 .sec4__info {
-    margin: 0 auto;
-    margin-top: 10vw;
-    font-size: 2.8vw;
-    line-height: 1.3;
-    font-weight: lighter;
-    padding-left: 44vw;
-    letter-spacing: -0.2vw;
-    display: inline-block;
+  margin: 0 auto;
+  margin-top: 10vw;
+  font-size: 2.8vw;
+  line-height: 1.3;
+  font-weight: lighter;
+  padding-left: 44vw;
+  letter-spacing: -0.2vw;
+  display: inline-block;
 }
 .sec4__info .white {
-    color: #fff;
-    background: #000;
+  color: #fff;
+  background: #000;
 }
 .sec4__footer {
-    width: 68%;
-    margin: 0 auto;
-    margin-top: 10vw;
-    margin-bottom: 10em;
+  width: 68%;
+  margin: 0 auto;
+  margin-top: 10vw;
+  margin-bottom: 10em;
 }
 .sec4__footer p {
-  font-family: 'Raleway Dots';
+  font-family: "Raleway Dots";
   text-transform: uppercase;
   font-size: 5.3vw;
   white-space: nowrap;
   text-align: center;
-  background: #946BC6;
+  background: #946bc6;
   color: #fff;
   border-radius: 100px;
 }
-@media (min-width:1200px) {
-  .sec4__info {width: 1200px; margin-top: 5em; font-size: 2.2rem; padding-left: 50vw; letter-spacing: -0.01em;}
-  .sec4__footer {width: 820px; margin-top: 150px;}
-  .sec4__footer p {font-size: 4.6rem;}
+@media (min-width: 1200px) {
+  .sec4__info {
+    width: 1200px;
+    margin-top: 5em;
+    font-size: 2.2rem;
+    padding-left: 50vw;
+    letter-spacing: -0.01em;
+  }
+  .sec4__footer {
+    width: 820px;
+    margin-top: 150px;
+  }
+  .sec4__footer p {
+    font-size: 4.6rem;
+  }
 }
 
 #section6 {
@@ -127,20 +159,20 @@
   position: relative;
 }
 .sec6__text1 h2 {
-  font-family: 'Kumar One';
+  font-family: "Kumar One";
   font-size: 4.8vw;
   color: #fff;
-  background: #3F6DC0;
+  background: #3f6dc0;
   display: inline-block;
   padding: 2vw 3vw 1vw 3vw;
   border-radius: 100px;
   line-height: 1;
 }
 .sec6__text1 span {
-  font-family: 'Abel';
+  font-family: "Abel";
   font-size: 3vw;
   text-transform: uppercase;
-  color: #E76D41;
+  color: #e76d41;
   position: absolute;
   left: 21vw;
   top: -2.5vw;
@@ -150,12 +182,14 @@
   margin-top: 1.3vw;
 }
 .sec6__text2 p {
-  font-family: 'Porter Sans Block';
+  font-family: "Porter Sans Block";
   font-size: 9.5vw;
 }
 
 @media (max-width: 1200px) {
-  #section6 {height: 100vw;}
+  #section6 {
+    height: 100vw;
+  }
 }
 
 #section7 {
@@ -178,10 +212,10 @@
   position: relative;
 }
 .sec7__title {
-  font-family: 'Rajdhani';
+  font-family: "Rajdhani";
   font-size: 3.5vw;
   color: #fff;
-  background: #000;
+  background: #222;
   display: inline-block;
   text-transform: uppercase;
   padding: 0.1em 0.5em;
@@ -204,6 +238,27 @@
   margin-top: -3.5vw;
   filter: grayscale(75%);
   transition: filter 0.5s ease;
+  position: relative;
+}
+.sec7__img a {
+  font-size: 2vw;
+  color: #fff;
+  position: absolute;
+  right: 1vw;
+  bottom: 1vw;
+  text-transform: uppercase;
+  border-radius: 50%;
+  background: #000;
+  width: 10vw;
+  height: 10vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.8;
+  transition: opacity 0.5s ease;
+}
+.sec7__img a:hover {
+  opacity: 1;
 }
 #section7 .sec7__contents .sec7__img:hover {
   filter: grayscale(0);
@@ -213,7 +268,7 @@
   margin-top: 3vh;
   width: 75%;
   display: flex;
-  font-family: 'GmarketSans';
+  font-family: "GmarketSans";
 }
 .sec7__text h4 {
   width: 30%;
@@ -222,12 +277,14 @@
   padding-left: 2vw;
 }
 .sec7__text h4::before {
-  content: '';
+  content: "";
   background: #000;
-  width: 1.4vw; height: 1.4vw;
+  width: 1.4vw;
+  height: 1.4vw;
   border-radius: 50%;
   position: absolute;
-  left: 0; top: 0.2vw;
+  left: 0;
+  top: 0.2vw;
 }
 .sec7__text p {
   width: 70%;
@@ -239,14 +296,14 @@
   background-image: url(../img/pics.jpg);
 }
 #section7 .sec7__contents:nth-child(2) .sec7__img {
-  background-image: url(https://images.unsplash.com/photo-1502945015378-0e284ca1a5be?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80);
+  background-image: url(https://illieee.netlify.app/img/aboutImg03@2x.jpg);
 }
 
-
-
-
-
-
+@media (max-width: 1200px) {
+  .sec7__img {
+    height: calc(80vw / 1.6);
+  }
+}
 
 #section15 {
   width: 100%;
