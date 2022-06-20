@@ -2,8 +2,10 @@
 * {
   margin: 0;
   padding: 0;
-
   /* font-family: 'abel','VitroPride'; */
+}
+body {
+  background: #f1f1f1;
 }
 html {
   font-size: 14px;
