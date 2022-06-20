@@ -24,10 +24,7 @@ ScrollTrigger.scrollerProxy(pageContents, {
 
 window.addEventListener("load", function () {
     let sec7WrapWidth = document.querySelector("#project").offsetWidth;
-    console.log(`${sec7WrapWidth}일`)
     let horizontal6 = sec7WrapWidth - window.innerWidth;
-    console.log(`${window.innerWidth}이`)
-    console.log(`${horizontal6}삼`)
     gsap.to("#section7 #project", {
         scrollTrigger: {
             scroller: pageContents,

@@ -40,7 +40,7 @@
   left: 84.72vw;
   top: 12.1vw; */
   left: 88.1vw;
-  top: 12.8vw;
+  top: 12vw;
   width: 18vw;
   height: 22.7vw;
   background-size: cover;
@@ -65,6 +65,7 @@
   font-family: 'Kumbh Sans';
   font-weight: 100;
   font-size: 3vw;
+  margin: 0;
 }
 
 .sec1__text2 {
