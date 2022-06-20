@@ -24,7 +24,10 @@ ScrollTrigger.scrollerProxy(pageContents, {
 
 window.addEventListener("load", function () {
     let sec6WrapWidth = document.querySelector("#project").offsetWidth;
+    console.log(`${sec6WrapWidth}sec6WrapWidth`)
     let horizontal6 = sec6WrapWidth - window.innerWidth;
+    console.log(`${window.innerWidth}window.innerWidth`)
+    console.log(`${horizontal6}horizontal6`)
     gsap.to("#horizon #project", {
         scrollTrigger: {
             scroller: pageContents,
