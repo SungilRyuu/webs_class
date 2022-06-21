@@ -1,5 +1,42 @@
 // resize 
-// window.onresize = function(){location.reload();}
+window.onresize = function(){location.reload();}
+
+// 로딩
+
+window.addEventListener("load", function () {
+    setTimeout(() => {
+      loadings();
+      setTimeout(() => {
+        document.querySelector(".progress__wrap").style.display = "none";
+      }, 3000);
+    }, 1000);
+  });
+  
+  function loadings() {
+    gsap.to(".progress", {
+      opacity: 0,
+      duration: 1,
+    });
+  
+    gsap.to("span.letter.left", {
+      y: 100,
+      duration: 4,
+      delay: 1,
+    });
+  
+    gsap.to("span.letter.right", {
+      y: -100,
+      duration: 4,
+      delay: 1,
+    });
+  
+    gsap.to(".progress__wrap", {
+      opacity: 0,
+      duration: 1,
+      delay: 2,
+    });
+  }
+  
 
 // 시계
     var lastHr,

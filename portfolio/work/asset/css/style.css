@@ -3,6 +3,7 @@
 @import url(font.css);
 @import url(bird.css);
 @import url(pacman.css);
+@import url(loading.css);
 
 #section2 {
   width: 100%;
