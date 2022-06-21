@@ -9,6 +9,7 @@
   display: flex;
   overflow: hidden;
   padding-top: 0.5vw;
+  /* border: 1px solid #000; */
 }
 .pacman {
   width: 9vw;

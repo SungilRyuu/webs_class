@@ -594,7 +594,7 @@
   display: none;
 }
 .sec10__body iframe {
-  display: none;
+  height: calc(88vw / 1.6);
 }
 @media (min-width: 1200px) {
   #section10 {
@@ -636,9 +636,3 @@
     display: none;
   }
 }
-
-/* #section15 {
-  width: 100%;
-  height: 100vh;
-  background-color: yellow;
-} */
