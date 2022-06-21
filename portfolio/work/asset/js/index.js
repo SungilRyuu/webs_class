@@ -10,13 +10,13 @@ window.addEventListener("load", function () {
     setTimeout(() => {
       document.querySelector(".progress__wrap").style.display = "none";
     }, 3000);
-  }, 1000);
+  }, 2000);
 });
 
 function loadings() {
   gsap.to(".progress", {
     opacity: 0,
-    duration: 1,
+    duration: 1.2,
   });
 
   gsap.to("span.letter.left", {
@@ -33,8 +33,8 @@ function loadings() {
 
   gsap.to(".progress__wrap", {
     opacity: 0,
-    duration: 1,
-    delay: 2,
+    duration: 1.3,
+    delay: 2.3,
   });
 }
 
