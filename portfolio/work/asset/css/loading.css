@@ -20,6 +20,7 @@
 .progress__wrap span.letter {
   font-family: "Abel";
   font-size: 2.6vw;
+  font-weight: bold;
   text-transform: uppercase;
   line-height: 1;
   display: inline-block;
