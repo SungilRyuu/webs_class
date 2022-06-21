@@ -38,14 +38,6 @@ function loadings() {
   });
 }
 
-// gsap.to(".sec4__info", {
-//   scrollTrigger: {
-//     trigger: "#section5",
-//   },
-//   x: 400,
-//   duration: 3,
-// });
-
 // 시계
 var lastHr, lastMin;
 function leTime() {
