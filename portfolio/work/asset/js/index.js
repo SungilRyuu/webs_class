@@ -1,7 +1,7 @@
 // resize
-window.onresize = function () {
-  location.reload();
-};
+// window.onresize = function () {
+//   location.reload();
+// };
 
 // 로딩
 window.addEventListener("load", function () {
